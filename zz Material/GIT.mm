@@ -1,7 +1,7 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="" FOLDED="false" ID="ID_513931562" CREATED="1580379249661" MODIFIED="1580379252481"><hook NAME="MapStyle" zoom="1.61">
-    <properties fit_to_viewport="false" show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
+    <properties show_icon_for_attributes="true" fit_to_viewport="false" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -72,15 +72,15 @@
 </node>
 </node>
 <node TEXT="" ID="ID_55663464" CREATED="1581027096865" MODIFIED="1581027096865">
-<node TEXT="branch&#xa;(rama)" FOLDED="true" ID="ID_883210579" CREATED="1580380178229" MODIFIED="1580380201859">
+<node TEXT="branch&#xa;(rama)" ID="ID_883210579" CREATED="1580380178229" MODIFIED="1580380201859">
 <node TEXT="es una línea de desarrollo independiente, dentro del mismo repositorio (dentro del mismo proyecto)" ID="ID_382133975" CREATED="1580380202142" MODIFIED="1601895956584"/>
 <node TEXT="mantiene una copia independiente de TODOS los archivos (aunque yo seguramente solo modificaré algunos)" ID="ID_1644388114" CREATED="1580380241553" MODIFIED="1601896053924"/>
 <node TEXT="si varias personas trabajan en un mismo proyecto (mismo repositorio) y una de las personas se va a encargar de determinada funcionalidad en ese proyecto, crea una rama y trabaja sobre ella" ID="ID_694032540" CREATED="1601895987365" MODIFIED="1601896032793"/>
-<node TEXT="la rama inicial es &quot;master&quot; y las demás tienen nombres propios" ID="ID_133910444" CREATED="1580380301534" MODIFIED="1601895972120"/>
+<node TEXT="la rama inicial es &quot;main&quot; (antes se llamaba &quot;master&quot;); las demás tienen nombres propios" ID="ID_133910444" CREATED="1580380301534" MODIFIED="1602764355566"/>
 <node TEXT="las demaś ramas suelen llamarse &quot;topic branches&quot;" ID="ID_169349569" CREATED="1580380317733" MODIFIED="1580380339177">
 <node TEXT="ramas &quot;de (determinado) tema&quot;" ID="ID_454695863" CREATED="1580380340204" MODIFIED="1580380351606"/>
 </node>
-<node TEXT="al terminar de trabajar en mi parte, &quot;mergeo&quot; mi rama con la &quot;master&quot;" ID="ID_120103700" CREATED="1601896209492" MODIFIED="1601896225672"/>
+<node TEXT="al terminar de trabajar en mi parte, &quot;mergeo&quot; mi rama con la &quot;main&quot;" ID="ID_120103700" CREATED="1601896209492" MODIFIED="1602764372986"/>
 </node>
 <node TEXT="clone" ID="ID_1230266521" CREATED="1580379584181" MODIFIED="1580379585065">
 <node TEXT="copiar una *rama* de un repositorio a local" ID="ID_1750845751" CREATED="1580379969223" MODIFIED="1601897851606">

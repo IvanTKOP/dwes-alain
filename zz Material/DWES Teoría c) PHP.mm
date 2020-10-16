@@ -1198,19 +1198,19 @@
 <node TEXT="no busca claves: busca VALORES" ID="ID_489347655" CREATED="1574687146171" MODIFIED="1574687229137"/>
 </node>
 </node>
-<node TEXT="sobre variables" FOLDED="true" ID="ID_1411206105" CREATED="1383849037201" MODIFIED="1445876808707">
+<node TEXT="sobre variables" ID="ID_1411206105" CREATED="1383849037201" MODIFIED="1445876808707">
 <node TEXT="isset" ID="ID_807243970" CREATED="1361476363951" MODIFIED="1574687328455">
 <icon BUILTIN="atenciвn_!"/>
 <node TEXT="determina si una variable está definida *y* no es NULL" ID="ID_66304869" CREATED="1361476371156" MODIFIED="1574687249613"/>
-<node TEXT="se puede utilizar sobre tres tipos de elementos" ID="ID_835417584" CREATED="1414435264220" MODIFIED="1521139800220">
+<node TEXT="se puede utilizar sobre&#xa;tres tipos de elementos" ID="ID_835417584" CREATED="1414435264220" MODIFIED="1602842556499">
 <node TEXT="sobre una variable &quot;normal&quot;" ID="ID_829814965" CREATED="1414435272530" MODIFIED="1521139803377">
-<node TEXT="me dice si existe o no (si alguien le ha asignado un valor ya, o si no)" ID="ID_673270034" CREATED="1414435283579" MODIFIED="1414435295790"/>
+<node TEXT="me dice si existe o no (si alguien le ha asignado un valor ya, o si no) (eso sí: si existe con null, también dice false)" ID="ID_673270034" CREATED="1414435283579" MODIFIED="1602842578245"/>
 </node>
 <node TEXT="sobre una variable de tipo array asociativo, como por ejemplo, $_REQUEST" ID="ID_136327500" CREATED="1414435309602" MODIFIED="1521139803376">
-<node TEXT="¿existe &quot;la caja&quot;?" ID="ID_1520281017" CREATED="1414435332537" MODIFIED="1414435345302"/>
+<node TEXT="¿existe &quot;la estantería&quot;?" ID="ID_1520281017" CREATED="1414435332537" MODIFIED="1602842590672"/>
 </node>
 <node TEXT="sobre un valor concreto que pueda estar dentro de una variable de tipo array asociativo, como por ejemplo, $_REQUEST[&quot;nombre&quot;]" ID="ID_1212659855" CREATED="1414435309602" MODIFIED="1521139803374">
-<node TEXT="¿existe tal valor dentro de la caja?" ID="ID_498010101" CREATED="1414435332537" MODIFIED="1414435388455"/>
+<node TEXT="¿existe tal valor dentro de la estantería?" ID="ID_498010101" CREATED="1414435332537" MODIFIED="1602842607496"/>
 <node TEXT="¿han enviado un parámetro llamado &quot;nombre&quot;?" ID="ID_769899022" CREATED="1414435390410" MODIFIED="1414435399646"/>
 </node>
 </node>
