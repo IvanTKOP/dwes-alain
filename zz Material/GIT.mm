@@ -1,7 +1,7 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="" FOLDED="false" ID="ID_513931562" CREATED="1580379249661" MODIFIED="1580379252481"><hook NAME="MapStyle" zoom="1.61">
-    <properties show_icon_for_attributes="true" fit_to_viewport="false" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
+<node TEXT="" FOLDED="false" ID="ID_513931562" CREATED="1580379249661" MODIFIED="1580379252481"><hook NAME="MapStyle" zoom="2.593">
+    <properties fit_to_viewport="false" show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -51,7 +51,7 @@
 </hook>
 <hook NAME="accessories/plugins/AutomaticLayout.properties" VALUE="ALL"/>
 <node TEXT="GIT" STYLE_REF="Alain Título general mindmap" POSITION="right" ID="ID_311244207" CREATED="1580379433126" MODIFIED="1580382213072"/>
-<node TEXT="conceptos" POSITION="right" ID="ID_660282869" CREATED="1580379527085" MODIFIED="1580379529147">
+<node TEXT="conceptos" FOLDED="true" POSITION="right" ID="ID_660282869" CREATED="1580379527085" MODIFIED="1580379529147">
 <node TEXT="link interesante" ID="ID_998138140" CREATED="1580381276856" MODIFIED="1580381279932">
 <node TEXT="https://thepilcrow.net/explaining-basic-concepts-git-and-github/" ID="ID_1779245921" CREATED="1580381280198" MODIFIED="1580381280198" LINK="https://thepilcrow.net/explaining-basic-concepts-git-and-github/"/>
 </node>
@@ -186,7 +186,7 @@
 </node>
 </node>
 </node>
-<node TEXT="GitKraken" POSITION="right" ID="ID_1045581662" CREATED="1581331111381" MODIFIED="1581331114480">
+<node TEXT="GitKraken" FOLDED="true" POSITION="right" ID="ID_1045581662" CREATED="1581331111381" MODIFIED="1581331114480">
 <node TEXT="es una interfaz gráfica (&quot;UI&quot;) para GIT" ID="ID_1343617100" CREATED="1581332918703" MODIFIED="1581332935475">
 <node TEXT="NO es un IDE como tal" ID="ID_1090345786" CREATED="1581332925601" MODIFIED="1581332928525"/>
 </node>
@@ -236,8 +236,13 @@
 <node TEXT="se pica en el otro punto con el que queramos comparar" ID="ID_1769850042" CREATED="1581340592257" MODIFIED="1581340601637"/>
 </node>
 </node>
+<node TEXT="reiniciar la cuenta GitKraken &quot;a mano&quot;" ID="ID_1841428091" CREATED="1603108539181" MODIFIED="1603108556867">
+<node TEXT="rm -rf ~/.gitkraken" ID="ID_1835508273" CREATED="1603108557569" MODIFIED="1603108561316">
+<icon BUILTIN="z_application_xp_terminal"/>
 </node>
-<node TEXT="PhpStorm" POSITION="right" ID="ID_127499868" CREATED="1581331122150" MODIFIED="1581331126212">
+</node>
+</node>
+<node TEXT="PhpStorm" FOLDED="true" POSITION="right" ID="ID_127499868" CREATED="1581331122150" MODIFIED="1581331126212">
 <node TEXT="regenerar carpeta local clonada" ID="ID_1922516912" CREATED="1580379259383" MODIFIED="1580379265572">
 <node TEXT="Borrar carpeta 080-tienda desde el navegador de archivos" ID="ID_968188644" CREATED="1580379253265" MODIFIED="1580379253265"/>
 <node TEXT="VCS, Git, Clone" ID="ID_1196660090" CREATED="1580379253265" MODIFIED="1580379253265"/>
