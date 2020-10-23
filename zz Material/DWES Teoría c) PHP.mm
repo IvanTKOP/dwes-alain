@@ -1480,7 +1480,7 @@
 <node TEXT="sentencias que NO&#xa;devuelven datos&#xa;(INS, UPD, DEL)" ID="ID_803700530" CREATED="1275132334962" MODIFIED="1521139803244">
 <icon BUILTIN="full-2"/>
 <node TEXT="primero preparo la sentencia,&#xa;opcionalmente con huecos" ID="ID_200036736" CREATED="1398276154511" MODIFIED="1576659889391">
-<node ID="ID_1818879539" CREATED="1576656463690" MODIFIED="1578568233469"><richcontent TYPE="NODE">
+<node ID="ID_1818879539" CREATED="1576656463690" MODIFIED="1603451571180"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -1491,6 +1491,7 @@
 $sentencia </span><span class="token operator">=</span> <span class="token variable">$pdo</span><span class="token operator">-&gt;</span><span class="token function">prepare</span><span class="token punctuation">($sql);</span></code></pre>
   </body>
 </html>
+
 </richcontent>
 </node>
 </node>
@@ -1507,6 +1508,7 @@ $sentencia </span><span class="token operator">=</span> <span class="token varia
 </html>
 </richcontent>
 </node>
+<node TEXT="devuelve true o false en función de si ha ido todo bien" ID="ID_247357934" CREATED="1603452033543" MODIFIED="1603452046011"/>
 </node>
 <node TEXT="$numFilasAfectadas = $sentencia-&gt;rowCount();" ID="ID_909919678" CREATED="1275132405209" MODIFIED="1576657359257">
 <node TEXT="cuántas filas se han visto afectadas en lo último que he ejecutado a través de esta conexión" ID="ID_337401225" CREATED="1275132442719" MODIFIED="1366215557833"/>
