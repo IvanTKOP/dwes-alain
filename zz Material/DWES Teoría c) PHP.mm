@@ -1,6 +1,6 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="2.357">
+<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="1.771">
     <properties fit_to_viewport="false" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
@@ -994,7 +994,7 @@
 <node TEXT="tienen forma de &quot;array asociativo&quot;" ID="ID_1321015760" CREATED="1275122958844" MODIFIED="1414434456241">
 <node TEXT="se accede a los datos por nombre y no por su índice" ID="ID_1315220453" CREATED="1275122972494" MODIFIED="1275122983635"/>
 </node>
-<node TEXT="VARIABLES&#xa;SUPERGLOBALES&#xa;IMPORTANTES" FOLDED="true" ID="ID_100193819" CREATED="1275123074316" MODIFIED="1414434456242">
+<node TEXT="VARIABLES&#xa;SUPERGLOBALES&#xa;IMPORTANTES" ID="ID_100193819" CREATED="1275123074316" MODIFIED="1414434456242">
 <node TEXT="(todas estas contienen los datos en forma de STRINGS: si quiero números u otras cosas, tengo que convertilos con typecasts [ (int) ... ] u otras funciones)" ID="ID_613353326" CREATED="1414435821798" MODIFIED="1414435864075"/>
 <node TEXT="$_REQUEST" ID="ID_1766545966" CREATED="1275123369795" MODIFIED="1574685690012">
 <icon BUILTIN="atenciвn_!"/>
@@ -1491,7 +1491,6 @@
 $sentencia </span><span class="token operator">=</span> <span class="token variable">$pdo</span><span class="token operator">-&gt;</span><span class="token function">prepare</span><span class="token punctuation">($sql);</span></code></pre>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
