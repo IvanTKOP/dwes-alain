@@ -6,6 +6,8 @@
         $acumulado = (int) $_REQUEST["acumulado"] + 1;
     }
 
+    // INTERFAZ:
+    // $acumulado
 ?>
 
 

@@ -1,6 +1,6 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="1.771">
+<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="2.143">
     <properties fit_to_viewport="false" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
@@ -1477,7 +1477,7 @@
 <node TEXT="try {&#xa;    $pdo = new PDO(&quot;mysql:host=$servidor;dbname=$bd;charset=utf8&quot;, $identificador, $contrasenna, $opciones);&#xa;} catch (Exception $e) {&#xa;    error_log(&quot;Error al conectar: &quot; . $e-&gt;getMessage());&#xa;    exit(&apos;Error al conectar&apos;);&#xa;}" ID="ID_1579793351" CREATED="1576495516374" MODIFIED="1576495663878"/>
 </node>
 </node>
-<node TEXT="sentencias que NO&#xa;devuelven datos&#xa;(INS, UPD, DEL)" ID="ID_803700530" CREATED="1275132334962" MODIFIED="1521139803244">
+<node TEXT="sentencias que NO&#xa;devuelven datos&#xa;(INS, UPD, DEL)" FOLDED="true" ID="ID_803700530" CREATED="1275132334962" MODIFIED="1521139803244">
 <icon BUILTIN="full-2"/>
 <node TEXT="primero preparo la sentencia,&#xa;opcionalmente con huecos" ID="ID_200036736" CREATED="1398276154511" MODIFIED="1576659889391">
 <node ID="ID_1818879539" CREATED="1576656463690" MODIFIED="1603451571180"><richcontent TYPE="NODE">
@@ -1510,7 +1510,7 @@ $sentencia </span><span class="token operator">=</span> <span class="token varia
 <node TEXT="devuelve true o false en función de si ha ido todo bien" ID="ID_247357934" CREATED="1603452033543" MODIFIED="1603452046011"/>
 </node>
 <node TEXT="$numFilasAfectadas = $sentencia-&gt;rowCount();" ID="ID_909919678" CREATED="1275132405209" MODIFIED="1576657359257">
-<node TEXT="cuántas filas se han visto afectadas en lo último que he ejecutado a través de esta conexión" ID="ID_337401225" CREATED="1275132442719" MODIFIED="1366215557833"/>
+<node TEXT="cuántas filas se han visto afectadas en lo último que he ejecutado" ID="ID_337401225" CREATED="1275132442719" MODIFIED="1603879650709"/>
 <node TEXT="habitualmente, lo suyo es que salga UNO" ID="ID_649466945" CREATED="1384196718927" MODIFIED="1384196727340"/>
 <node TEXT="si sale 0, es posible que la sentencia estuviera bien pero que sencillamente el where no ha coincidido con ningún caso" ID="ID_1770772324" CREATED="1445453638230" MODIFIED="1445453659267"/>
 </node>
@@ -1523,7 +1523,7 @@ $sentencia </span><span class="token operator">=</span> <span class="token varia
 <node TEXT="OJO: esto se solicita sobre el objeto PDO, no sobre el objeto sentencia" ID="ID_1781564233" CREATED="1576657479179" MODIFIED="1576657495641"/>
 </node>
 </node>
-<node TEXT="consultas que SÍ&#xa;devuelven datos&#xa;(SELECT)" ID="ID_1746855546" CREATED="1275132334962" MODIFIED="1521139803242">
+<node TEXT="consultas que SÍ&#xa;devuelven datos&#xa;(SELECT)" FOLDED="true" ID="ID_1746855546" CREATED="1275132334962" MODIFIED="1521139803242">
 <icon BUILTIN="full-3"/>
 <node TEXT="al ejecutarlas, me devuelven una &quot;tabla&quot; con todos los registros que vienen como resultado de la select" ID="ID_1776372879" CREATED="1275132379071" MODIFIED="1576495738611">
 <icon BUILTIN="info_informaciвn"/>
