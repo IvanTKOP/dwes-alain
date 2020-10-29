@@ -2,22 +2,29 @@
 
     $oculto = (int) $_REQUEST["oculto"];
 
-    if (isset($_REQUEST["intento"])) {
+    if (!isset($_REQUEST["intento"])) { // Primera vez. Solo viene oculto.
+        $intento = null;
+
+        $numIntentos = 0;
+    } else { // Resto de veces. Vienen todos los datos.
         $intento = (int) $_REQUEST["intento"];
 
         $numIntentos = (int) $_REQUEST["numIntentos"] + 1;
 
-        $asteriscos = 1 + abs($intento - $oculto) / 10;
-        $cercania = "";
-        for ($i=1; $i <= $asteriscos; $i++) {
-            $cercania = $cercania . "*";
+        // Esto del logaritmo no es importante. Es solo una manera de que
+        // no salga 1.000.000 de asteriscos si hacen un intento de "1000000".
+        $numAsteriscos = 1 + log(abs($intento - $oculto), 1.5);
+        $stringCercania = "";
+        for ($i=1; $i <= $numAsteriscos; $i++) {
+            $stringCercania = $stringCercania . "*";
         }
-    } else {
-        $intento = Null;
-
-        $numIntentos = 0;
     }
 
+    // INTERFAZ:
+    // $oculto
+    // $intento
+    // $numAsteriscos
+    // $stringCercania
 ?>
 
 
@@ -35,12 +42,12 @@
 
 <?php
 
-    if ($intento == Null) {
+    if ($intento == null) {
         // No informamos de nada, el juego acaba de empezar.
     } elseif ($intento < $oculto) {
-        echo "<p>El número que buscas es mayor ($cercania)</p>";
+        echo "<p>El número que buscas es mayor ($stringCercania)</p>";
     } elseif ($intento > $oculto) {
-        echo "<p>El número que buscas es menor ($cercania)</p>";
+        echo "<p>El número que buscas es menor ($stringCercania)</p>";
     } else {
         echo "<p>¡Has adivinado el número! Era, efectivamente, $oculto. Has gastado $numIntentos intentos.</p>";
     }
@@ -48,18 +55,17 @@
 
 
     if ($intento != $oculto) { // Presentamos el formulario:
-
-        ?>
+?>
 
         <form method="post">
             <p>Jugador 2: Adivina el número (llevas <?= $numIntentos ?> intentos).</p>
             <input type="hidden" name="oculto" value="<?= $oculto ?>">
             <input type="hidden" name="numIntentos" value="<?= $numIntentos ?>">
             <input type="number" name="intento">
-            <input type="submit" value="enviar">
+            <input type="submit" value="Intentar">
         </form>
 
-        <?php
+<?php
     }
 ?>
 

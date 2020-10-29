@@ -1,6 +1,6 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="2.143">
+<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="2.852">
     <properties fit_to_viewport="false" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
@@ -1311,7 +1311,9 @@
 </node>
 </node>
 </node>
-<node TEXT="&quot;maneras de llamar&quot; a otros PHPs" FOLDED="true" POSITION="right" ID="ID_1032821341" CREATED="1416426544726" MODIFIED="1579077194954">
+<node TEXT="&quot;maneras de llamar&quot; a otros PHPs" FOLDED="true" POSITION="right" ID="ID_1032821341" CREATED="1416426544726" MODIFIED="1603977334435">
+<icon BUILTIN="estadotarea_pendiente"/>
+<icon BUILTIN="full-2"/>
 <node TEXT="links (sean parametrizados o no)" ID="ID_1564348510" CREATED="1416426551126" MODIFIED="1416426563067"/>
 <node TEXT="formularios: action=&quot;url&quot;" ID="ID_1351730628" CREATED="1416426564070" MODIFIED="1416426579547"/>
 <node TEXT="redirecciones y remapeos del servidor web (de Apache, etc.)" ID="ID_1042722096" CREATED="1603365356496" MODIFIED="1603365425737"/>
@@ -1328,7 +1330,9 @@
 </node>
 <node TEXT="llamar a una función" ID="ID_739271633" CREATED="1416426585278" MODIFIED="1416426590890"/>
 </node>
-<node TEXT="redirecciones" FOLDED="true" POSITION="right" ID="ID_762877911" CREATED="1384454993727" MODIFIED="1603367330718">
+<node TEXT="redirecciones" FOLDED="true" POSITION="right" ID="ID_762877911" CREATED="1384454993727" MODIFIED="1603977334436">
+<icon BUILTIN="estadotarea_pendiente"/>
+<icon BUILTIN="full-2"/>
 <node TEXT="&quot;header location&quot; (PHP)" ID="ID_166162388" CREATED="1384455000607" MODIFIED="1603367881245">
 <node TEXT="header(&quot;Location: otroScript.php&quot;);" ID="ID_1497097085" CREATED="1384455009903" MODIFIED="1603367492188">
 <icon BUILTIN="atenciвn_!"/>
@@ -1349,7 +1353,9 @@
 </node>
 </node>
 </node>
-<node TEXT="include/require" FOLDED="true" POSITION="right" ID="ID_1598411886" CREATED="1361472642335" MODIFIED="1573030892571">
+<node TEXT="include/require" FOLDED="true" POSITION="right" ID="ID_1598411886" CREATED="1361472642335" MODIFIED="1603977334436">
+<icon BUILTIN="estadotarea_pendiente"/>
+<icon BUILTIN="full-2"/>
 <node TEXT="sirven para incrustar en este PHP un php que hay en otro fichero" ID="ID_133279188" CREATED="1361473137655" MODIFIED="1361473152232"/>
 <node TEXT="include/require + ¿_once?" ID="ID_1657062023" CREATED="1361473068254" MODIFIED="1414434456245">
 <node TEXT="include &quot;loquesea.php&quot;;" ID="ID_1092903553" CREATED="1361473088816" MODIFIED="1603365806716">
@@ -1477,10 +1483,10 @@
 <node TEXT="try {&#xa;    $pdo = new PDO(&quot;mysql:host=$servidor;dbname=$bd;charset=utf8&quot;, $identificador, $contrasenna, $opciones);&#xa;} catch (Exception $e) {&#xa;    error_log(&quot;Error al conectar: &quot; . $e-&gt;getMessage());&#xa;    exit(&apos;Error al conectar&apos;);&#xa;}" ID="ID_1579793351" CREATED="1576495516374" MODIFIED="1576495663878"/>
 </node>
 </node>
-<node TEXT="sentencias que NO&#xa;devuelven datos&#xa;(INS, UPD, DEL)" FOLDED="true" ID="ID_803700530" CREATED="1275132334962" MODIFIED="1521139803244">
+<node TEXT="sentencias que NO&#xa;devuelven datos&#xa;(INS, UPD, DEL)" ID="ID_803700530" CREATED="1275132334962" MODIFIED="1521139803244">
 <icon BUILTIN="full-2"/>
 <node TEXT="primero preparo la sentencia,&#xa;opcionalmente con huecos" ID="ID_200036736" CREATED="1398276154511" MODIFIED="1576659889391">
-<node ID="ID_1818879539" CREATED="1576656463690" MODIFIED="1603451571180"><richcontent TYPE="NODE">
+<node ID="ID_1818879539" CREATED="1576656463690" MODIFIED="1603975696707"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -1491,20 +1497,22 @@
 $sentencia </span><span class="token operator">=</span> <span class="token variable">$pdo</span><span class="token operator">-&gt;</span><span class="token function">prepare</span><span class="token punctuation">($sql);</span></code></pre>
   </body>
 </html>
+
 </richcontent>
 </node>
 </node>
 <node TEXT="y luego la ejecuto, pasando un&#xa;array para rellenar huecos" ID="ID_1977365181" CREATED="1576656651610" MODIFIED="1576659876609">
-<node ID="ID_1756829186" CREATED="1576656463692" MODIFIED="1578568311440"><richcontent TYPE="NODE">
+<node ID="ID_1756829186" CREATED="1576656463692" MODIFIED="1603975870780"><richcontent TYPE="NODE">
 
 <html>
   <head>
     
   </head>
   <body>
-    <pre http-equiv="content-type" content="text/html; charset=utf-8" class="line-numbers language-php code-toolbar"><code class=" language-php"><span class="token variable">$sentencia</span><span class="token operator">-&gt;</span><span class="token function">execute</span><span class="token punctuation">([$name,</span> $age<span class="token punctuation">]);</span></code></pre>
+    <pre http-equiv="content-type" content="text/html; charset=utf-8" class="line-numbers language-php code-toolbar"><code class=" language-php"><span class="token variable">$sqlConExito = $sentencia-&gt;</span><span class="token function">execute</span><span class="token punctuation">([$name,</span> $age<span class="token punctuation">]);</span></code></pre>
   </body>
 </html>
+
 </richcontent>
 </node>
 <node TEXT="devuelve true o false en función de si ha ido todo bien" ID="ID_247357934" CREATED="1603452033543" MODIFIED="1603452046011"/>
@@ -1512,13 +1520,15 @@ $sentencia </span><span class="token operator">=</span> <span class="token varia
 <node TEXT="$numFilasAfectadas = $sentencia-&gt;rowCount();" ID="ID_909919678" CREATED="1275132405209" MODIFIED="1576657359257">
 <node TEXT="cuántas filas se han visto afectadas en lo último que he ejecutado" ID="ID_337401225" CREATED="1275132442719" MODIFIED="1603879650709"/>
 <node TEXT="habitualmente, lo suyo es que salga UNO" ID="ID_649466945" CREATED="1384196718927" MODIFIED="1384196727340"/>
-<node TEXT="si sale 0, es posible que la sentencia estuviera bien pero que sencillamente el where no ha coincidido con ningún caso" ID="ID_1770772324" CREATED="1445453638230" MODIFIED="1445453659267"/>
+<node TEXT="si sale 0, es posible que la sentencia estuviera bien pero que sencillamente el where no ha coincidido con ningún caso (lo pueden haber borrado en paralelo...)" ID="ID_1770772324" CREATED="1445453638230" MODIFIED="1603976338152"/>
 </node>
 <node TEXT="nota sobre actualización con los mismos datos" ID="ID_817985661" CREATED="1384194571326" MODIFIED="1414434456433">
 <icon BUILTIN="info_informaciвn"/>
 <node TEXT="parece ser que si se actualiza un registro metiéndole los mismos datos cuenta como rowCount() = 0" ID="ID_1712798575" CREATED="1384194582174" MODIFIED="1576656626166"/>
 </node>
-<node TEXT="$id = $pdo-&gt;lastInsertId();" ID="ID_1698286276" CREATED="1384461137077" MODIFIED="1576658623398">
+<node TEXT="$id = $pdo-&gt;lastInsertId();" ID="ID_1698286276" CREATED="1384461137077" MODIFIED="1603977326475">
+<icon BUILTIN="estadotarea_pendiente"/>
+<icon BUILTIN="full-2"/>
 <node TEXT="tras un INSERT, para obtener el id que MySQL ha asignado al nuevo registro" ID="ID_1930669587" CREATED="1384461142852" MODIFIED="1384461168873"/>
 <node TEXT="OJO: esto se solicita sobre el objeto PDO, no sobre el objeto sentencia" ID="ID_1781564233" CREATED="1576657479179" MODIFIED="1576657495641"/>
 </node>

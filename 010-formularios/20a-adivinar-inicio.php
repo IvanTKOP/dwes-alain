@@ -11,7 +11,7 @@
 <form action="20b-adivinar-principal.php" method="post">
     <p>Jugador 1: Introduce un número:</p>
     <input type="number" name="oculto" />
-    <input type="submit" value="Introducir" />
+    <input type="submit" value="Guardar oculto" />
 </form>
 
 </body>
