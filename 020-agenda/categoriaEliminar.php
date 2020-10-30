@@ -1,14 +1,14 @@
 <?php
 	require_once "_varios.php";
 
-	$pdo = obtenerPdoConexionBD();
+	$conexionBD = obtenerPdoConexionBD();
 
 	// Se recoge el parámetro "id" de la request.
 	$id = (int)$_REQUEST["id"];
 
 	$sql = "DELETE FROM categoria WHERE id=?";
 
-    $sentencia = $pdo->prepare($sql);
+    $sentencia = $conexionBD->prepare($sql);
     //Esta llamada devuelve true o false según si la ejecución de la sentencia ha ido bien o mal.
     $sqlConExito = $sentencia->execute([$id]); // Se añade el parámetro a la consulta preparada.
 
@@ -30,7 +30,7 @@
 <html>
 
 <head>
-	<meta charset="UTF-8">
+	<meta charset='UTF-8'>
 </head>
 
 
@@ -54,7 +54,7 @@
 
 <?php } ?>
 
-<a href="categoria-listado.php">Volver al listado de categorías.</a>
+<a href='categoriaListado.php'>Volver al listado de categorías.</a>
 
 </body>
 

@@ -1480,13 +1480,13 @@
 <node TEXT="$servidor = &quot;localhost&quot;;&#xa;$identificador = &quot;root&quot;;&#xa;$contrasenna = &quot;&quot;;&#xa;$bd = &quot;agenda&quot;;&#xa;$opciones = [&#xa;    PDO::ATTR_EMULATE_PREPARES   =&gt; false, // Modo emulación desactivado para prepared statements &quot;reales&quot;&#xa;    PDO::ATTR_ERRMODE            =&gt; PDO::ERRMODE_EXCEPTION, // Que los errores salgan como excepciones&#xa;    PDO::ATTR_DEFAULT_FETCH_MODE =&gt; PDO::FETCH_ASSOC, // El modo de fetch que queremos por defecto.&#xa;];" ID="ID_19044037" CREATED="1576495477638" MODIFIED="1576495648037"/>
 </node>
 <node TEXT="conectar" ID="ID_1423141842" CREATED="1576495649969" MODIFIED="1576495653632">
-<node TEXT="try {&#xa;    $pdo = new PDO(&quot;mysql:host=$servidor;dbname=$bd;charset=utf8&quot;, $identificador, $contrasenna, $opciones);&#xa;} catch (Exception $e) {&#xa;    error_log(&quot;Error al conectar: &quot; . $e-&gt;getMessage());&#xa;    exit(&apos;Error al conectar&apos;);&#xa;}" ID="ID_1579793351" CREATED="1576495516374" MODIFIED="1576495663878"/>
+<node TEXT="try {&#xa;    $conexion = new PDO(&quot;mysql:host=$servidor;dbname=$bd;charset=utf8&quot;, $identificador, $contrasenna, $opciones);&#xa;} catch (Exception $e) {&#xa;    error_log(&quot;Error al conectar: &quot; . $e-&gt;getMessage());&#xa;    exit(&apos;Error al conectar&apos;);&#xa;}" ID="ID_1579793351" CREATED="1576495516374" MODIFIED="1604059526500"/>
 </node>
 </node>
 <node TEXT="sentencias que NO&#xa;devuelven datos&#xa;(INS, UPD, DEL)" ID="ID_803700530" CREATED="1275132334962" MODIFIED="1521139803244">
 <icon BUILTIN="full-2"/>
 <node TEXT="primero preparo la sentencia,&#xa;opcionalmente con huecos" ID="ID_200036736" CREATED="1398276154511" MODIFIED="1576659889391">
-<node ID="ID_1818879539" CREATED="1576656463690" MODIFIED="1603975696707"><richcontent TYPE="NODE">
+<node ID="ID_1818879539" CREATED="1576656463690" MODIFIED="1604059462860"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -1494,7 +1494,7 @@
   </head>
   <body>
     <pre http-equiv="content-type" content="text/html; charset=utf-8" class="line-numbers language-php code-toolbar"><code class=" language-php"><span class="token variable">$sql = &quot;INSERT INTO myTable (name, age) VALUES (?, ?)&quot;;
-$sentencia </span><span class="token operator">=</span> <span class="token variable">$pdo</span><span class="token operator">-&gt;</span><span class="token function">prepare</span><span class="token punctuation">($sql);</span></code></pre>
+$sentencia </span><span class="token operator">=</span> <span class="token variable">$conexion</span><span class="token operator">-&gt;</span><span class="token function">prepare</span><span class="token punctuation">($sql);</span></code></pre>
   </body>
 </html>
 
@@ -1502,7 +1502,7 @@ $sentencia </span><span class="token operator">=</span> <span class="token varia
 </node>
 </node>
 <node TEXT="y luego la ejecuto, pasando un&#xa;array para rellenar huecos" ID="ID_1977365181" CREATED="1576656651610" MODIFIED="1576659876609">
-<node ID="ID_1756829186" CREATED="1576656463692" MODIFIED="1603975870780"><richcontent TYPE="NODE">
+<node ID="ID_1756829186" CREATED="1576656463692" MODIFIED="1604055425669"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -1524,16 +1524,14 @@ $sentencia </span><span class="token operator">=</span> <span class="token varia
 </node>
 <node TEXT="nota sobre actualización con los mismos datos" ID="ID_817985661" CREATED="1384194571326" MODIFIED="1414434456433">
 <icon BUILTIN="info_informaciвn"/>
-<node TEXT="parece ser que si se actualiza un registro metiéndole los mismos datos cuenta como rowCount() = 0" ID="ID_1712798575" CREATED="1384194582174" MODIFIED="1576656626166"/>
+<node TEXT="parece ser que si se actualiza un registro metiéndole los mismos datos que ya tenía cuenta como rowCount() = 0" ID="ID_1712798575" CREATED="1384194582174" MODIFIED="1604058657137"/>
 </node>
-<node TEXT="$id = $pdo-&gt;lastInsertId();" ID="ID_1698286276" CREATED="1384461137077" MODIFIED="1603977326475">
-<icon BUILTIN="estadotarea_pendiente"/>
-<icon BUILTIN="full-2"/>
+<node TEXT="$id = $conexion-&gt;lastInsertId();" ID="ID_1698286276" CREATED="1384461137077" MODIFIED="1604059438929">
 <node TEXT="tras un INSERT, para obtener el id que MySQL ha asignado al nuevo registro" ID="ID_1930669587" CREATED="1384461142852" MODIFIED="1384461168873"/>
-<node TEXT="OJO: esto se solicita sobre el objeto PDO, no sobre el objeto sentencia" ID="ID_1781564233" CREATED="1576657479179" MODIFIED="1576657495641"/>
+<node TEXT="OJO: esto se solicita sobre el objeto conexión (el &quot;PDO&quot;), no sobre el objeto sentencia" ID="ID_1781564233" CREATED="1576657479179" MODIFIED="1604059450156"/>
 </node>
 </node>
-<node TEXT="consultas que SÍ&#xa;devuelven datos&#xa;(SELECT)" FOLDED="true" ID="ID_1746855546" CREATED="1275132334962" MODIFIED="1521139803242">
+<node TEXT="consultas que SÍ&#xa;devuelven datos&#xa;(SELECT)" ID="ID_1746855546" CREATED="1275132334962" MODIFIED="1521139803242">
 <icon BUILTIN="full-3"/>
 <node TEXT="al ejecutarlas, me devuelven una &quot;tabla&quot; con todos los registros que vienen como resultado de la select" ID="ID_1776372879" CREATED="1275132379071" MODIFIED="1576495738611">
 <icon BUILTIN="info_informaciвn"/>
@@ -1542,7 +1540,7 @@ $sentencia </span><span class="token operator">=</span> <span class="token varia
 <node TEXT="$sql = &quot;SELECT id, nombre FROM categoria WHERE id&gt;? ORDER BY nombre&quot;;&#xa;$select = $pdo-&gt;prepare($sql);" ID="ID_28388962" CREATED="1576659972930" MODIFIED="1576660437902"/>
 </node>
 <node TEXT="y luego la ejecuto, pasando un&#xa;array para rellenar huecos" ID="ID_1468859892" CREATED="1576656651610" MODIFIED="1576659876609">
-<node TEXT="$rs = $select-&gt;fetchAll([]);" ID="ID_750262611" CREATED="1576659972932" MODIFIED="1578474461071">
+<node TEXT="$select-&gt;execute([]);&#xa;$rs = $select-&gt;fetchAll([]);" ID="ID_750262611" CREATED="1576659972932" MODIFIED="1604056221467">
 <node TEXT="$rs = $select-&gt;fetchAll([&quot;jlopez&quot;, &quot;abc123&quot;]);" ID="ID_1452280065" CREATED="1576659972932" MODIFIED="1578474473476"/>
 </node>
 </node>
@@ -1586,7 +1584,7 @@ $sentencia </span><span class="token operator">=</span> <span class="token varia
 <node TEXT="PHP desconecta y libera los recursos automáticamente cuando terminar el script" ID="ID_1347477526" CREATED="1413400733378" MODIFIED="1603369063868"/>
 <node TEXT="si quiero hacerlo de forma explícita (cosa que quizá sea buena idea):" ID="ID_1412313541" CREATED="1576660763088" MODIFIED="1603369093956"/>
 <node TEXT="" ID="ID_1679462985" CREATED="1603369067183" MODIFIED="1603369067183">
-<node TEXT="$bd = null;" ID="ID_191888552" CREATED="1576660790279" MODIFIED="1576660796816"/>
+<node TEXT="$pdo = null;" ID="ID_191888552" CREATED="1576660790279" MODIFIED="1604055562559"/>
 <node TEXT="$sentencia = null; ó $select = null;" ID="ID_368674551" CREATED="1576660783609" MODIFIED="1576660815624"/>
 </node>
 </node>
