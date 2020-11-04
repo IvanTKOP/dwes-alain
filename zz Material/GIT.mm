@@ -57,19 +57,28 @@
 <node TEXT="link interesante" ID="ID_998138140" CREATED="1580381276856" MODIFIED="1580381279932">
 <node TEXT="https://thepilcrow.net/explaining-basic-concepts-git-and-github/" ID="ID_1779245921" CREATED="1580381280198" MODIFIED="1580381280198" LINK="https://thepilcrow.net/explaining-basic-concepts-git-and-github/"/>
 </node>
-<node TEXT="" ID="ID_134768744" CREATED="1581027094617" MODIFIED="1581027094617">
-<node TEXT="repositorio" ID="ID_1342328881" CREATED="1581027051916" MODIFIED="1581027054480">
+<node TEXT="" ID="ID_134768744" CREATED="1581027094617" MODIFIED="1604487131183">
+<node TEXT="repositorio" FOLDED="true" ID="ID_1342328881" CREATED="1581027051916" MODIFIED="1604487131182">
 <node TEXT="la COLECCIÓN ENTERA de RAMAS con sus ficheros, sus cambios, los commits y toda la metainformación asociada" ID="ID_1451656154" CREATED="1581027054916" MODIFIED="1581333000300"/>
+<node TEXT="guarda TODO el historial de todos los archivos" ID="ID_1659529376" CREATED="1604487293801" MODIFIED="1604487303016">
+<node TEXT="puedo volver atrás siempre que quiera" ID="ID_962264331" CREATED="1604487303219" MODIFIED="1604487310861"/>
+<node TEXT="o recuperar el contenido de UN fichero a determinada fecha (en determinado commit)" ID="ID_1265164880" CREATED="1604487311017" MODIFIED="1604487330046"/>
+</node>
+<node TEXT="un repo es como una máquina del tiempo:" ID="ID_144972632" CREATED="1604487971744" MODIFIED="1604487986197">
+<node TEXT="¡puedo ir a cualquier commit!" ID="ID_1844803713" CREATED="1604487986394" MODIFIED="1604488026432"/>
+</node>
 <node TEXT="normalmente 1 repositorio = 1 proyecto" ID="ID_1749630218" CREATED="1601895660710" MODIFIED="1601895666955"/>
-<node TEXT="un repo se identifica mediante su URL" ID="ID_718862759" CREATED="1604482795211" MODIFIED="1604482812285"/>
+<node TEXT="un repo se identifica mediante su URL de donde está alojado en la nube" ID="ID_718862759" CREATED="1604482795211" MODIFIED="1604487140366"/>
 <node TEXT="un repo contiene" ID="ID_1027419662" CREATED="1604482232387" MODIFIED="1604482801472">
 <node TEXT="una colección de commits" ID="ID_1745993605" CREATED="1604482237895" MODIFIED="1604482299959"/>
 <node TEXT="y ficheros" ID="ID_708015068" CREATED="1604482243254" MODIFIED="1604482245609">
-<node TEXT="en cierto modo &quot;viene dentro de cada commit&quot;... Pero, no: están en el repositorio. O, sí, pero también están en el repo" ID="ID_1995851376" CREATED="1604482245887" MODIFIED="1604482283064"/>
+<node TEXT="en cierto modo &quot;vienen dentro de cada commit&quot;... Pero, no: están en el repositorio. O, sí, pero también están en el repo" ID="ID_1995851376" CREATED="1604482245887" MODIFIED="1604487217788"/>
 </node>
 </node>
 <node TEXT="un repo está COPIADO:" ID="ID_1747414022" CREATED="1604482349414" MODIFIED="1604482804807">
-<node TEXT="en la nube (github.com...)" ID="ID_510488969" CREATED="1604482359531" MODIFIED="1604482365872"/>
+<node TEXT="en la nube (github.com...)" ID="ID_510488969" CREATED="1604482359531" MODIFIED="1604482365872">
+<node TEXT="este sería el &quot;original&quot;, digamos" ID="ID_1976060204" CREATED="1604487257461" MODIFIED="1604487257974"/>
+</node>
 <node TEXT="*Y* en cada uno de nuestros ordenadores" ID="ID_447266639" CREATED="1604482366260" MODIFIED="1604482512940"/>
 </node>
 </node>
@@ -207,17 +216,21 @@
 <node TEXT="pero la gratuita es suficiente" ID="ID_1298009838" CREATED="1581332958004" MODIFIED="1581332964805"/>
 </node>
 <node TEXT="puede" ID="ID_1516491998" CREATED="1581333064664" MODIFIED="1581333066049">
-<node TEXT="clonar un repositorio" ID="ID_411996677" CREATED="1581333066273" MODIFIED="1581333193631">
-<icon BUILTIN="bookmark"/>
-<node TEXT="se enchufa a un repo que haya en la nube y lo copia a local, junto con todos los ficheros de UNA de sus ramas" ID="ID_957783155" CREATED="1581333075633" MODIFIED="1604483098645"/>
-<node TEXT="(y luego ya puedo cambiar a otra rama si quiero, y me actualiza los ficheros locales para reflejar el contenido de esa rama)" ID="ID_1846138022" CREATED="1581333148778" MODIFIED="1581333150081"/>
-<node TEXT="esto es lo que normalmente queremos hacer" ID="ID_1793270126" CREATED="1581333194787" MODIFIED="1581333198726"/>
-</node>
-<node TEXT="inicializar un repositorio" ID="ID_1632622875" CREATED="1581333151862" MODIFIED="1581333160276">
-<node TEXT="significa crear un repo" ID="ID_892646891" CREATED="1581333160480" MODIFIED="1581333166620"/>
-</node>
-<node TEXT="abrir un repositorio" ID="ID_227975632" CREATED="1581333169821" MODIFIED="1581333175417">
+<node TEXT="(Open a repo)&#xa;abrir un repositorio" ID="ID_227975632" CREATED="1581333169821" MODIFIED="1604488552002">
+<icon BUILTIN="button_cancel"/>
 <node TEXT="significa decirle dónde hay en local un repo para abrirlo" ID="ID_1395438287" CREATED="1581333175656" MODIFIED="1581333192280"/>
+<node TEXT="(esta opción no copiaría ningún archivo a ningún sitio)" ID="ID_459056873" CREATED="1604488589699" MODIFIED="1604488604766"/>
+</node>
+<node TEXT="(Clone a repo)&#xa;clonar un repositorio" ID="ID_411996677" CREATED="1581333066273" MODIFIED="1604488515018">
+<icon BUILTIN="bookmark"/>
+<node TEXT="esto es lo que normalmente queremos hacer" ID="ID_1793270126" CREATED="1581333194787" MODIFIED="1581333198726"/>
+<node TEXT="se enchufa a un repo que haya en la nube y lo copia a local, junto con todos los commits y ficheros (de UNA de sus ramas)" ID="ID_957783155" CREATED="1581333075633" MODIFIED="1604488654411"/>
+<node TEXT="(y luego ya puedo cambiar a otra rama si quiero, y me actualiza los ficheros locales para reflejar el contenido de esa rama)" ID="ID_1846138022" CREATED="1581333148778" MODIFIED="1581333150081"/>
+</node>
+<node TEXT="(Start a local repo)&#xa;inicializar un repositorio" ID="ID_1632622875" CREATED="1581333151862" MODIFIED="1604488554454">
+<icon BUILTIN="button_cancel"/>
+<node TEXT="significa crear un repo en local (y luego ya si eso lo subo)" ID="ID_892646891" CREATED="1581333160480" MODIFIED="1604488535058"/>
+<node TEXT="(es más sencillo crear el repo en la nube desde la web y luego clonarlo)" ID="ID_1031491109" CREATED="1604488557134" MODIFIED="1604488573776"/>
 </node>
 </node>
 <node TEXT="ramas en local VS en la nube" ID="ID_1763250471" CREATED="1581333401421" MODIFIED="1581333418927">
@@ -244,8 +257,8 @@
 </node>
 </node>
 </node>
-<node TEXT="NUESTRA organización" FOLDED="true" POSITION="right" ID="ID_1328978599" CREATED="1604483274597" MODIFIED="1604484091860">
-<node TEXT="profesor&#xa;(soluciones)" ID="ID_1872406368" CREATED="1604483302406" MODIFIED="1604483766470">
+<node TEXT="NUESTRA&#xa;organización" POSITION="right" ID="ID_1328978599" CREATED="1604483274597" MODIFIED="1604488679004">
+<node TEXT="profesor&#xa;(soluciones)" FOLDED="true" ID="ID_1872406368" CREATED="1604483302406" MODIFIED="1604483766470">
 <node TEXT="dos repos" ID="ID_297270676" CREATED="1604483427558" MODIFIED="1604483433156">
 <node TEXT="dwes-alain" ID="ID_692246896" CREATED="1604483309605" MODIFIED="1604483313987">
 <node TEXT="contendrá las soluciones que yo os pase" ID="ID_616092183" CREATED="1604483314197" MODIFIED="1604483323401"/>
@@ -256,16 +269,30 @@
 </node>
 </node>
 <node TEXT="qué hacer" ID="ID_1370796624" CREATED="1604483536632" MODIFIED="1604483750437">
-<node TEXT="abrir GitKraken" ID="ID_803593904" CREATED="1604483540884" MODIFIED="1604483561482"/>
+<node TEXT="clonar los dos repos desde GitKraken" ID="ID_803593904" CREATED="1604483540884" MODIFIED="1604488460791"/>
 <node TEXT="Clone a repo" ID="ID_809872254" CREATED="1581333230193" MODIFIED="1604483559607">
 <node TEXT="seleccionar GitHub.com" ID="ID_1339121832" CREATED="1581333212859" MODIFIED="1581333233970"/>
-<node TEXT="establecer dos rutas" ID="ID_198742174" CREATED="1581333237525" MODIFIED="1581333243443">
-<node TEXT="una remota, para indicar dónde en la nube está mi repo" ID="ID_307464677" CREATED="1581333278231" MODIFIED="1581333289710">
-<node TEXT="p. ej.: https://github.com/joatzel/dwes-alain" ID="ID_802705928" CREATED="1581333290971" MODIFIED="1604483574966"/>
-</node>
-<node TEXT="una local, para indicar dónde van a estar alojados los ficheros locales&#xa;(GitKraken ya creará dentro una SUBcarpeta para ESTE repositorio)&#xa;(Así que aquí puedo poner directamente la DocumentRoot de Apache)" ID="ID_634893141" CREATED="1581333243648" MODIFIED="1601898185284">
+<node TEXT="establecer las rutas" ID="ID_198742174" CREATED="1581333237525" MODIFIED="1604488886193">
+<node TEXT="una local&#xa;(&quot;Where to clone to&quot;)" ID="ID_1643186527" CREATED="1604488853916" MODIFIED="1604488871195">
+<node TEXT="para indicar dónde van a estar alojados los ficheros locales" ID="ID_634893141" CREATED="1581333243648" MODIFIED="1604488916509"/>
+<node TEXT="" ID="ID_189282385" CREATED="1604488921527" MODIFIED="1604488921527">
 <node TEXT="p. ej. /home/alumno/Fulanito/DAW2/DWES/Apache--htdocs" ID="ID_1801227104" CREATED="1601897943776" MODIFIED="1601898120980"/>
 </node>
+<node TEXT="GitKraken ya creará dentro una SUBcarpeta para ESTE repositorio" ID="ID_1593903107" CREATED="1604488924863" MODIFIED="1604488929083"/>
+<node TEXT="Así que aquí puedo poner directamente la DocumentRoot de Apache" ID="ID_1303016250" CREATED="1604488924864" MODIFIED="1604488932032"/>
+</node>
+<node TEXT="una remota&#xa;(&quot;Repository to clone&quot;)" ID="ID_1882865424" CREATED="1604488857805" MODIFIED="1604488879715">
+<node TEXT="para indicar dónde en la nube está mi repo" ID="ID_307464677" CREATED="1581333278231" MODIFIED="1604488857568">
+<node TEXT="p. ej.: https://github.com/joatzel/dwes-alain" ID="ID_802705928" CREATED="1581333290971" MODIFIED="1604483574966"/>
+</node>
+</node>
+<node TEXT="(&quot;Full path&quot;)" ID="ID_1146115614" CREATED="1604488887313" MODIFIED="1604488897872">
+<node TEXT="se rellena AUTOMÁTICAMENTE: no tocar" ID="ID_861067298" CREATED="1604488899805" MODIFIED="1604488911325"/>
+</node>
+</node>
+<node TEXT="pulsar &quot;Clone the repo!&quot; y:" ID="ID_174373734" CREATED="1604488945012" MODIFIED="1604488957106">
+<node TEXT="se copiará el repositorio a local" ID="ID_1649051264" CREATED="1604488957310" MODIFIED="1604488965300"/>
+<node TEXT="incluyendo todos los ficheros" ID="ID_854089540" CREATED="1604488965612" MODIFIED="1604488969396"/>
 </node>
 </node>
 <node TEXT="soluciones del profesor" ID="ID_1800829314" CREATED="1604483781103" MODIFIED="1604483794352">
@@ -276,12 +303,12 @@
 </node>
 <node TEXT="cada alumno:" ID="ID_848531951" CREATED="1604483846975" MODIFIED="1604483849974">
 <node TEXT="se bajará (pull) los commits de la nube (github.com) a su repo local" ID="ID_1383402350" CREATED="1604483844770" MODIFIED="1604483886014"/>
-<node TEXT="verá los ficheros ya locales en Phpstorm, sin más" ID="ID_1758573977" CREATED="1604483857128" MODIFIED="1604483911405"/>
+<node TEXT="verá los ficheros ya locales en Phpstorm, sin más (o en el navegador de archivos, etc.)" ID="ID_1758573977" CREATED="1604483857128" MODIFIED="1604489209527"/>
 </node>
 </node>
 </node>
 </node>
-<node TEXT="alumnos&#xa;(entregas)" ID="ID_1446145224" CREATED="1604483363877" MODIFIED="1604483769758">
+<node TEXT="alumnos&#xa;(entregas)" FOLDED="true" ID="ID_1446145224" CREATED="1604483363877" MODIFIED="1604483769758">
 <node TEXT="" ID="ID_101016777" CREATED="1604483390418" MODIFIED="1604483390418">
 <node TEXT="daw2.1-NombreApellido" ID="ID_500755232" CREATED="1604483365408" MODIFIED="1604483380435"/>
 <node TEXT="daw2.2-NombreApellido" ID="ID_1571176958" CREATED="1604483365408" MODIFIED="1604483387248"/>
@@ -290,7 +317,7 @@
 <node TEXT="ir a github.com" ID="ID_186203252" CREATED="1604483414011" MODIFIED="1604483417451">
 <node TEXT="crear repo nuevo" ID="ID_1622802867" CREATED="1604483418161" MODIFIED="1604483422502"/>
 <node TEXT="ponerle el nombre indicado" ID="ID_1274747722" CREATED="1604483459807" MODIFIED="1604483464585"/>
-<node TEXT="ponerlo público HASTA clonar (luego ya se puede poner privado)" ID="ID_1331999667" CREATED="1604483391633" MODIFIED="1604484066839"/>
+<node TEXT="ponerlo público (¿funcionaría público HASTA clonar y luego ya poner privado?)" ID="ID_1331999667" CREATED="1604483391633" MODIFIED="1604484705871"/>
 <node TEXT="Settings, Manage Access, Invite a Collaborator" ID="ID_1435092969" CREATED="1604483473547" MODIFIED="1604483503116">
 <node ID="ID_1992350237" CREATED="1604483519634" MODIFIED="1604483519634"><richcontent TYPE="NODE">
 
