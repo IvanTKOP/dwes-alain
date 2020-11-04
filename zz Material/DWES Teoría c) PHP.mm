@@ -1412,7 +1412,7 @@
 </node>
 </node>
 </node>
-<node TEXT="acceso&#xa;a BBDD" POSITION="right" ID="ID_316249312" CREATED="1275131296618" MODIFIED="1573030892579">
+<node TEXT="acceso&#xa;a BBDD" FOLDED="true" POSITION="right" ID="ID_316249312" CREATED="1275131296618" MODIFIED="1573030892579">
 <node TEXT="tutoriales" ID="ID_1643720653" CREATED="1574766505250" MODIFIED="1576659850741">
 <node TEXT="https://websitebeaver.com/php-pdo-vs-mysqli" ID="ID_536140428" CREATED="1575976474136" MODIFIED="1576655616318" LINK="https://websitebeaver.com/php-pdo-vs-mysqli">
 <icon BUILTIN="button_ok"/>
@@ -1483,7 +1483,7 @@
 <node TEXT="try {&#xa;    $conexion = new PDO(&quot;mysql:host=$servidor;dbname=$bd;charset=utf8&quot;, $identificador, $contrasenna, $opciones);&#xa;} catch (Exception $e) {&#xa;    error_log(&quot;Error al conectar: &quot; . $e-&gt;getMessage());&#xa;    exit(&apos;Error al conectar&apos;);&#xa;}" ID="ID_1579793351" CREATED="1576495516374" MODIFIED="1604059526500"/>
 </node>
 </node>
-<node TEXT="sentencias que NO&#xa;devuelven datos&#xa;(INS, UPD, DEL)" ID="ID_803700530" CREATED="1275132334962" MODIFIED="1521139803244">
+<node TEXT="sentencias que NO&#xa;devuelven datos&#xa;(INS, UPD, DEL)" FOLDED="true" ID="ID_803700530" CREATED="1275132334962" MODIFIED="1521139803244">
 <icon BUILTIN="full-2"/>
 <node TEXT="primero preparo la sentencia,&#xa;opcionalmente con huecos" ID="ID_200036736" CREATED="1398276154511" MODIFIED="1576659889391">
 <node ID="ID_1818879539" CREATED="1576656463690" MODIFIED="1604059462860"><richcontent TYPE="NODE">
@@ -1531,7 +1531,7 @@ $sentencia </span><span class="token operator">=</span> <span class="token varia
 <node TEXT="OJO: esto se solicita sobre el objeto conexión (el &quot;PDO&quot;), no sobre el objeto sentencia" ID="ID_1781564233" CREATED="1576657479179" MODIFIED="1604059450156"/>
 </node>
 </node>
-<node TEXT="consultas que SÍ&#xa;devuelven datos&#xa;(SELECT)" ID="ID_1746855546" CREATED="1275132334962" MODIFIED="1521139803242">
+<node TEXT="consultas que SÍ&#xa;devuelven datos&#xa;(SELECT)" FOLDED="true" ID="ID_1746855546" CREATED="1275132334962" MODIFIED="1521139803242">
 <icon BUILTIN="full-3"/>
 <node TEXT="al ejecutarlas, me devuelven una &quot;tabla&quot; con todos los registros que vienen como resultado de la select" ID="ID_1776372879" CREATED="1275132379071" MODIFIED="1576495738611">
 <icon BUILTIN="info_informaciвn"/>

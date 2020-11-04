@@ -1,7 +1,7 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="" FOLDED="false" ID="ID_513931562" CREATED="1580379249661" MODIFIED="1580379252481"><hook NAME="MapStyle" zoom="2.593">
-    <properties fit_to_viewport="false" show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
+<node TEXT="" FOLDED="false" ID="ID_513931562" CREATED="1580379249661" MODIFIED="1580379252481"><hook NAME="MapStyle" zoom="2.357">
+    <properties show_icon_for_attributes="true" fit_to_viewport="false" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -50,21 +50,34 @@
 </map_styles>
 </hook>
 <hook NAME="accessories/plugins/AutomaticLayout.properties" VALUE="ALL"/>
-<node TEXT="GIT" STYLE_REF="Alain Título general mindmap" POSITION="right" ID="ID_311244207" CREATED="1580379433126" MODIFIED="1580382213072"/>
+<node TEXT="GIT" STYLE_REF="Alain Título general mindmap" POSITION="right" ID="ID_311244207" CREATED="1580379433126" MODIFIED="1580382213072">
+<node TEXT="Alain @ IES Laguna de Joatzel (Getafe)" ID="ID_1653364224" CREATED="1604484102902" MODIFIED="1604484117951"/>
+</node>
 <node TEXT="conceptos" FOLDED="true" POSITION="right" ID="ID_660282869" CREATED="1580379527085" MODIFIED="1580379529147">
 <node TEXT="link interesante" ID="ID_998138140" CREATED="1580381276856" MODIFIED="1580381279932">
 <node TEXT="https://thepilcrow.net/explaining-basic-concepts-git-and-github/" ID="ID_1779245921" CREATED="1580381280198" MODIFIED="1580381280198" LINK="https://thepilcrow.net/explaining-basic-concepts-git-and-github/"/>
 </node>
 <node TEXT="" ID="ID_134768744" CREATED="1581027094617" MODIFIED="1581027094617">
-<node TEXT="repositorio" FOLDED="true" ID="ID_1342328881" CREATED="1581027051916" MODIFIED="1581027054480">
+<node TEXT="repositorio" ID="ID_1342328881" CREATED="1581027051916" MODIFIED="1581027054480">
 <node TEXT="la COLECCIÓN ENTERA de RAMAS con sus ficheros, sus cambios, los commits y toda la metainformación asociada" ID="ID_1451656154" CREATED="1581027054916" MODIFIED="1581333000300"/>
 <node TEXT="normalmente 1 repositorio = 1 proyecto" ID="ID_1749630218" CREATED="1601895660710" MODIFIED="1601895666955"/>
+<node TEXT="un repo se identifica mediante su URL" ID="ID_718862759" CREATED="1604482795211" MODIFIED="1604482812285"/>
+<node TEXT="un repo contiene" ID="ID_1027419662" CREATED="1604482232387" MODIFIED="1604482801472">
+<node TEXT="una colección de commits" ID="ID_1745993605" CREATED="1604482237895" MODIFIED="1604482299959"/>
+<node TEXT="y ficheros" ID="ID_708015068" CREATED="1604482243254" MODIFIED="1604482245609">
+<node TEXT="en cierto modo &quot;viene dentro de cada commit&quot;... Pero, no: están en el repositorio. O, sí, pero también están en el repo" ID="ID_1995851376" CREATED="1604482245887" MODIFIED="1604482283064"/>
+</node>
+</node>
+<node TEXT="un repo está COPIADO:" ID="ID_1747414022" CREATED="1604482349414" MODIFIED="1604482804807">
+<node TEXT="en la nube (github.com...)" ID="ID_510488969" CREATED="1604482359531" MODIFIED="1604482365872"/>
+<node TEXT="*Y* en cada uno de nuestros ordenadores" ID="ID_447266639" CREATED="1604482366260" MODIFIED="1604482512940"/>
+</node>
 </node>
 <node TEXT="fork" FOLDED="true" ID="ID_393525981" CREATED="1580379811708" MODIFIED="1580382274475">
 <node TEXT="&quot;hacer un fork&quot; = copiar el repositorio entero que alguien tiene en la nube en otro lugar (por ejemplo, mi cuenta GitHub), también en la nube" ID="ID_1264251597" CREATED="1580379895208" MODIFIED="1601895822023"/>
 <node TEXT="es como crear un proyecto independiente" ID="ID_592696606" CREATED="1580380266082" MODIFIED="1601897688527"/>
 <node TEXT="por ejemplo, cojo el proyecto entero de un software y mi equipo y yo nos personalizamos una versión de ese software" ID="ID_318993330" CREATED="1601895839475" MODIFIED="1601895871656"/>
-<node TEXT="dicho de otra manera, si tengo un repositorio y hago un fork, ahora tengo dos repositorios" ID="ID_1994663708" CREATED="1580382251042" MODIFIED="1580382267326"/>
+<node TEXT="dicho de otra manera, si tengo un repositorio y hago un fork, ahora tengo dos repositorios (DOS URLs DIFERENTES)" ID="ID_1994663708" CREATED="1580382251042" MODIFIED="1604483732028"/>
 <node TEXT="remote/origin" ID="ID_81315487" CREATED="1580380106890" MODIFIED="1580380137004">
 <node TEXT="Git llama &quot;remotes&quot; a los otros repositorios que conoce, que están relacionados con este" ID="ID_1033787337" CREATED="1580380107938" MODIFIED="1580382284669"/>
 </node>
@@ -72,7 +85,7 @@
 </node>
 </node>
 <node TEXT="" ID="ID_55663464" CREATED="1581027096865" MODIFIED="1581027096865">
-<node TEXT="branch&#xa;(rama)" ID="ID_883210579" CREATED="1580380178229" MODIFIED="1580380201859">
+<node TEXT="branch&#xa;(rama)" FOLDED="true" ID="ID_883210579" CREATED="1580380178229" MODIFIED="1580380201859">
 <node TEXT="es una línea de desarrollo independiente, dentro del mismo repositorio (dentro del mismo proyecto)" ID="ID_382133975" CREATED="1580380202142" MODIFIED="1601895956584"/>
 <node TEXT="mantiene una copia independiente de TODOS los archivos (aunque yo seguramente solo modificaré algunos)" ID="ID_1644388114" CREATED="1580380241553" MODIFIED="1601896053924"/>
 <node TEXT="si varias personas trabajan en un mismo proyecto (mismo repositorio) y una de las personas se va a encargar de determinada funcionalidad en ese proyecto, crea una rama y trabaja sobre ella" ID="ID_694032540" CREATED="1601895987365" MODIFIED="1601896032793"/>
@@ -82,7 +95,7 @@
 </node>
 <node TEXT="al terminar de trabajar en mi parte, &quot;mergeo&quot; mi rama con la &quot;main&quot;" ID="ID_120103700" CREATED="1601896209492" MODIFIED="1602764372986"/>
 </node>
-<node TEXT="clone" ID="ID_1230266521" CREATED="1580379584181" MODIFIED="1580379585065">
+<node TEXT="clone" FOLDED="true" ID="ID_1230266521" CREATED="1580379584181" MODIFIED="1580379585065">
 <node TEXT="copiar una *rama* de un repositorio a local" ID="ID_1750845751" CREATED="1580379969223" MODIFIED="1601897851606">
 <node TEXT="si no digo nada copiaré la rama por defecto, que normalmente será la &quot;master&quot;" ID="ID_361756886" CREATED="1580380453979" MODIFIED="1580380460703"/>
 </node>
@@ -100,7 +113,7 @@
 </node>
 </node>
 <node TEXT="" ID="ID_111409358" CREATED="1581027104859" MODIFIED="1581027104859">
-<node TEXT="pull" ID="ID_1392255597" CREATED="1580379531380" MODIFIED="1580731987998">
+<node TEXT="pull" FOLDED="true" ID="ID_1392255597" CREATED="1580379531380" MODIFIED="1580731987998">
 <node TEXT="traerte lo que hay en la nube" ID="ID_92534372" CREATED="1580381243958" MODIFIED="1580731982230"/>
 </node>
 <node TEXT="push" FOLDED="true" ID="ID_1378599376" CREATED="1580379533760" MODIFIED="1580379534716">
@@ -112,7 +125,7 @@
 </node>
 <node TEXT="&quot;hola, soy una topic branch y te pido a ti, master, que te hagas pull de mis cambios, es decir, que cojas mis cambios y te los incorpores&quot;" ID="ID_1223380737" CREATED="1580383592935" MODIFIED="1580383632012"/>
 </node>
-<node TEXT="commit" ID="ID_1691120529" CREATED="1580379536103" MODIFIED="1580379539221">
+<node TEXT="commit" FOLDED="true" ID="ID_1691120529" CREATED="1580379536103" MODIFIED="1580379539221">
 <node TEXT="consiste en registrar/congelar el ESTADO ACTUAL, ya sea en local o en la nube" ID="ID_1417516934" CREATED="1580381059864" MODIFIED="1601896791703"/>
 <node TEXT="&quot;poner un matasellos&quot;, &quot;hacer un backup&quot;, &quot;poner nombre (o un código) a esta versión&quot;" ID="ID_1619771438" CREATED="1601896753684" MODIFIED="1601896825614"/>
 <node TEXT="OJO" ID="ID_346815002" CREATED="1580732023394" MODIFIED="1580732026896">
@@ -196,20 +209,9 @@
 <node TEXT="puede" ID="ID_1516491998" CREATED="1581333064664" MODIFIED="1581333066049">
 <node TEXT="clonar un repositorio" ID="ID_411996677" CREATED="1581333066273" MODIFIED="1581333193631">
 <icon BUILTIN="bookmark"/>
-<node TEXT="se enchufa a un repo que haya en la nube y copia a local todos los ficheros de UNA de sus ramas" ID="ID_957783155" CREATED="1581333075633" MODIFIED="1581333148589"/>
+<node TEXT="se enchufa a un repo que haya en la nube y lo copia a local, junto con todos los ficheros de UNA de sus ramas" ID="ID_957783155" CREATED="1581333075633" MODIFIED="1604483098645"/>
 <node TEXT="(y luego ya puedo cambiar a otra rama si quiero, y me actualiza los ficheros locales para reflejar el contenido de esa rama)" ID="ID_1846138022" CREATED="1581333148778" MODIFIED="1581333150081"/>
 <node TEXT="esto es lo que normalmente queremos hacer" ID="ID_1793270126" CREATED="1581333194787" MODIFIED="1581333198726"/>
-<node TEXT="para clonar" ID="ID_809872254" CREATED="1581333230193" MODIFIED="1581333236265">
-<node TEXT="seleccionar GitHub.com" ID="ID_1339121832" CREATED="1581333212859" MODIFIED="1581333233970"/>
-<node TEXT="establecer dos rutas" ID="ID_198742174" CREATED="1581333237525" MODIFIED="1581333243443">
-<node TEXT="una remota, para indicar dónde en la nube está mi repo" ID="ID_307464677" CREATED="1581333278231" MODIFIED="1581333289710">
-<node TEXT="p. ej.: https://github.com/joatzel/123-tienda" ID="ID_802705928" CREATED="1581333290971" MODIFIED="1601897922384"/>
-</node>
-<node TEXT="una local, para indicar dónde van a estar alojados los ficheros locales&#xa;(GitKraken ya creará dentro una SUBcarpeta para ESTE repositorio)&#xa;(Así que aquí puedo poner directamente la DocumentRoot de Apache)" ID="ID_634893141" CREATED="1581333243648" MODIFIED="1601898185284">
-<node TEXT="p. ej. /home/alumno/Fulanito/DAW2/DWES/Apache--htdocs" ID="ID_1801227104" CREATED="1601897943776" MODIFIED="1601898120980"/>
-</node>
-</node>
-</node>
 </node>
 <node TEXT="inicializar un repositorio" ID="ID_1632622875" CREATED="1581333151862" MODIFIED="1581333160276">
 <node TEXT="significa crear un repo" ID="ID_892646891" CREATED="1581333160480" MODIFIED="1581333166620"/>
@@ -242,8 +244,90 @@
 </node>
 </node>
 </node>
-<node TEXT="PhpStorm" FOLDED="true" POSITION="right" ID="ID_127499868" CREATED="1581331122150" MODIFIED="1581331126212">
-<node TEXT="regenerar carpeta local clonada" ID="ID_1922516912" CREATED="1580379259383" MODIFIED="1580379265572">
+<node TEXT="NUESTRA organización" FOLDED="true" POSITION="right" ID="ID_1328978599" CREATED="1604483274597" MODIFIED="1604484091860">
+<node TEXT="profesor&#xa;(soluciones)" ID="ID_1872406368" CREATED="1604483302406" MODIFIED="1604483766470">
+<node TEXT="dos repos" ID="ID_297270676" CREATED="1604483427558" MODIFIED="1604483433156">
+<node TEXT="dwes-alain" ID="ID_692246896" CREATED="1604483309605" MODIFIED="1604483313987">
+<node TEXT="contendrá las soluciones que yo os pase" ID="ID_616092183" CREATED="1604483314197" MODIFIED="1604483323401"/>
+</node>
+<node TEXT="dwes-alain-1&#xa;dwes-alain-2" ID="ID_359345584" CREATED="1604483324564" MODIFIED="1604483437995">
+<node TEXT="(coged solo el que os corresponda)" ID="ID_616936915" CREATED="1604483440338" MODIFIED="1604483448113"/>
+<node TEXT="contendrá ficheros que vayan solo para un subgrupo" ID="ID_1276842281" CREATED="1604483337478" MODIFIED="1604483346840"/>
+</node>
+</node>
+<node TEXT="qué hacer" ID="ID_1370796624" CREATED="1604483536632" MODIFIED="1604483750437">
+<node TEXT="abrir GitKraken" ID="ID_803593904" CREATED="1604483540884" MODIFIED="1604483561482"/>
+<node TEXT="Clone a repo" ID="ID_809872254" CREATED="1581333230193" MODIFIED="1604483559607">
+<node TEXT="seleccionar GitHub.com" ID="ID_1339121832" CREATED="1581333212859" MODIFIED="1581333233970"/>
+<node TEXT="establecer dos rutas" ID="ID_198742174" CREATED="1581333237525" MODIFIED="1581333243443">
+<node TEXT="una remota, para indicar dónde en la nube está mi repo" ID="ID_307464677" CREATED="1581333278231" MODIFIED="1581333289710">
+<node TEXT="p. ej.: https://github.com/joatzel/dwes-alain" ID="ID_802705928" CREATED="1581333290971" MODIFIED="1604483574966"/>
+</node>
+<node TEXT="una local, para indicar dónde van a estar alojados los ficheros locales&#xa;(GitKraken ya creará dentro una SUBcarpeta para ESTE repositorio)&#xa;(Así que aquí puedo poner directamente la DocumentRoot de Apache)" ID="ID_634893141" CREATED="1581333243648" MODIFIED="1601898185284">
+<node TEXT="p. ej. /home/alumno/Fulanito/DAW2/DWES/Apache--htdocs" ID="ID_1801227104" CREATED="1601897943776" MODIFIED="1601898120980"/>
+</node>
+</node>
+</node>
+<node TEXT="soluciones del profesor" ID="ID_1800829314" CREATED="1604483781103" MODIFIED="1604483794352">
+<node TEXT="el profesor:" ID="ID_1247452381" CREATED="1604483794596" MODIFIED="1604483810920">
+<node TEXT="añadirá/actualizará/borrará archivos en local" ID="ID_416504763" CREATED="1604483811164" MODIFIED="1604483820809"/>
+<node TEXT="hará commits en el repo local" ID="ID_31784183" CREATED="1604483821005" MODIFIED="1604483838406"/>
+<node TEXT="subirá (push) los commits al repo de la nube (github.com)" ID="ID_1532016647" CREATED="1604483825651" MODIFIED="1604483864789"/>
+</node>
+<node TEXT="cada alumno:" ID="ID_848531951" CREATED="1604483846975" MODIFIED="1604483849974">
+<node TEXT="se bajará (pull) los commits de la nube (github.com) a su repo local" ID="ID_1383402350" CREATED="1604483844770" MODIFIED="1604483886014"/>
+<node TEXT="verá los ficheros ya locales en Phpstorm, sin más" ID="ID_1758573977" CREATED="1604483857128" MODIFIED="1604483911405"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="alumnos&#xa;(entregas)" ID="ID_1446145224" CREATED="1604483363877" MODIFIED="1604483769758">
+<node TEXT="" ID="ID_101016777" CREATED="1604483390418" MODIFIED="1604483390418">
+<node TEXT="daw2.1-NombreApellido" ID="ID_500755232" CREATED="1604483365408" MODIFIED="1604483380435"/>
+<node TEXT="daw2.2-NombreApellido" ID="ID_1571176958" CREATED="1604483365408" MODIFIED="1604483387248"/>
+</node>
+<node TEXT="qué hacer" ID="ID_1914807626" CREATED="1604483398157" MODIFIED="1604483758005">
+<node TEXT="ir a github.com" ID="ID_186203252" CREATED="1604483414011" MODIFIED="1604483417451">
+<node TEXT="crear repo nuevo" ID="ID_1622802867" CREATED="1604483418161" MODIFIED="1604483422502"/>
+<node TEXT="ponerle el nombre indicado" ID="ID_1274747722" CREATED="1604483459807" MODIFIED="1604483464585"/>
+<node TEXT="ponerlo público HASTA clonar (luego ya se puede poner privado)" ID="ID_1331999667" CREATED="1604483391633" MODIFIED="1604484066839"/>
+<node TEXT="Settings, Manage Access, Invite a Collaborator" ID="ID_1435092969" CREATED="1604483473547" MODIFIED="1604483503116">
+<node ID="ID_1992350237" CREATED="1604483519634" MODIFIED="1604483519634"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      &quot;alainprofe&quot;
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
+</node>
+<node TEXT="clonarlo a local para poder añadir ficheros" ID="ID_717530471" CREATED="1604483492844" MODIFIED="1604483610150">
+<node TEXT="(seguir las mismas instrucciones que para lo del profesor)" ID="ID_1374358703" CREATED="1604483668225" MODIFIED="1604483679725"/>
+</node>
+<node TEXT="cómo hacer &quot;entregas&quot;" ID="ID_1694330793" CREATED="1604483922532" MODIFIED="1604483928967">
+<node TEXT="el alumno" ID="ID_152551850" CREATED="1604483929248" MODIFIED="1604483932237">
+<node TEXT="(igual que antes: archivos en local, commit, push)" ID="ID_1624835370" CREATED="1604483811164" MODIFIED="1604483975142"/>
+</node>
+<node TEXT="el profesor" ID="ID_1678302059" CREATED="1604483947774" MODIFIED="1604483949487">
+<node TEXT="(igual que antes: pull para tener los archivos en local y revisarlos)" ID="ID_1804790823" CREATED="1604483811164" MODIFIED="1604484000249"/>
+</node>
+</node>
+</node>
+</node>
+<node TEXT="lo de clonar repos del profe y propios lo haréis tanto en casa como en clase" ID="ID_1442373201" CREATED="1604483610391" MODIFIED="1604483662457">
+<icon BUILTIN="idea"/>
+</node>
+</node>
+<node TEXT="(desactualizado) PhpStorm" POSITION="right" ID="ID_127499868" CREATED="1581331122150" MODIFIED="1604483300755">
+<node TEXT="regenerar carpeta local clonada" FOLDED="true" ID="ID_1922516912" CREATED="1580379259383" MODIFIED="1580379265572">
 <node TEXT="Borrar carpeta 080-tienda desde el navegador de archivos" ID="ID_968188644" CREATED="1580379253265" MODIFIED="1580379253265"/>
 <node TEXT="VCS, Git, Clone" ID="ID_1196660090" CREATED="1580379253265" MODIFIED="1580379253265"/>
 <node TEXT="URL = https://github.com/lagunadejoatzel/080-tienda.git" ID="ID_1459126218" CREATED="1580379253360" MODIFIED="1580379253360" LINK="https://github.com/lagunadejoatzel/080-tienda.git"/>
