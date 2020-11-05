@@ -1497,7 +1497,6 @@
 $sentencia </span><span class="token operator">=</span> <span class="token variable">$conexion</span><span class="token operator">-&gt;</span><span class="token function">prepare</span><span class="token punctuation">($sql);</span></code></pre>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
@@ -1512,7 +1511,6 @@ $sentencia </span><span class="token operator">=</span> <span class="token varia
     <pre http-equiv="content-type" content="text/html; charset=utf-8" class="line-numbers language-php code-toolbar"><code class=" language-php"><span class="token variable">$sqlConExito = $sentencia-&gt;</span><span class="token function">execute</span><span class="token punctuation">([$name,</span> $age<span class="token punctuation">]);</span></code></pre>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="devuelve true o false en función de si ha ido todo bien" ID="ID_247357934" CREATED="1603452033543" MODIFIED="1603452046011"/>
@@ -1551,6 +1549,10 @@ $sentencia </span><span class="token operator">=</span> <span class="token varia
 </node>
 <node TEXT="cada registro es un ARRAY ASOCIATIVO" ID="ID_1281921116" CREATED="1275132705478" MODIFIED="1275132711954"/>
 <node TEXT="(es &quot;una TABLA&quot;, podríamos decir)" ID="ID_1986150980" CREATED="1398276332700" MODIFIED="1445889368846"/>
+<node TEXT="ejemplo" FOLDED="true" ID="ID_1803486930" CREATED="1604578800261" MODIFIED="1604578809812">
+<icon BUILTIN="z_script"/>
+<node TEXT="Array (&#xa;&#xa;    [0] =&gt; Array (&#xa;        [id] =&gt; 19&#xa;        [nombre] =&gt; Colegio&#xa;    )&#xa;    [1] =&gt; Array (&#xa;        [id] =&gt; 18&#xa;        [nombre] =&gt; Negocios&#xa;    )&#xa;    [2] =&gt; Array (&#xa;        [id] =&gt; 8&#xa;        [nombre] =&gt; Estudios&#xa;    )&#xa;    [3] =&gt; Array (&#xa;        [id] =&gt; 1&#xa;        [nombre] =&gt; Familiares&#xa;    )&#xa;    [4] =&gt; Array (&#xa;        [id] =&gt; 4&#xa;        [nombre] =&gt; Otros&#xa;    )&#xa;    [5] =&gt; Array (&#xa;        [id] =&gt; 3&#xa;        [nombre] =&gt; Trabajo&#xa;    )&#xa;&#xa;)" ID="ID_633585920" CREATED="1604578786332" MODIFIED="1604578787564"/>
+</node>
 </node>
 <node TEXT="if(!$rs) exit(&quot;Sin resultados.&quot;);" ID="ID_1216252476" CREATED="1576659972934" MODIFIED="1576660485064">
 <node TEXT="si $rs es false, no ha venido ninguna fila" ID="ID_1860310757" CREATED="1576660485334" MODIFIED="1576660499710"/>

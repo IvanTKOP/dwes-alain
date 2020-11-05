@@ -1,7 +1,7 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="" FOLDED="false" ID="ID_513931562" CREATED="1580379249661" MODIFIED="1580379252481"><hook NAME="MapStyle" zoom="2.357">
-    <properties show_icon_for_attributes="true" fit_to_viewport="false" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
+    <properties fit_to_viewport="false" show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -53,7 +53,7 @@
 <node TEXT="GIT" STYLE_REF="Alain Título general mindmap" POSITION="right" ID="ID_311244207" CREATED="1580379433126" MODIFIED="1580382213072">
 <node TEXT="Alain @ IES Laguna de Joatzel (Getafe)" ID="ID_1653364224" CREATED="1604484102902" MODIFIED="1604484117951"/>
 </node>
-<node TEXT="conceptos" FOLDED="true" POSITION="right" ID="ID_660282869" CREATED="1580379527085" MODIFIED="1580379529147">
+<node TEXT="conceptos" POSITION="right" ID="ID_660282869" CREATED="1580379527085" MODIFIED="1580379529147">
 <node TEXT="link interesante" ID="ID_998138140" CREATED="1580381276856" MODIFIED="1580381279932">
 <node TEXT="https://thepilcrow.net/explaining-basic-concepts-git-and-github/" ID="ID_1779245921" CREATED="1580381280198" MODIFIED="1580381280198" LINK="https://thepilcrow.net/explaining-basic-concepts-git-and-github/"/>
 </node>
@@ -207,6 +207,22 @@
 <node TEXT="un issue está asignado a un desarrollador en particular" ID="ID_1036102642" CREATED="1581027202274" MODIFIED="1581027212968"/>
 </node>
 </node>
+<node TEXT="" ID="ID_208480023" CREATED="1604583184541" MODIFIED="1604583184541">
+<node TEXT="detached HEAD state" ID="ID_477221190" CREATED="1604583185216" MODIFIED="1604583188885">
+<node TEXT="info aquí" ID="ID_160742356" CREATED="1604583189313" MODIFIED="1604583193551">
+<node TEXT="https://www.cloudbees.com/blog/git-detached-head" ID="ID_711767153" CREATED="1604583193917" MODIFIED="1604583193917" LINK="https://www.cloudbees.com/blog/git-detached-head"/>
+</node>
+<node TEXT="&quot;cosas&quot;" ID="ID_411103927" CREATED="1604583318060" MODIFIED="1604583321805">
+<node TEXT="&quot;branches are just names for commits&quot;" ID="ID_786534472" CREATED="1604583326688" MODIFIED="1604583328913"/>
+<node TEXT="&quot;keep this in mind: you get to the detached HEAD state by checking out a commit directly&quot;" ID="ID_1077283292" CREATED="1604583342462" MODIFIED="1604583344698"/>
+<node TEXT="&quot;The most important references in Git are branches, which you can think of as labels you put on a commit.&quot;" ID="ID_208358742" CREATED="1604583374010" MODIFIED="1604583375390"/>
+<node TEXT="&quot;The purpose of HEAD is to keep track of the current point in a Git repo. In other words, HEAD answers the question, “Where am I right now?”&quot;" ID="ID_671298968" CREATED="1604583389718" MODIFIED="1604583392232"/>
+<node TEXT="(normalmente) &quot;HEAD is synonymous with “the last commit in the current branch.” This is the normal state, in which HEAD is attached to a branch.&quot;" ID="ID_507882940" CREATED="1604583438032" MODIFIED="1604583441587"/>
+<node TEXT="(in a) &quot;detached HEAD state; HEAD is pointing directly to a commit instead of a branch.&quot;" ID="ID_587838781" CREATED="1604583461032" MODIFIED="1604583470956"/>
+<node TEXT="&quot;You are in &apos;detached HEAD&apos; state. You can look around, make experimental changes and commit them, and you can discard any commits you make in this state without impacting any branches by switching back to a branch.&quot;" ID="ID_1105310981" CREATED="1604583490133" MODIFIED="1604583491247"/>
+</node>
+</node>
+</node>
 </node>
 <node TEXT="GitKraken" FOLDED="true" POSITION="right" ID="ID_1045581662" CREATED="1581331111381" MODIFIED="1581331114480">
 <node TEXT="es una interfaz gráfica (&quot;UI&quot;) para GIT" ID="ID_1343617100" CREATED="1581332918703" MODIFIED="1581332935475">
@@ -331,7 +347,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>

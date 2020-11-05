@@ -63,9 +63,9 @@ CREATE TABLE IF NOT EXISTS `persona` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(45) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   `telefono` varchar(15) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  `categoria_id` int(11) DEFAULT NULL,
+  `categoriaId` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_categoria_id_idx` (`categoria_id`)
+  KEY `fk_categoriaIdIdx` (`categoriaId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 --
@@ -77,7 +77,7 @@ TRUNCATE TABLE `persona`;
 -- Volcado de datos para la tabla `persona`
 --
 
-INSERT INTO `persona` (`id`, `nombre`, `telefono`, `categoria_id`) VALUES
+INSERT INTO `persona` (`id`, `nombre`, `telefono`, `categoriaId`) VALUES
 (1, 'Pepe', '600111222', 3),
 (2, 'Mario', '688444222', 1),
 (3, 'Jose', '611222333', 1),
@@ -94,7 +94,7 @@ INSERT INTO `persona` (`id`, `nombre`, `telefono`, `categoria_id`) VALUES
 -- Filtros para la tabla `persona`
 --
 ALTER TABLE `persona`
-  ADD CONSTRAINT `fk_categoria_id` FOREIGN KEY (`categoria_id`) REFERENCES `categoria` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `fk_categoriaId` FOREIGN KEY (`categoriaId`) REFERENCES `categoria` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,0 +1,7 @@
+Que el listado de Persona incluya una columna para apellidos.
+
+En el listado, en caso de estrella=true, que aparezca una img a continuación del nombre, en esa misma celda, o nada en caso de false.
+
+Que la ficha de persona permita editar y guardar esas columnas. Investigad cómo meter un checkbox en un form.
+
+(Opcional) Meter un link en el listado de personas para alternar entre ver todas o ver solo las que tengan estrella.

@@ -14,13 +14,13 @@
         ];
 
         try {
-            $conexionBD = new PDO("mysql:host=$servidor;dbname=$bd;charset=utf8", $identificador, $contrasenna, $opciones);
+            $conexion = new PDO("mysql:host=$servidor;dbname=$bd;charset=utf8", $identificador, $contrasenna, $opciones);
         } catch (Exception $e) {
             error_log("Error al conectar: " . $e->getMessage()); // El error se vuelca a php_error.log
             exit('Error al conectar'); //something a user can understand
         }
 
-		return $conexionBD;
+		return $conexion;
 	}
 
 	// (Esta función no se utiliza en este proyecto pero se deja por si se optimizase el flujo de navegación.)
