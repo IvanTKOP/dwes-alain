@@ -3,10 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 05-11-2020 a las 14:25:01
+-- Tiempo de generación: 06-11-2020 a las 12:00:18
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.10
 
+SET FOREIGN_KEY_CHECKS=0;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -14,6 +15,32 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `agenda`
 --
+CREATE DATABASE IF NOT EXISTS `agenda` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `agenda`;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `categoria`
+--
+
+DROP TABLE IF EXISTS `categoria`;
+CREATE TABLE IF NOT EXISTS `categoria` (
+                                           `id` int(11) NOT NULL AUTO_INCREMENT,
+                                           `nombre` varchar(45) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+                                           PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+
+--
+-- Volcado de datos para la tabla `categoria`
+--
+
+INSERT INTO `categoria` (`id`, `nombre`) VALUES
+(1, 'Familiares'),
+(2, 'Amigüitos'),
+(3, 'Trabajo'),
+(4, 'Otros'),
+(8, 'Estudios');
 
 -- --------------------------------------------------------
 
@@ -23,14 +50,14 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `persona`;
 CREATE TABLE IF NOT EXISTS `persona` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(45) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  `apellidos` varchar(80) DEFAULT NULL,
-  `telefono` varchar(15) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  `estrella` tinyint(1) NOT NULL DEFAULT 0,
-  `categoriaId` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_categoriaIdIdx` (`categoriaId`)
+                                         `id` int(11) NOT NULL AUTO_INCREMENT,
+                                         `nombre` varchar(45) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+                                         `apellidos` varchar(80) DEFAULT NULL,
+                                         `telefono` varchar(15) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+                                         `estrella` tinyint(1) NOT NULL DEFAULT 0,
+                                         `categoriaId` int(11) NOT NULL,
+                                         PRIMARY KEY (`id`),
+                                         KEY `fk_categoriaIdIdx` (`categoriaId`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 --
@@ -54,5 +81,6 @@ INSERT INTO `persona` (`id`, `nombre`, `apellidos`, `telefono`, `estrella`, `cat
 -- Filtros para la tabla `persona`
 --
 ALTER TABLE `persona`
-  ADD CONSTRAINT `fk_categoriaId` FOREIGN KEY (`categoriaId`) REFERENCES `categoria` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+    ADD CONSTRAINT `fk_categoriaId` FOREIGN KEY (`categoriaId`) REFERENCES `categoria` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+SET FOREIGN_KEY_CHECKS=1;
 COMMIT;
