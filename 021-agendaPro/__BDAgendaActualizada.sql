@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 06-11-2020 a las 12:00:18
+-- Tiempo de generación: 06-11-2020 a las 13:31:49
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.10
 
@@ -65,13 +65,12 @@ CREATE TABLE IF NOT EXISTS `persona` (
 --
 
 INSERT INTO `persona` (`id`, `nombre`, `apellidos`, `telefono`, `estrella`, `categoriaId`) VALUES
-(1, 'Pepe', NULL, '600111222', 0, 3),
+(1, 'Joseph', 'Smith', '600111222', 1, 3),
 (2, 'Mario', NULL, '688444222', 1, 1),
-(3, 'Jose', NULL, '611222333', 0, 1),
-(4, 'Cristina', NULL, '644999444', 0, 8),
-(5, 'Laura', NULL, '666777888', 1, 2),
-(6, 'Menganito', NULL, '699888777', 0, 3),
-(11, 'Menganito', NULL, 'Fulánez', 0, 4);
+(3, 'Jose', 'Pérez Pi', '611222333', 1, 1),
+(4, 'Cristina', 'Muñoz', '644999444', 0, 8),
+(5, 'Laura', 'García', '666777888', 1, 2),
+(6, 'Menganito', 'Mengánez', '699888777', 0, 3);
 
 --
 -- Restricciones para tablas volcadas

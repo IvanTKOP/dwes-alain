@@ -166,11 +166,11 @@
 </node>
 <node TEXT="checkboxes" ID="ID_1095390504" CREATED="1578567644769" MODIFIED="1578567647458">
 <node TEXT="ejemplo" ID="ID_6783258" CREATED="1578567648942" MODIFIED="1578567650884">
-<node TEXT="Recuérdame &lt;input type=&quot;checkbox&quot; name=&quot;recuerdame&quot; /&gt;" ID="ID_825239032" CREATED="1578569316240" MODIFIED="1578569329470"/>
+<node TEXT="Recuérdame &lt;input type=&apos;checkbox&apos; name=&apos;recuerdame&apos; value=&apos;no es imprescindible poner el value&apos;/&gt;" ID="ID_825239032" CREATED="1578569316240" MODIFIED="1604664081824"/>
 </node>
 </node>
 </node>
-<node TEXT="formularios&#xa;y GET/POST" POSITION="right" ID="ID_527988653" CREATED="1355793049588" MODIFIED="1573030714621">
+<node TEXT="formularios&#xa;y GET/POST" FOLDED="true" POSITION="right" ID="ID_527988653" CREATED="1355793049588" MODIFIED="1573030714621">
 <node TEXT="elementos de un formulario" ID="ID_214754670" CREATED="1355793144984" MODIFIED="1355936805953">
 <node TEXT="etiqueta de apertura&#xa;de formulario &lt;form ...&gt;" ID="ID_812964290" CREATED="1355793257610" MODIFIED="1602240786010">
 <node TEXT="name=&quot;nombreDelFormulario&quot;" ID="ID_1726276917" CREATED="1355793264540" MODIFIED="1355794592968">
@@ -243,6 +243,9 @@
 <node TEXT="admite el envío de datos mucho más extensos&#xa;(campos de texto muy largos, ficheros...)" ID="ID_1074742635" CREATED="1571054371739" MODIFIED="1573030840797">
 <node TEXT="límite de unos 2 GB (configurable en el servidor)" ID="ID_812212235" CREATED="1571302649163" MODIFIED="1573030836978"/>
 </node>
+</node>
+<node TEXT="explicación buena (inglés)" FOLDED="true" ID="ID_354373433" CREATED="1604662485153" MODIFIED="1604662494053">
+<node TEXT="Some notes on GET requests:&#xa;&#xa;    GET requests can be cached&#xa;    GET requests remain in the browser history&#xa;    GET requests can be bookmarked&#xa;    GET requests should never be used when dealing with sensitive data&#xa;    GET requests have length restrictions&#xa;    GET requests should be used only to retrieve data&#xa;&#xa;Some notes on POST requests:&#xa;&#xa;    POST requests are never cached&#xa;    POST requests do not remain in the browser history&#xa;    POST requests cannot be bookmarked&#xa;    POST requests have no restrictions on data length" ID="ID_1446709323" CREATED="1604662497547" MODIFIED="1604662500847"/>
 </node>
 </node>
 <node TEXT="extensión útil Chrome para&#xa;manipular datos GET/POST" ID="ID_62025536" CREATED="1571302730154" MODIFIED="1571302753602">

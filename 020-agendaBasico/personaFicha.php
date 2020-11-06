@@ -13,10 +13,11 @@
 	
 	if ($nuevaEntrada) { // Quieren CREAR una nueva entrada, así que no se cargan datos.
 		$personaNombre = "<introduzca nombre>";
+        $personaApellidos = "<introduzca apellidos>";
 		$personaTelefono = "<introduzca teléfono>";
 		$personaCategoriaId = 0;
 	} else { // Quieren VER la ficha de una persona existente, cuyos datos se cargan.
-		$sqlPersona = "SELECT nombre, telefono, categoriaId FROM persona WHERE id=?";
+        $sqlPersona = "SELECT nombre, apellidos, telefono, categoriaId FROM persona WHERE id=?";
 
         $select = $conexion->prepare($sqlPersona);
         $select->execute([$id]); // Se añade el parámetro a la consulta preparada.
@@ -24,6 +25,7 @@
 
         // Con esto, accedemos a los datos de la primera (y esperemos que única) fila que haya venido.
 		$personaNombre = $rsPersona[0]["nombre"];
+        $personaApellidos = $rsPersona[0]["apellidos"];
 		$personaTelefono = $rsPersona[0]["telefono"];
 		$personaCategoriaId = $rsPersona[0]["categoriaId"];
 	}
@@ -45,7 +47,8 @@
     // personaTelefono
     // personaCategoriaId
     // rsCategorias
-?>
+?>pr0fes0r
+
 
 
 
@@ -74,12 +77,15 @@
 		<strong>Nombre: </strong>
 		<input type='text' name='nombre' value='<?=$personaNombre ?>' />
 	</li>
-	
+    <li>
+        <strong> Apellidos: </strong>
+        <input type='text' name='apellidos' value='<?=$personaApellidos ?>' />
+
+    </li>
 	<li>
 		<strong>Teléfono: </strong>
 		<input type='text' name='telefono' value='<?=$personaTelefono ?>' />
 	</li>
-		
 	<li>
 		<strong>Categoría: </strong>
 		<select name='categoriaId'>
