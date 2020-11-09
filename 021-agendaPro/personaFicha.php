@@ -113,10 +113,9 @@
 
 </form>
 
-<br />
-
 <?php if (!$nuevaEntrada) { ?>
-	<a href='personaEliminar.php?id=<?=$id ?>'>Eliminar persona</a>
+    <br />
+    <a href='personaEliminar.php?id=<?=$id ?>'>Eliminar persona</a>
 <?php } ?>
 
 <br />

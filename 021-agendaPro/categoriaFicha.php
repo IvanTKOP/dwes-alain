@@ -68,9 +68,10 @@
 
 </form>
 
-<br />
-
-<a href='categoriaEliminar.php?id=<?=$id?>'>Eliminar categoría</a>
+<?php if (!$nuevaEntrada) { ?>
+    <br />
+    <a href='categoriaEliminar.php?id=<?=$id?>'>Eliminar categoría</a>
+<?php } ?>
 
 <br />
 <br />

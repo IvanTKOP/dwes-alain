@@ -68,11 +68,11 @@
 
 </form>
 
-<br />
+<?php if (!$nuevaEntrada) { ?>
+    <br />
+    <a href='categoriaEliminar.php?id=<?=$id?>'>Eliminar categoría</a>
+<?php } ?>
 
-<a href='categoriaEliminar.php?id=<?=$id?>'>Eliminar categoría</a>
-
-<br />
 <br />
 
 <a href='categoriaListado.php'>Volver al listado de categorías.</a>
