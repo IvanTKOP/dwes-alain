@@ -9,3 +9,29 @@ Que la ficha de persona permita editar y guardar esas columnas. Investigad cómo
 Meter un link en el listado de personas para alternar entre ver todas o ver solo las que tengan estrella.
 
 Que al visualizar una categoría salga abajo un listado básico (solo nombre y apellidos, sin tabla, en un <ul>) de las personas que pertenecen a esa categoría.
+
+
+
+
+DEBERES GRUPO .2:
+
+(Para ayer)
+Que el listado de Persona incluya una columna para apellidos.
+Que la ficha de persona permita editar y guardar esa nueva columna.
+
+
+Nuevos deberes para JUEVES:
+
+En el listado, queremos que aparezca una estrella (etiqueta img) a continuación del nombre, en esa misma celda.
+Si estrella=true, será la rellena. Si no, la vacía.
+
+Que la ficha de persona permita editar y guardar la estrella. Investigad cómo meter un checkbox en un form.
+
+Meter un link en el listado de personas para alternar entre ver todas o ver solo las que tengan estrella.
+
+
+
+
+Deberes para OTRO DÍA:
+
+Que al visualizar una categoría salga abajo un listado básico (solo nombre y apellidos, sin tabla, en un <ul>) de las personas que pertenecen a esa categoría.

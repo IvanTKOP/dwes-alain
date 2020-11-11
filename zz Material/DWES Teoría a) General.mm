@@ -482,7 +482,7 @@
 </node>
 </node>
 </node>
-<node TEXT="sesiones" FOLDED="true" POSITION="right" ID="ID_713848640" CREATED="1361805095560" MODIFIED="1573478035306">
+<node TEXT="sesiones" POSITION="right" ID="ID_713848640" CREATED="1361805095560" MODIFIED="1573478035306">
 <node TEXT="tipos de &quot;sesiones&quot;" ID="ID_1826064534" CREATED="1361805681864" MODIFIED="1414434456284">
 <node TEXT="sesión-USUARIO" ID="ID_598023351" CREATED="1361588759128" MODIFIED="1414434456445">
 <node TEXT="es un concepto NO-técnico" ID="ID_409146745" CREATED="1361805759349" MODIFIED="1361805783020"/>
@@ -493,8 +493,8 @@
 <node TEXT="es una &quot;zona de memoria&quot; en la que podemos guardar datos" ID="ID_1460861576" CREATED="1415645306860" MODIFIED="1415645318025"/>
 <node TEXT="está en el servidor y se gestiona mediante el lenguaje de programación de servidor (JSP, PHP...)" ID="ID_351266943" CREATED="1361805129535" MODIFIED="1588869145852"/>
 <node TEXT="hay una por cada combinación de:" ID="ID_1090188393" CREATED="1362677438528" MODIFIED="1521139800066">
-<node TEXT="NAVEGADOR-SERVIDOR" ID="ID_1753829427" CREATED="1362677444167" MODIFIED="1369844672085"/>
-<node TEXT="(si cambia uno de los dos, es una sesión distinta)" ID="ID_854235185" CREATED="1369844602349" MODIFIED="1369844664788"/>
+<node TEXT="NAVEGADOR-DOMINIO-SERVIDOR" ID="ID_1753829427" CREATED="1362677444167" MODIFIED="1605087634249"/>
+<node TEXT="(si cambia uno de los tres, es una sesión distinta)" ID="ID_854235185" CREATED="1369844602349" MODIFIED="1605087637937"/>
 </node>
 <node TEXT="****SÍ****&#xa;podemos&#xa;fiarnos de&#xa;su contenido" ID="ID_174327295" CREATED="1361805166985" MODIFIED="1573478050210">
 <node TEXT="lo que guardemos aquí no puede alterar nadie (salvo error, troyano, etc.)" ID="ID_1545494538" CREATED="1369844682353" MODIFIED="1369844700738"/>

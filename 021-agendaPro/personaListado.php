@@ -3,6 +3,8 @@
 
     $conexion = obtenerPdoConexionBD();
 
+    $posibleClausulaWhere = "WHERE etrella";
+
     $sql = "
                SELECT
                     p.id     AS pId,
@@ -15,7 +17,7 @@
                    persona AS p INNER JOIN categoria AS c
                    ON p.categoriaId = c.id
                 ORDER BY p.nombre
-        ";
+        " . $posibleClausulaWhere;
 
     $select = $conexion->prepare($sql);
     $select->execute([]); // Array vacío porque la consulta preparada no requiere parámetros.

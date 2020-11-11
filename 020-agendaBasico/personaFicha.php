@@ -47,7 +47,7 @@
     // personaTelefono
     // personaCategoriaId
     // rsCategorias
-?>pr0fes0r
+?>
 
 
 
