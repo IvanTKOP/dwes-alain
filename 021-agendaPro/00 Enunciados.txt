@@ -1,4 +1,4 @@
-DEBERES GRUPO .1:
+DEBERES "YA HECHOS" AMBOS GRUPOS:
 
 Que el listado de Persona incluya una columna para apellidos.
 
@@ -12,26 +12,8 @@ Que al visualizar una categoría salga abajo un listado básico (solo nombre y a
 
 
 
+NUEVOS DEBERES para AMBOS GRUPOS (grupo 1 lunes, grupo 2 miércoles):
 
-DEBERES GRUPO .2:
-
-(Para ayer)
-Que el listado de Persona incluya una columna para apellidos.
-Que la ficha de persona permita editar y guardar esa nueva columna.
-
-
-Nuevos deberes para JUEVES:
-
-En el listado, queremos que aparezca una estrella (etiqueta img) a continuación del nombre, en esa misma celda.
-Si estrella=true, será la rellena. Si no, la vacía.
-
-Que la ficha de persona permita editar y guardar la estrella. Investigad cómo meter un checkbox en un form.
-
-Meter un link en el listado de personas para alternar entre ver todas o ver solo las que tengan estrella.
-
-
-
-
-Deberes para OTRO DÍA:
-
-Que al visualizar una categoría salga abajo un listado básico (solo nombre y apellidos, sin tabla, en un <ul>) de las personas que pertenecen a esa categoría.
+Que funcione el alternar estrella en el listado de personas. Es decir, que si pulso en una estrella veo que se recarga el listado y la persona tiene la estrella cambiada (de sí a no, o de no a sí).
+Esto requiere una redirección.
+Si el listado estaba filtrado para solo estrellas, al volver se me cambia a ver todos. Intentar conseguir que permanezca el modo de filtrado que tuviera.

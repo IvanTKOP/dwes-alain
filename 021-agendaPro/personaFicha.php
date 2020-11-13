@@ -112,6 +112,8 @@
     <input type='checkbox' name='estrella' <?= $personaEstrella ? "checked" : "" ?> />
     <br/>
 
+    <br/>
+
 <?php if ($nuevaEntrada) { ?>
 	<input type='submit' name='crear' value='Crear persona' />
 <?php } else { ?>

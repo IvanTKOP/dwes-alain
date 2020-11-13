@@ -1,6 +1,6 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1573029101196"><hook NAME="MapStyle" zoom="1.948">
+<node TEXT="" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1573029101196"><hook NAME="MapStyle" zoom="3.137">
     <properties fit_to_viewport="false" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
@@ -277,8 +277,8 @@
 </node>
 </node>
 </node>
-<node TEXT="cookies" FOLDED="true" POSITION="right" ID="ID_1541411190" CREATED="1572867598677" MODIFIED="1572867599851">
-<node TEXT="es una pareja (clave, contenido)" ID="ID_552500770" CREATED="1275125678094" MODIFIED="1417635341490">
+<node TEXT="cookies" POSITION="right" ID="ID_1541411190" CREATED="1572867598677" MODIFIED="1572867599851">
+<node TEXT="es una pareja (clave, contenido)" ID="ID_552500770" CREATED="1275125678094" MODIFIED="1417635341490"/>
 <node TEXT="p. ej.:" ID="ID_1628951635" CREATED="1417635366541" MODIFIED="1521139799990">
 <node TEXT="(¡OJO!) identificador-con-sesion-iniciada" ID="ID_639951159" CREATED="1417635369934" MODIFIED="1588868872429">
 <node TEXT="jlopez" ID="ID_742733500" CREATED="1417635378959" MODIFIED="1588868872427"/>
@@ -287,14 +287,13 @@
 <node TEXT="anuncio-forocoches" ID="ID_1105820651" CREATED="1417635392258" MODIFIED="1572950597216"/>
 </node>
 <node TEXT="por ejemplo...:" ID="ID_303802621" CREATED="1417635681257" MODIFIED="1521139803155">
-<node TEXT="www.miweb.es/index.jsp?procedencia=forocoches" ID="ID_1685170642" CREATED="1417635430704" MODIFIED="1572950615136"/>
+<node TEXT="www.miweb.es/index.php?procedencia=forocoches" ID="ID_1685170642" CREATED="1417635430704" MODIFIED="1605088217767"/>
 <node TEXT="y guardo (pido guardar) una cookie" ID="ID_1895674765" CREATED="1417635692886" MODIFIED="1417635703309"/>
 <node TEXT="y, si finalmente contactan vía formulario de contacto, me envío por email no solo los datos del formulario sino también los datos de la cookie" ID="ID_1700228180" CREATED="1417635704906" MODIFIED="1572867616690"/>
 </node>
 </node>
-</node>
 <node TEXT="ni nombre ni contenido pueden contener nada de esto:" ID="ID_1561657308" CREATED="1572867577129" MODIFIED="1572867589271">
-<node ID="ID_1780313768" CREATED="1572867584351" MODIFIED="1572951344034"><richcontent TYPE="NODE">
+<node ID="ID_1780313768" CREATED="1572867584351" MODIFIED="1605088422145"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -304,6 +303,7 @@
     <pre http-equiv="content-type" content="text/html; charset=utf-8" class="result notranslate">[ ] ( ) = , &quot; / ? @ : ;</pre>
   </body>
 </html>
+
 </richcontent>
 </node>
 </node>
