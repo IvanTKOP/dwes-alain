@@ -66,14 +66,8 @@
                     }
                     echo "</a>";
 
-                    if ($fila["pEstrella"]) {
-                        $urlImagen = "img/estrellaRellena.png";
-                        $parametroEstrella = "estrella";
-                    } else {
-                        $urlImagen = "img/estrellaVacia.png";
-                        $parametroEstrella = "";
-                    }
-                    echo " <a href='personaEstablecerEstadoEstrella.php?$parametroEstrella'><img src='$urlImagen' width='16' height='16'></a>";
+                    $urlImagen = $fila["pEstrella"] ? "img/estrellaRellena.png" : "img/estrellaVacia.png";
+                    echo " <a href='personaEstablecerEstadoEstrella.php?id=PTE_HACER'><img src='$urlImagen' width='16' height='16'></a>";
                 ?>
             </td>
             <td><a href= 'personaFicha.php?id=<?=$fila["pId"]?>'> <?= $fila["pApellidos"] ?> </a></td>
