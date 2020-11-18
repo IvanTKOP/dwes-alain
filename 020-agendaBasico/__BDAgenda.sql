@@ -2,7 +2,7 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost
+-- daw2.2-IvanRodriguez: localhost
 -- Tiempo de generación: 29-10-2020 a las 13:21:58
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.10
@@ -29,23 +29,23 @@ USE `agenda`;
 -- Estructura de tabla para la tabla `categoria`
 --
 
-DROP TABLE IF EXISTS `categoria`;
-CREATE TABLE IF NOT EXISTS `categoria` (
+DROP TABLE IF EXISTS `persona`;
+CREATE TABLE IF NOT EXISTS `persona` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(45) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 --
--- Truncar tablas antes de insertar `categoria`
+-- Truncar tablas antes de insertar `persona`
 --
 
-TRUNCATE TABLE `categoria`;
+TRUNCATE TABLE `persona`;
 --
--- Volcado de datos para la tabla `categoria`
+-- Volcado de datos para la tabla `persona`
 --
 
-INSERT INTO `categoria` (`id`, `nombre`) VALUES
+INSERT INTO `persona` (`id`, `nombre`) VALUES
 (1, 'Familiares'),
 (2, 'Amigüitos'),
 (3, 'Trabajo'),

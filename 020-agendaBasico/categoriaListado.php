@@ -2,9 +2,13 @@
 	require_once "_varios.php";
 
 	$conexionBD = obtenerPdoConexionBD();
+<<<<<<< Updated upstream:020-agenda/categoriaListado.php
 
 	// Los campos que incluyo en el SELECT son los que luego podré leer
     // con $fila["campo"].
+=======
+	
+>>>>>>> Stashed changes:020-agenda/categoria-listado.php
 	$sql = "SELECT id, nombre FROM categoria ORDER BY nombre";
 
     $select = $conexionBD->prepare($sql);

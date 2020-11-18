@@ -14,7 +14,7 @@
 
     //Se cargan variables boolean según la cantidad de filas afectadas por la ultima sentencia sql.
 
-    // Está todo correcto de forma normal si NO ha habido errores y se ha visto afectada UNA fila.
+    // Está to-do correcto de forma normal si NO ha habido errores y se ha visto afectada UNA fila.
     $correctoNormal = ($sqlConExito && $sentencia->rowCount() == 1);
 
  	// Caso raro: cero filas afectadas... (No existía la fila en la BD)
