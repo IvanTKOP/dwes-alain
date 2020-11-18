@@ -1,6 +1,6 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="2.852">
+<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="3.451">
     <properties fit_to_viewport="false" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
@@ -1311,51 +1311,25 @@
 </node>
 </node>
 </node>
-<node TEXT="&quot;maneras de llamar&quot; a otros PHPs" FOLDED="true" POSITION="right" ID="ID_1032821341" CREATED="1416426544726" MODIFIED="1603977334435">
-<icon BUILTIN="estadotarea_pendiente"/>
-<icon BUILTIN="full-2"/>
+<node TEXT="&quot;maneras de llamar&quot; a otros PHPs" FOLDED="true" POSITION="right" ID="ID_1032821341" CREATED="1416426544726" MODIFIED="1604921111707">
 <node TEXT="links (sean parametrizados o no)" ID="ID_1564348510" CREATED="1416426551126" MODIFIED="1416426563067"/>
-<node TEXT="formularios: action=&quot;url&quot;" ID="ID_1351730628" CREATED="1416426564070" MODIFIED="1416426579547"/>
-<node TEXT="redirecciones y remapeos del servidor web (de Apache, etc.)" ID="ID_1042722096" CREATED="1603365356496" MODIFIED="1603365425737"/>
+<node TEXT="formularios: action=&apos;url&apos;" ID="ID_1351730628" CREATED="1416426564070" MODIFIED="1604920427986"/>
+<node TEXT="redirecciones y remapeos del servidor web (de Apache...)" ID="ID_1042722096" CREATED="1603365356496" MODIFIED="1604920444367"/>
+<node TEXT="llamar a una función" ID="ID_739271633" CREATED="1416426585278" MODIFIED="1416426590890"/>
+<node TEXT="require_once" ID="ID_1935401366" CREATED="1416426576078" MODIFIED="1416426583690">
+<node TEXT="equivale a incrustar &quot;aquí&quot; TODO el contenido de otro fichero" ID="ID_1574393693" CREATED="1603365500585" MODIFIED="1603365517231"/>
+</node>
 <node TEXT="redireccionar&#xa;(redirect)" ID="ID_1508211487" CREATED="1416426641854" MODIFIED="1603364680491">
 <node TEXT="es como devolverle al navegador un &quot;link obligatorio&quot;" ID="ID_1922077365" CREATED="1444761216115" MODIFIED="1603364695991"/>
 <node TEXT="el navegador ES CONSCIENTE de la redirección" ID="ID_143439016" CREATED="1603364696147" MODIFIED="1603364703071"/>
+<node TEXT="el humano, NO es consciente" ID="ID_122000103" CREATED="1604920849460" MODIFIED="1604920856402"/>
 <node TEXT="hay dos maneras" ID="ID_1007562585" CREATED="1603367410161" MODIFIED="1603367412007">
 <node TEXT="&quot;header location&quot;" ID="ID_449200806" CREATED="1603367412211" MODIFIED="1603367448498"/>
 <node TEXT="&quot;meta redirect&quot;" ID="ID_1114805327" CREATED="1603367415391" MODIFIED="1603367445373"/>
 </node>
 </node>
-<node TEXT="require_once" ID="ID_1935401366" CREATED="1416426576078" MODIFIED="1416426583690">
-<node TEXT="equivale a incrustar &quot;aquí&quot; TODO el contenido de otro fichero" ID="ID_1574393693" CREATED="1603365500585" MODIFIED="1603365517231"/>
 </node>
-<node TEXT="llamar a una función" ID="ID_739271633" CREATED="1416426585278" MODIFIED="1416426590890"/>
-</node>
-<node TEXT="redirecciones" FOLDED="true" POSITION="right" ID="ID_762877911" CREATED="1384454993727" MODIFIED="1603977334436">
-<icon BUILTIN="estadotarea_pendiente"/>
-<icon BUILTIN="full-2"/>
-<node TEXT="&quot;header location&quot; (PHP)" ID="ID_166162388" CREATED="1384455000607" MODIFIED="1603367881245">
-<node TEXT="header(&quot;Location: otroScript.php&quot;);" ID="ID_1497097085" CREATED="1384455009903" MODIFIED="1603367492188">
-<icon BUILTIN="atenciвn_!"/>
-<node TEXT="Redirige al cliente a otro PHP (es decir, PIDE al navegador que cargue otro PHP)." ID="ID_882481267" CREATED="1384455046871" MODIFIED="1384455065227"/>
-<node TEXT="es como devolver al cliente un &quot;link obligatorio&quot;" ID="ID_531008869" CREATED="1444761422664" MODIFIED="1444761434963"/>
-<node TEXT="(suele ir seguido de un exit; para terminar de procesar inmediatamente este PHP y devolver el control al navegador) (y el navegador deberá solicitarnos la URL del link)" ID="ID_1378637154" CREATED="1416426680269" MODIFIED="1603364857850"/>
-</node>
-<node TEXT="exit();" ID="ID_1971667045" CREATED="1384455066191" MODIFIED="1574761710569">
-<icon BUILTIN="atenciвn_!"/>
-<node TEXT="termina de procesar este PHP y se devuelve &quot;lo que haya&quot;" ID="ID_55323259" CREATED="1384455070366" MODIFIED="1384458748313"/>
-<node TEXT="muy útil si justo después de la redirección viene código que SOLO debe ejecutarse si NO hemos redirigido [por ejemplo, if (hay error) {redirijo; exit();} Y si no, continúo con más cosas...]" ID="ID_1846106333" CREATED="1384458740496" MODIFIED="1384458817175"/>
-</node>
-</node>
-<node TEXT="&quot;meta redirect&quot; (HTML)" ID="ID_1019255048" CREATED="1381173423760" MODIFIED="1603367875812">
-<node TEXT="esto se devuelve como parte de una página HTML &quot;completa&quot;" ID="ID_1210942810" CREATED="1603367766822" MODIFIED="1603367779618"/>
-<node TEXT="&lt;meta http-equiv=&quot;refresh&quot; content=&quot;5;URL=listado.php&quot;&gt;" ID="ID_1948733852" CREATED="1381173428401" MODIFIED="1603367832226">
-<icon BUILTIN="atenciвn_!"/>
-</node>
-</node>
-</node>
-<node TEXT="include/require" FOLDED="true" POSITION="right" ID="ID_1598411886" CREATED="1361472642335" MODIFIED="1603977334436">
-<icon BUILTIN="estadotarea_pendiente"/>
-<icon BUILTIN="full-2"/>
+<node TEXT="include/require" FOLDED="true" POSITION="right" ID="ID_1598411886" CREATED="1361472642335" MODIFIED="1604921351850">
 <node TEXT="sirven para incrustar en este PHP un php que hay en otro fichero" ID="ID_133279188" CREATED="1361473137655" MODIFIED="1361473152232"/>
 <node TEXT="include/require + ¿_once?" ID="ID_1657062023" CREATED="1361473068254" MODIFIED="1414434456245">
 <node TEXT="include &quot;loquesea.php&quot;;" ID="ID_1092903553" CREATED="1361473088816" MODIFIED="1603365806716">
@@ -1392,6 +1366,32 @@
 <node TEXT="por ejemplo, que comiencen por _" ID="ID_1395462070" CREATED="1361473831398" MODIFIED="1361473839398"/>
 </node>
 </node>
+<node TEXT="redirecciones" FOLDED="true" POSITION="right" ID="ID_762877911" CREATED="1384454993727" MODIFIED="1604921355097">
+<node TEXT="&quot;meta redirect&quot; (HTML)" ID="ID_1019255048" CREATED="1381173423760" MODIFIED="1603367875812">
+<node TEXT="esto se devuelve como parte de una página HTML &quot;COMPLETA&quot;" ID="ID_1210942810" CREATED="1603367766822" MODIFIED="1604921485064"/>
+<node TEXT="&lt;head&gt;&#xa;    &lt;meta http-equiv=&quot;refresh&quot; content=&quot;5;URL=listado.php&quot;&gt;&#xa;&lt;/head&gt;" ID="ID_1948733852" CREATED="1381173428401" MODIFIED="1604921440220">
+<icon BUILTIN="atenciвn_!"/>
+</node>
+<node TEXT="puedo poner 0 pero eso provoca &quot;glitches&quot;" ID="ID_178420931" CREATED="1604921485618" MODIFIED="1604921494719"/>
+</node>
+<node TEXT="&quot;header location&quot; (HTTP)" ID="ID_166162388" CREATED="1384455000607" MODIFIED="1604921372144">
+<node TEXT="header(&quot;Location: otroScript.php&quot;);" ID="ID_1497097085" CREATED="1384455009903" MODIFIED="1603367492188">
+<icon BUILTIN="atenciвn_!"/>
+<node TEXT="se basa en meta-órdenes del protocolo HTTP" ID="ID_1626804127" CREATED="1604921540322" MODIFIED="1604921550485"/>
+<node TEXT="redirige al cliente a otro PHP (es decir, PIDE al navegador que cargue otro PHP)." ID="ID_882481267" CREATED="1384455046871" MODIFIED="1604921551831"/>
+<node TEXT="es como devolver al cliente un &quot;link obligatorio&quot;" ID="ID_531008869" CREATED="1444761422664" MODIFIED="1444761434963"/>
+<node TEXT="(en PHP suele ir seguido de un exit; para terminar de procesar inmediatamente este PHP y devolver el control al navegador) (y el navegador deberá solicitarnos la URL del link)" ID="ID_1378637154" CREATED="1416426680269" MODIFIED="1604921577520"/>
+<node TEXT="esto de header(...) sirve para varias cosas, no solo esto" ID="ID_317574086" CREATED="1604921589350" MODIFIED="1604921981844"/>
+<node TEXT="el header(...) SIEMPRE tiene que ir ANTES de generar ni un solo espacio en HTML" ID="ID_1570093326" CREATED="1604921982311" MODIFIED="1604922105418"/>
+<node TEXT="en algunos casos se puede poner header(...) y, luego, generar página HTML. En el caso del &quot;header location&quot;, NO se puede generar página HTML" ID="ID_1374277989" CREATED="1604921991691" MODIFIED="1604922019930"/>
+</node>
+<node TEXT="exit();" ID="ID_1971667045" CREATED="1384455066191" MODIFIED="1574761710569">
+<icon BUILTIN="atenciвn_!"/>
+<node TEXT="termina de procesar este PHP y se devuelve &quot;lo que haya&quot;" ID="ID_55323259" CREATED="1384455070366" MODIFIED="1384458748313"/>
+<node TEXT="muy útil si justo después de la redirección viene código que SOLO debe ejecutarse si NO hemos redirigido [por ejemplo, if (hay error) {redirijo; exit();} Y si no, continúo con más cosas...]" ID="ID_1846106333" CREATED="1384458740496" MODIFIED="1384458817175"/>
+</node>
+</node>
+</node>
 <node TEXT="depurar (&quot;syso&quot;/&quot;sysout&quot;)" FOLDED="true" POSITION="right" ID="ID_704969651" CREATED="1361985646718" MODIFIED="1573030892591">
 <node TEXT="en PHP, al ejecutarse en servidor, no hay una consola a la que se pueda sacar texto, como hace en Java el System.out.println()" ID="ID_495259531" CREATED="1361985655208" MODIFIED="1362075593100"/>
 <node TEXT="opción fácil y rápida" ID="ID_1406010987" CREATED="1361986088142" MODIFIED="1414434456305">
@@ -1412,7 +1412,7 @@
 </node>
 </node>
 </node>
-<node TEXT="acceso&#xa;a BBDD" FOLDED="true" POSITION="right" ID="ID_316249312" CREATED="1275131296618" MODIFIED="1573030892579">
+<node TEXT="acceso&#xa;a BBDD" POSITION="right" ID="ID_316249312" CREATED="1275131296618" MODIFIED="1573030892579">
 <node TEXT="tutoriales" ID="ID_1643720653" CREATED="1574766505250" MODIFIED="1576659850741">
 <node TEXT="https://websitebeaver.com/php-pdo-vs-mysqli" ID="ID_536140428" CREATED="1575976474136" MODIFIED="1576655616318" LINK="https://websitebeaver.com/php-pdo-vs-mysqli">
 <icon BUILTIN="button_ok"/>
@@ -1426,7 +1426,7 @@
 <icon BUILTIN="help"/>
 </node>
 </node>
-<node TEXT="hay tres formas de acceder a MySQL desde PHP:" ID="ID_1201680916" CREATED="1445449286793" MODIFIED="1521139803250">
+<node TEXT="hay tres formas de acceder a MySQL desde PHP:" FOLDED="true" ID="ID_1201680916" CREATED="1445449286793" MODIFIED="1521139803250">
 <node TEXT="funciones mysql_***" ID="ID_912876348" CREATED="1445449321105" MODIFIED="1576493907760">
 <icon BUILTIN="button_cancel"/>
 <node TEXT="¡eliminadas desde PHP 7!" ID="ID_1825018928" CREATED="1445449338759" MODIFIED="1576493891376"/>
@@ -1451,15 +1451,17 @@
 <node TEXT="ir a" ID="ID_781391754" CREATED="1576494598330" MODIFIED="1576659826175">
 <node TEXT="http://localhost/phpmyadmin/" ID="ID_529000009" CREATED="1576494599267" MODIFIED="1576494599267" LINK="http://localhost/phpmyadmin/"/>
 </node>
-<node TEXT="Se abrirá el navegador con un panel de control del SGBD." ID="ID_1126778563" CREATED="1413411280801" MODIFIED="1576494604904"/>
-<node TEXT="Id a Importar, Seleccionar Archivo, seleccionad el .sql que os doy, Continuar." ID="ID_1121550017" CREATED="1413411280801" MODIFIED="1413411280801"/>
-<node TEXT="Debe decir algo como &quot;La importación se ejecutó exitosamente, se ejecutaron XX consultas. (Backup BD Agenda.sql)&quot;." ID="ID_1890287289" CREATED="1413411280811" MODIFIED="1413411280811"/>
-<node TEXT="Con esto último, hemos ejecutado un montón de consultas de creación de schema, tablas e inserción de datos que dejan preparado un schema llamado Agenda con el que podemos trabajar." ID="ID_1847859640" CREATED="1413411280811" MODIFIED="1413411280811"/>
+<node TEXT="se abrirá el navegador con un panel de control del SGBD" ID="ID_1126778563" CREATED="1413411280801" MODIFIED="1604922239225"/>
+<node TEXT="pegar el código SQL en la pestaña &quot;SQL&quot; o ir a Importar, Seleccionar Archivo, seleccionad el .sql y Continuar" ID="ID_1121550017" CREATED="1413411280801" MODIFIED="1604922224172"/>
+<node TEXT="debe decir algo como &quot;se ejecutó exitosamente, se ejecutaron XX consultas&quot;" ID="ID_1890287289" CREATED="1413411280811" MODIFIED="1604922236786"/>
+<node TEXT="con esto último, hemos ejecutado un montón de consultas de creación de schema, tablas e inserción de datos que dejan preparado un schema llamado Agenda con el que podemos trabajar" ID="ID_1847859640" CREATED="1413411280811" MODIFIED="1604922242639"/>
 </node>
-<node TEXT="para conectar con MySQL desde PHP&#xa;necesitamos los siguientes datos" FOLDED="true" ID="ID_193611375" CREATED="1275131482383" MODIFIED="1521139803246">
-<icon BUILTIN="info_informaciвn"/>
+<node TEXT="conectar y seleccionar BD (schema)" FOLDED="true" ID="ID_1933660106" CREATED="1275131564025" MODIFIED="1521139803246">
+<icon BUILTIN="full-1"/>
+<node TEXT="datos y&#xa;opciones&#xa;generales" ID="ID_1066498149" CREATED="1576495557688" MODIFIED="1576495706291">
+<node TEXT="para conectar con MySQL desde PHP&#xa;necesitamos los siguientes datos" ID="ID_193611375" CREATED="1275131482383" MODIFIED="1604922398877">
 <node TEXT="nombre o IP de la máquina (con puerto,&#xa;si no es el 3126, que es el que viene por defecto)" ID="ID_1418820901" CREATED="1275131484450" MODIFIED="1576494690865">
-<node TEXT="&quot;localhost&quot;" ID="ID_1610886290" CREATED="1275131543441" MODIFIED="1413399525988"/>
+<node TEXT="en nuestro caso, &quot;localhost&quot;" ID="ID_1610886290" CREATED="1275131543441" MODIFIED="1604922260498"/>
 </node>
 <node TEXT="nombre de usuario" ID="ID_1924234693" CREATED="1275131489309" MODIFIED="1414434456427">
 <node TEXT="&quot;root&quot;" ID="ID_12821611" CREATED="1413399521087" MODIFIED="1413399522819"/>
@@ -1470,14 +1472,8 @@
 <node TEXT="BD (schema) al que nos queremos conectar" ID="ID_191763149" CREATED="1384190295333" MODIFIED="1414434456427">
 <node TEXT="&quot;agenda&quot; (o el que sea)" ID="ID_984054516" CREATED="1413399517172" MODIFIED="1576494653574"/>
 </node>
-<node TEXT="MySQL (o XAMPP, que ya trae MySQL)" ID="ID_1895909362" CREATED="1275131498505" MODIFIED="1445452895713">
-<node TEXT="XAMPP trae por defecto el usuario root con contraseña en blanco" ID="ID_1765462837" CREATED="1275131505112" MODIFIED="1384189809493"/>
 </node>
-</node>
-<node TEXT="conectar y seleccionar BD (schema)" FOLDED="true" ID="ID_1933660106" CREATED="1275131564025" MODIFIED="1521139803246">
-<icon BUILTIN="full-1"/>
-<node TEXT="datos y&#xa;opciones&#xa;generales" ID="ID_1066498149" CREATED="1576495557688" MODIFIED="1576495706291">
-<node TEXT="$servidor = &quot;localhost&quot;;&#xa;$identificador = &quot;root&quot;;&#xa;$contrasenna = &quot;&quot;;&#xa;$bd = &quot;agenda&quot;;&#xa;$opciones = [&#xa;    PDO::ATTR_EMULATE_PREPARES   =&gt; false, // Modo emulación desactivado para prepared statements &quot;reales&quot;&#xa;    PDO::ATTR_ERRMODE            =&gt; PDO::ERRMODE_EXCEPTION, // Que los errores salgan como excepciones&#xa;    PDO::ATTR_DEFAULT_FETCH_MODE =&gt; PDO::FETCH_ASSOC, // El modo de fetch que queremos por defecto.&#xa;];" ID="ID_19044037" CREATED="1576495477638" MODIFIED="1576495648037"/>
+<node TEXT="$servidor = &quot;localhost&quot;;&#xa;$identificador = &quot;root&quot;;&#xa;$contrasenna = &quot;&quot;;&#xa;$bd = &quot;agenda&quot;;&#xa;&#xa;$opciones = [&#xa;    PDO::ATTR_EMULATE_PREPARES   =&gt; false, // Modo emulación desactivado para prepared statements &quot;reales&quot;&#xa;    PDO::ATTR_ERRMODE            =&gt; PDO::ERRMODE_EXCEPTION, // Que los errores salgan como excepciones&#xa;    PDO::ATTR_DEFAULT_FETCH_MODE =&gt; PDO::FETCH_ASSOC, // El modo de fetch que queremos por defecto.&#xa;];" ID="ID_19044037" CREATED="1576495477638" MODIFIED="1604922438777"/>
 </node>
 <node TEXT="conectar" ID="ID_1423141842" CREATED="1576495649969" MODIFIED="1576495653632">
 <node TEXT="try {&#xa;    $conexion = new PDO(&quot;mysql:host=$servidor;dbname=$bd;charset=utf8&quot;, $identificador, $contrasenna, $opciones);&#xa;} catch (Exception $e) {&#xa;    error_log(&quot;Error al conectar: &quot; . $e-&gt;getMessage());&#xa;    exit(&apos;Error al conectar&apos;);&#xa;}" ID="ID_1579793351" CREATED="1576495516374" MODIFIED="1604059526500"/>
@@ -1485,32 +1481,48 @@
 </node>
 <node TEXT="sentencias que NO&#xa;devuelven datos&#xa;(INS, UPD, DEL)" FOLDED="true" ID="ID_803700530" CREATED="1275132334962" MODIFIED="1521139803244">
 <icon BUILTIN="full-2"/>
-<node TEXT="primero preparo la sentencia,&#xa;opcionalmente con huecos" ID="ID_200036736" CREATED="1398276154511" MODIFIED="1576659889391">
-<node ID="ID_1818879539" CREATED="1576656463690" MODIFIED="1604059462860"><richcontent TYPE="NODE">
+<node TEXT="primero redacto la sentencia,&#xa;opcionalmente con huecos" ID="ID_200036736" CREATED="1398276154511" MODIFIED="1604923107899">
+<node ID="ID_1818879539" CREATED="1576656463690" MODIFIED="1604923110654"><richcontent TYPE="NODE">
 
 <html>
   <head>
     
   </head>
   <body>
-    <pre http-equiv="content-type" content="text/html; charset=utf-8" class="line-numbers language-php code-toolbar"><code class=" language-php"><span class="token variable">$sql = &quot;INSERT INTO myTable (name, age) VALUES (?, ?)&quot;;
-$sentencia </span><span class="token operator">=</span> <span class="token variable">$conexion</span><span class="token operator">-&gt;</span><span class="token function">prepare</span><span class="token punctuation">($sql);</span></code></pre>
+    <pre http-equiv="content-type" content="text/html; charset=utf-8" class="line-numbers language-php code-toolbar"><code class=" language-php"><span class="token variable">$sql = &quot;INSERT INTO myTable (name, age) VALUES (?, ?)&quot;;</span></code></pre>
   </body>
 </html>
+
+</richcontent>
+</node>
+</node>
+<node TEXT="luego la &quot;preparo&quot; (por seguridad)&#xa;(&quot;conviertir string a objeto&quot;)" ID="ID_208713291" CREATED="1604923112023" MODIFIED="1604923233609">
+<node ID="ID_518111315" CREATED="1604923119927" MODIFIED="1604923190772"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <pre http-equiv="content-type" content="text/html; charset=utf-8" class="line-numbers language-php code-toolbar"><code class=" language-php"><span class="token variable">$sentencia </span><span class="token operator">=</span> <span class="token variable">$conexion</span><span class="token operator">-&gt;</span><span class="token function">prepare</span><span class="token punctuation">($sql);</span></code></pre>
+  </body>
+</html>
+
 </richcontent>
 </node>
 </node>
 <node TEXT="y luego la ejecuto, pasando un&#xa;array para rellenar huecos" ID="ID_1977365181" CREATED="1576656651610" MODIFIED="1576659876609">
-<node ID="ID_1756829186" CREATED="1576656463692" MODIFIED="1604055425669"><richcontent TYPE="NODE">
+<node ID="ID_1756829186" CREATED="1576656463692" MODIFIED="1604923339526"><richcontent TYPE="NODE">
 
 <html>
   <head>
     
   </head>
   <body>
-    <pre http-equiv="content-type" content="text/html; charset=utf-8" class="line-numbers language-php code-toolbar"><code class=" language-php"><span class="token variable">$sqlConExito = $sentencia-&gt;</span><span class="token function">execute</span><span class="token punctuation">([$name,</span> $age<span class="token punctuation">]);</span></code></pre>
+    <pre http-equiv="content-type" content="text/html; charset=utf-8" class="line-numbers language-php code-toolbar"><code class=" language-php"><span class="token variable">$sqlConExito = $sentencia-&gt;</span><span class="token function">execute</span><span class="token punctuation">([$name, $age]);</span></code></pre>
   </body>
 </html>
+
 </richcontent>
 </node>
 <node TEXT="devuelve true o false en función de si ha ido todo bien" ID="ID_247357934" CREATED="1603452033543" MODIFIED="1603452046011"/>
@@ -1534,16 +1546,21 @@ $sentencia </span><span class="token operator">=</span> <span class="token varia
 <node TEXT="al ejecutarlas, me devuelven una &quot;tabla&quot; con todos los registros que vienen como resultado de la select" ID="ID_1776372879" CREATED="1275132379071" MODIFIED="1576495738611">
 <icon BUILTIN="info_informaciвn"/>
 </node>
-<node TEXT="primero preparo la select,&#xa;opcionalmente con huecos" ID="ID_1237057906" CREATED="1398276154511" MODIFIED="1576660404997">
-<node TEXT="$sql = &quot;SELECT id, nombre FROM categoria WHERE id&gt;? ORDER BY nombre&quot;;&#xa;$select = $pdo-&gt;prepare($sql);" ID="ID_28388962" CREATED="1576659972930" MODIFIED="1576660437902"/>
+<node TEXT="primero redacto la select,&#xa;opcionalmente con huecos" ID="ID_1237057906" CREATED="1398276154511" MODIFIED="1604925261775">
+<node TEXT="$sql = &quot;SELECT id, nombre FROM categoria WHERE id&gt;? ORDER BY nombre&quot;;" ID="ID_28388962" CREATED="1576659972930" MODIFIED="1604925264113"/>
 </node>
-<node TEXT="y luego la ejecuto, pasando un&#xa;array para rellenar huecos" ID="ID_1468859892" CREATED="1576656651610" MODIFIED="1576659876609">
-<node TEXT="$select-&gt;execute([]);&#xa;$rs = $select-&gt;fetchAll([]);" ID="ID_750262611" CREATED="1576659972932" MODIFIED="1604056221467">
-<node TEXT="$rs = $select-&gt;fetchAll([&quot;jlopez&quot;, &quot;abc123&quot;]);" ID="ID_1452280065" CREATED="1576659972932" MODIFIED="1578474473476"/>
+<node TEXT="luego la &quot;preparo&quot; (por seguridad)&#xa;(&quot;conviertir string a objeto&quot;)" ID="ID_841518484" CREATED="1604925264746" MODIFIED="1604925281362">
+<node TEXT="$select = $conexion-&gt;prepare($sql);" ID="ID_350253790" CREATED="1604925273428" MODIFIED="1604925291812"/>
 </node>
+<node TEXT="luego la ejecuto, pasando un&#xa;array para rellenar huecos" ID="ID_1468859892" CREATED="1576656651610" MODIFIED="1604925372066">
+<node TEXT="$select-&gt;execute([]);" ID="ID_750262611" CREATED="1576659972932" MODIFIED="1604925370094"/>
+<node TEXT="$select-&gt;execute([&quot;jlopez&quot;, &quot;abc123&quot;]);" ID="ID_1452280065" CREATED="1576659972932" MODIFIED="1604925367915"/>
+</node>
+<node TEXT="y por último &quot;traigo&quot; a una variable&#xa;los datos que han venido como resultado" ID="ID_1980127427" CREATED="1604925376052" MODIFIED="1604925397137">
+<node TEXT="$rs = $select-&gt;fetchAll();" ID="ID_663883666" CREATED="1604925397498" MODIFIED="1604925399001"/>
 </node>
 <node TEXT="el $rs que he obtenido" ID="ID_955116771" CREATED="1275132684645" MODIFIED="1576660586800">
-<node TEXT="rs = &quot;record set&quot;" ID="ID_918292832" CREATED="1578474484199" MODIFIED="1578474488391"/>
+<node TEXT="rs = &quot;record set&quot; (&quot;conjunto de registros&quot;)" ID="ID_918292832" CREATED="1578474484199" MODIFIED="1604925444083"/>
 <node TEXT="es un ARRAY NORMAL (1er nivel)" ID="ID_829708486" CREATED="1275132693560" MODIFIED="1521139800086">
 <node TEXT="de ARRAYS ASOCIATIVOS (2º nivel)" ID="ID_808823819" CREATED="1275132859382" MODIFIED="1275132863111"/>
 </node>
@@ -1554,14 +1571,14 @@ $sentencia </span><span class="token operator">=</span> <span class="token varia
 <node TEXT="Array (&#xa;&#xa;    [0] =&gt; Array (&#xa;        [id] =&gt; 19&#xa;        [nombre] =&gt; Colegio&#xa;    )&#xa;    [1] =&gt; Array (&#xa;        [id] =&gt; 18&#xa;        [nombre] =&gt; Negocios&#xa;    )&#xa;    [2] =&gt; Array (&#xa;        [id] =&gt; 8&#xa;        [nombre] =&gt; Estudios&#xa;    )&#xa;    [3] =&gt; Array (&#xa;        [id] =&gt; 1&#xa;        [nombre] =&gt; Familiares&#xa;    )&#xa;    [4] =&gt; Array (&#xa;        [id] =&gt; 4&#xa;        [nombre] =&gt; Otros&#xa;    )&#xa;    [5] =&gt; Array (&#xa;        [id] =&gt; 3&#xa;        [nombre] =&gt; Trabajo&#xa;    )&#xa;&#xa;)" ID="ID_633585920" CREATED="1604578786332" MODIFIED="1604578787564"/>
 </node>
 </node>
-<node TEXT="if(!$rs) exit(&quot;Sin resultados.&quot;);" ID="ID_1216252476" CREATED="1576659972934" MODIFIED="1576660485064">
+<node TEXT="if(!$rs) ..." ID="ID_1216252476" CREATED="1576659972934" MODIFIED="1604925705285">
 <node TEXT="si $rs es false, no ha venido ninguna fila" ID="ID_1860310757" CREATED="1576660485334" MODIFIED="1576660499710"/>
 </node>
-<node TEXT="tratamiento&#xa;del recordset" ID="ID_1858477053" CREATED="1275132870987" MODIFIED="1445889393974">
-<node TEXT="foreach ($rs as $fila) {&#xa;    // ...&#xa;}" ID="ID_1252977988" CREATED="1576660637313" MODIFIED="1576660650933"/>
+<node TEXT="tratamiento&#xa;del record set" ID="ID_1858477053" CREATED="1275132870987" MODIFIED="1604925720869">
+<node TEXT="foreach ($rs as $fila) {&#xa;    // ...&#xa;}" ID="ID_1252977988" CREATED="1576660637313" MODIFIED="1604925792294"/>
 <node TEXT="cuando estoy DENTRO del for, para obtener el valor de UN campo de ESTA fila en concreto que estoy tratando" ID="ID_1552437794" CREATED="1384191003840" MODIFIED="1576660677521">
 <node TEXT="$nombre = $fila[&quot;nombre&quot;];" ID="ID_1988667085" CREATED="1384191020104" MODIFIED="1445889934160"/>
-<node TEXT="$fila[&quot;telefono&quot;]" ID="ID_1284021596" CREATED="1384191035039" MODIFIED="1384191037420"/>
+<node TEXT="$telefono = $fila[&quot;telefono&quot;]" ID="ID_1284021596" CREATED="1384191035039" MODIFIED="1604925781059"/>
 <node TEXT="..." ID="ID_1123366710" CREATED="1384191038751" MODIFIED="1384191039348"/>
 </node>
 <node TEXT="por tanto, hago" ID="ID_1709606239" CREATED="1275133381241" MODIFIED="1521139800077">
@@ -1572,23 +1589,30 @@ $sentencia </span><span class="token operator">=</span> <span class="token varia
 </node>
 </node>
 <node TEXT="tratamiento del rs&#xa;con una sola fila" ID="ID_655826309" CREATED="1578474587786" MODIFIED="1578474600338">
+<node TEXT="en dos pasos" ID="ID_1452018945" CREATED="1604925882619" MODIFIED="1604925884553">
 <node TEXT="obtengo la única fila" ID="ID_335575438" CREATED="1578474653096" MODIFIED="1578474666306">
 <node TEXT="$fila = rs[0];" ID="ID_662438302" CREATED="1578474600986" MODIFIED="1578474613148"/>
 </node>
-<node TEXT="extraigo los datos" ID="ID_1471663432" CREATED="1578474654385" MODIFIED="1578474671840">
+<node TEXT="y extraigo los datos" ID="ID_1471663432" CREATED="1578474654385" MODIFIED="1604925863525">
 <node TEXT="$nombre = $fila[&quot;nombre&quot;];" ID="ID_344924052" CREATED="1384191020104" MODIFIED="1445889934160"/>
-<node TEXT="$fila[&quot;telefono&quot;]" ID="ID_1563583656" CREATED="1384191035039" MODIFIED="1384191037420"/>
+<node TEXT="$telefono = $fila[&quot;telefono&quot;]" ID="ID_1563583656" CREATED="1384191035039" MODIFIED="1604925913900"/>
+</node>
+</node>
+<node TEXT="o, de una sola vez:" ID="ID_1421086778" CREATED="1604925864345" MODIFIED="1604925871816">
+<node TEXT="$nombre = $rs[0][&quot;nombre&quot;];" ID="ID_1511128204" CREATED="1384191020104" MODIFIED="1604925904185"/>
+<node TEXT="$telefono = $rs[0][&quot;telefono&quot;]" ID="ID_760086201" CREATED="1384191035039" MODIFIED="1604925919123"/>
 </node>
 </node>
 </node>
 <node TEXT="desconectar" FOLDED="true" ID="ID_638936873" CREATED="1275132597893" MODIFIED="1521139803230">
 <icon BUILTIN="full-4"/>
-<node TEXT="PHP desconecta y libera los recursos automáticamente cuando terminar el script" ID="ID_1347477526" CREATED="1413400733378" MODIFIED="1603369063868"/>
-<node TEXT="si quiero hacerlo de forma explícita (cosa que quizá sea buena idea):" ID="ID_1412313541" CREATED="1576660763088" MODIFIED="1603369093956"/>
+<node TEXT="PHP desconecta y libera los recursos automáticamente cuando termina el script" ID="ID_1347477526" CREATED="1413400733378" MODIFIED="1604922969135"/>
+<node TEXT="si necesito en algún momento hacerlo de forma explícita:" ID="ID_1412313541" CREATED="1576660763088" MODIFIED="1604922986999"/>
 <node TEXT="" ID="ID_1679462985" CREATED="1603369067183" MODIFIED="1603369067183">
-<node TEXT="$pdo = null;" ID="ID_191888552" CREATED="1576660790279" MODIFIED="1604055562559"/>
+<node TEXT="$conexion = null;" ID="ID_191888552" CREATED="1576660790279" MODIFIED="1604922992858"/>
 <node TEXT="$sentencia = null; ó $select = null;" ID="ID_368674551" CREATED="1576660783609" MODIFIED="1576660815624"/>
 </node>
+<node TEXT="(no desconectaremos explícitamente en clase)" ID="ID_284058754" CREATED="1604923001057" MODIFIED="1604923009424"/>
 </node>
 <node TEXT="cuestiones&#xa;asociadas" FOLDED="true" ID="ID_659880427" CREATED="1275132411745" MODIFIED="1576660832815">
 <icon BUILTIN="z_bricks"/>

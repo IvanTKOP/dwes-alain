@@ -47,7 +47,7 @@
     // personaTelefono
     // personaCategoriaId
     // rsCategorias
-?>pr0fes0r
+?>
 
 
 
@@ -116,9 +116,8 @@
 
 </form>
 
-<br />
-
 <?php if (!$nuevaEntrada) { ?>
+    <br />
 	<a href='personaEliminar.php?id=<?=$id ?>'>Eliminar persona</a>
 <?php } ?>
 

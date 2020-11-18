@@ -26,9 +26,17 @@
 
 
 
+    $sql = "SELECT * FROM persona WHERE categoriaId=? ORDER BY nombre";
+
+    $select = $conexion->prepare($sql);
+    $select->execute([$id]); // Array vacío porque la consulta preparada no requiere parámetros.
+    $rsPersonasDeLaCategoria = $select->fetchAll();
+
+
 	// INTERFAZ:
     // $nuevaEntrada
     // $categoriaNombre
+    // $rsPersonasDeLaCategoria
 ?>
 
 
@@ -70,7 +78,20 @@
 
 <br />
 
-<a href='categoriaEliminar.php?id=<?=$id?>'>Eliminar categoría</a>
+<p>Personas que pertenecen actualmente a la categoría:</p>
+
+<ul>
+<?php
+    foreach ($rsPersonasDeLaCategoria as $fila) {
+        echo "<li>$fila[nombre] $fila[apellidos]</li>";
+    }
+?>
+</ul>
+
+<?php if (!$nuevaEntrada) { ?>
+    <br />
+    <a href='categoriaEliminar.php?id=<?=$id?>'>Eliminar categoría</a>
+<?php } ?>
 
 <br />
 <br />

@@ -1,7 +1,7 @@
 <?php
 	require_once "_varios.php";
 
-	$conexionBD = obtenerPdoConexionBD();
+	$conexion = obtenerPdoConexionBD();
 
 	// Se recogen los datos del formulario de la request.
 	$id = (int)$_REQUEST["id"];
@@ -22,7 +22,8 @@
         $parametros = [$nombre, $id];
  	}
  	
-    $sentencia = $conexionBD->prepare($sql);
+    $sentencia = $conexion->prepare($sql);
+
     //Esta llamada devuelve true o false según si la ejecución de la sentencia ha ido bien o mal.
     $sqlConExito = $sentencia->execute($parametros); // Se añaden los parámetros a la consulta preparada.
 

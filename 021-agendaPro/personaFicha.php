@@ -36,7 +36,7 @@
 	
 	// Con lo siguiente se deja preparado un recordset con todas las categorías.
 	
-	$sqlCategorias = "SELECT id, nombre FROM categoria ORDER BY nombre";
+	$sqlCategorias = "SELECT * FROM categoria ORDER BY nombre";
 
     $select = $conexion->prepare($sqlCategorias);
     $select->execute([]); // Array vacío porque la consulta preparada no requiere parámetros.
@@ -45,10 +45,12 @@
 
 
     // INTERFAZ:
-    // personaNombre
-    // personaTelefono
-    // personaCategoriaId
-    // rsCategorias
+    // $personaNombre
+    // $personaTelefono
+    // $personaApellidos
+    // $personaEstrella
+    // $personaCategoriaId
+    // $rsCategorias
 ?>
 
 
@@ -76,12 +78,15 @@
 
     <label for='nombre'>Nombre: </label>
     <input type='text' name='nombre' value='<?=$personaNombre ?>' />
+    <br/>
 
     <label for='apellidos'> Apellidos: </label>
     <input type='text' name='apellidos' value='<?=$personaApellidos ?>' />
+    <br/>
 
     <label for='telefono'> Teléfono: </label>
     <input type='text' name='telefono' value='<?=$personaTelefono ?>' />
+    <br/>
 
     <label for='categoriaId'>Categoría: </label>
     <select name='categoriaId'>
@@ -101,9 +106,13 @@
             }
         ?>
     </select>
+    <br/>
 
     <label for='estrella'>Estrellado</label>
     <input type='checkbox' name='estrella' <?= $personaEstrella ? "checked" : "" ?> />
+    <br/>
+
+    <br/>
 
 <?php if ($nuevaEntrada) { ?>
 	<input type='submit' name='crear' value='Crear persona' />
@@ -113,10 +122,9 @@
 
 </form>
 
-<br />
-
 <?php if (!$nuevaEntrada) { ?>
-	<a href='personaEliminar.php?id=<?=$id ?>'>Eliminar persona</a>
+    <br />
+    <a href='personaEliminar.php?id=<?=$id ?>'>Eliminar persona</a>
 <?php } ?>
 
 <br />
