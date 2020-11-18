@@ -1,6 +1,6 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="3.451">
+<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="2.593">
     <properties fit_to_viewport="false" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
@@ -1412,7 +1412,7 @@
 </node>
 </node>
 </node>
-<node TEXT="acceso&#xa;a BBDD" POSITION="right" ID="ID_316249312" CREATED="1275131296618" MODIFIED="1573030892579">
+<node TEXT="acceso&#xa;a BBDD" FOLDED="true" POSITION="right" ID="ID_316249312" CREATED="1275131296618" MODIFIED="1573030892579">
 <node TEXT="tutoriales" ID="ID_1643720653" CREATED="1574766505250" MODIFIED="1576659850741">
 <node TEXT="https://websitebeaver.com/php-pdo-vs-mysqli" ID="ID_536140428" CREATED="1575976474136" MODIFIED="1576655616318" LINK="https://websitebeaver.com/php-pdo-vs-mysqli">
 <icon BUILTIN="button_ok"/>
@@ -1492,7 +1492,6 @@
     <pre http-equiv="content-type" content="text/html; charset=utf-8" class="line-numbers language-php code-toolbar"><code class=" language-php"><span class="token variable">$sql = &quot;INSERT INTO myTable (name, age) VALUES (?, ?)&quot;;</span></code></pre>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
@@ -1507,7 +1506,6 @@
     <pre http-equiv="content-type" content="text/html; charset=utf-8" class="line-numbers language-php code-toolbar"><code class=" language-php"><span class="token variable">$sentencia </span><span class="token operator">=</span> <span class="token variable">$conexion</span><span class="token operator">-&gt;</span><span class="token function">prepare</span><span class="token punctuation">($sql);</span></code></pre>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
@@ -1522,7 +1520,6 @@
     <pre http-equiv="content-type" content="text/html; charset=utf-8" class="line-numbers language-php code-toolbar"><code class=" language-php"><span class="token variable">$sqlConExito = $sentencia-&gt;</span><span class="token function">execute</span><span class="token punctuation">([$name, $age]);</span></code></pre>
   </body>
 </html>
-
 </richcontent>
 </node>
 <node TEXT="devuelve true o false en función de si ha ido todo bien" ID="ID_247357934" CREATED="1603452033543" MODIFIED="1603452046011"/>
@@ -1647,7 +1644,8 @@
 </node>
 </node>
 </node>
-<node TEXT="cookies" FOLDED="true" POSITION="right" ID="ID_578081402" CREATED="1275125484565" MODIFIED="1573030892593">
+<node TEXT="cookies" FOLDED="true" POSITION="right" ID="ID_578081402" CREATED="1275125484565" MODIFIED="1605691669984">
+<icon BUILTIN="estadotarea_pendiente"/>
 <node TEXT="para acceder al&#xa;valor de una cookie" ID="ID_70278479" CREATED="1275126411467" MODIFIED="1417636498312">
 <node TEXT="mediante el array asociativo supergobal" ID="ID_867586564" CREATED="1275126719898" MODIFIED="1521139799986">
 <node TEXT="$_COOKIE[&quot;clave&quot;]" ID="ID_1833983350" CREATED="1275126423869" MODIFIED="1575369869397"/>
@@ -1712,7 +1710,9 @@
 <node TEXT="para 10 días: 60*60*24*10" ID="ID_202503221" CREATED="1386011993219" MODIFIED="1386012006683"/>
 </node>
 </node>
-<node TEXT="si se pone 0, la cookie expirará al final de la sesión (al cerrar el navegador)" ID="ID_892533980" CREATED="1575370206181" MODIFIED="1575370220538"/>
+<node TEXT="si se pone 0, la cookie expirará al final de la sesión (al cerrar el navegador)" ID="ID_892533980" CREATED="1575370206181" MODIFIED="1575370220538">
+<node TEXT="esta es la caducidad de la cookie implícita PHPSESSID" ID="ID_184957869" CREATED="1605692439193" MODIFIED="1605692450665"/>
+</node>
 </node>
 <node TEXT="las cookies no se pueden &quot;modificar&quot; como tal pero se pueden sobreescribir" ID="ID_1218930642" CREATED="1417637129936" MODIFIED="1417637150861"/>
 <node TEXT="en cada página sólo tengo que poner las cookies NUEVAS" ID="ID_350177417" CREATED="1275126684140" MODIFIED="1521139799976">
@@ -1731,8 +1731,8 @@
 </node>
 </node>
 </node>
-<node TEXT="manejo de&#xa;sesiones-RAM&#xa;en PHP" FOLDED="true" POSITION="right" ID="ID_89182252" CREATED="1275125486180" MODIFIED="1573030892585">
-<node TEXT="¿qué es lo que da soporte&#xa;al mecanismo de la sesión?&#xa;(¿cómo nos &quot;acordamos&quot;&#xa;del id de sesión?)&#xa;(si no lo entendéis 100%,&#xa;no os preocupéis)&#xa;(no examen)" ID="ID_1213888443" CREATED="1275129962771" MODIFIED="1449084380215">
+<node TEXT="sesiones" POSITION="right" ID="ID_89182252" CREATED="1275125486180" MODIFIED="1605691662118">
+<node TEXT="¿qué es lo que da soporte&#xa;al mecanismo de la sesión?&#xa;(¿cómo nos &quot;acordamos&quot;&#xa;del id de sesión?)" ID="ID_1213888443" CREATED="1275129962771" MODIFIED="1605692539444">
 <node TEXT="cookies" ID="ID_1992282971" CREATED="1275130054916" MODIFIED="1575971031393">
 <icon BUILTIN="button_ok"/>
 <node TEXT="php.ini" ID="ID_714313853" CREATED="1275130023123" MODIFIED="1521139800061">
@@ -1750,6 +1750,7 @@
 <node TEXT="esto siempre funciona" ID="ID_272404279" CREATED="1385051063506" MODIFIED="1385051065737"/>
 <node TEXT="posible problema" ID="ID_1135074305" CREATED="1385051047851" MODIFIED="1521139800056">
 <node TEXT="es farragoso de programar" ID="ID_1847342962" CREATED="1385051052882" MODIFIED="1385051058029"/>
+<node TEXT="es muy inseguro" ID="ID_1575615870" CREATED="1605692601598" MODIFIED="1605692609371"/>
 </node>
 </node>
 <node TEXT="mediante la URL de&#xa;forma AUTOMÁTICA" ID="ID_837359256" CREATED="1275130070336" MODIFIED="1414434456459">
@@ -1805,12 +1806,14 @@
 <node TEXT="es un array asociativo" ID="ID_1502098500" CREATED="1275129563106" MODIFIED="1370447651107"/>
 <node TEXT="PHP lo que hace es:" ID="ID_1796944794" CREATED="1370448395989" MODIFIED="1521139800039">
 <node TEXT="al hacer session_start() CARGA desde la RAM al array los datos que haya" ID="ID_28628947" CREATED="1370448401020" MODIFIED="1370448416868"/>
-<node TEXT="al terminar la ejecución del PHP y devolver la página al cliente, GUARDA en la RAM los datos que tenga el array" ID="ID_969800900" CREATED="1370448417387" MODIFIED="1370448438245"/>
+<node TEXT="al terminar la ejecución del PHP y devolver la página al cliente, GUARDA en la RAM los datos que tenga el array" ID="ID_969800900" CREATED="1370448417387" MODIFIED="1605693078248">
+<icon BUILTIN="atenciвn_!!"/>
+</node>
 </node>
 <node TEXT="" ID="ID_1322406768" CREATED="1370447660507" MODIFIED="1521139800035">
-<node TEXT="con $_SESSION[&quot;tal&quot;] = 17 creo o actualizo un valor en la sesión" ID="ID_715035420" CREATED="1275130725214" MODIFIED="1449086657198"/>
+<node TEXT="con $_SESSION[&quot;tal&quot;] = 17 creo o actualizo una clave en la sesión" ID="ID_715035420" CREATED="1275130725214" MODIFIED="1605693148657"/>
 <node TEXT="con echo $_SESSION[&quot;tal&quot;] recupero y uso un valor de la sesión" ID="ID_17855061" CREATED="1275130725214" MODIFIED="1449086682078"/>
-<node TEXT="con isset($_SESSION[&quot;tal&quot;]) comprobamos si existe determinado valor en la sesión" ID="ID_1420107742" CREATED="1275130753949" MODIFIED="1415649294292"/>
+<node TEXT="con isset($_SESSION[&quot;tal&quot;]) comprobamos si existe determinada clave en la sesión" ID="ID_1420107742" CREATED="1275130753949" MODIFIED="1605693142390"/>
 <node TEXT="con unset($_SESSION[&quot;tal&quot;]) quitamos un valor de la sesión" ID="ID_342428644" CREATED="1275130742990" MODIFIED="1575971650887"/>
 </node>
 </node>
@@ -1830,31 +1833,14 @@
 <node TEXT="// Esto es necesario solo si luego viene HTML.&#xa;unset($_SESSION);" ID="ID_786059019" CREATED="1385051296132" MODIFIED="1575971663586">
 <icon BUILTIN="full-3"/>
 <node TEXT="si este PHP tiene parte HTML, hay que tener en cuenta que el array asociativo $_SESSION estará CARGADO con datos que ya no están vigentes, por lo que hay que borrarlo con el unset" ID="ID_1431490266" CREATED="1385051258705" MODIFIED="1417031306510"/>
-<node TEXT="ejemplo" ID="ID_1540256365" CREATED="1385669359916" MODIFIED="1521139803210">
+<node TEXT="ejemplo" FOLDED="true" ID="ID_1540256365" CREATED="1385669359916" MODIFIED="1521139803210">
 <icon BUILTIN="z_script"/>
-<node ID="ID_109006907" CREATED="1385669363988" MODIFIED="1385669365201"><richcontent TYPE="NODE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    ?php session_start(); session_destroy(); // *** ?&gt;
-
-    <html>
-      <body>
-        ?php if (isset($_SESSION["sesion_iniciada"])) { // Si NO hago un unset($_SESSION) arriba en la posici&#xf3;n marcada con ***, // aqu&#xed; parecer&#xed;a que S&#xcd; hay sesi&#xf3;n iniciada a pesar del session_destroy(). // ... } ?&gt;
-      </body>
-    </html>
-  </body>
-</html>
-</richcontent>
+<node TEXT="&lt;?php&#xa;    session_start();&#xa;    session_destroy();&#xa;    // ***&#xa;?&gt;&#xa;&#xa;...&#xa;&#xa;&lt;?php&#xa;    if (isset($_SESSION[&quot;sesionIniciada&quot;])) {&#xa;        // Si NO hago un unset($_SESSION) arriba en la posición marcada con ***,&#xa;        // aquí parecería que SÍ hay sesión iniciada a pesar del session_destroy().&#xa;        // ...&#xa;    }&#xa;?&gt;" ID="ID_1220875861" CREATED="1605693431723" MODIFIED="1605693433266"/>
 </node>
 </node>
-</node>
-<node TEXT="ejemplo, cerrar-sesion.php" ID="ID_861930094" CREATED="1385051173747" MODIFIED="1521139800006">
+<node TEXT="ejemplo, cerrarSesion.php" ID="ID_861930094" CREATED="1385051173747" MODIFIED="1605693524106">
 <icon BUILTIN="z_script"/>
-<node TEXT="&lt;?php&#xa;&#x9;session_start();&#xa;&#xa;&#x9;session_destroy();&#xa;&#x9;&#xa;&#x9;// No hace falta hacer unset($_SESSION), porque este PHP no tiene HTML.&#xa;&#x9;&#x9;&#xa;&#x9;// Se redirige al cliente a otro PHP.&#xa;&#x9;header(&quot;Location: iniciar-sesion.php&quot;);&#xa;&#x9;exit();&#xa;?&gt;" ID="ID_1562055074" CREATED="1385051175969" MODIFIED="1417031335859">
+<node TEXT="&lt;?php&#xa;         session_start();&#xa;&#xa;         session_destroy();&#xa;&#xa;         // No hace falta hacer unset($_SESSION), porque este PHP no tiene HTML.&#xa;&#xa;         // Se redirige al cliente a otro PHP.&#xa;         header(&quot;Location: iniciarSesion.php&quot;);&#xa;         exit();&#xa;?&gt;" ID="ID_1562055074" CREATED="1385051175969" MODIFIED="1605693557000">
 <arrowlink SHAPE="LINE" COLOR="#000000" WIDTH="2" TRANSPARENCY="200" FONT_SIZE="9" FONT_FAMILY="SansSerif" DESTINATION="ID_1562055074" STARTINCLINATION="0;0;" ENDINCLINATION="0;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
 <linktarget COLOR="#b0b0b0" DESTINATION="ID_1562055074" ENDARROW="Default" ENDINCLINATION="0;0;" ID="Arrow_ID_1229805768" SOURCE="ID_1562055074" STARTARROW="None" STARTINCLINATION="0;0;"/>
 </node>

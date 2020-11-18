@@ -3,9 +3,15 @@
 
     $conexion = obtenerPdoConexionBD();
 
-    $mostrarSoloEstrellas = isset($_REQUEST["soloEstrellas"]);
+    session_start(); // Crear post-it vacío, o recuperar el que ya haya  (vacío o con cosas).
+    if (isset($_REQUEST["soloEstrellas"])) {
+        $_SESSION["soloEstrellas"] = true;
+    }
+    if (isset($_REQUEST["todos"])) {
+        unset($_SESSION["soloEstrellas"]);
+    }
 
-    $posibleClausulaWhere = $mostrarSoloEstrellas ? "WHERE p.estrella=1" : "";
+    $posibleClausulaWhere = isset($_SESSION["soloEstrellas"]) ? "WHERE p.estrella=1" : "";
 
     $sql = "
                SELECT
@@ -29,7 +35,7 @@
 
     // INTERFAZ:
     // $rs
-    // $mostrarSoloEstrellas
+    // $_SESSION
 ?>
 
 
@@ -67,7 +73,7 @@
                     echo "</a>";
 
                     $urlImagen = $fila["pEstrella"] ? "img/estrellaRellena.png" : "img/estrellaVacia.png";
-                    echo " <a href='personaEstablecerEstadoEstrella.php?id=PTE_HACER'><img src='$urlImagen' width='16' height='16'></a>";
+                    echo " <a href='personaEstablecerEstadoEstrella.php?id=$fila[pId]'><img src='$urlImagen' width='16' height='16'></a>";
                 ?>
             </td>
             <td><a href= 'personaFicha.php?id=<?=$fila["pId"]?>'> <?= $fila["pApellidos"] ?> </a></td>
@@ -80,10 +86,10 @@
 
 <br />
 
-<?php if (!$mostrarSoloEstrellas) {?>
+<?php if (!isset($_SESSION["soloEstrellas"])) {?>
     <a href='personaListado.php?soloEstrellas'>Mostrar solo contactos con estrella</a>
 <?php } else { ?>
-    <a href='personaListado.php'>Mostrar todos los contactos</a>
+    <a href='personaListado.php?todos'>Mostrar todos los contactos</a>
 <?php } ?>
 
 <br />

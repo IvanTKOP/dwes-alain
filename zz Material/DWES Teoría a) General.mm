@@ -1,6 +1,6 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1573029101196"><hook NAME="MapStyle" zoom="3.137">
+<node TEXT="" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1573029101196"><hook NAME="MapStyle" zoom="1.948">
     <properties fit_to_viewport="false" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
@@ -277,7 +277,7 @@
 </node>
 </node>
 </node>
-<node TEXT="cookies" POSITION="right" ID="ID_1541411190" CREATED="1572867598677" MODIFIED="1572867599851">
+<node TEXT="cookies" FOLDED="true" POSITION="right" ID="ID_1541411190" CREATED="1572867598677" MODIFIED="1572867599851">
 <node TEXT="es una pareja (clave, contenido)" ID="ID_552500770" CREATED="1275125678094" MODIFIED="1417635341490"/>
 <node TEXT="p. ej.:" ID="ID_1628951635" CREATED="1417635366541" MODIFIED="1521139799990">
 <node TEXT="(¡OJO!) identificador-con-sesion-iniciada" ID="ID_639951159" CREATED="1417635369934" MODIFIED="1588868872429">
@@ -303,7 +303,6 @@
     <pre http-equiv="content-type" content="text/html; charset=utf-8" class="result notranslate">[ ] ( ) = , &quot; / ? @ : ;</pre>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
@@ -327,7 +326,8 @@
 <node TEXT="por tanto, no puede garantizarse al 100% que una cookie permanecerá... O que no vaya a ser modificada por el usuario, sin o con mala intención" ID="ID_1944910520" CREATED="1275129244700" MODIFIED="1572950279120"/>
 </node>
 </node>
-<node TEXT="envío de&#xa;información entre&#xa;cliente y servidor;&#xa;formularios" FOLDED="true" POSITION="right" ID="ID_1565451000" CREATED="1275124186238" MODIFIED="1573029608845">
+<node TEXT="envío de&#xa;información entre&#xa;cliente y servidor;&#xa;formularios" FOLDED="true" POSITION="right" ID="ID_1565451000" CREATED="1275124186238" MODIFIED="1605692276817">
+<icon BUILTIN="estadotarea_pendiente"/>
 <node TEXT="para que el cliente&#xa;le envíe info. al servidor" ID="ID_391061124" CREATED="1365607676763" MODIFIED="1414434456422">
 <node TEXT="será, siempre, por GET o por POST (que sigue siendo GET, también)" ID="ID_1658119230" CREATED="1365610563958" MODIFIED="1573029189870">
 <icon BUILTIN="info_informaciвn"/>
@@ -372,7 +372,8 @@
 </node>
 </node>
 </node>
-<node TEXT="propuesta de modelo&#xa;de organización del flujo&#xa;de las interacciones web" FOLDED="true" POSITION="right" ID="ID_698241357" CREATED="1355105075663" MODIFIED="1573029156260">
+<node TEXT="propuesta de modelo&#xa;de organización del flujo&#xa;de las interacciones web" FOLDED="true" POSITION="right" ID="ID_698241357" CREATED="1355105075663" MODIFIED="1605692276820">
+<icon BUILTIN="estadotarea_pendiente"/>
 <node TEXT="una aplicación web es un trasiego constante de" ID="ID_437303761" CREATED="1361587386566" MODIFIED="1414434456281">
 <icon BUILTIN="info_informaciвn"/>
 <node TEXT="peticiones del cliente en forma de URL+posibles parámetros (un &quot;GET&quot;)" ID="ID_642489009" CREATED="1361587417696" MODIFIED="1415644240513">
@@ -483,7 +484,7 @@
 </node>
 </node>
 <node TEXT="sesiones" POSITION="right" ID="ID_713848640" CREATED="1361805095560" MODIFIED="1573478035306">
-<node TEXT="tipos de &quot;sesiones&quot;" ID="ID_1826064534" CREATED="1361805681864" MODIFIED="1414434456284">
+<node TEXT="tipos de &quot;sesiones&quot;" FOLDED="true" ID="ID_1826064534" CREATED="1361805681864" MODIFIED="1414434456284">
 <node TEXT="sesión-USUARIO" ID="ID_598023351" CREATED="1361588759128" MODIFIED="1414434456445">
 <node TEXT="es un concepto NO-técnico" ID="ID_409146745" CREATED="1361805759349" MODIFIED="1361805783020"/>
 <node TEXT="es, DESDE EL PUNTO DE VISTA DE UN USUARIO, el tiempo que pasa desde que introduce identificador y contraseña hasta que &quot;cierra sesión&quot;" ID="ID_1869307765" CREATED="1361805780864" MODIFIED="1361805817248"/>

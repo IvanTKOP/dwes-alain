@@ -36,7 +36,7 @@
 	
 	// Con lo siguiente se deja preparado un recordset con todas las categorías.
 	
-	$sqlCategorias = "SELECT * FROM categoria ORDER BY nombre";
+	$sqlCategorias = "SELECT id, nombre FROM categoria ORDER BY nombre";
 
     $select = $conexion->prepare($sqlCategorias);
     $select->execute([]); // Array vacío porque la consulta preparada no requiere parámetros.
@@ -76,19 +76,19 @@
 
 <input type='hidden' name='id' value='<?= $id ?>' />
 
-    <label for='nombre'>Nombre: </label>
+    <label for='nombre'>Nombre</label>
     <input type='text' name='nombre' value='<?=$personaNombre ?>' />
     <br/>
 
-    <label for='apellidos'> Apellidos: </label>
+    <label for='apellidos'> Apellidos</label>
     <input type='text' name='apellidos' value='<?=$personaApellidos ?>' />
     <br/>
 
-    <label for='telefono'> Teléfono: </label>
+    <label for='telefono'> Teléfono</label>
     <input type='text' name='telefono' value='<?=$personaTelefono ?>' />
     <br/>
 
-    <label for='categoriaId'>Categoría: </label>
+    <label for='categoriaId'>Categoría</label>
     <select name='categoriaId'>
         <?php
             foreach ($rsCategorias as $filaCategoria) {

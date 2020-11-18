@@ -61,12 +61,11 @@
 
 <input type='hidden' name='id' value='<?=$id?>' />
 
-<ul>
-	<li>
-		<strong>Nombre: </strong>
-		<input type='text' name='nombre' value='<?=$categoriaNombre?>' />
-	</li>
-</ul>
+    <label for='nombre'>Nombre</label>
+	<input type='text' name='nombre' value='<?=$categoriaNombre?>' />
+    <br/>
+
+    <br/>
 
 <?php if ($nuevaEntrada) { ?>
 	<input type='submit' name='crear' value='Crear categoría' />
