@@ -6,7 +6,7 @@
 
 <body>
 
-<form action="03b-color-presentar.php" method="get">
+<form action="03b_ColorPresentar.php" method="get">
 
     <p>Elige un color:</p>
     <select name="color">

@@ -1,5 +1,5 @@
 <?php
-    require_once "_varios.php";
+    require_once "_Varios.php";
 
     $conexion = obtenerPdoConexionBD();
 
@@ -9,5 +9,5 @@
     $sentencia = $conexion->prepare($sql);
     $sentencia->execute([$id, $id]);
 
-    redireccionar("personaListado.php");
+    redireccionar("PersonaListado.php");
 ?>

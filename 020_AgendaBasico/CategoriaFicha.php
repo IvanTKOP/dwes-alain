@@ -1,5 +1,5 @@
 <?php
-	require_once "_varios.php";
+	require_once "_Varios.php";
 
 	$conexion = obtenerPdoConexionBD();
 	
@@ -26,17 +26,9 @@
 
 
 
-    $sql = "SELECT * FROM persona WHERE categoriaId=? ORDER BY nombre";
-
-    $select = $conexion->prepare($sql);
-    $select->execute([$id]); // Array vacío porque la consulta preparada no requiere parámetros.
-    $rsPersonasDeLaCategoria = $select->fetchAll();
-
-
 	// INTERFAZ:
     // $nuevaEntrada
     // $categoriaNombre
-    // $rsPersonasDeLaCategoria
 ?>
 
 
@@ -57,15 +49,16 @@
 	<h1>Ficha de categoría</h1>
 <?php } ?>
 
-<form method='post' action='categoriaGuardar.php'>
+<form method='post' action='CategoriaGuardar.php'>
 
 <input type='hidden' name='id' value='<?=$id?>' />
 
-    <label for='nombre'>Nombre</label>
-	<input type='text' name='nombre' value='<?=$categoriaNombre?>' />
-    <br/>
-
-    <br/>
+<ul>
+	<li>
+		<strong>Nombre: </strong>
+		<input type='text' name='nombre' value='<?=$categoriaNombre?>' />
+	</li>
+</ul>
 
 <?php if ($nuevaEntrada) { ?>
 	<input type='submit' name='crear' value='Crear categoría' />
@@ -75,27 +68,14 @@
 
 </form>
 
-<br />
-
-<p>Personas que pertenecen actualmente a la categoría:</p>
-
-<ul>
-<?php
-    foreach ($rsPersonasDeLaCategoria as $fila) {
-        echo "<li>$fila[nombre] $fila[apellidos]</li>";
-    }
-?>
-</ul>
-
 <?php if (!$nuevaEntrada) { ?>
     <br />
-    <a href='categoriaEliminar.php?id=<?=$id?>'>Eliminar categoría</a>
+    <a href='CategoriaEliminar.php?id=<?=$id?>'>Eliminar categoría</a>
 <?php } ?>
 
 <br />
-<br />
 
-<a href='categoriaListado.php'>Volver al listado de categorías.</a>
+<a href='CategoriaListado.php'>Volver al listado de categorías.</a>
 
 </body>
 

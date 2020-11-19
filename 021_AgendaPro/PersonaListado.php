@@ -1,5 +1,5 @@
 <?php
-    require_once "_varios.php";
+    require_once "_Varios.php";
 
     $conexion = obtenerPdoConexionBD();
 
@@ -66,20 +66,20 @@
         <tr>
             <td>
                 <?php
-                    echo "<a href='personaFicha.php?id=$fila[pId]'>";
+                    echo "<a href='PersonaFicha.php?id=$fila[pId]'>";
                     echo "$fila[pNombre]";
                     if ($fila["pApellidos"] != "") {
                         echo " $fila[pApellidos]";
                     }
                     echo "</a>";
 
-                    $urlImagen = $fila["pEstrella"] ? "img/estrellaRellena.png" : "img/estrellaVacia.png";
+                    $urlImagen = $fila["pEstrella"] ? "img/EstrellaRellena.png" : "img/EstrellaVacia.png";
                     echo " <a href='personaEstablecerEstadoEstrella.php?id=$fila[pId]'><img src='$urlImagen' width='16' height='16'></a>";
                 ?>
             </td>
-            <td><a href= 'personaFicha.php?id=<?=$fila["pId"]?>'> <?= $fila["pApellidos"] ?> </a></td>
-            <td><a href= 'categoriaFicha.php?id=<?=$fila["cId"]?>'> <?= $fila["cNombre"] ?> </a></td>
-            <td><a href='personaEliminar.php?id=<?=$fila["pId"]?>'> (X)                      </a></td>
+            <td><a href= 'PersonaFicha.php?id=<?=$fila["pId"]?>'> <?= $fila["pApellidos"] ?> </a></td>
+            <td><a href= 'CategoriaFicha.php?id=<?=$fila["cId"]?>'> <?= $fila["cNombre"] ?> </a></td>
+            <td><a href='PersonaEliminar.php?id=<?=$fila["pId"]?>'> (X)                      </a></td>
         </tr>
     <?php } ?>
 
@@ -88,20 +88,20 @@
 <br />
 
 <?php if (!isset($_SESSION["soloEstrellas"])) {?>
-    <a href='personaListado.php?soloEstrellas'>Mostrar solo contactos con estrella</a>
+    <a href='PersonaListado.php?soloEstrellas'>Mostrar solo contactos con estrella</a>
 <?php } else { ?>
-    <a href='personaListado.php?todos'>Mostrar todos los contactos</a>
+    <a href='PersonaListado.php?todos'>Mostrar todos los contactos</a>
 <?php } ?>
 
 <br />
 <br />
 
-<a href='personaFicha.php?id=-1'>Crear entrada</a>
+<a href='PersonaFicha.php?id=-1'>Crear entrada</a>
 
 <br />
 <br />
 
-<a href='categoriaListado.php'>Gestionar listado de Categorías</a>
+<a href='CategoriaListado.php'>Gestionar listado de Categorías</a>
 
 </body>
 

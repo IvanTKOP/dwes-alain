@@ -8,7 +8,7 @@
 
 <h1>ADIVINAR EL NÚMERO</h1>
 
-<form action="20b-adivinar-principal.php" method="post">
+<form action="20b_AdivinarPrincipal.php" method="post">
     <p>Jugador 1: Introduce un número:</p>
     <input type="number" name="oculto" />
     <input type="submit" value="Guardar oculto" />

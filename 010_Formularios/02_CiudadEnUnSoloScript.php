@@ -18,7 +18,7 @@
 ?>
 
     <p>¿Cuál es tu cuidad favorita?</p>
-    <form action='' method='get'>
+    <form method='get'>
         <input type='text' name='ciudad' />
         <input type='submit' name='boton' value="Enviar" />
     </form>

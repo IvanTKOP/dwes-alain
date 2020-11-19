@@ -1,5 +1,5 @@
 <?php
-	require_once "_varios.php";
+	require_once "_Varios.php";
 
 	$conexionBD = obtenerPdoConexionBD();
 
@@ -9,7 +9,6 @@
 	$sql = "DELETE FROM categoria WHERE id=?";
 
     $sentencia = $conexionBD->prepare($sql);
-
     //Esta llamada devuelve true o false según si la ejecución de la sentencia ha ido bien o mal.
     $sqlConExito = $sentencia->execute([$id]); // Se añade el parámetro a la consulta preparada.
 
@@ -22,7 +21,6 @@
  	$noExistia = ($sqlConExito && $sentencia->rowCount() == 0);
 
  	// INTERFAZ:
-    // $sqlConExito
     // $correctoNormal
     // $noExistia
 ?>
@@ -56,7 +54,7 @@
 
 <?php } ?>
 
-<a href='categoriaListado.php'>Volver al listado de categorías.</a>
+<a href='CategoriaListado.php'>Volver al listado de categorías.</a>
 
 </body>
 
