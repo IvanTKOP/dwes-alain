@@ -11,6 +11,7 @@
         unset($_SESSION["soloEstrellas"]);
     }
 
+
     $posibleClausulaWhere = isset($_SESSION["soloEstrellas"]) ? "WHERE p.estrella=1" : "";
 
     $sql = "

@@ -1,6 +1,6 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="2.593">
+<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="3.451">
     <properties fit_to_viewport="false" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
@@ -1731,18 +1731,19 @@
 </node>
 </node>
 </node>
-<node TEXT="sesiones" POSITION="right" ID="ID_89182252" CREATED="1275125486180" MODIFIED="1605691662118">
+<node TEXT="sesiones" FOLDED="true" POSITION="right" ID="ID_89182252" CREATED="1275125486180" MODIFIED="1605691662118">
 <node TEXT="¿qué es lo que da soporte&#xa;al mecanismo de la sesión?&#xa;(¿cómo nos &quot;acordamos&quot;&#xa;del id de sesión?)" ID="ID_1213888443" CREATED="1275129962771" MODIFIED="1605692539444">
 <node TEXT="cookies" ID="ID_1992282971" CREATED="1275130054916" MODIFIED="1575971031393">
 <icon BUILTIN="button_ok"/>
 <node TEXT="php.ini" ID="ID_714313853" CREATED="1275130023123" MODIFIED="1521139800061">
-<node TEXT="session.use_cookies =1/0" ID="ID_68019424" CREATED="1275130026141" MODIFIED="1275130035831"/>
+<node TEXT="session.use_cookies =1" ID="ID_68019424" CREATED="1275130026141" MODIFIED="1605787160131"/>
 </node>
 <node TEXT="posible problema" ID="ID_478548212" CREATED="1385051020680" MODIFIED="1521139800060">
 <node TEXT="el cliente puede no aceptar cookies (aunque hoy día no es habitual)" ID="ID_288057720" CREATED="1275130140872" MODIFIED="1385051038967"/>
 </node>
 </node>
-<node TEXT="mediante la URL de&#xa;forma MANUAL" ID="ID_1827202374" CREATED="1275130611811" MODIFIED="1449084416614">
+<node TEXT="mediante&#xa;la URL" ID="ID_793557493" CREATED="1605787181051" MODIFIED="1605787184118">
+<node TEXT="de forma&#xa;MANUAL" ID="ID_1827202374" CREATED="1275130611811" MODIFIED="1605787186264">
 <node TEXT="poniendo enlaces como" ID="ID_1660755617" CREATED="1275130624829" MODIFIED="1521139800059">
 <node TEXT="pag_sig.php?&lt;?= session_name().&quot;=&quot;session_id() ?&gt;" ID="ID_1859623688" CREATED="1275130619500" MODIFIED="1415649083102"/>
 <node TEXT="(hay que pasar tb el NAME porque pueden repetirse los ids en distintos names...)" ID="ID_1263301812" CREATED="1275130662228" MODIFIED="1275130704974"/>
@@ -1753,7 +1754,7 @@
 <node TEXT="es muy inseguro" ID="ID_1575615870" CREATED="1605692601598" MODIFIED="1605692609371"/>
 </node>
 </node>
-<node TEXT="mediante la URL de&#xa;forma AUTOMÁTICA" ID="ID_837359256" CREATED="1275130070336" MODIFIED="1414434456459">
+<node TEXT="de forma&#xa;AUTO-&#xa;MÁTICA" ID="ID_837359256" CREATED="1275130070336" MODIFIED="1605787193181">
 <node TEXT="añadirlo a las URLs" ID="ID_476669974" CREATED="1275130074728" MODIFIED="1275130081157"/>
 <node TEXT="php.ini" ID="ID_864386478" CREATED="1275130090258" MODIFIED="1521139800053">
 <node TEXT="session.use_trans_sid=1" ID="ID_98284786" CREATED="1275130092761" MODIFIED="1275130098083"/>
@@ -1765,11 +1766,12 @@
 </node>
 </node>
 </node>
+</node>
 <node TEXT="" ID="ID_271876877" CREATED="1275129599930" MODIFIED="1414434456294">
 <icon BUILTIN="info_informaciвn"/>
 <node TEXT="la sesión tiene una ID" ID="ID_202016699" CREATED="1275129650801" MODIFIED="1275129654859"/>
-<node TEXT="el servidor devuelve el ID de sesión junto con la página (en una Cookie)" ID="ID_643211332" CREATED="1275129693452" MODIFIED="1575971331547"/>
-<node TEXT="y en la siguiente llamada el navegador indica al servidor cuál es la sesión (mediante la cookie)" ID="ID_297051332" CREATED="1275129705175" MODIFIED="1575971342712"/>
+<node TEXT="la primera vez el servidor devuelve el ID de sesión junto con la página (en una Cookie)" ID="ID_643211332" CREATED="1275129693452" MODIFIED="1605787324086"/>
+<node TEXT="y en TODAS las siguientes llamada el navegador indica al servidor cuál es la sesión (mediante la cookie)" ID="ID_297051332" CREATED="1275129705175" MODIFIED="1605787355539"/>
 </node>
 <node TEXT="caducidad de cookies de sesión" ID="ID_1322914868" CREATED="1575542792026" MODIFIED="1575542797455">
 <node TEXT="mediante esta directiva en php.ini:" ID="ID_611511733" CREATED="1575542799825" MODIFIED="1575542806987">
@@ -1778,11 +1780,11 @@
 </node>
 </node>
 <node TEXT="duración" ID="ID_889132234" CREATED="1575542822346" MODIFIED="1575542825119">
-<node TEXT="si se pone 0: duran la sesión (hasta cerrar la pestaña)" ID="ID_1790873751" CREATED="1575542807335" MODIFIED="1575542818783"/>
+<node TEXT="si se pone 0: duran la sesión (hasta cerrar el navegador o la pestaña)" ID="ID_1790873751" CREATED="1575542807335" MODIFIED="1605787466302"/>
 <node TEXT="si no, lo que se ponga" ID="ID_719805323" CREATED="1575542818976" MODIFIED="1575542821697"/>
 </node>
 </node>
-<node TEXT="instrucciones en PHP" ID="ID_1223236180" CREATED="1385051085963" MODIFIED="1414434456295">
+<node TEXT="instrucciones&#xa;en PHP" ID="ID_1223236180" CREATED="1385051085963" MODIFIED="1605787472644">
 <node TEXT="session_start()" ID="ID_1090740023" CREATED="1275129503264" MODIFIED="1575971910449">
 <node TEXT="Inicializa la sesión con el usuario o, si ya estaba inicializada, la recupera para utilizarla." ID="ID_1051741353" CREATED="1361546119766" MODIFIED="1361546124512"/>
 <node TEXT="esta llamada tiene que venir ANTES que cualquier etiqueta HTML" ID="ID_237670414" CREATED="1275129752716" MODIFIED="1521139800048">
@@ -1797,6 +1799,7 @@
 </node>
 </node>
 </node>
+<node TEXT="y, al finalizar el script PHP, toma el contenido de $_SESSION y lo guarda en RAM para la próxima" ID="ID_892015530" CREATED="1605787687283" MODIFIED="1605787708698"/>
 <node TEXT="si en php.ini se establece esto, no es necesario hacer session_start() en cada página:" ID="ID_1288498460" CREATED="1575542017591" MODIFIED="1575542041110">
 <node TEXT=" session.auto_start=1" ID="ID_983182080" CREATED="1575542041351" MODIFIED="1575542122594"/>
 </node>
@@ -1817,7 +1820,7 @@
 <node TEXT="con unset($_SESSION[&quot;tal&quot;]) quitamos un valor de la sesión" ID="ID_342428644" CREATED="1275130742990" MODIFIED="1575971650887"/>
 </node>
 </node>
-<node TEXT="destrucción de la sesión" ID="ID_280566063" CREATED="1385051161823" MODIFIED="1414434456466">
+<node TEXT="destrucción&#xa;de la sesión" ID="ID_280566063" CREATED="1385051161823" MODIFIED="1605787833928">
 <node TEXT="session_start();" ID="ID_545133239" CREATED="1385051210373" MODIFIED="1575971661554">
 <icon BUILTIN="full-1"/>
 <node TEXT="primero hay que hacer esto, aunque parezca raro. Es para recuperar la sesión, si no, PHP no sabe qué sesión hay que destruir" ID="ID_734041547" CREATED="1385051199954" MODIFIED="1385051334732"/>
@@ -1980,10 +1983,28 @@
 </node>
 </node>
 </node>
-<node TEXT="serialización de variables" FOLDED="true" POSITION="right" ID="ID_1884531973" CREATED="1575542414951" MODIFIED="1575542418962">
-<icon BUILTIN="estadotarea_pendiente"/>
-<node TEXT="*  serialize($variable) returns a string representation of the variable" ID="ID_1791400580" CREATED="1575542419577" MODIFIED="1575542421308"/>
-<node TEXT="*  unserialize($string) returns back a variable from a string" ID="ID_1156515189" CREATED="1575542419578" MODIFIED="1575542421312"/>
+<node TEXT="serialización de variables" POSITION="right" ID="ID_1884531973" CREATED="1575542414951" MODIFIED="1605787932168">
+<icon BUILTIN="full-1"/>
+<node TEXT="serialize($variable)" ID="ID_1791400580" CREATED="1575542419577" MODIFIED="1605787943251">
+<node TEXT="returns a string representation of the variable" ID="ID_958046948" CREATED="1605787943614" MODIFIED="1605787945231"/>
+</node>
+<node TEXT="unserialize($string)" ID="ID_1156515189" CREATED="1575542419578" MODIFIED="1605787983115">
+<node ID="ID_1612832596" CREATED="1605787983482" MODIFIED="1605787983482"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      returns back a variable from a string
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
 </node>
 <node TEXT="generar PDFs" POSITION="right" ID="ID_1021978191" CREATED="1571658785271" MODIFIED="1573030892588">
 <node TEXT="https://stackoverflow.com/questions/6438522/create-new-pdf-from-template-with-php" ID="ID_1115163844" CREATED="1571658820264" MODIFIED="1571658820264" LINK="https://stackoverflow.com/questions/6438522/create-new-pdf-from-template-with-php"/>
