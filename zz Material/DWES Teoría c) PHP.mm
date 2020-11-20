@@ -1,6 +1,6 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="3.451">
+<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="1.771">
     <properties fit_to_viewport="false" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
@@ -1818,6 +1818,17 @@
 <node TEXT="con echo $_SESSION[&quot;tal&quot;] recupero y uso un valor de la sesión" ID="ID_17855061" CREATED="1275130725214" MODIFIED="1449086682078"/>
 <node TEXT="con isset($_SESSION[&quot;tal&quot;]) comprobamos si existe determinada clave en la sesión" ID="ID_1420107742" CREATED="1275130753949" MODIFIED="1605693142390"/>
 <node TEXT="con unset($_SESSION[&quot;tal&quot;]) quitamos un valor de la sesión" ID="ID_342428644" CREATED="1275130742990" MODIFIED="1575971650887"/>
+</node>
+<node TEXT="tipos de datos en $_SESSION" ID="ID_1748434450" CREATED="1605791757747" MODIFIED="1605791765824">
+<node TEXT="en general PHP conserva el tipo de dato (más o menos...)" ID="ID_1267071009" CREATED="1605791766178" MODIFIED="1605791895592"/>
+<node TEXT="pero con los objetos, no (puede que en algún otro caso, tampoco)" ID="ID_96826739" CREATED="1605791890348" MODIFIED="1605791954404"/>
+<node TEXT="para asegurarnos, serializar/deserializar:" ID="ID_1890342973" CREATED="1605791954794" MODIFIED="1605791965697"/>
+<node TEXT="guardar" ID="ID_868779746" CREATED="1605791856859" MODIFIED="1605791858211">
+<node TEXT="session_start();&#xa;$object = new sample_object();&#xa;$_SESSION[&apos;sample&apos;] = serialize($object);" ID="ID_234192090" CREATED="1605791848804" MODIFIED="1605791855889"/>
+</node>
+<node TEXT="recuperar" ID="ID_1513952348" CREATED="1605791858405" MODIFIED="1605791859642">
+<node TEXT="session_start();&#xa;$object = unserialize($_SESSION[&apos;sample&apos;]);" ID="ID_1197631096" CREATED="1605791861324" MODIFIED="1605791862507"/>
+</node>
 </node>
 </node>
 <node TEXT="destrucción&#xa;de la sesión" ID="ID_280566063" CREATED="1385051161823" MODIFIED="1605787833928">

@@ -10,10 +10,15 @@ Meter un link en el listado de personas para alternar entre ver todas o ver solo
 
 Que al visualizar una categoría salga abajo un listado básico (solo nombre y apellidos, sin tabla, en un <ul>) de las personas que pertenecen a esa categoría.
 
-
-
-NUEVOS DEBERES para AMBOS GRUPOS (grupo 1 lunes, grupo 2 miércoles):
-
 Que funcione el alternar estrella en el listado de personas. Es decir, que si pulso en una estrella veo que se recarga el listado y la persona tiene la estrella cambiada (de sí a no, o de no a sí).
 Esto requiere una redirección.
 Si el listado estaba filtrado para solo estrellas, al volver se me cambia a ver todos. Intentar conseguir que permanezca el modo de filtrado que tuviera.
+
+
+
+
+NUEVOS DEBERES GRUPO .1 (para lunes):
+
+Incoroporar temas en la agenda, utilizando la $_SESSION como soporte para recordar qué tema tenemos puesto.
+Link en la parte superior para cambiar de tema.
+

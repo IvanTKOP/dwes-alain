@@ -11,7 +11,6 @@
         unset($_SESSION["soloEstrellas"]);
     }
 
-
     $posibleClausulaWhere = isset($_SESSION["soloEstrellas"]) ? "WHERE p.estrella=1" : "";
 
     $sql = "
@@ -56,8 +55,7 @@
 <table border='1'>
 
     <tr>
-        <th>Nombre</th>
-        <th>Apellidos</th>
+        <th>Persona</th>
         <th>Categoría</th>
     </tr>
 
@@ -66,18 +64,17 @@
         <tr>
             <td>
                 <?php
+                    $urlImagen = $fila["pEstrella"] ? "img/EstrellaRellena.png" : "img/EstrellaVacia.png";
+                    echo " <a href='PersonaEstablecerEstadoEstrella.php?id=$fila[pId]'><img src='$urlImagen' width='16' height='16'></a> ";
+
                     echo "<a href='PersonaFicha.php?id=$fila[pId]'>";
                     echo "$fila[pNombre]";
                     if ($fila["pApellidos"] != "") {
                         echo " $fila[pApellidos]";
                     }
                     echo "</a>";
-
-                    $urlImagen = $fila["pEstrella"] ? "img/EstrellaRellena.png" : "img/EstrellaVacia.png";
-                    echo " <a href='personaEstablecerEstadoEstrella.php?id=$fila[pId]'><img src='$urlImagen' width='16' height='16'></a>";
                 ?>
             </td>
-            <td><a href= 'PersonaFicha.php?id=<?=$fila["pId"]?>'> <?= $fila["pApellidos"] ?> </a></td>
             <td><a href= 'CategoriaFicha.php?id=<?=$fila["cId"]?>'> <?= $fila["cNombre"] ?> </a></td>
             <td><a href='PersonaEliminar.php?id=<?=$fila["pId"]?>'> (X)                      </a></td>
         </tr>
