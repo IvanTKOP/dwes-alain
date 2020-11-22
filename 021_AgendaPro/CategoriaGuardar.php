@@ -1,7 +1,7 @@
 <?php
-	require_once "_varios.php";
+	require_once "_Varios.php";
 
-	$conexion = obtenerPdoConexionBD();
+	$conexionBD = obtenerPdoConexionBD();
 
 	// Se recogen los datos del formulario de la request.
 	$id = (int)$_REQUEST["id"];
@@ -22,26 +22,16 @@
         $parametros = [$nombre, $id];
  	}
  	
-    $sentencia = $conexion->prepare($sql);
-
+    $sentencia = $conexionBD->prepare($sql);
     //Esta llamada devuelve true o false según si la ejecución de la sentencia ha ido bien o mal.
     $sqlConExito = $sentencia->execute($parametros); // Se añaden los parámetros a la consulta preparada.
 
-<<<<<<< Updated upstream:020-agenda/categoriaGuardar.php
  	// Está todo correcto de forma normal si NO ha habido errores y se ha visto afectada UNA fila.
  	$correcto = ($sqlConExito && $sentencia->rowCount() == 1);
 
  	// Si los datos no se habían modificado, también está correcto pero es "raro".
  	$datosNoModificados = ($sqlConExito && $sentencia->rowCount() == 0);
 
-=======
- 	//Se consulta la cantidad de filas afectadas por la ultima sentencia sql.
- 	$una_fila_afectada = ($sentencia->rowCount() == 1);
- 	$ninguna_fila_afectada = ($sentencia->rowCount() == 0);
- 	
- 	// Está to-do correcto de forma normal si NO ha habido errores y se ha visto afectada UNA fila.
- 	$correcto = ($sql_con_exito && $una_fila_afectada);
->>>>>>> Stashed changes:020-agenda/categoria-guardar.php
 
 
  	// INTERFAZ:
@@ -63,16 +53,9 @@
 <body>
 
 <?php
-<<<<<<< Updated upstream:020-agenda/categoriaGuardar.php
 	// Todo bien tanto si se han guardado los datos nuevos como si no se habían modificado.
 	if ($correcto || $datosNoModificados) { ?>
 		<?php if ($nuevaEntrada) { ?>
-=======
-	// To-do bien tanto si se han guardado los datos nuevos como si no se habían modificado.
-	if ($correcto || $datos_no_modificados) { ?>
-
-		<?php if ($id == -1) { ?>
->>>>>>> Stashed changes:020-agenda/categoria-guardar.php
 			<h1>Inserción completada</h1>
 			<p>Se ha insertado correctamente la nueva entrada de <?=$nombre?>.</p>
 		<?php } else { ?>
@@ -101,7 +84,7 @@
 	}
 ?>
 
-<a href='categoriaListado.php'>Volver al listado de categorías.</a>
+<a href='CategoriaListado.php'>Volver al listado de categorías.</a>
 
 </body>
 

@@ -1,5 +1,5 @@
 <?php
-	require_once "_varios.php";
+	require_once "_Varios.php";
 
 	$conexionBD = obtenerPdoConexionBD();
 <<<<<<< Updated upstream:020-agenda/categoriaListado.php
@@ -41,8 +41,8 @@
 
 	<?php foreach ($rs as $fila) { ?>
         <tr>
-            <td><a href=   'categoriaFicha.php?id=<?=$fila["id"]?>'> <?=$fila["nombre"] ?> </a></td>
-            <td><a href='categoriaEliminar.php?id=<?=$fila["id"]?>'> (X)                   </a></td>
+            <td><a href=   'CategoriaFicha.php?id=<?=$fila["id"]?>'> <?=$fila["nombre"] ?> </a></td>
+            <td><a href='CategoriaEliminar.php?id=<?=$fila["id"]?>'> (X)                   </a></td>
         </tr>
 	<?php } ?>
 
@@ -50,12 +50,12 @@
 
 <br />
 
-<a href='categoriaFicha.php?id=-1'>Crear entrada</a>
+<a href='CategoriaFicha.php?id=-1'>Crear entrada</a>
 
 <br />
 <br />
 
-<a href='personaListado.php'>Gestionar listado de Personas</a>
+<a href='PersonaListado.php'>Gestionar listado de Personas</a>
 
 </body>
 

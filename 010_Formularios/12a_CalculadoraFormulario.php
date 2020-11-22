@@ -9,7 +9,7 @@
 
 <h1>Calculadora</h1>
 
-<form action="12b-calculadora-resultado.php">
+<form action="12b_CalculadoraResultado.php">
     <p><input type="number" name="operando1"></p>
 
     <select name="codigoOperacion">

@@ -1,5 +1,5 @@
 <?php
-	require_once "_varios.php";
+	require_once "_Varios.php";
 
 	$conexion = obtenerPdoConexionBD();
 	
@@ -68,7 +68,7 @@
 	<h1>Ficha de persona</h1>
 <?php } ?>
 
-<form method='post' action='personaGuardar.php'>
+<form method='post' action='PersonaGuardar.php'>
 
 <input type='hidden' name='id' value='<?= $id ?>' />
 
@@ -118,13 +118,13 @@
 
 <?php if (!$nuevaEntrada) { ?>
     <br />
-	<a href='personaEliminar.php?id=<?=$id ?>'>Eliminar persona</a>
+	<a href='PersonaEliminar.php?id=<?=$id ?>'>Eliminar persona</a>
 <?php } ?>
 
 <br />
 <br />
 
-<a href='personaListado.php'>Volver al listado de personas.</a>
+<a href='PersonaListado.php'>Volver al listado de personas.</a>
 
 </body>
 

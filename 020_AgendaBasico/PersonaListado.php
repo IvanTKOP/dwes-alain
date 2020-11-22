@@ -1,5 +1,5 @@
 <?php
-    require_once "_varios.php";
+    require_once "_Varios.php";
 
     $conexion = obtenerPdoConexionBD();
 
@@ -48,9 +48,9 @@
     <?php
     foreach ($rs as $fila) { ?>
         <tr>
-            <td><a href=   'personaFicha.php?id=<?=$fila["pId"]?>'> <?= $fila["pNombre"] ?> </a></td>
-            <td><a href= 'categoriaFicha.php?id=<?=$fila["cId"]?>'> <?= $fila["cNombre"] ?> </a></td>
-            <td><a href='personaEliminar.php?id=<?=$fila["pId"]?>'> (X)                      </a></td>
+            <td><a href=   'PersonaFicha.php?id=<?=$fila["pId"]?>'> <?= $fila["pNombre"] ?> </a></td>
+            <td><a href= 'CategoriaFicha.php?id=<?=$fila["cId"]?>'> <?= $fila["cNombre"] ?> </a></td>
+            <td><a href='PersonaEliminar.php?id=<?=$fila["pId"]?>'> (X)                      </a></td>
         </tr>
     <?php } ?>
 
@@ -58,12 +58,12 @@
 
 <br />
 
-<a href='personaFicha.php?id=-1'>Crear entrada</a>
+<a href='PersonaFicha.php?id=-1'>Crear entrada</a>
 
 <br />
 <br />
 
-<a href='categoriaListado.php'>Gestionar listado de Categorías</a>
+<a href='CategoriaListado.php'>Gestionar listado de Categorías</a>
 
 </body>
 
