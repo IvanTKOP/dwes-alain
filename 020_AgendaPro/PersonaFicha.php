@@ -20,7 +20,7 @@
 	} else { // Quieren VER la ficha de una persona existente, cuyos datos se cargan.
         $sqlPersona = "SELECT * FROM persona WHERE id=?";
 
-        $select = $conexion->prepare($sqlPersona);
+        //$select = $conexion->prepare($sqlPersona);
         $select->execute([$id]); // Se añade el parámetro a la consulta preparada.
         $rsPersona = $select->fetchAll();
 

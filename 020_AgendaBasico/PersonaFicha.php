@@ -25,7 +25,7 @@
 
         // Con esto, accedemos a los datos de la primera (y esperemos que única) fila que haya venido.
 		$personaNombre = $rsPersona[0]["nombre"];
-        $personaApellidos = $rsPersona[0]["apellidos"];
+		$personaApellidos = $rsPersona[0]["apellidos"];
 		$personaTelefono = $rsPersona[0]["telefono"];
 		$personaCategoriaId = $rsPersona[0]["categoriaId"];
 	}
@@ -78,7 +78,7 @@
 		<input type='text' name='nombre' value='<?=$personaNombre ?>' />
 	</li>
     <li>
-        <strong> Apellidos: </strong>
+        <strong>Apellidos: </strong>
         <input type='text' name='apellidos' value='<?=$personaApellidos ?>' />
 
     </li>

@@ -25,29 +25,25 @@ USE `agenda`;
 
 -- --------------------------------------------------------
 
---
--- Estructura de tabla para la tabla `categoria`
---
-
-DROP TABLE IF EXISTS `persona`;
-CREATE TABLE IF NOT EXISTS `persona` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(45) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 --
--- Truncar tablas antes de insertar `persona`
+-- Estructura de tabla para la tabla categoria
 --
 
-TRUNCATE TABLE `persona`;
+DROP TABLE IF EXISTS categoria;
+CREATE TABLE IF NOT EXISTS categoria (
+                                         id int(11) NOT NULL AUTO_INCREMENT,
+                                         nombre varchar(45) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+                                         PRIMARY KEY (id)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
 --
--- Volcado de datos para la tabla `persona`
+-- Volcado de datos para la tabla categoria
 --
 
-INSERT INTO `persona` (`id`, `nombre`) VALUES
+INSERT INTO categoria (id, nombre) VALUES
 (1, 'Familiares'),
-(2, 'Amigüitos'),
+(2, 'Amigos'),
 (3, 'Trabajo'),
 (4, 'Otros'),
 (8, 'Estudios');
@@ -62,6 +58,7 @@ DROP TABLE IF EXISTS `persona`;
 CREATE TABLE IF NOT EXISTS `persona` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(45) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
+  `apellidos` varchar(80) DEFAULT NULL,
   `telefono` varchar(15) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   `categoriaId` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
@@ -77,13 +74,13 @@ TRUNCATE TABLE `persona`;
 -- Volcado de datos para la tabla `persona`
 --
 
-INSERT INTO `persona` (`id`, `nombre`, `telefono`, `categoriaId`) VALUES
-(1, 'Pepe', '600111222', 3),
-(2, 'Mario', '688444222', 1),
-(3, 'Jose', '611222333', 1),
-(4, 'Cristina', '644999444', 8),
-(5, 'Laura', '666777888', 2),
-(6, 'Menganito', '699888777', 3),
+INSERT INTO `persona` (`id`, `nombre`,`apellidos`, `telefono`, `categoriaId`) VALUES
+(1, 'Pepe', 'Muñoz', '600111222', 3),
+(2, 'Mario', 'Palacios', '688444222', 1),
+(3, 'Jose','García', '611222333', 1),
+(4, 'Cristina','González', '644999444', 8),
+(5, 'Laura','Pardo', '666777888', 2),
+(6, 'Menganito','Cantor', '699888777', 3),
 (11, 'Menganito', 'Fulánez', 4);
 
 --
