@@ -1,6 +1,6 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1573029101196"><hook NAME="MapStyle" zoom="1.948">
+<node TEXT="" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1573029101196"><hook NAME="MapStyle" zoom="2.593">
     <properties fit_to_viewport="false" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
@@ -96,7 +96,7 @@
 <node TEXT="Node.js" ID="ID_1222464077" CREATED="1571656387214" MODIFIED="1571656388910"/>
 </node>
 </node>
-<node TEXT="acerca de codificaciones&#xa;de caracteres y collation-s" FOLDED="true" POSITION="right" ID="ID_714666312" CREATED="1571655861358" MODIFIED="1571655866890">
+<node TEXT="acerca de codificaciones&#xa;de caracteres y collation-s" POSITION="right" ID="ID_714666312" CREATED="1571655861358" MODIFIED="1571655866890">
 <node TEXT="codificación de caracteres" ID="ID_1599031643" CREATED="1413913157486" MODIFIED="1414434456203">
 <node TEXT="¿&apos;A&apos; es 01001011 ó es 11001010?" ID="ID_200708452" CREATED="1413912779159" MODIFIED="1414434456335">
 <node TEXT="" ID="ID_851031861" CREATED="1413912905989" MODIFIED="1521139800408">
@@ -105,7 +105,8 @@
 </node>
 </node>
 <node TEXT="en la web en general y en España, los más usados son:" ID="ID_481858204" CREATED="1413912962309" MODIFIED="1414434456337">
-<node TEXT="&quot;Unicode&quot;&#xa;en UTF-8" ID="ID_469615372" CREATED="1413913282698" MODIFIED="1521139800406">
+<node TEXT="&quot;Unicode&quot;&#xa;en UTF-8" ID="ID_469615372" CREATED="1413913282698" MODIFIED="1606392244982">
+<icon BUILTIN="button_ok"/>
 <node TEXT="(Unicode es un esquema de codificación de caracteres que puede materializarse en métodos de codificación concretos tales como UTF-8 ó UTF-16. UTF-8 utiliza 8 bits para caracteres ASCII y 16 ó más bits para caracteres del alfabeto chino, coreano... Cada caracter puede tener entre 1 y 4 Bytes.)" ID="ID_1357911674" CREATED="1413913296410" MODIFIED="1571655936453"/>
 </node>
 <node TEXT="ASCII" ID="ID_1817328575" CREATED="1413913795191" MODIFIED="1521139800404">
@@ -119,10 +120,10 @@
 <node TEXT="ver gráfico" ID="ID_495481130" CREATED="1413913240763" MODIFIED="1413913254200" LINK="http://4.bp.blogspot.com/-O4jXmTm7WWI/Tyw1As8jt7I/AAAAAAAAI9E/nxxi1T21IH4/s1600/unicode.png"/>
 </node>
 </node>
-<node TEXT="ficheros en el disco, .jsp, .php, .css, etc." ID="ID_882473593" CREATED="1414434816654" MODIFIED="1571656181279">
+<node TEXT="ficheros en el disco, .php, .jsp, .css, etc." ID="ID_882473593" CREATED="1414434816654" MODIFIED="1606392396788">
 <node TEXT="guardémoslos con la misma codificación que indiquemos en el HEAD-META-CHARSET, etc." ID="ID_688940736" CREATED="1414434822821" MODIFIED="1571656203399"/>
 </node>
-<node TEXT="collation" ID="ID_667028499" CREATED="1413913168716" MODIFIED="1414434456204">
+<node TEXT="collation&#xa;(cotejamiento)" ID="ID_667028499" CREATED="1413913168716" MODIFIED="1606392652782">
 <node TEXT="es para MySQL (u otro SGBD...)" ID="ID_1510463697" CREATED="1414434788559" MODIFIED="1414434806578">
 <node TEXT="y para algunas otras aplicaciones..." ID="ID_302614019" CREATED="1414434806944" MODIFIED="1414434806944"/>
 </node>

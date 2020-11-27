@@ -67,7 +67,7 @@
 <font NAME="Arial Narrow" SIZE="12" BOLD="true"/>
 </node>
 </node>
-<node TEXT="recursos PHP" FOLDED="true" POSITION="right" ID="ID_684937512" CREATED="1446115156465" MODIFIED="1573030892409">
+<node TEXT="recursos PHP" POSITION="right" ID="ID_684937512" CREATED="1446115156465" MODIFIED="1573030892409">
 <node TEXT="www.php.net" ID="ID_158488882" CREATED="1275120834488" MODIFIED="1414434456189" LINK="http://www.php.net">
 <node TEXT="web oficial" ID="ID_1115416659" CREATED="1275120886818" MODIFIED="1380218440780"/>
 </node>
@@ -93,6 +93,11 @@
 </richcontent>
 <node TEXT="preguntas y respuestas" ID="ID_1315628131" CREATED="1442431711957" MODIFIED="1442431717247"/>
 <node TEXT="si sale entre los resultados, dadle una oportunidad" ID="ID_990424878" CREATED="1442431797235" MODIFIED="1442431811351"/>
+</node>
+<node TEXT="https://phptherightway.com" ID="ID_784411309" CREATED="1606477126634" MODIFIED="1606477126634" LINK="https://phptherightway.com">
+<node TEXT="MUCHA INFO MUY INTERESANTE Y RESUMIDA" ID="ID_1370725755" CREATED="1606477128291" MODIFIED="1606477137401">
+<icon BUILTIN="bookmark"/>
+</node>
 </node>
 </node>
 <node TEXT="aspectos&#xa;básicos" FOLDED="true" POSITION="right" ID="ID_1439237891" CREATED="1275132076746" MODIFIED="1573030892464">
@@ -184,9 +189,30 @@
 </node>
 </node>
 </node>
-<node TEXT="PSR12" FOLDED="true" POSITION="right" ID="ID_1068402278" CREATED="1574333977717" MODIFIED="1574333980236">
+<node TEXT="estándar de formato/código" POSITION="right" ID="ID_1068402278" CREATED="1574333977717" MODIFIED="1606477216230">
+<node TEXT="PSR12" ID="ID_1396536626" CREATED="1606474609226" MODIFIED="1606474611557">
 <node TEXT="es un estándar de sintaxis para PHP" ID="ID_730248174" CREATED="1602061228639" MODIFIED="1602061237253"/>
 <node TEXT="https://www.php-fig.org/psr/psr-12/" ID="ID_1442126530" CREATED="1574333973448" MODIFIED="1574333973448" LINK="https://www.php-fig.org/psr/psr-12/"/>
+</node>
+</node>
+<node TEXT="UTF8, etc." FOLDED="true" POSITION="right" ID="ID_1924483537" CREATED="1606475091484" MODIFIED="1606475095452">
+<node TEXT="cadenas multibyte para UTF8..." ID="ID_386857960" CREATED="1606475099320" MODIFIED="1606475105654">
+<node ID="ID_101546937" CREATED="1606474636093" MODIFIED="1606474636093" LINK="https://phptherightway.com/#php_and_utf8"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      https://phptherightway.com/#php_and_utf8
+    </p>
+  </body>
+</html>
+
+</richcontent>
+</node>
+</node>
 </node>
 <node TEXT="instalación y config. de&#xa;XAMPP/PhpStorm/MySQL" FOLDED="true" POSITION="right" ID="ID_560545200" CREATED="1360941993238" MODIFIED="1602064060376">
 <node TEXT="Para que funcionen los&#xa;PHPs en casa necesitáis:" FOLDED="true" ID="ID_228646396" CREATED="1411582436285" MODIFIED="1414434456191">
@@ -1994,7 +2020,7 @@
 </node>
 </node>
 </node>
-<node TEXT="serialización de variables" POSITION="right" ID="ID_1884531973" CREATED="1575542414951" MODIFIED="1605787932168">
+<node TEXT="serialización de variables" FOLDED="true" POSITION="right" ID="ID_1884531973" CREATED="1575542414951" MODIFIED="1605787932168">
 <icon BUILTIN="full-1"/>
 <node TEXT="serialize($variable)" ID="ID_1791400580" CREATED="1575542419577" MODIFIED="1605787943251">
 <node TEXT="returns a string representation of the variable" ID="ID_958046948" CREATED="1605787943614" MODIFIED="1605787945231"/>
@@ -2012,12 +2038,30 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
 </node>
-<node TEXT="generar PDFs" POSITION="right" ID="ID_1021978191" CREATED="1571658785271" MODIFIED="1573030892588">
+<node TEXT="seguridad en PHP" FOLDED="true" POSITION="right" ID="ID_1617170601" CREATED="1606475370407" MODIFIED="1606475375548">
+<node ID="ID_1057359749" CREATED="1606474636095" MODIFIED="1606474636095" LINK="https://phptherightway.com/#security"><richcontent TYPE="NODE">
+
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p>
+      https://phptherightway.com/#security
+    </p>
+  </body>
+</html>
+</richcontent>
+</node>
+</node>
+<node TEXT="i18n y l10n" FOLDED="true" POSITION="right" ID="ID_1263443491" CREATED="1606475201030" MODIFIED="1606475212968">
+<node TEXT="https://phptherightway.com/#i18n_l10n" ID="ID_754967839" CREATED="1606475213906" MODIFIED="1606475213906" LINK="https://phptherightway.com/#i18n_l10n"/>
+</node>
+<node TEXT="generar PDFs" FOLDED="true" POSITION="right" ID="ID_1021978191" CREATED="1571658785271" MODIFIED="1573030892588">
 <node TEXT="https://stackoverflow.com/questions/6438522/create-new-pdf-from-template-with-php" ID="ID_1115163844" CREATED="1571658820264" MODIFIED="1571658820264" LINK="https://stackoverflow.com/questions/6438522/create-new-pdf-from-template-with-php"/>
 <node TEXT="https://ourcodeworld.com/articles/read/226/top-5-best-open-source-pdf-generation-libraries-for-php" ID="ID_1756706514" CREATED="1571658824546" MODIFIED="1571658824546" LINK="https://ourcodeworld.com/articles/read/226/top-5-best-open-source-pdf-generation-libraries-for-php"/>
 <node TEXT="FPDF" ID="ID_69681200" CREATED="1592818617817" MODIFIED="1592818620665">
