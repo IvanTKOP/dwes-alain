@@ -37,10 +37,11 @@ function obtenerUsuario(string $identificador, string $contrasenna): ?array
     return ["id" => 17, "identificador" => "jlopez", ...];
 }
 
-function marcarSesionComoIniciada(int $id, string $identificador, string $nombre, string $apellidos)
+function marcarSesionComoIniciada(array $arrayUsuario)
 {
     // TODO Anotar en el post-it todos estos datos:
     // $_SESSION["id"] = ...
+    // $_SESSION["identificador"] = ...
     // ...
 }
 
@@ -55,7 +56,7 @@ function haySesionIniciada(): boolean
 
 function cerrarSesion()
 {
-    // TODO session_destroy() y unset (por si acaso).
+    // TODO session_destroy() y unset de $_SESSION (por si acaso).
 }
 
 // (Esta función no se utiliza en este proyecto pero se deja por si se optimizase el flujo de navegación.)

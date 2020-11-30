@@ -1,6 +1,6 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1573029101196"><hook NAME="MapStyle" zoom="2.593">
+<node TEXT="" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1573029101196"><hook NAME="MapStyle" zoom="3.137">
     <properties fit_to_viewport="false" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
@@ -96,7 +96,7 @@
 <node TEXT="Node.js" ID="ID_1222464077" CREATED="1571656387214" MODIFIED="1571656388910"/>
 </node>
 </node>
-<node TEXT="acerca de codificaciones&#xa;de caracteres y collation-s" POSITION="right" ID="ID_714666312" CREATED="1571655861358" MODIFIED="1571655866890">
+<node TEXT="acerca de codificaciones&#xa;de caracteres y collation-s" FOLDED="true" POSITION="right" ID="ID_714666312" CREATED="1571655861358" MODIFIED="1571655866890">
 <node TEXT="codificación de caracteres" ID="ID_1599031643" CREATED="1413913157486" MODIFIED="1414434456203">
 <node TEXT="¿&apos;A&apos; es 01001011 ó es 11001010?" ID="ID_200708452" CREATED="1413912779159" MODIFIED="1414434456335">
 <node TEXT="" ID="ID_851031861" CREATED="1413912905989" MODIFIED="1521139800408">
@@ -105,7 +105,8 @@
 </node>
 </node>
 <node TEXT="en la web en general y en España, los más usados son:" ID="ID_481858204" CREATED="1413912962309" MODIFIED="1414434456337">
-<node TEXT="&quot;Unicode&quot;&#xa;en UTF-8" ID="ID_469615372" CREATED="1413913282698" MODIFIED="1606392244982">
+<node TEXT="&quot;Unicode&quot;&#xa;en UTF-8" ID="ID_469615372" CREATED="1413913282698" MODIFIED="1606737325283">
+<icon BUILTIN="button_ok"/>
 <icon BUILTIN="button_ok"/>
 <node TEXT="(Unicode es un esquema de codificación de caracteres que puede materializarse en métodos de codificación concretos tales como UTF-8 ó UTF-16. UTF-8 utiliza 8 bits para caracteres ASCII y 16 ó más bits para caracteres del alfabeto chino, coreano... Cada caracter puede tener entre 1 y 4 Bytes.)" ID="ID_1357911674" CREATED="1413913296410" MODIFIED="1571655936453"/>
 </node>
@@ -128,7 +129,7 @@
 <node TEXT="y para algunas otras aplicaciones..." ID="ID_302614019" CREATED="1414434806944" MODIFIED="1414434806944"/>
 </node>
 <node TEXT="partimos de la base de que ya hemos decidido cómo vamos a representar cada caracter" ID="ID_1563658989" CREATED="1413913181748" MODIFIED="1414434456338">
-<node TEXT="por ejemplo, con UTF-8" ID="ID_1628814935" CREATED="1413913194939" MODIFIED="1413913197945"/>
+<node TEXT="por ejemplo, con Unicode, codificado en formato UTF-8" ID="ID_1628814935" CREATED="1413913194939" MODIFIED="1606737956948"/>
 </node>
 <node TEXT="ahora, ¿cómo ordenamos los caracteres desde el punto de vista lógico cuando nos piden, por ejemplo, un ORDER BY? Por ejemplo, ¿cómo se ordenan las palabras éxito, nariz, ñu, oso y ópera?" ID="ID_1672261017" CREATED="1413913177803" MODIFIED="1413914440080"/>
 <node TEXT="DEPENDE del COLLATION que usemos:" ID="ID_1598618962" CREATED="1413913223131" MODIFIED="1414434456339">
@@ -144,8 +145,7 @@
 </node>
 </node>
 </node>
-</node>
-<node TEXT="codificación de caracteres (HTML)" FOLDED="true" POSITION="right" ID="ID_611872532" CREATED="1571132245616" MODIFIED="1571655584222">
+<node TEXT="en HTML" ID="ID_611872532" CREATED="1571132245616" MODIFIED="1606738257656">
 <node TEXT="para que la página se vea bien (tildes,&#xa;eñes...) son necesarias dos cosas:" ID="ID_1245232107" CREATED="1571655405537" MODIFIED="1571655446474">
 <node TEXT="que la página indique qué codificación tiene&#xa;(se hace en el propio HTML: etiqueta &lt;meta&gt;...)" ID="ID_1280648014" CREATED="1571655464555" MODIFIED="1571655569105">
 <icon BUILTIN="full-1"/>
@@ -157,6 +157,7 @@
 <node TEXT="aquí se describe qué hacer para cubrir la parte HTML" ID="ID_921594184" CREATED="1571655628088" MODIFIED="1571655643965"/>
 <node TEXT="meter esto dentro del &lt;head&gt;" ID="ID_1971820406" CREATED="1571132422482" MODIFIED="1571655619967">
 <node TEXT="&lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;/&gt;" ID="ID_1088347935" CREATED="1571132437256" MODIFIED="1571132438395"/>
+</node>
 </node>
 </node>
 <node TEXT="controles especiales&#xa;en forms" FOLDED="true" POSITION="right" ID="ID_508935275" CREATED="1578567629483" MODIFIED="1578567642617">
