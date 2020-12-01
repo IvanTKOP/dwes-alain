@@ -2,7 +2,7 @@
 
 // TODO ...$_REQUEST["..."]...
 
-// TODO Verificar (usar funciones de _Varios.php) identificador y contrasenna recibidos y redirigir a contenido1 (si OK) o a iniciar sesión (si NO ok).
+// TODO Verificar (usar funciones de _Varios.php) identificador y contrasenna recibidos y redirigir a ContenidoPrivado1 (si OK) o a iniciar sesión (si NO ok).
 
 $arrayUsuario = obtenerUsuario($identificador, $contrasenna);
 

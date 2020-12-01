@@ -67,7 +67,7 @@
 <font NAME="Arial Narrow" SIZE="12" BOLD="true"/>
 </node>
 </node>
-<node TEXT="recursos PHP" POSITION="right" ID="ID_684937512" CREATED="1446115156465" MODIFIED="1573030892409">
+<node TEXT="recursos PHP" FOLDED="true" POSITION="right" ID="ID_684937512" CREATED="1446115156465" MODIFIED="1573030892409">
 <node TEXT="www.php.net" ID="ID_158488882" CREATED="1275120834488" MODIFIED="1414434456189" LINK="http://www.php.net">
 <node TEXT="web oficial" ID="ID_1115416659" CREATED="1275120886818" MODIFIED="1380218440780"/>
 </node>
@@ -189,7 +189,7 @@
 </node>
 </node>
 </node>
-<node TEXT="estándar de formato/código" POSITION="right" ID="ID_1068402278" CREATED="1574333977717" MODIFIED="1606477216230">
+<node TEXT="estándar de formato/código" FOLDED="true" POSITION="right" ID="ID_1068402278" CREATED="1574333977717" MODIFIED="1606477216230">
 <node TEXT="PSR12" ID="ID_1396536626" CREATED="1606474609226" MODIFIED="1606474611557">
 <node TEXT="es un estándar de sintaxis para PHP" ID="ID_730248174" CREATED="1602061228639" MODIFIED="1602061237253"/>
 <node TEXT="https://www.php-fig.org/psr/psr-12/" ID="ID_1442126530" CREATED="1574333973448" MODIFIED="1574333973448" LINK="https://www.php-fig.org/psr/psr-12/"/>
@@ -209,7 +209,6 @@
     </p>
   </body>
 </html>
-
 </richcontent>
 </node>
 </node>
@@ -2058,15 +2057,15 @@
 </richcontent>
 </node>
 </node>
-<node TEXT="i18n y l10n" FOLDED="true" POSITION="right" ID="ID_1263443491" CREATED="1606475201030" MODIFIED="1606475212968">
+<node TEXT="i18n y l10n" FOLDED="true" POSITION="right" ID="ID_1263443491" CREATED="1606475201030" MODIFIED="1606742400367">
+<icon BUILTIN="idea"/>
 <node TEXT="https://phptherightway.com/#i18n_l10n" ID="ID_754967839" CREATED="1606475213906" MODIFIED="1606475213906" LINK="https://phptherightway.com/#i18n_l10n"/>
 </node>
-<node TEXT="generar PDFs" FOLDED="true" POSITION="right" ID="ID_1021978191" CREATED="1571658785271" MODIFIED="1573030892588">
+<node TEXT="generar PDFs" FOLDED="true" POSITION="right" ID="ID_1021978191" CREATED="1571658785271" MODIFIED="1606742400370">
+<icon BUILTIN="idea"/>
 <node TEXT="https://stackoverflow.com/questions/6438522/create-new-pdf-from-template-with-php" ID="ID_1115163844" CREATED="1571658820264" MODIFIED="1571658820264" LINK="https://stackoverflow.com/questions/6438522/create-new-pdf-from-template-with-php"/>
 <node TEXT="https://ourcodeworld.com/articles/read/226/top-5-best-open-source-pdf-generation-libraries-for-php" ID="ID_1756706514" CREATED="1571658824546" MODIFIED="1571658824546" LINK="https://ourcodeworld.com/articles/read/226/top-5-best-open-source-pdf-generation-libraries-for-php"/>
-<node TEXT="FPDF" ID="ID_69681200" CREATED="1592818617817" MODIFIED="1592818620665">
-<node TEXT="(proyecto Karim 2020-06)" ID="ID_1811665043" CREATED="1592818620840" MODIFIED="1592818631177"/>
-</node>
+<node TEXT="FPDF es una herramienta para ello" ID="ID_69681200" CREATED="1592818617817" MODIFIED="1606738590313"/>
 </node>
 <node TEXT="zz" POSITION="right" ID="ID_1166101184" CREATED="1447271947768" MODIFIED="1450097638305">
 <node TEXT="en caso de usar Eclipse como IDE" FOLDED="true" ID="ID_1118953776" CREATED="1350324142372" MODIFIED="1573030892597">
