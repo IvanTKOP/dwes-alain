@@ -32,7 +32,6 @@ function obtenerUsuario(string $identificador, string $contrasenna): ?array
 
     // Conectar con BD, lanzar consulta, ver si viene 1 fila o ninguna...
 
-    // Devolver una cosa u otra para que sepan (true/false).
     //return $rs[0];
     return ["id" => 17, "identificador" => "jlopez", ...];
 }

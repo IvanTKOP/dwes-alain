@@ -1437,7 +1437,7 @@
 </node>
 </node>
 </node>
-<node TEXT="acceso&#xa;a BBDD" FOLDED="true" POSITION="right" ID="ID_316249312" CREATED="1275131296618" MODIFIED="1573030892579">
+<node TEXT="acceso&#xa;a BBDD" POSITION="right" ID="ID_316249312" CREATED="1275131296618" MODIFIED="1573030892579">
 <node TEXT="tutoriales" ID="ID_1643720653" CREATED="1574766505250" MODIFIED="1576659850741">
 <node TEXT="https://websitebeaver.com/php-pdo-vs-mysqli" ID="ID_536140428" CREATED="1575976474136" MODIFIED="1576655616318" LINK="https://websitebeaver.com/php-pdo-vs-mysqli">
 <icon BUILTIN="button_ok"/>
@@ -1563,7 +1563,7 @@
 <node TEXT="OJO: esto se solicita sobre el objeto conexión (el &quot;PDO&quot;), no sobre el objeto sentencia" ID="ID_1781564233" CREATED="1576657479179" MODIFIED="1604059450156"/>
 </node>
 </node>
-<node TEXT="consultas que SÍ&#xa;devuelven datos&#xa;(SELECT)" FOLDED="true" ID="ID_1746855546" CREATED="1275132334962" MODIFIED="1521139803242">
+<node TEXT="consultas que SÍ&#xa;devuelven datos&#xa;(SELECT)" ID="ID_1746855546" CREATED="1275132334962" MODIFIED="1521139803242">
 <icon BUILTIN="full-3"/>
 <node TEXT="al ejecutarlas, me devuelven una &quot;tabla&quot; con todos los registros que vienen como resultado de la select" ID="ID_1776372879" CREATED="1275132379071" MODIFIED="1576495738611">
 <icon BUILTIN="info_informaciвn"/>
@@ -1593,8 +1593,10 @@
 <node TEXT="Array (&#xa;&#xa;    [0] =&gt; Array (&#xa;        [id] =&gt; 19&#xa;        [nombre] =&gt; Colegio&#xa;    )&#xa;    [1] =&gt; Array (&#xa;        [id] =&gt; 18&#xa;        [nombre] =&gt; Negocios&#xa;    )&#xa;    [2] =&gt; Array (&#xa;        [id] =&gt; 8&#xa;        [nombre] =&gt; Estudios&#xa;    )&#xa;    [3] =&gt; Array (&#xa;        [id] =&gt; 1&#xa;        [nombre] =&gt; Familiares&#xa;    )&#xa;    [4] =&gt; Array (&#xa;        [id] =&gt; 4&#xa;        [nombre] =&gt; Otros&#xa;    )&#xa;    [5] =&gt; Array (&#xa;        [id] =&gt; 3&#xa;        [nombre] =&gt; Trabajo&#xa;    )&#xa;&#xa;)" ID="ID_633585920" CREATED="1604578786332" MODIFIED="1604578787564"/>
 </node>
 </node>
-<node TEXT="if(!$rs) ..." ID="ID_1216252476" CREATED="1576659972934" MODIFIED="1604925705285">
-<node TEXT="si $rs es false, no ha venido ninguna fila" ID="ID_1860310757" CREATED="1576660485334" MODIFIED="1576660499710"/>
+<node TEXT="$select-&gt;rowCount()" ID="ID_429482772" CREATED="1606902383454" MODIFIED="1606902388255">
+<node TEXT="para contar el número de filas obtenidas" ID="ID_490046366" CREATED="1606902388926" MODIFIED="1606902393842"/>
+<node TEXT="si el resultado no tiene ninguna fila, viene un array, pero vacío" ID="ID_1860310757" CREATED="1576660485334" MODIFIED="1606902025808"/>
+<node TEXT="comprobado que NO viene ni false ni nulo ni nada" ID="ID_872315085" CREATED="1606902030183" MODIFIED="1606902037270"/>
 </node>
 <node TEXT="tratamiento&#xa;del record set" ID="ID_1858477053" CREATED="1275132870987" MODIFIED="1604925720869">
 <node TEXT="foreach ($rs as $fila) {&#xa;    // ...&#xa;}" ID="ID_1252977988" CREATED="1576660637313" MODIFIED="1604925792294"/>
