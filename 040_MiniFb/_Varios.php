@@ -30,10 +30,9 @@ function obtenerUsuario(string $identificador, string $contrasenna): ?array
 
     // "SELECT * FROM Usuario WHERE identificador=? AND contrasenna=?"
 
-    // Conectar con BD, lanzar consulta, ver si viene 1 fila o ninguna...
+    // Conectar con BD, lanzar consulta...
 
-    //return $rs[0];
-    return ["id" => 17, "identificador" => "jlopez", ...];
+    return $select->rowCount()==1 ? rs[0] : null;
 }
 
 function marcarSesionComoIniciada(array $arrayUsuario)
@@ -44,7 +43,7 @@ function marcarSesionComoIniciada(array $arrayUsuario)
     // ...
 }
 
-function haySesionIniciada(): boolean
+function haySesionIniciada(): bool
 {
     // TODO Pendiente hacer la comprobación.
 
