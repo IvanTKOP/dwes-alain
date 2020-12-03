@@ -32,7 +32,7 @@ function obtenerUsuario(string $identificador, string $contrasenna): ?array
 
     // Conectar con BD, lanzar consulta...
 
-    return $select->rowCount()==1 ? rs[0] : null;
+    return $select->rowCount()==1 ? $rs[0] : null;
 }
 
 function marcarSesionComoIniciada(array $arrayUsuario)
