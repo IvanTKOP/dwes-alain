@@ -14,7 +14,7 @@
 
 <body>
 
-<h1>Iniciar Sesión</h1>
+<h1>Crear cuenta</h1>
 
 llamad a los campos IGUAL que en la BD:
 identificador
