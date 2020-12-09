@@ -1,7 +1,7 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="1.771">
-    <properties fit_to_viewport="false" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
+<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="3.137">
+    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -1535,7 +1535,7 @@
 </node>
 </node>
 <node TEXT="y luego la ejecuto, pasando un&#xa;array para rellenar huecos" ID="ID_1977365181" CREATED="1576656651610" MODIFIED="1576659876609">
-<node ID="ID_1756829186" CREATED="1576656463692" MODIFIED="1604923339526"><richcontent TYPE="NODE">
+<node ID="ID_1756829186" CREATED="1576656463692" MODIFIED="1606996744911"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -1593,8 +1593,10 @@
 <node TEXT="Array (&#xa;&#xa;    [0] =&gt; Array (&#xa;        [id] =&gt; 19&#xa;        [nombre] =&gt; Colegio&#xa;    )&#xa;    [1] =&gt; Array (&#xa;        [id] =&gt; 18&#xa;        [nombre] =&gt; Negocios&#xa;    )&#xa;    [2] =&gt; Array (&#xa;        [id] =&gt; 8&#xa;        [nombre] =&gt; Estudios&#xa;    )&#xa;    [3] =&gt; Array (&#xa;        [id] =&gt; 1&#xa;        [nombre] =&gt; Familiares&#xa;    )&#xa;    [4] =&gt; Array (&#xa;        [id] =&gt; 4&#xa;        [nombre] =&gt; Otros&#xa;    )&#xa;    [5] =&gt; Array (&#xa;        [id] =&gt; 3&#xa;        [nombre] =&gt; Trabajo&#xa;    )&#xa;&#xa;)" ID="ID_633585920" CREATED="1604578786332" MODIFIED="1604578787564"/>
 </node>
 </node>
-<node TEXT="if(!$rs) ..." ID="ID_1216252476" CREATED="1576659972934" MODIFIED="1604925705285">
-<node TEXT="si $rs es false, no ha venido ninguna fila" ID="ID_1860310757" CREATED="1576660485334" MODIFIED="1576660499710"/>
+<node TEXT="$select-&gt;rowCount()" ID="ID_429482772" CREATED="1606902383454" MODIFIED="1606902388255">
+<node TEXT="para contar el número de filas obtenidas" ID="ID_490046366" CREATED="1606902388926" MODIFIED="1606902393842"/>
+<node TEXT="si el resultado no tiene ninguna fila, viene un array, pero vacío" ID="ID_1860310757" CREATED="1576660485334" MODIFIED="1606902025808"/>
+<node TEXT="comprobado que NO viene ni false ni nulo ni nada" ID="ID_872315085" CREATED="1606902030183" MODIFIED="1606902037270"/>
 </node>
 <node TEXT="tratamiento&#xa;del record set" ID="ID_1858477053" CREATED="1275132870987" MODIFIED="1604925720869">
 <node TEXT="foreach ($rs as $fila) {&#xa;    // ...&#xa;}" ID="ID_1252977988" CREATED="1576660637313" MODIFIED="1604925792294"/>
@@ -1669,7 +1671,7 @@
 </node>
 </node>
 </node>
-<node TEXT="cookies" FOLDED="true" POSITION="right" ID="ID_578081402" CREATED="1275125484565" MODIFIED="1605691669984">
+<node TEXT="cookies" POSITION="right" ID="ID_578081402" CREATED="1275125484565" MODIFIED="1605691669984">
 <icon BUILTIN="estadotarea_pendiente"/>
 <node TEXT="para acceder al&#xa;valor de una cookie" ID="ID_70278479" CREATED="1275126411467" MODIFIED="1417636498312">
 <node TEXT="mediante el array asociativo supergobal" ID="ID_867586564" CREATED="1275126719898" MODIFIED="1521139799986">
@@ -1735,7 +1737,7 @@
 <node TEXT="para 10 días: 60*60*24*10" ID="ID_202503221" CREATED="1386011993219" MODIFIED="1386012006683"/>
 </node>
 </node>
-<node TEXT="si se pone 0, la cookie expirará al final de la sesión (al cerrar el navegador)" ID="ID_892533980" CREATED="1575370206181" MODIFIED="1575370220538">
+<node TEXT="si se pone 0, la cookie expirará al final de la sesión (al cerrar el navegador): &quot;cookie de sesión&quot;" ID="ID_892533980" CREATED="1575370206181" MODIFIED="1607083358130">
 <node TEXT="esta es la caducidad de la cookie implícita PHPSESSID" ID="ID_184957869" CREATED="1605692439193" MODIFIED="1605692450665"/>
 </node>
 </node>

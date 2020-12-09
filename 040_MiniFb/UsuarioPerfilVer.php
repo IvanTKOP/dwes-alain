@@ -1,5 +1,7 @@
 <?php
 
+    require_once "_Varios.php";
+
 ?>
 
 
@@ -14,11 +16,10 @@
 
 <body>
 
-<h1>Iniciar Sesión</h1>
+<?php pintarInfoSesion(); ?>
 
-llamad a los campos IGUAL que en la BD:
-identificador
-contrasenna
+
+
 
 </body>
 
