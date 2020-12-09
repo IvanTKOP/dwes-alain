@@ -8,7 +8,6 @@
 
 
 
-
 <html>
 
 <head>
@@ -19,7 +18,7 @@
 
 <body>
 
-<h1>Crear cuenta</h1>
+<h1>Iniciar sesión</h1>
 
 <?php if ($datosErroneos) { ?>
     <p style='color: red;'>No se ha podido iniciar sesión con los datos proporcionados. Inténtelo de nuevo.</p>

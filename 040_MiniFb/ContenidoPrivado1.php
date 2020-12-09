@@ -7,7 +7,7 @@
     //     (Mostrar info del usuario logueado y tal...)
     //   - Si NO la hay, redirigimos a SesionInicioFormulario.php
 
-    if (!haySesionIniciada() && !hayCookieValida()) {
+    if (!haySesionIniciada() /* TODO && !hayCookieValida() */) {
         redireccionar("SesionInicioFormulario.php");
     }
 
