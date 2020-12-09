@@ -1,6 +1,15 @@
 <?php
 
-    // TODO Ídem.
+    require_once "_Varios.php";
+
+    // Comprobamos si hay sesión-usuario iniciada.
+    //   - Si la hay, no intervenimos. Dejamos que la pág se cargue.
+    //     (Mostrar info del usuario logueado y tal...)
+    //   - Si NO la hay, redirigimos a SesionInicioFormulario.php
+
+    if (!haySesionIniciada()) {
+        redireccionar("SesionInicioFormulario.php");
+    }
 
 ?>
 
@@ -15,6 +24,8 @@
 
 
 <body>
+
+<?php pintarInfoSesion(); ?>
 
 <h1>Contenido Privado 2</h1>
 

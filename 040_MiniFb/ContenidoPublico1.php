@@ -1,7 +1,6 @@
 <?php
 
-    // TODO: En esta página, si hay sesión iniciada, mostrar la info y si no poner un link para iniciar sesión,
-    // pero cualquiera puede verla, tenga sesión iniciada o no.
+    require_once "_Varios.php";
 
 ?>
 
@@ -16,6 +15,8 @@
 
 
 <body>
+
+<?php pintarInfoSesion(); ?>
 
 <h1>Contenido Público 1</h1>
 

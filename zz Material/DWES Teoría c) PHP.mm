@@ -1,7 +1,7 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="1.771">
-    <properties fit_to_viewport="false" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
+<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="3.137">
+    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -1437,7 +1437,7 @@
 </node>
 </node>
 </node>
-<node TEXT="acceso&#xa;a BBDD" POSITION="right" ID="ID_316249312" CREATED="1275131296618" MODIFIED="1573030892579">
+<node TEXT="acceso&#xa;a BBDD" FOLDED="true" POSITION="right" ID="ID_316249312" CREATED="1275131296618" MODIFIED="1573030892579">
 <node TEXT="tutoriales" ID="ID_1643720653" CREATED="1574766505250" MODIFIED="1576659850741">
 <node TEXT="https://websitebeaver.com/php-pdo-vs-mysqli" ID="ID_536140428" CREATED="1575976474136" MODIFIED="1576655616318" LINK="https://websitebeaver.com/php-pdo-vs-mysqli">
 <icon BUILTIN="button_ok"/>
@@ -1535,7 +1535,7 @@
 </node>
 </node>
 <node TEXT="y luego la ejecuto, pasando un&#xa;array para rellenar huecos" ID="ID_1977365181" CREATED="1576656651610" MODIFIED="1576659876609">
-<node ID="ID_1756829186" CREATED="1576656463692" MODIFIED="1604923339526"><richcontent TYPE="NODE">
+<node ID="ID_1756829186" CREATED="1576656463692" MODIFIED="1606996744911"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -1563,7 +1563,7 @@
 <node TEXT="OJO: esto se solicita sobre el objeto conexión (el &quot;PDO&quot;), no sobre el objeto sentencia" ID="ID_1781564233" CREATED="1576657479179" MODIFIED="1604059450156"/>
 </node>
 </node>
-<node TEXT="consultas que SÍ&#xa;devuelven datos&#xa;(SELECT)" ID="ID_1746855546" CREATED="1275132334962" MODIFIED="1521139803242">
+<node TEXT="consultas que SÍ&#xa;devuelven datos&#xa;(SELECT)" FOLDED="true" ID="ID_1746855546" CREATED="1275132334962" MODIFIED="1521139803242">
 <icon BUILTIN="full-3"/>
 <node TEXT="al ejecutarlas, me devuelven una &quot;tabla&quot; con todos los registros que vienen como resultado de la select" ID="ID_1776372879" CREATED="1275132379071" MODIFIED="1576495738611">
 <icon BUILTIN="info_informaciвn"/>
@@ -1671,7 +1671,7 @@
 </node>
 </node>
 </node>
-<node TEXT="cookies" FOLDED="true" POSITION="right" ID="ID_578081402" CREATED="1275125484565" MODIFIED="1605691669984">
+<node TEXT="cookies" POSITION="right" ID="ID_578081402" CREATED="1275125484565" MODIFIED="1605691669984">
 <icon BUILTIN="estadotarea_pendiente"/>
 <node TEXT="para acceder al&#xa;valor de una cookie" ID="ID_70278479" CREATED="1275126411467" MODIFIED="1417636498312">
 <node TEXT="mediante el array asociativo supergobal" ID="ID_867586564" CREATED="1275126719898" MODIFIED="1521139799986">
@@ -1737,7 +1737,7 @@
 <node TEXT="para 10 días: 60*60*24*10" ID="ID_202503221" CREATED="1386011993219" MODIFIED="1386012006683"/>
 </node>
 </node>
-<node TEXT="si se pone 0, la cookie expirará al final de la sesión (al cerrar el navegador)" ID="ID_892533980" CREATED="1575370206181" MODIFIED="1575370220538">
+<node TEXT="si se pone 0, la cookie expirará al final de la sesión (al cerrar el navegador): &quot;cookie de sesión&quot;" ID="ID_892533980" CREATED="1575370206181" MODIFIED="1607083358130">
 <node TEXT="esta es la caducidad de la cookie implícita PHPSESSID" ID="ID_184957869" CREATED="1605692439193" MODIFIED="1605692450665"/>
 </node>
 </node>

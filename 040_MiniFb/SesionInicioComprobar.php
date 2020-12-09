@@ -1,15 +1,21 @@
 <?php
 
-// TODO ...$_REQUEST["..."]...
+require_once "_Varios.php";
 
-// TODO Verificar (usar funciones de _Varios.php) identificador y contrasenna recibidos y redirigir a ContenidoPrivado1 (si OK) o a iniciar sesión (si NO ok).
+$arrayUsuario = obtenerUsuario($_REQUEST["identificador"], $_REQUEST["contrasenna"]);
 
-$arrayUsuario = obtenerUsuario($identificador, $contrasenna);
+if ($arrayUsuario) { // Identificador existía y contraseña era correcta.
+    marcarSesionComoIniciada($arrayUsuario);
 
-if ($arrayUsuario) { // HAN venido datos: identificador existía y contraseña era correcta.
-    // TODO Llamar a marcarSesionComoIniciada($arrayUsuario) ...
+    // TODO if (checkbox...) {
+    //    generarCookieRecordar($arrayUsuario);
+    //}
 
-    // TODO Redirigir.
+    // TODO Generar código cookie
+    // TODO Crear cookie con el código
+    // TODO Anotar código en BD
+
+    redireccionar("ContenidoPrivado1.php");
 } else {
-    // TODO Redirigir.
+    redireccionar("SesionInicioFormulario.php?datosErroneos");
 }

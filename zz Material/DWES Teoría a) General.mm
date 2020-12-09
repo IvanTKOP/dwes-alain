@@ -1,7 +1,7 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1573029101196"><hook NAME="MapStyle" zoom="3.137">
-    <properties fit_to_viewport="false" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
+    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -280,7 +280,9 @@
 </node>
 </node>
 <node TEXT="cookies" FOLDED="true" POSITION="right" ID="ID_1541411190" CREATED="1572867598677" MODIFIED="1572867599851">
-<node TEXT="es una pareja (clave, contenido)" ID="ID_552500770" CREATED="1275125678094" MODIFIED="1417635341490"/>
+<node TEXT="es una pareja (clave, contenido)" ID="ID_552500770" CREATED="1275125678094" MODIFIED="1417635341490">
+<node TEXT="y caducidad..." ID="ID_641891355" CREATED="1607083178009" MODIFIED="1607083181056"/>
+</node>
 <node TEXT="p. ej.:" ID="ID_1628951635" CREATED="1417635366541" MODIFIED="1521139799990">
 <node TEXT="(¡OJO!) identificador-con-sesion-iniciada" ID="ID_639951159" CREATED="1417635369934" MODIFIED="1588868872429">
 <node TEXT="jlopez" ID="ID_742733500" CREATED="1417635378959" MODIFIED="1588868872427"/>

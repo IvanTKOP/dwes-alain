@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+session_start();
+
 function obtenerPdoConexionBD(): PDO
 {
     $servidor = "localhost";
@@ -26,35 +28,78 @@ function obtenerPdoConexionBD(): PDO
 
 function obtenerUsuario(string $identificador, string $contrasenna): ?array
 {
-    // TODO Pendiente hacer.
+    $pdo = obtenerPdoConexionBD();
 
-    // "SELECT * FROM Usuario WHERE identificador=? AND contrasenna=?"
+    $sql = "SELECT * FROM Usuario WHERE identificador=? AND BINARY contrasenna=?";
+    $select = $pdo->prepare($sql);
+    $select->execute([$identificador, $contrasenna]);
+    $rs = $select->fetchAll();
 
-    // Conectar con BD, lanzar consulta...
-
+    // $rs[0] es la primera (y esperemos que única) fila que ha podido venir. Es un array asociativo.
     return $select->rowCount()==1 ? $rs[0] : null;
 }
 
 function marcarSesionComoIniciada(array $arrayUsuario)
 {
-    // TODO Anotar en el post-it todos estos datos:
-    // $_SESSION["id"] = ...
-    // $_SESSION["identificador"] = ...
-    // ...
+    // Anotar en el post-it como mínimo el id.
+    $_SESSION["id"] = $arrayUsuario["id"];
+
+    // Además, podemos anotar todos los datos que podamos querer tener a mano, sabiendo que pueden quedar obsoletos...
+    $_SESSION["identificador"] = $arrayUsuario["identificador"];
+    $_SESSION["tipoUsuario"] = $arrayUsuario["tipoUsuario"];
+    $_SESSION["nombre"] = $arrayUsuario["nombre"];
+    $_SESSION["apellidos"] = $arrayUsuario["apellidos"];
 }
 
 function haySesionIniciada(): bool
 {
-    // TODO Pendiente hacer la comprobación.
-
     // Está iniciada si isset($_SESSION["id"])
-
-    return false;
+    return isset($_SESSION["id"]);
 }
 
-function cerrarSesion()
+function pintarInfoSesion() {
+    if (haySesionIniciada()) {
+        echo "<span>Sesión iniciada por <a href='UsuarioPerfilVer.php'>$_SESSION[identificador]</a> ($_SESSION[nombre] $_SESSION[apellidos]) <a href='SesionCerrar.php'>Cerrar sesión</a></span>";
+    } else {
+        echo "<a href='SesionInicioFormulario.php'>Iniciar sesión</a>";
+    }
+}
+
+function cerrarSesionRamYCookie()
 {
-    // TODO session_destroy() y unset de $_SESSION (por si acaso).
+    session_destroy();
+    unset($_SESSION); // Por si acaso
+}
+
+function establecerCookieRecuerdame(array $arrayUsuario)
+{
+    // TODO Enviamos al cliente, en forma de cookies, el código cookie y su identificador.
+}
+
+function generarCookieRecordar(array $arrayUsuario)
+{
+    // Creamos un código cookie muy complejo (no necesariamente único).
+    $codigoCookie = generarCadenaAleatoria(32); // Random...
+
+    // TODO guardar código en BD
+    // Para una seguridad óptima convendría anotar en la BD la fecha de caducidad de la cookie y no aceptar ninguna cookie pasada dicha fecha.
+
+    // TODO $arrayUsuario["codigoCookie"] = ...
+
+    establecerCookieRecordar($arrayUsuario);
+}
+
+function borrarCookieRecordar(array $arrayUsuario)
+{
+    // TODO Eliminar el código cookie de nuestra BD.
+
+    // TODO Pedir borrar cookie (setcookie con tiempo time() - negativo...)
+}
+
+function generarCadenaAleatoria($longitud): string
+{
+    for ($s = '', $i = 0, $z = strlen($a = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789')-1; $i != $longitud; $x = rand(0,$z), $s .= $a[$x], $i++);
+    return $s;
 }
 
 // (Esta función no se utiliza en este proyecto pero se deja por si se optimizase el flujo de navegación.)
