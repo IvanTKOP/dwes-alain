@@ -19,6 +19,53 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `Usuario`
+--
+
+CREATE TABLE `Usuario` (
+                           `id` int(11) NOT NULL,
+                           `identificador` varchar(40) COLLATE utf8_spanish_ci NOT NULL,
+                           `contrasenna` varchar(80) COLLATE utf8_spanish_ci NOT NULL,
+                           `codigoCookie` varchar(50) COLLATE utf8_spanish_ci DEFAULT NULL,
+                           `tipoUsuario` int(11) NOT NULL,
+                           `nombre` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
+                           `apellidos` varchar(50) COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `Usuario`
+--
+
+INSERT INTO `Usuario` (`id`, `identificador`, `contrasenna`, `codigoCookie`, `tipoUsuario`, `nombre`, `apellidos`) VALUES
+(1, 'jlopez', 'j', NULL, 0, 'José', 'López'),
+(2, 'mgarcia', 'm', NULL, 0, 'María', 'García'),
+(3, 'fpi', 'f', NULL, 0, 'Felipe', 'Pi');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `Usuario`
+--
+ALTER TABLE `Usuario`
+    ADD PRIMARY KEY (`id`),
+    ADD UNIQUE KEY `identificador` (`identificador`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `Usuario`
+--
+ALTER TABLE `Usuario`
+    MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+SET FOREIGN_KEY_CHECKS=1;
+COMMIT;
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `Publicacion`
 --
 
