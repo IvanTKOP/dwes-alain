@@ -2,7 +2,7 @@
 
 require_once "../_com/requireonces-comunes.php";
 
-if (haySesionIniciada()) redireccionar("../cli/productos-listado.php");
+if (haySesionRamIniciada()) redireccionar("../cli/productos-listado.php");
 
 ?>
 
