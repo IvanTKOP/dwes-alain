@@ -57,6 +57,15 @@ function haySesionIniciada(): bool
     return isset($_SESSION["id"]);
 }
 
+function hayCookieValida(): bool
+{
+    // TODO Comprobar si hay una "sesión-cookie" válida:
+    //   - Ver que vengan DOS cookies "identificador" y "codigoCookie".
+    //   - BD: SELECT ... WHERE identificador=? AND BINARY codigoCookie=?
+    //   - ¿Ha venido un registro? (Igual que el inicio de sesión)
+    //   - IMPORTANTE: si las cookies NO eran válidas, tenemos que borrárselas.
+}
+
 function pintarInfoSesion() {
     if (haySesionIniciada()) {
         echo "<span>Sesión iniciada por <a href='UsuarioPerfilVer.php'>$_SESSION[identificador]</a> ($_SESSION[nombre] $_SESSION[apellidos]) <a href='SesionCerrar.php'>Cerrar sesión</a></span>";
@@ -71,22 +80,16 @@ function cerrarSesionRamYCookie()
     unset($_SESSION); // Por si acaso
 }
 
-function establecerCookieRecuerdame(array $arrayUsuario)
-{
-    // TODO Enviamos al cliente, en forma de cookies, el código cookie y su identificador.
-}
-
 function generarCookieRecordar(array $arrayUsuario)
 {
     // Creamos un código cookie muy complejo (no necesariamente único).
     $codigoCookie = generarCadenaAleatoria(32); // Random...
 
     // TODO guardar código en BD
-    // Para una seguridad óptima convendría anotar en la BD la fecha de caducidad de la cookie y no aceptar ninguna cookie pasada dicha fecha.
 
-    // TODO $arrayUsuario["codigoCookie"] = ...
+    // TODO Para una seguridad óptima convendría anotar en la BD la fecha de caducidad de la cookie y no aceptar ninguna cookie pasada dicha fecha.
 
-    establecerCookieRecordar($arrayUsuario);
+    // TODO Enviamos al cliente, en forma de cookies, el identificador y el codigoCookie: setcookie(...) ...
 }
 
 function borrarCookieRecordar(array $arrayUsuario)
@@ -96,7 +99,7 @@ function borrarCookieRecordar(array $arrayUsuario)
     // TODO Pedir borrar cookie (setcookie con tiempo time() - negativo...)
 }
 
-function generarCadenaAleatoria($longitud): string
+function generarCadenaAleatoria(int $longitud): string
 {
     for ($s = '', $i = 0, $z = strlen($a = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789')-1; $i != $longitud; $x = rand(0,$z), $s .= $a[$x], $i++);
     return $s;
