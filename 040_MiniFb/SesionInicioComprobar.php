@@ -9,11 +9,11 @@ if ($arrayUsuario) { // Identificador existía y contraseña era correcta.
 
     // TODO if (checkbox...) {
     //    generarCookieRecordar($arrayUsuario);
+    // Consistirá en:
+    //    Generar código cookie
+    //    Crear cookie con el código
+    //    Anotar código en BD
     //}
-
-    // TODO Generar código cookie
-    // TODO Crear cookie con el código
-    // TODO Anotar código en BD
 
     redireccionar("ContenidoPrivado1.php");
 } else {
