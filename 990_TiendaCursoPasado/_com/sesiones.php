@@ -32,7 +32,7 @@ function garantizarSesion()
 {
     sessionStartSiNoLoEsta();
 
-    if (haySesionIniciada()) {
+    if (haySesionRamIniciada()) {
         // Si hay cookie de "recuérdame", la renovamos.
         if (vieneCookieRecuerdame()) {
             establecerCookieRecuerdame($_COOKIE["email"], $_COOKIE["codigoCookie"]);

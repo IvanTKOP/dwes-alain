@@ -1,7 +1,7 @@
 <?php
     require_once "_Varios.php";
 
-    if (haySesionIniciada()) redireccionar("ContenidoPrivado1.php");
+    if (haySesionRamIniciada()) redireccionar("ContenidoPrivado1.php");
 
     $datosErroneos = isset($_REQUEST["datosErroneos"]);
 ?>

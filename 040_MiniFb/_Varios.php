@@ -167,23 +167,26 @@ function marcarSesionComoIniciada(array $arrayUsuario)
     $_SESSION["apellidos"] = $arrayUsuario["apellidos"];
 }
 
-function haySesionIniciada(): bool
+function haySesionRamIniciada(): bool
 {
     // Está iniciada si isset($_SESSION["id"])
     return isset($_SESSION["id"]);
 }
 
-function hayCookieValida(): bool
+function intentarCanjearSesionCookie(): bool
 {
     // TODO Comprobar si hay una "sesión-cookie" válida:
     //   - Ver que vengan DOS cookies "identificador" y "codigoCookie".
     //   - BD: SELECT ... WHERE identificador=? AND BINARY codigoCookie=?
     //   - ¿Ha venido un registro? (Igual que el inicio de sesión)
+    //     · Entonces, se la canjeamos por una SESIÓN RAM INICIADA: marcarSesionComoIniciada($arrayUsuario)
+    //     · Además, RENOVAMOS (re-creamos) la cookie.
     //   - IMPORTANTE: si las cookies NO eran válidas, tenemos que borrárselas.
+    //   - En cualquier caso, devolver true/false.
 }
 
 function pintarInfoSesion() {
-    if (haySesionIniciada()) {
+    if (haySesionRamIniciada()) {
         echo "<span>Sesión iniciada por <a href='UsuarioPerfilVer.php'>$_SESSION[identificador]</a> ($_SESSION[nombre] $_SESSION[apellidos]) <a href='SesionCerrar.php'>Cerrar sesión</a></span>";
     } else {
         echo "<a href='SesionInicioFormulario.php'>Iniciar sesión</a>";

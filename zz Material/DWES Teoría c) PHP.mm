@@ -1,6 +1,6 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="3.137">
+<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="2.357">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -447,7 +447,7 @@
 </node>
 </node>
 <node TEXT="errores y problemas frecuentes" FOLDED="true" POSITION="right" ID="ID_76994381" CREATED="1380824496072" MODIFIED="1573030902589">
-<node TEXT="si Apache no arranca" ID="ID_622419806" CREATED="1411407848327" MODIFIED="1414434456199">
+<node TEXT="si Apache no arranca" FOLDED="true" ID="ID_622419806" CREATED="1411407848327" MODIFIED="1414434456199">
 <node TEXT="mirar carpeta DocumentRoot y Directory existe (debe indicarse la misma ruta en ambas)" ID="ID_416087543" CREATED="1411407881279" MODIFIED="1411407925405"/>
 <node TEXT="en dichas rutas, poner las barras así / y no así \" ID="ID_1136514709" CREATED="1411407929447" MODIFIED="1411407943013"/>
 <node TEXT="mirar posibles puertos ocupados y configurar las aplicaciones causantes para que no los usen, o parar los servicios que los usen" ID="ID_496441875" CREATED="1411407858544" MODIFIED="1411583052182"/>
@@ -466,19 +466,25 @@
 <node TEXT="Si habéis instalado el XAMPP varias veces (distinta versión, etc.) puede que eso lleve algún servicio anterior..." ID="ID_359411842" CREATED="1381170138608" MODIFIED="1381170160294"/>
 </node>
 </node>
-<node TEXT="si desde XAMPP no se abren los ficheros de configuración" ID="ID_62332063" CREATED="1443724285607" MODIFIED="1443724299297">
+<node TEXT="si desde XAMPP no se abren los ficheros de configuración" FOLDED="true" ID="ID_62332063" CREATED="1443724285607" MODIFIED="1443724299297">
 <node TEXT="asegurarnos de que los ficheros &quot;.conf&quot; y &quot;.ini&quot; tienen asociada una aplicación que los abre (si hago doble click a un fichero de estos tipos deberían abrirse con el Notepad o con la aplicación que sea)" ID="ID_850492002" CREATED="1443724299582" MODIFIED="1443724425943"/>
 </node>
-<node TEXT="si no se pueden cargar páginas" ID="ID_45437456" CREATED="1411407950431" MODIFIED="1414434456199">
+<node TEXT="si no se pueden cargar páginas" FOLDED="true" ID="ID_45437456" CREATED="1411407950431" MODIFIED="1414434456199">
 <node TEXT="desactivar firewalls que pueda haber, incluido el de Windows" ID="ID_541638219" CREATED="1411407955768" MODIFIED="1411407966500"/>
 </node>
-<node TEXT="proxy vs localhost" ID="ID_1825377287" CREATED="1411408019327" MODIFIED="1414434456200">
+<node TEXT="proxy vs localhost" FOLDED="true" ID="ID_1825377287" CREATED="1411408019327" MODIFIED="1414434456200">
 <node TEXT="si usamos proxy (en el instituto lo usamos), hay que decirle al navegador que NO lo use para direcciones locales" ID="ID_1368771361" CREATED="1411408068382" MODIFIED="1411408154019"/>
 </node>
-<node TEXT="si cambiamos la configuración de un servidor y no la coge" ID="ID_287450574" CREATED="1411407970399" MODIFIED="1445886903407">
+<node TEXT="si cambiamos la configuración de un servidor y no la coge" FOLDED="true" ID="ID_287450574" CREATED="1411407970399" MODIFIED="1445886903407">
 <node TEXT="reiniciar Apache/MySQL o lo que corresponda" ID="ID_767321953" CREATED="1411407975639" MODIFIED="1411407986443"/>
 </node>
-<node TEXT="errores PHP" ID="ID_1063529080" CREATED="1411407854105" MODIFIED="1414434456201">
+<node TEXT="errores PHP" FOLDED="true" ID="ID_1063529080" CREATED="1411407854105" MODIFIED="1414434456201">
+<node TEXT="si ante un error solo vuelve un código 500 pero NO indica texto del error" ID="ID_1234149735" CREATED="1607604855509" MODIFIED="1607604879186">
+<node TEXT="asegurarnos de que esta opción está a On:" ID="ID_1896331819" CREATED="1607604881395" MODIFIED="1607604890284"/>
+<node TEXT="/opt/lampp/etc/php.ini" ID="ID_1831112905" CREATED="1607604891242" MODIFIED="1607604899449">
+<node TEXT="display_errors=On" ID="ID_417229863" CREATED="1607604858968" MODIFIED="1607604863087"/>
+</node>
+</node>
 <node TEXT="failed to open stream, failed opening..." ID="ID_1796562515" CREATED="1380824502706" MODIFIED="1414434456335">
 <node TEXT="mensaje completo" ID="ID_1774696689" CREATED="1380824518770" MODIFIED="1521139800409">
 <node TEXT="Warning: Unknown: failed to open stream: No such file or directory in Unknown on line 0&#xa;&#xa;Fatal error: Unknown: Failed opening required &apos;W:/p_PFE/13-14 LV/IMP/workspace/010 Ejercicios bÃ¡sicos/script.php&apos; (include_path=&apos;.;C:\xampp\php\PEAR&apos;) in Unknown on line 0" ID="ID_560502853" CREATED="1380824503823" MODIFIED="1380824505525"/>
@@ -486,16 +492,16 @@
 <node TEXT="mira a ver si has puesto tildes (¡bien! Pero no en este caso) en el nombre de la carpeta o en el de alguno de los ficheros" ID="ID_916281918" CREATED="1380824523483" MODIFIED="1396285597899"/>
 </node>
 </node>
-<node TEXT="si algo relativo a Apache/PHP/MySQL no funciona:" ID="ID_934544187" CREATED="1445876856371" MODIFIED="1445876868926">
+<node TEXT="si algo relativo a Apache/PHP/MySQL no funciona:" FOLDED="true" ID="ID_934544187" CREATED="1445876856371" MODIFIED="1445876868926">
 <node TEXT="probar con WAMP (es un paquete alternativo parecido a XAMPP)" ID="ID_1071929763" CREATED="1445876869195" MODIFIED="1445876888070"/>
 <node TEXT="usar una máquina virtual" ID="ID_1919661251" CREATED="1445876888298" MODIFIED="1445876896294"/>
 </node>
-<node TEXT="si MySQL no arranca" ID="ID_829916949" CREATED="1411407889512" MODIFIED="1445886898131">
+<node TEXT="si MySQL no arranca" FOLDED="true" ID="ID_829916949" CREATED="1411407889512" MODIFIED="1445886898131">
 <node TEXT="mirar posibles puertos ocupados y configurar las aplicaciones causantes para que no los usen, o parar los servicios que los usen" ID="ID_1072771598" CREATED="1411407858544" MODIFIED="1411407880116"/>
 <node TEXT="el MySQL de XAMPP y un posible MySQL instalado en la máquina aparte mediante instalador son independientes: ¿está arrancado el instalado (lo estará a modo de servicio) y por tanto está ocupando el lugar del MySQL de XAMPP?)" ID="ID_641127277" CREATED="1445454593791" MODIFIED="1445454636916"/>
 <node TEXT="mirar carpeta &quot;data-dir&quot; a ver si existe y tiene el contenido adecuado (el de una instalación virgen; o, si no lo tenéis, el profesor os proporcionará uno)" ID="ID_1326267427" CREATED="1411407895041" MODIFIED="1445455684052"/>
 </node>
-<node TEXT="si un schema (una BD) de MySQL hace &quot;cosas raras&quot;" ID="ID_742290707" CREATED="1445886907115" MODIFIED="1445886927007">
+<node TEXT="si un schema (una BD) de MySQL hace &quot;cosas raras&quot;" FOLDED="true" ID="ID_742290707" CREATED="1445886907115" MODIFIED="1445886927007">
 <node TEXT="ocurre a veces, especialmente cuando movemos de sitio la carpeta &quot;mysql_datos&quot;, cuando importamos/exportamos o cuando hay ordenadores &quot;congelados&quot; de por medio (tarjeta protectora)" ID="ID_1767610994" CREATED="1445886927410" MODIFIED="1445887034846"/>
 <node TEXT="los síntomas son que PHPs aparentemente correctos dan error inexplicablemente o que al querer ver las tablas del schema a través del phpMyAdmin salen errores" ID="ID_1581472917" CREATED="1445887035665" MODIFIED="1445887067360"/>
 <node TEXT="la solución consiste en ir a la carpeta mysql_datos, y eliminar la subcarpeta que se llame igual que el schema (luego, volver a crear o a importar el schema)" ID="ID_1710307946" CREATED="1445887070690" MODIFIED="1445887106246"/>
