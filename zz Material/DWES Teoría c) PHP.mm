@@ -1,6 +1,6 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="2.357">
+<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="1.771">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -1527,7 +1527,7 @@
 </node>
 </node>
 <node TEXT="luego la &quot;preparo&quot; (por seguridad)&#xa;(&quot;conviertir string a objeto&quot;)" ID="ID_208713291" CREATED="1604923112023" MODIFIED="1604923233609">
-<node ID="ID_518111315" CREATED="1604923119927" MODIFIED="1604923190772"><richcontent TYPE="NODE">
+<node ID="ID_518111315" CREATED="1604923119927" MODIFIED="1607685758084"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -1541,7 +1541,7 @@
 </node>
 </node>
 <node TEXT="y luego la ejecuto, pasando un&#xa;array para rellenar huecos" ID="ID_1977365181" CREATED="1576656651610" MODIFIED="1576659876609">
-<node ID="ID_1756829186" CREATED="1576656463692" MODIFIED="1606996744911"><richcontent TYPE="NODE">
+<node ID="ID_1756829186" CREATED="1576656463692" MODIFIED="1607685744437"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -1764,7 +1764,7 @@
 </node>
 </node>
 </node>
-<node TEXT="sesiones" FOLDED="true" POSITION="right" ID="ID_89182252" CREATED="1275125486180" MODIFIED="1605691662118">
+<node TEXT="sesiones" POSITION="right" ID="ID_89182252" CREATED="1275125486180" MODIFIED="1605691662118">
 <node TEXT="¿qué es lo que da soporte&#xa;al mecanismo de la sesión?&#xa;(¿cómo nos &quot;acordamos&quot;&#xa;del id de sesión?)" ID="ID_1213888443" CREATED="1275129962771" MODIFIED="1605692539444">
 <node TEXT="cookies" ID="ID_1992282971" CREATED="1275130054916" MODIFIED="1575971031393">
 <icon BUILTIN="button_ok"/>
@@ -1807,9 +1807,16 @@
 <node TEXT="y en TODAS las siguientes llamada el navegador indica al servidor cuál es la sesión (mediante la cookie)" ID="ID_297051332" CREATED="1275129705175" MODIFIED="1605787355539"/>
 </node>
 <node TEXT="caducidad de cookies de sesión" ID="ID_1322914868" CREATED="1575542792026" MODIFIED="1575542797455">
-<node TEXT="mediante esta directiva en php.ini:" ID="ID_611511733" CREATED="1575542799825" MODIFIED="1575542806987">
-<node TEXT="session.cookie_lifetime=0" ID="ID_1072995842" CREATED="1575542797727" MODIFIED="1575971235497">
+<node TEXT="mediante estas directivas en php.ini&#xa;(deberían ir de la mano):" ID="ID_611511733" CREATED="1575542799825" MODIFIED="1607684918130">
+<node TEXT="caducidad de la cookie:" ID="ID_1393022852" CREATED="1607684879538" MODIFIED="1607684885623">
+<node TEXT="session.cookie_lifetime" ID="ID_1072995842" CREATED="1575542797727" MODIFIED="1607947044637">
 <icon BUILTIN="atenciвn_!"/>
+</node>
+</node>
+<node TEXT="caducidad del &quot;post-it&quot; en la RAM del servidor" ID="ID_726424745" CREATED="1607684886479" MODIFIED="1607947070126">
+<node TEXT="session.gc_maxlifetime" ID="ID_467350692" CREATED="1607684903122" MODIFIED="1607684908404">
+<icon BUILTIN="atenciвn_!"/>
+</node>
 </node>
 </node>
 <node TEXT="duración" ID="ID_889132234" CREATED="1575542822346" MODIFIED="1575542825119">

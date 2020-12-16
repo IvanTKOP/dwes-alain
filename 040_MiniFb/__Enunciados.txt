@@ -1,4 +1,4 @@
-GRUPO .1 y .2 PARA MIÉRCOLES.
+GRUPO .1 y .2 PARA MIÉRCOLES 9.
 
 Orden sugerido:
 1: Formulario inicio sesión.
@@ -17,3 +17,16 @@ Bis 1: Crear cuenta de usuario (OJO con identificadores repetidos...)
 Bis 2: Ver/modificar mi cuenta de usuario
 Bis 3: Subir foto perfil
 ¿Algo más?
+
+GRUPO .1 PARA LUNES 14 y GRUPO .2 PARA VIERNES 11 (RETRASADO A MIÉRCOLES 16 AMBOS):
+Que funcione el "recordar":
+- Para las pruebas, poner, en el /opt/lampp/etc/php.ini, una duración de sesión de ¿1 minuto?: session.cookie_lifetime=60
+- Que, si caduca (o borran) la cookie de PHPSESSID, se sigan acordando de mí mientras tenga las cookies "identificador" y "codigoCookie" correctas (si pulsé el checkbox; si no, que no se acuerden de mí).
+- Que, si cierro sesión, se borren también las cookies "mías" (identificador y codigoCookie).
+
+Comportamiento:
+Si NO marco recordar, mi sesión dura hasta que cierre el navegador (lo normal).
+Si MARCO recordar:
+  - La aplicación funciona normal mientras haya sesión-RAM.
+  - Si cierro el navegador y/o paso tiempo sin tocar nada y caduca la sesion-RAM: al volver, la app tiene que detectar que traigo cookies que valen por una sesión iniciada y canjeármelas, exactamente igual que si hubiera introducido identificador y contraseña.
+  - Pero, si caduca incluso la cookie que soporta la sesión cookie entonces es como si no hubiéramos pulsado "recordar".
