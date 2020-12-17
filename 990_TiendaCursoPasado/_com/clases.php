@@ -31,7 +31,7 @@ class Cliente extends Dato {
 
     public function __construct($id, $email, $contrasenna, $codigoCookie, $nombre, $telefono, $direccion)
     {
-        $this->setId($id);
+        $this->id = $id;
         $this->setEmail($email);
         $this->setContrasenna($contrasenna);
         $this->setCodigoCookie($codigoCookie);

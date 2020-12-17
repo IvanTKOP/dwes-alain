@@ -1,18 +1,7 @@
 <?php
-	require_once "_Varios.php";
+	require_once "_com/dao.php";
 
-	$conexionBD = obtenerPdoConexionBD();
-
-	// Los campos que incluyo en el SELECT son los que luego podré leer
-    // con $fila["campo"].
-	$sql = "SELECT id, nombre FROM categoria ORDER BY nombre ";
-
-    $select = $conexionBD->prepare($sql);
-    $select->execute([]); // Array vacío porque la consulta preparada no requiere parámetros.
-    $rs = $select->fetchAll();
-
-    // INTERFAZ:
-    // $rs
+	$categorias = DAO::categoriaObtenerTodas();
 ?>
 
 
@@ -35,10 +24,10 @@
 		<th>Nombre</th>
 	</tr>
 
-	<?php foreach ($rs as $fila) { ?>
+	<?php foreach ($categorias as $categoria) { ?>
         <tr>
-            <td><a href=   'CategoriaFicha.php?id=<?=$fila["id"]?>'> <?=$fila["nombre"] ?> </a></td>
-            <td><a href='CategoriaEliminar.php?id=<?=$fila["id"]?>'> (X)                   </a></td>
+            <td><a href='CategoriaFicha.php?id=<?=$categoria->getId()?>'>    <?=$categoria->getNombre()?> </a></td>
+            <td><a href='CategoriaEliminar.php?id=<?=$categoria->getId()?>'> (X)                            </a></td>
         </tr>
 	<?php } ?>
 

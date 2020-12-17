@@ -31,9 +31,9 @@ class DAO
 
     private static function ejecutarConsulta(string $sql, array $parametros): array
     {
-        if (!isset(self::$pdo)) self::$pdo = self::obtenerPdoConexionBd();
+        if (!isset(Self::$pdo)) Self::$pdo = Self::obtenerPdoConexionBd();
 
-        $select = self::$pdo->prepare($sql);
+        $select = Self::$pdo->prepare($sql);
         $select->execute($parametros);
         return $select->fetchAll();
     }
@@ -62,9 +62,9 @@ class DAO
         else return null;
     }
 
-    public static function clienteObtenerPorEmailYContrasenna($email, $contrasenna): Cliente
+    public static function clienteObtenerPorEmailYContrasenna($email, $contrasenna): ?Cliente
     {
-        $rs = self::ejecutarConsulta("SELECT * FROM cliente WHERE email=? AND BINARY contrasenna=?",
+        $rs = Self::ejecutarConsulta("SELECT * FROM cliente WHERE email=? AND BINARY contrasenna=?",
             [$email, $contrasenna]);
         if ($rs) {
             return self::crearClienteDesdeRs($rs);
@@ -73,7 +73,7 @@ class DAO
         }
     }
 
-    public static function clienteObtenerPorEmailYCodigoCookie($email, $codigoCookie): Cliente
+    public static function clienteObtenerPorEmailYCodigoCookie($email, $codigoCookie): ?Cliente
     {
         $rs = self::ejecutarConsulta("SELECT * FROM cliente WHERE email=? AND BINARY codigoCookie=?",
             [$email, $codigoCookie]);
