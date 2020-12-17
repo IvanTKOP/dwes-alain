@@ -14,11 +14,11 @@
 	
 	if ($nuevaEntrada) {
 		// Quieren CREAR una nueva entrada, así que es un INSERT.
- 		$sql = "INSERT INTO categoria (nombre) VALUES (?)";
+ 		$sql = "INSERT INTO Categoria (nombre) VALUES (?)";
  		$parametros = [$nombre];
 	} else {
 		// Quieren MODIFICAR una categoría existente y es un UPDATE.
- 		$sql = "UPDATE categoria SET nombre=? WHERE id=?";
+ 		$sql = "UPDATE Categoria SET nombre=? WHERE id=?";
         $parametros = [$nombre, $id];
  	}
  	

@@ -12,7 +12,7 @@ class DAO
         $servidor = "localhost";
         $identificador = "root";
         $contrasenna = "";
-        $bd = "agenda"; // Schema
+        $bd = "Agenda"; // Schema
         $opciones = [
             PDO::ATTR_EMULATE_PREPARES => false, // Modo emulación desactivado para prepared statements "reales"
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION, // Que los errores salgan como excepciones.
@@ -62,7 +62,7 @@ class DAO
     public static function categoriaObtenerPorId(int $id): ?Categoria
     {
         $rs = self::ejecutarConsulta(
-            "SELECT * FROM categoria WHERE id=?",
+            "SELECT * FROM Categoria WHERE id=?",
             [$id]
         );
         if ($rs) return self::crearCategoriaDesdeRs($rs[0]);
@@ -72,7 +72,7 @@ class DAO
     public static function categoriaActualizar($id, $nombre)
     {
         self::ejecutarActualizacion(
-            "UPDATE categoria SET nombre=? WHERE id=?",
+            "UPDATE Categoria SET nombre=? WHERE id=?",
             [$nombre, $id]
         );
     }
@@ -80,7 +80,7 @@ class DAO
     public static function categoriaCrear(string $nombre)
     {
         self::ejecutarActualizacion(
-            "INSERT INTO categoria (nombre) VALUES (?)",
+            "INSERT INTO Categoria (nombre) VALUES (?)",
             [$nombre]
         );
     }
@@ -89,7 +89,7 @@ class DAO
     {
         $datos = [];
         $rs = self::ejecutarConsulta(
-            "SELECT * FROM categoria ORDER BY nombre",
+            "SELECT * FROM Categoria ORDER BY nombre",
             []
         );
 
