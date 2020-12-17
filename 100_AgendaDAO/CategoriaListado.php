@@ -1,5 +1,5 @@
 <?php
-	require_once "_com/dao.php";
+	require_once "_com/DAO.php";
 
 	$categorias = DAO::categoriaObtenerTodas();
 ?>

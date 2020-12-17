@@ -1,7 +1,7 @@
 <?php
 
-require_once "clases.php";
-require_once "utilidades.php";
+require_once "Clases.php";
+require_once "Varios.php";
 
 class DAO
 {

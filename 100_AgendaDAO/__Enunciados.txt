@@ -9,3 +9,9 @@ Amoldar productoObtenerTodos() --> categoriaObtenerTodas()
 Crear clase Categoria.
 
 Y que funcione ese PHP con este modelo.
+
+
+
+PARA EL 22-DIC (AMBOS GRUPOS):
+
+Agenda completa en "formato DAO" subida al GIT PROPIO de cada uno.
