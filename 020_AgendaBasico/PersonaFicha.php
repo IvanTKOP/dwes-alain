@@ -17,7 +17,7 @@
 		$personaTelefono = "<introduzca teléfono>";
 		$personaCategoriaId = 0;
 	} else { // Quieren VER la ficha de una persona existente, cuyos datos se cargan.
-        $sqlPersona = "SELECT nombre, apellidos, telefono, categoriaId FROM persona WHERE id=?";
+        $sqlPersona = "SELECT nombre, apellidos, telefono, categoriaId FROM Persona WHERE id=?";
 
         $select = $conexion->prepare($sqlPersona);
         $select->execute([$id]); // Se añade el parámetro a la consulta preparada.
@@ -34,7 +34,7 @@
 	
 	// Con lo siguiente se deja preparado un recordset con todas las categorías.
 	
-	$sqlCategorias = "SELECT id, nombre FROM categoria ORDER BY nombre";
+	$sqlCategorias = "SELECT id, nombre FROM Categoria ORDER BY nombre";
 
     $select = $conexion->prepare($sqlCategorias);
     $select->execute([]); // Array vacío porque la consulta preparada no requiere parámetros.

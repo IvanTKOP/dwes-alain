@@ -10,7 +10,7 @@
                     c.id        AS cId,
                     c.nombre    AS cNombre
                 FROM
-                   persona AS p INNER JOIN categoria AS c
+                   Persona AS p INNER JOIN Categoria AS c
                    ON p.categoriaId = c.id
                 ORDER BY p.nombre
         ";

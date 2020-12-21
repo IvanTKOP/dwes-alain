@@ -17,11 +17,11 @@
 	
 	if ($nuevaEntrada) {
 		// Quieren CREAR una nueva entrada, así que es un INSERT.
- 		$sql = "INSERT INTO persona (nombre, apellidos, telefono, categoriaId) VALUES (?, ?, ?)";
+ 		$sql = "INSERT INTO Persona (nombre, apellidos, telefono, categoriaId) VALUES (?, ?, ?)";
         $parametros = [$nombre, $telefono, $categoriaId];
 	} else {
 		// Quieren MODIFICAR una persona existente y es un UPDATE.
- 		$sql = "UPDATE persona SET nombre=?, apellidos=?, telefono=?, categoriaId=? WHERE id=?";
+ 		$sql = "UPDATE Persona SET nombre=?, apellidos=?, telefono=?, categoriaId=? WHERE id=?";
         $parametros = [$nombre, $apellidos, $telefono, $categoriaId, $id];
  	}
 

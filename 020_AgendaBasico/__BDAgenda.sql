@@ -29,7 +29,7 @@ USE `agenda`;
 -- Estructura de tabla para la tabla `categoria`
 --
 
-DROP TABLE IF EXISTS `categoria`;
+DROP TABLE IF EXISTS Categoria;
 CREATE TABLE IF NOT EXISTS `categoria` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(45) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
@@ -40,12 +40,12 @@ CREATE TABLE IF NOT EXISTS `categoria` (
 -- Truncar tablas antes de insertar `categoria`
 --
 
-TRUNCATE TABLE `categoria`;
+TRUNCATE TABLE Categoria;
 --
 -- Volcado de datos para la tabla `categoria`
 --
 
-INSERT INTO `categoria` (`id`, `nombre`) VALUES
+INSERT INTO Categoria (`id`, `nombre`) VALUES
 (1, 'Familiares'),
 (2, 'Amigüitos'),
 (3, 'Trabajo'),
@@ -58,7 +58,7 @@ INSERT INTO `categoria` (`id`, `nombre`) VALUES
 -- Estructura de tabla para la tabla `persona`
 --
 
-DROP TABLE IF EXISTS `persona`;
+DROP TABLE IF EXISTS Persona;
 CREATE TABLE IF NOT EXISTS `persona` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` varchar(45) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
@@ -72,12 +72,12 @@ CREATE TABLE IF NOT EXISTS `persona` (
 -- Truncar tablas antes de insertar `persona`
 --
 
-TRUNCATE TABLE `persona`;
+TRUNCATE TABLE Persona;
 --
 -- Volcado de datos para la tabla `persona`
 --
 
-INSERT INTO `persona` (`id`, `nombre`, `telefono`, `categoriaId`) VALUES
+INSERT INTO Persona (`id`, `nombre`, `telefono`, `categoriaId`) VALUES
 (1, 'Pepe', '600111222', 3),
 (2, 'Mario', '688444222', 1),
 (3, 'Jose', '611222333', 1),
@@ -93,8 +93,8 @@ INSERT INTO `persona` (`id`, `nombre`, `telefono`, `categoriaId`) VALUES
 --
 -- Filtros para la tabla `persona`
 --
-ALTER TABLE `persona`
-  ADD CONSTRAINT `fk_categoriaId` FOREIGN KEY (`categoriaId`) REFERENCES `categoria` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE Persona
+  ADD CONSTRAINT `fk_categoriaId` FOREIGN KEY (`categoriaId`) REFERENCES Categoria (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

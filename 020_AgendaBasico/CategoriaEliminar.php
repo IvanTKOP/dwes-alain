@@ -6,7 +6,7 @@
 	// Se recoge el parámetro "id" de la request.
 	$id = (int)$_REQUEST["id"];
 
-	$sql = "DELETE FROM categoria WHERE id=?";
+	$sql = "DELETE FROM Categoria WHERE id=?";
 
     $sentencia = $conexionBD->prepare($sql);
 

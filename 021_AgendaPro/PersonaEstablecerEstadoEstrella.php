@@ -5,7 +5,7 @@
 
     $id = $_REQUEST["id"];
 
-    $sql = "UPDATE persona SET estrella = (NOT (SELECT estrella FROM persona WHERE id=?)) WHERE id=?";
+    $sql = "UPDATE Persona SET estrella = (NOT (SELECT estrella FROM Persona WHERE id=?)) WHERE id=?";
     $sentencia = $conexion->prepare($sql);
     $sentencia->execute([$id, $id]);
 

@@ -24,7 +24,7 @@ USE agenda;
 -- Estructura de tabla para la tabla categoria
 --
 
-DROP TABLE IF EXISTS categoria;
+DROP TABLE IF EXISTS Categoria;
 CREATE TABLE IF NOT EXISTS categoria (
                                          id int(11) NOT NULL AUTO_INCREMENT,
                                          nombre varchar(45) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS categoria (
 -- Volcado de datos para la tabla categoria
 --
 
-INSERT INTO categoria (id, nombre) VALUES
+INSERT INTO Categoria (id, nombre) VALUES
 (1, 'Familiares'),
 (2, 'Amigos'),
 (3, 'Trabajo'),
@@ -48,7 +48,7 @@ INSERT INTO categoria (id, nombre) VALUES
 -- Estructura de tabla para la tabla persona
 --
 
-DROP TABLE IF EXISTS persona;
+DROP TABLE IF EXISTS Persona;
 CREATE TABLE IF NOT EXISTS persona (
                                        id int(11) NOT NULL AUTO_INCREMENT,
                                        nombre varchar(45) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS persona (
 -- Volcado de datos para la tabla persona
 --
 
-INSERT INTO persona (id, nombre, apellidos, telefono, estrella, categoriaId) VALUES
+INSERT INTO Persona (id, nombre, apellidos, telefono, estrella, categoriaId) VALUES
 (1, 'Joseph', 'Smith', '600111222', 0, 3),
 (3, 'Jose', 'Pérez Pi', '611222333', 0, 1),
 (4, 'Cristina', 'Muñoz', '644999444', 1, 8),
@@ -79,7 +79,7 @@ INSERT INTO persona (id, nombre, apellidos, telefono, estrella, categoriaId) VAL
 --
 -- Filtros para la tabla persona
 --
-ALTER TABLE persona
-    ADD CONSTRAINT fk_categoriaId FOREIGN KEY (categoriaId) REFERENCES categoria (id) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE Persona
+    ADD CONSTRAINT fk_categoriaId FOREIGN KEY (categoriaId) REFERENCES Categoria (id) ON DELETE CASCADE ON UPDATE CASCADE;
 SET FOREIGN_KEY_CHECKS=1;
 COMMIT;

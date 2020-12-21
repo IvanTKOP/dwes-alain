@@ -6,7 +6,7 @@
 	// Se recoge el parámetro "id" de la request.
 	$id = (int)$_REQUEST["id"];
 
-	$sql = "DELETE FROM persona WHERE id=?";
+	$sql = "DELETE FROM Persona WHERE id=?";
 
     $sentencia = $conexion->prepare($sql);
     //Esta llamada devuelve true o false según si la ejecución de la sentencia ha ido bien o mal.
