@@ -40,14 +40,18 @@ class DAO
         return $rs;
     }
 
-    private static function ejecutarActualizacion(string $sql, array $parametros): bool
+    // Devuelve:
+    //   - null: si ha habido un error
+    //   - 0, 1 u otro número positivo: OK (no errores) y estas son las filas afectadas.
+    private static function ejecutarActualizacion(string $sql, array $parametros): ?int
     {
         if (!isset(self::$pdo)) self::$pdo = self::obtenerPdoConexionBd();
 
         $actualizacion = self::$pdo->prepare($sql);
         $sqlConExito = $actualizacion->execute($parametros);
 
-        return $sqlConExito;
+        if (!$sqlConExito) return null;
+        else return $actualizacion->rowCount();
     }
 
 
