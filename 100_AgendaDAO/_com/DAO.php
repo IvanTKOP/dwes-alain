@@ -92,6 +92,7 @@ class DAO
     public static function categoriaObtenerTodas(): array
     {
         $datos = [];
+
         $rs = self::ejecutarConsulta(
             "SELECT * FROM Categoria ORDER BY nombre",
             []

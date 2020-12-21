@@ -24,6 +24,7 @@ class Categoria extends Dato
     use Identificable;
 
     private string $nombre;
+    private array $personasPertenecientes;
 
     public function __construct(int $id, string $nombre)
     {
@@ -39,5 +40,30 @@ class Categoria extends Dato
     public function setNombre(string $nombre)
     {
         $this->nombre = $nombre;
+    }
+
+    public function obtenerPersonasPertenecientes(): array
+    {
+        if ($this->personasPertenecientes == null) $personasPertenecientes = DAO::personaObtenerPorCategoria($this->id);
+
+        return $personasPertenecientes;
+    }
+}
+
+class Persona extends Dato
+{
+    use Identificable;
+
+    private string $nombre;
+    private string $apellidos;
+    // ...
+    private int $categoriaId;
+    private Categoria $categoria;
+
+    public function obtenerCategoria(): Categoria
+    {
+        if ($this->categoria == null) $categoria = DAO::categoriaObtenerPorId($this->categoriaId);
+
+        return $categoria;
     }
 }
