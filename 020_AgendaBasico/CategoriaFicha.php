@@ -14,7 +14,7 @@
 	if ($nuevaEntrada) { // Quieren CREAR una nueva entrada, así que no se cargan datos.
 		$categoriaNombre = "<introduzca nombre>";
 	} else { // Quieren VER la ficha de una categoría existente, cuyos datos se cargan.
-		$sql = "SELECT nombre FROM categoria WHERE id=?";
+		$sql = "SELECT nombre FROM Categoria WHERE id=?";
 
         $select = $conexion->prepare($sql);
         $select->execute([$id]); // Se añade el parámetro a la consulta preparada.

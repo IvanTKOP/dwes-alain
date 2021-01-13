@@ -2,8 +2,7 @@
 
 require_once "../_com/comunes-app.php";
 
-$clienteId = $_SESSION["id"];
-$pedidos = DAO::pedidosObtenerTodosPorCliente($clienteId);
+$pedidos = DAO::pedidosObtenerTodosPorCliente($_SESSION["id"]);
 
 ?>
 

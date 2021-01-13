@@ -1,5 +1,5 @@
 <?php
-	require_once "_Varios.php";
+	require_once "_com/Varios.php";
 
 	$conexion = obtenerPdoConexionBD();
 
@@ -9,6 +9,7 @@
 	$apellidos = $_REQUEST["apellidos"];
 	$telefono = $_REQUEST["telefono"];
     $categoriaId = (int)$_REQUEST["categoriaId"];
+    $estrella = isset($_REQUEST["estrella"]);
 
 	// Si id es -1 quieren INSERTAR una nueva entrada ($nueva_entrada tomará true).
 	// Sin embargo, si id NO es -1 quieren ACTUALIZAR la ficha de una persona existente
@@ -17,12 +18,12 @@
 	
 	if ($nuevaEntrada) {
 		// Quieren CREAR una nueva entrada, así que es un INSERT.
- 		$sql = "INSERT INTO Persona (nombre, apellidos, telefono, categoriaId) VALUES (?, ?, ?)";
-        $parametros = [$nombre, $telefono, $categoriaId];
+ 		$sql = "INSERT INTO Persona (nombre, apellidos, telefono, estrella, categoriaId) VALUES (?, ?, ?, ?, ?)";
+        $parametros = [$nombre, $apellidos, $telefono, $estrella?1:0, $categoriaId];
 	} else {
 		// Quieren MODIFICAR una persona existente y es un UPDATE.
- 		$sql = "UPDATE Persona SET nombre=?, apellidos=?, telefono=?, categoriaId=? WHERE id=?";
-        $parametros = [$nombre, $apellidos, $telefono, $categoriaId, $id];
+ 		$sql = "UPDATE Persona SET nombre=?, apellidos=?, telefono=?, estrella=?, categoriaId=? WHERE id=?";
+        $parametros = [$nombre, $apellidos, $telefono, $estrella?1:0, $categoriaId, $id];
  	}
 
     $sentencia = $conexion->prepare($sql);

@@ -5,7 +5,7 @@
 
 	// Los campos que incluyo en el SELECT son los que luego podré leer
     // con $fila["campo"].
-	$sql = "SELECT id, nombre FROM categoria ORDER BY nombre ";
+	$sql = "SELECT id, nombre FROM Categoria ORDER BY nombre ";
 
     $select = $conexionBD->prepare($sql);
     $select->execute([]); // Array vacío porque la consulta preparada no requiere parámetros.

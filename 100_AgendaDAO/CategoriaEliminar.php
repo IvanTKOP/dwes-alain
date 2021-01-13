@@ -1,5 +1,5 @@
 <?php
-	require_once "_Varios.php";
+	require_once "_com/Varios.php";
 
 	$conexionBD = obtenerPdoConexionBD();
 
@@ -9,20 +9,18 @@
 	$sql = "DELETE FROM Categoria WHERE id=?";
 
     $sentencia = $conexionBD->prepare($sql);
-
     //Esta llamada devuelve true o false según si la ejecución de la sentencia ha ido bien o mal.
     $sqlConExito = $sentencia->execute([$id]); // Se añade el parámetro a la consulta preparada.
 
     //Se cargan variables boolean según la cantidad de filas afectadas por la ultima sentencia sql.
 
-    // Está to-do correcto de forma normal si NO ha habido errores y se ha visto afectada UNA fila.
+    // Está todo correcto de forma normal si NO ha habido errores y se ha visto afectada UNA fila.
     $correctoNormal = ($sqlConExito && $sentencia->rowCount() == 1);
 
  	// Caso raro: cero filas afectadas... (No existía la fila en la BD)
  	$noExistia = ($sqlConExito && $sentencia->rowCount() == 0);
 
  	// INTERFAZ:
-    // $sqlConExito
     // $correctoNormal
     // $noExistia
 ?>

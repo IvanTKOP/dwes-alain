@@ -2,7 +2,7 @@
 
 // TODO ...$_REQUEST["..."]...
 
-// TODO Intentar crear (añadir funciones en _Varios.php para crear y tal).
+// TODO Intentar crear (añadir funciones en Varios.php para crear y tal).
 //
 // TODO Y redirigir a donde sea.
 

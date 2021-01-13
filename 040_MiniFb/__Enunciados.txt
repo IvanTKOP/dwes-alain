@@ -15,7 +15,7 @@ Orden sugerido:
 Extras (grupo .1):
 Bis 1: Crear cuenta de usuario (OJO con identificadores repetidos...)
 Bis 2: Ver/modificar mi cuenta de usuario
-Bis 3: Subir foto perfil
+Bis 3: Subir foto perfil: <input type="file" ...> (poner POST), $_FILES
 ¿Algo más?
 
 GRUPO .1 PARA LUNES 14 y GRUPO .2 PARA VIERNES 11 (RETRASADO A MIÉRCOLES 16 AMBOS):

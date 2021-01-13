@@ -1,6 +1,6 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="1.771">
+<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="2.143">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -1764,7 +1764,7 @@
 </node>
 </node>
 </node>
-<node TEXT="sesiones" POSITION="right" ID="ID_89182252" CREATED="1275125486180" MODIFIED="1605691662118">
+<node TEXT="sesiones" FOLDED="true" POSITION="right" ID="ID_89182252" CREATED="1275125486180" MODIFIED="1605691662118">
 <node TEXT="¿qué es lo que da soporte&#xa;al mecanismo de la sesión?&#xa;(¿cómo nos &quot;acordamos&quot;&#xa;del id de sesión?)" ID="ID_1213888443" CREATED="1275129962771" MODIFIED="1605692539444">
 <node TEXT="cookies" ID="ID_1992282971" CREATED="1275130054916" MODIFIED="1575971031393">
 <icon BUILTIN="button_ok"/>
@@ -1980,7 +1980,8 @@
 </node>
 <node TEXT="y cuando el usuario cierra sesión no solo hay que eliminar la info de $_SESSION sino TAMBIÉN LA COOKIE." ID="ID_1419254114" CREATED="1576752355245" MODIFIED="1576752367032"/>
 </node>
-<node TEXT="POO con PHP" FOLDED="true" POSITION="right" ID="ID_324968914" CREATED="1579077200297" MODIFIED="1579077202557">
+<node TEXT="POO con PHP" POSITION="right" ID="ID_324968914" CREATED="1579077200297" MODIFIED="1608113151270">
+<icon BUILTIN="full-2"/>
 <node TEXT="muy parecida a Java en prácticamente todo" ID="ID_1564780997" CREATED="1579077983152" MODIFIED="1579079151093"/>
 <node TEXT="TIENE recolector de basura" ID="ID_422938202" CREATED="1579077988178" MODIFIED="1579077992376"/>
 <node TEXT="estructura general de una clase" ID="ID_255400265" CREATED="1579078962296" MODIFIED="1579078967823">
@@ -2021,14 +2022,14 @@
 </node>
 </node>
 <node TEXT="clases y métodos abstractos" ID="ID_181535245" CREATED="1579078191868" MODIFIED="1579078211392">
-<node TEXT="ejemplo" ID="ID_1010299409" CREATED="1579079044724" MODIFIED="1579079048379">
+<node TEXT="ejemplo" FOLDED="true" ID="ID_1010299409" CREATED="1579079044724" MODIFIED="1579079048379">
 <icon BUILTIN="z_script"/>
 <node TEXT="abstract class ParentClass {&#xa;  abstract public function someMethod1();&#xa;  ...&#xa;}" ID="ID_1632536706" CREATED="1579078195932" MODIFIED="1579078203356"/>
 </node>
 </node>
 <node TEXT="parent" ID="ID_1360375762" CREATED="1579077202753" MODIFIED="1579077844699">
 <node TEXT="equivale al super de Java" ID="ID_1038770187" CREATED="1579077844901" MODIFIED="1579077848958"/>
-<node TEXT="ejemplo:" ID="ID_838986235" CREATED="1579077853251" MODIFIED="1579079000763">
+<node TEXT="ejemplo:" FOLDED="true" ID="ID_838986235" CREATED="1579077853251" MODIFIED="1579079000763">
 <icon BUILTIN="z_script"/>
 <node TEXT="parent::__destruct()" ID="ID_1343707853" CREATED="1579077849112" MODIFIED="1579077852976"/>
 </node>
