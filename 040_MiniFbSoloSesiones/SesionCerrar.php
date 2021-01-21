@@ -4,6 +4,6 @@
 
     destruirSesionRamYCookie();
 
-    redireccionar("ContenidoPublico1.php");
+    redireccionar("Index.php");
 
 ?>
