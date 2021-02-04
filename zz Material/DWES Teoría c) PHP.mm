@@ -2142,7 +2142,7 @@
 </node>
 </node>
 </node>
-<node TEXT="funciones clave" ID="ID_1529744937" CREATED="1549371413027" MODIFIED="1549371416892">
+<node TEXT="funciones clave&#xa;JavaScript" ID="ID_1529744937" CREATED="1549371413027" MODIFIED="1612444537132">
 <node TEXT="request = new XMLHttpRequest();" ID="ID_1141743508" CREATED="1549371442393" MODIFIED="1549371758459"/>
 <node TEXT="" ID="ID_1712525120" CREATED="1549371956705" MODIFIED="1549371956705">
 <node TEXT="crea un objeto que nos ayudará a realizar una petición al servidor" ID="ID_914649761" CREATED="1549371894649" MODIFIED="1549371946648"/>
@@ -2163,7 +2163,7 @@
 <node TEXT="lanza ya de forma efectiva la petición al servidor" ID="ID_776499030" CREATED="1549372122757" MODIFIED="1549372133851"/>
 </node>
 </node>
-<node TEXT="mi función&#xa;manejadora&#xa;de eventos" FOLDED="true" ID="ID_605265025" CREATED="1549371406391" MODIFIED="1549372243585">
+<node TEXT="mi función&#xa;manejadora&#xa;de eventos" ID="ID_605265025" CREATED="1549371406391" MODIFIED="1549372243585">
 <node TEXT="atenderEventosRequest()" ID="ID_1769317178" CREATED="1549371888810" MODIFIED="1549372262818">
 <node ID="ID_1114842108" CREATED="1549371409502" MODIFIED="1549372389215"><richcontent TYPE="NODE">
 
