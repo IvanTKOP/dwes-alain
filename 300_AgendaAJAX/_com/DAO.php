@@ -69,7 +69,7 @@ class DAO
             "SELECT * FROM Categoria WHERE id=?",
             [$id]
         );
-        if ($rs) return self::crearCategoriaDesdeRs($rs[0]);
+        if ($rs) return self::categoriaCrearDesdeRs($rs[0]);
         else return null;
     }
 
