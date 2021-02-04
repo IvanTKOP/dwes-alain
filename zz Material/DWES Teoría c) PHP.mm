@@ -1,6 +1,6 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle">
+<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="1.771">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -2110,8 +2110,8 @@
 </node>
 </node>
 </node>
-<node TEXT="AJAX" FOLDED="true" POSITION="right" ID="ID_1940917263" CREATED="1540365581168" MODIFIED="1612441779177">
-<node TEXT="" ID="ID_1207659829" CREATED="1549008444621" MODIFIED="1549008454575">
+<node TEXT="AJAX" POSITION="right" ID="ID_1940917263" CREATED="1540365581168" MODIFIED="1612441779177">
+<node TEXT="" FOLDED="true" ID="ID_1207659829" CREATED="1549008444621" MODIFIED="1549008454575">
 <icon BUILTIN="z_world"/>
 <node TEXT="http://www.tutorialesprogramacionya.com/ajaxya/" ID="ID_644796698" CREATED="1549008923483" MODIFIED="1549008923483" LINK="http://www.tutorialesprogramacionya.com/ajaxya/"/>
 <node TEXT="https://www.w3schools.com/js/js_ajax_http_send.asp" ID="ID_353264210" CREATED="1549371601841" MODIFIED="1549371601841" LINK="https://www.w3schools.com/js/js_ajax_http_send.asp"/>
