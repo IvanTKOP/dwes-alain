@@ -11,7 +11,7 @@ if ($arrayUsuario) { // Identificador existía y contraseña era correcta.
         establecerSesionCookie($arrayUsuario);
     }
 
-    redireccionar("ContenidoPrivado1.php");
+    redireccionar("MuroVerGlobal.php");
 } else {
     redireccionar("SesionInicioFormulario.php?datosErroneos");
 }

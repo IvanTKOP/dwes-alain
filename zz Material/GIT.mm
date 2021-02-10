@@ -1,7 +1,7 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="" FOLDED="false" ID="ID_513931562" CREATED="1580379249661" MODIFIED="1580379252481"><hook NAME="MapStyle" zoom="2.357">
-    <properties fit_to_viewport="false" show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
+    <properties show_icon_for_attributes="true" fit_to_viewport="false" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -68,7 +68,7 @@
 <node TEXT="¡puedo ir a cualquier commit!" ID="ID_1844803713" CREATED="1604487986394" MODIFIED="1604488026432"/>
 </node>
 <node TEXT="normalmente 1 repositorio = 1 proyecto" ID="ID_1749630218" CREATED="1601895660710" MODIFIED="1601895666955"/>
-<node TEXT="un repo se identifica mediante su URL de donde está alojado en la nube" ID="ID_718862759" CREATED="1604482795211" MODIFIED="1604487140366"/>
+<node TEXT="un repo se identifica mediante su URL de donde está alojado en la nube/local" ID="ID_718862759" CREATED="1604482795211" MODIFIED="1611406531910"/>
 <node TEXT="un repo contiene" ID="ID_1027419662" CREATED="1604482232387" MODIFIED="1604482801472">
 <node TEXT="una colección de commits" ID="ID_1745993605" CREATED="1604482237895" MODIFIED="1604482299959"/>
 <node TEXT="y ficheros" ID="ID_708015068" CREATED="1604482243254" MODIFIED="1604482245609">
@@ -94,7 +94,7 @@
 </node>
 </node>
 <node TEXT="" ID="ID_55663464" CREATED="1581027096865" MODIFIED="1581027096865">
-<node TEXT="branch&#xa;(rama)" FOLDED="true" ID="ID_883210579" CREATED="1580380178229" MODIFIED="1580380201859">
+<node TEXT="branch&#xa;(rama)" ID="ID_883210579" CREATED="1580380178229" MODIFIED="1580380201859">
 <node TEXT="es una línea de desarrollo independiente, dentro del mismo repositorio (dentro del mismo proyecto)" ID="ID_382133975" CREATED="1580380202142" MODIFIED="1601895956584"/>
 <node TEXT="mantiene una copia independiente de TODOS los archivos (aunque yo seguramente solo modificaré algunos)" ID="ID_1644388114" CREATED="1580380241553" MODIFIED="1601896053924"/>
 <node TEXT="si varias personas trabajan en un mismo proyecto (mismo repositorio) y una de las personas se va a encargar de determinada funcionalidad en ese proyecto, crea una rama y trabaja sobre ella" ID="ID_694032540" CREATED="1601895987365" MODIFIED="1601896032793"/>
@@ -102,18 +102,19 @@
 <node TEXT="las demaś ramas suelen llamarse &quot;topic branches&quot;" ID="ID_169349569" CREATED="1580380317733" MODIFIED="1580380339177">
 <node TEXT="ramas &quot;de (determinado) tema&quot;" ID="ID_454695863" CREATED="1580380340204" MODIFIED="1580380351606"/>
 </node>
+<node TEXT="en mantenimiento, las ramas se suelen llamar con el Nº de ticket de la incidencia" ID="ID_1111260899" CREATED="1611406847041" MODIFIED="1611406863178"/>
 <node TEXT="al terminar de trabajar en mi parte, &quot;mergeo&quot; mi rama con la &quot;main&quot;" ID="ID_120103700" CREATED="1601896209492" MODIFIED="1602764372986"/>
 </node>
-<node TEXT="clone" FOLDED="true" ID="ID_1230266521" CREATED="1580379584181" MODIFIED="1580379585065">
+<node TEXT="clone" ID="ID_1230266521" CREATED="1580379584181" MODIFIED="1580379585065">
 <node TEXT="copiar una *rama* de un repositorio a local" ID="ID_1750845751" CREATED="1580379969223" MODIFIED="1601897851606">
-<node TEXT="si no digo nada copiaré la rama por defecto, que normalmente será la &quot;master&quot;" ID="ID_361756886" CREATED="1580380453979" MODIFIED="1580380460703"/>
+<node TEXT="si no digo nada copiaré la rama por defecto, que normalmente será la &quot;main&quot;" ID="ID_361756886" CREATED="1580380453979" MODIFIED="1611406904163"/>
 </node>
 <node TEXT="clonar es necesario para trabajar realmente sobre los ficheros, editarlos, etc." ID="ID_1443682469" CREATED="1580379956003" MODIFIED="1580380469219"/>
 <node TEXT="puedo elegir en cada momento sobre qué rama estoy trabajando" ID="ID_854793943" CREATED="1580382106384" MODIFIED="1580382120436">
 <node TEXT="si hay tres ramas en Git entonces en Git hay tres copias de los ficheros EN LA NUBE, PERO yo en local solo tengo UNA copia de los ficheros" ID="ID_1915600084" CREATED="1580382120641" MODIFIED="1601896511561"/>
 </node>
 </node>
-<node TEXT="checkout" FOLDED="true" ID="ID_1828110324" CREATED="1580379809928" MODIFIED="1581027667385">
+<node TEXT="checkout" ID="ID_1828110324" CREATED="1580379809928" MODIFIED="1581027667385">
 <node TEXT="cambiar de rama en local" ID="ID_1905168852" CREATED="1581027668032" MODIFIED="1581027731810"/>
 <node TEXT="&quot;hagamos que los archivos de mi carpeta local equivalgan a los de la rama que indico&quot;" ID="ID_143428171" CREATED="1581027697293" MODIFIED="1581027721195"/>
 <node TEXT="checkout master" ID="ID_850329372" CREATED="1581027733935" MODIFIED="1581027739890">
@@ -122,17 +123,17 @@
 </node>
 </node>
 <node TEXT="" ID="ID_111409358" CREATED="1581027104859" MODIFIED="1581027104859">
-<node TEXT="pull" FOLDED="true" ID="ID_1392255597" CREATED="1580379531380" MODIFIED="1580731987998">
+<node TEXT="pull" ID="ID_1392255597" CREATED="1580379531380" MODIFIED="1580731987998">
 <node TEXT="traerte lo que hay en la nube" ID="ID_92534372" CREATED="1580381243958" MODIFIED="1580731982230"/>
 </node>
-<node TEXT="push" FOLDED="true" ID="ID_1378599376" CREATED="1580379533760" MODIFIED="1580379534716">
+<node TEXT="push" ID="ID_1378599376" CREATED="1580379533760" MODIFIED="1580379534716">
 <node TEXT="enviar lo local a la nube" ID="ID_1996440520" CREATED="1580381257199" MODIFIED="1581029102191"/>
 </node>
 <node TEXT="pull request&#xa;o merge request" FOLDED="true" ID="ID_1477536453" CREATED="1580379819235" MODIFIED="1581027977983">
 <node TEXT="solicitud de pull" ID="ID_1331565678" CREATED="1580383588769" MODIFIED="1580383592701">
 <node TEXT="(podían haberlo llamado &quot;PUSH request&quot;)" ID="ID_471067163" CREATED="1580732009759" MODIFIED="1580732018224"/>
 </node>
-<node TEXT="&quot;hola, soy una topic branch y te pido a ti, master, que te hagas pull de mis cambios, es decir, que cojas mis cambios y te los incorpores&quot;" ID="ID_1223380737" CREATED="1580383592935" MODIFIED="1580383632012"/>
+<node TEXT="&quot;hola, soy una topic branch y te pido a ti, main, que te hagas pull de mis cambios, es decir, que cojas mis cambios y te los incorpores&quot;" ID="ID_1223380737" CREATED="1580383592935" MODIFIED="1611407050866"/>
 </node>
 <node TEXT="commit" FOLDED="true" ID="ID_1691120529" CREATED="1580379536103" MODIFIED="1580379539221">
 <node TEXT="consiste en registrar/congelar el ESTADO ACTUAL, ya sea en local o en la nube" ID="ID_1417516934" CREATED="1580381059864" MODIFIED="1601896791703"/>
@@ -155,13 +156,16 @@
 <node TEXT="equivale a un hash (pero es más fácil de recordar)" ID="ID_1600378469" CREATED="1580381855546" MODIFIED="1580381935054"/>
 <node TEXT="hay un tag especial llamado &quot;HEAD&quot; que hace referencia/apunta a donde estoy trabajando ahora" ID="ID_1544455531" CREATED="1580382030663" MODIFIED="1601899817838"/>
 </node>
-<node TEXT="&quot;reset to a commit&quot;" ID="ID_637145914" CREATED="1580381811121" MODIFIED="1580381942494">
-<node TEXT="&apos;= máquina del tiempo a cuando se hizo dicho commit" ID="ID_1827764022" CREATED="1580381841498" MODIFIED="1580381944205"/>
+<node TEXT="&quot;reset to a commit&quot;" ID="ID_637145914" CREATED="1580381811121" MODIFIED="1611407194909">
+<node TEXT="&apos;= máquina del tiempo a cuando se hizo dicho commit" ID="ID_1827764022" CREATED="1580381841498" MODIFIED="1611407194907"/>
 <node TEXT="genera, a su vez, un hash propio, como si se hubiera hecho un nuevo commit" ID="ID_114566300" CREATED="1580381960772" MODIFIED="1580381974308"/>
 </node>
 <node TEXT="revert a commit" ID="ID_1989666820" CREATED="1580381816908" MODIFIED="1580381840971">
 <node TEXT="&apos;= deshacer el último commit como si nunca se hubiera hecho" ID="ID_1377425533" CREATED="1580381948574" MODIFIED="1580381959623"/>
 </node>
+</node>
+<node TEXT="M" ID="ID_665663027" CREATED="1611407199675" MODIFIED="1611407203836">
+<icon BUILTIN="info_acción"/>
 </node>
 <node TEXT="squash" FOLDED="true" ID="ID_1883534022" CREATED="1580383504105" MODIFIED="1580383505777">
 <node TEXT="juntar varios commits en uno solo, con un solo hash" ID="ID_1429817604" CREATED="1580383505943" MODIFIED="1580383518435"/>
@@ -208,7 +212,7 @@
 </node>
 </node>
 <node TEXT="" ID="ID_208480023" CREATED="1604583184541" MODIFIED="1604583184541">
-<node TEXT="detached HEAD state" ID="ID_477221190" CREATED="1604583185216" MODIFIED="1604583188885">
+<node TEXT="detached HEAD state" FOLDED="true" ID="ID_477221190" CREATED="1604583185216" MODIFIED="1604583188885">
 <node TEXT="info aquí" ID="ID_160742356" CREATED="1604583189313" MODIFIED="1604583193551">
 <node TEXT="https://www.cloudbees.com/blog/git-detached-head" ID="ID_711767153" CREATED="1604583193917" MODIFIED="1604583193917" LINK="https://www.cloudbees.com/blog/git-detached-head"/>
 </node>
@@ -224,7 +228,7 @@
 </node>
 </node>
 </node>
-<node TEXT="GitKraken" FOLDED="true" POSITION="right" ID="ID_1045581662" CREATED="1581331111381" MODIFIED="1581331114480">
+<node TEXT="GitKraken" POSITION="right" ID="ID_1045581662" CREATED="1581331111381" MODIFIED="1581331114480">
 <node TEXT="es una interfaz gráfica (&quot;UI&quot;) para GIT" ID="ID_1343617100" CREATED="1581332918703" MODIFIED="1581332935475">
 <node TEXT="NO es un IDE como tal" ID="ID_1090345786" CREATED="1581332925601" MODIFIED="1581332928525"/>
 </node>

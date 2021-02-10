@@ -1,6 +1,6 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="2.143">
+<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="1.771">
     <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
 
 <map_styles>
@@ -1677,7 +1677,7 @@
 </node>
 </node>
 </node>
-<node TEXT="cookies" POSITION="right" ID="ID_578081402" CREATED="1275125484565" MODIFIED="1605691669984">
+<node TEXT="cookies" FOLDED="true" POSITION="right" ID="ID_578081402" CREATED="1275125484565" MODIFIED="1605691669984">
 <icon BUILTIN="estadotarea_pendiente"/>
 <node TEXT="para acceder al&#xa;valor de una cookie" ID="ID_70278479" CREATED="1275126411467" MODIFIED="1417636498312">
 <node TEXT="mediante el array asociativo supergobal" ID="ID_867586564" CREATED="1275126719898" MODIFIED="1521139799986">
@@ -1980,7 +1980,7 @@
 </node>
 <node TEXT="y cuando el usuario cierra sesión no solo hay que eliminar la info de $_SESSION sino TAMBIÉN LA COOKIE." ID="ID_1419254114" CREATED="1576752355245" MODIFIED="1576752367032"/>
 </node>
-<node TEXT="POO con PHP" POSITION="right" ID="ID_324968914" CREATED="1579077200297" MODIFIED="1608113151270">
+<node TEXT="POO con PHP" FOLDED="true" POSITION="right" ID="ID_324968914" CREATED="1579077200297" MODIFIED="1608113151270">
 <icon BUILTIN="full-2"/>
 <node TEXT="muy parecida a Java en prácticamente todo" ID="ID_1564780997" CREATED="1579077983152" MODIFIED="1579079151093"/>
 <node TEXT="TIENE recolector de basura" ID="ID_422938202" CREATED="1579077988178" MODIFIED="1579077992376"/>
@@ -2035,13 +2035,137 @@
 </node>
 </node>
 </node>
-<node TEXT="serialización de variables" FOLDED="true" POSITION="right" ID="ID_1884531973" CREATED="1575542414951" MODIFIED="1605787932168">
-<icon BUILTIN="full-1"/>
-<node TEXT="serialize($variable)" ID="ID_1791400580" CREATED="1575542419577" MODIFIED="1605787943251">
-<node TEXT="returns a string representation of the variable" ID="ID_958046948" CREATED="1605787943614" MODIFIED="1605787945231"/>
+<node TEXT="JSON" FOLDED="true" POSITION="right" ID="ID_759030514" CREATED="1540365575091" MODIFIED="1547558618271">
+<node TEXT="" ID="ID_1909952889" CREATED="1541509892626" MODIFIED="1541509892626">
+<node TEXT="" ID="ID_1802744666" CREATED="1541509892049" MODIFIED="1541509892049">
+<node TEXT="https://jsonplaceholder.typicode.com/" ID="ID_809137415" CREATED="1541509883334" MODIFIED="1541509899898" LINK="https://jsonplaceholder.typicode.com/">
+<icon BUILTIN="atenciвn_!!"/>
+<icon BUILTIN="atenciвn_!!"/>
+<icon BUILTIN="atenciвn_!!"/>
+<icon BUILTIN="atenciвn_!!"/>
+<icon BUILTIN="atenciвn_!!"/>
+<font SIZE="30"/>
 </node>
-<node TEXT="unserialize($string)" ID="ID_1156515189" CREATED="1575542419578" MODIFIED="1605787983115">
-<node ID="ID_1612832596" CREATED="1605787983482" MODIFIED="1605787983482"><richcontent TYPE="NODE">
+</node>
+</node>
+<node TEXT="&quot;JavaScript Object Notation&quot; (notación de objeto de JavaScript)" ID="ID_272635056" CREATED="1540365586251" MODIFIED="1540365600206"/>
+<node TEXT="es un formato de solo texto (sin nada de binario) para intercambio de datos" ID="ID_1394576191" CREATED="1540365600439" MODIFIED="1547797727107"/>
+<node TEXT="se basa en la notación literal de objetos de JavaScript" ID="ID_1506087634" CREATED="1540365617820" MODIFIED="1540365632794">
+<node TEXT="pero puede ser escrito o leído en cualquier lenguaje" ID="ID_1542076768" CREATED="1540367294658" MODIFIED="1540367302731"/>
+</node>
+<node TEXT="es muy fácil pasar de objetos JS a este formato y viceversa" ID="ID_1190938379" CREATED="1540365637124" MODIFIED="1540365654595">
+<node TEXT="el formato JSON &quot;se evalúa a objetos JS&quot;" ID="ID_1546500435" CREATED="1540367340796" MODIFIED="1540367349978"/>
+</node>
+<node TEXT="formato" ID="ID_1575361087" CREATED="1540367358749" MODIFIED="1540367562690">
+<node TEXT="&quot;etiqueta&quot;:&quot;valor&quot;" ID="ID_1802683872" CREATED="1540367473701" MODIFIED="1540367476713">
+<node TEXT="&quot;nombreDeCampo&quot;:&quot;valorDelCampo&quot;" ID="ID_828847722" CREATED="1547627612807" MODIFIED="1547627622842"/>
+<node TEXT="los datos (las propiedades de los objetos) vienen en parejas con comillas dobles" ID="ID_1689684169" CREATED="1540367361579" MODIFIED="1540367483986"/>
+<node TEXT="los datos se separan por comas" ID="ID_1291052849" CREATED="1540367361580" MODIFIED="1540367396045"/>
+</node>
+<node TEXT="{objetos}" ID="ID_14694698" CREATED="1540367512628" MODIFIED="1540367513726">
+<node TEXT="las llaves representan objetos" ID="ID_742772455" CREATED="1540367361586" MODIFIED="1540367512236"/>
+<node TEXT="ejemplo" ID="ID_963400231" CREATED="1540367551837" MODIFIED="1540367552913">
+<node TEXT="{&quot;firstName&quot;:&quot;John&quot;, &quot;lastName&quot;:&quot;Doe&quot;} " ID="ID_1646939381" CREATED="1540367530605" MODIFIED="1540367531896"/>
+</node>
+</node>
+<node TEXT="[arrays]" ID="ID_1434988527" CREATED="1540367517808" MODIFIED="1540367518958">
+<node TEXT="los corchetes representan los valores de un array" ID="ID_538000936" CREATED="1540367361588" MODIFIED="1547192427079"/>
+<node TEXT="ejemplo" ID="ID_355819545" CREATED="1540367549289" MODIFIED="1540367550997">
+<node TEXT="&quot;empleados&quot;:[&#xa;    {&quot;firstName&quot;:&quot;John&quot;, &quot;lastName&quot;:&quot;Doe&quot;},&#xa;    {&quot;firstName&quot;:&quot;Anna&quot;, &quot;lastName&quot;:&quot;Smith&quot;},&#xa;    {&quot;firstName&quot;:&quot;Peter&quot;, &quot;lastName&quot;:&quot;Jones&quot;}&#xa;]" ID="ID_1851830830" CREATED="1540367542387" MODIFIED="1547627701122"/>
+</node>
+</node>
+</node>
+<node TEXT="conversión" ID="ID_643900475" CREATED="1540367581292" MODIFIED="1540367583029">
+<node TEXT="ejemplo" ID="ID_105106284" CREATED="1540367763065" MODIFIED="1540367764530">
+<node TEXT="var texto = &apos;{ &quot;employees&quot; : [{ &quot;firstName&quot;:&quot;John&quot; , &quot;lastName&quot;:&quot;Doe&quot; },{ &quot;firstName&quot;:&quot;Anna&quot; , &quot;lastName&quot;:&quot;Smith&quot; },{ &quot;firstName&quot;:&quot;Peter&quot; , &quot;lastName&quot;:&quot;Jones&quot; } ]}&apos;;&#xa;&#xa;var obj = JSON.parse(text);&#xa;&#xa;&lt;p id=&quot;demo&quot;&gt;&lt;/p&gt;&#xa;&#xa;&lt;script&gt;&#xa;    document.getElementById(&quot;demo&quot;).innerHTML =&#xa;    obj.employees[1].firstName + &quot; &quot; + obj.employees[1].lastName;&#xa;&lt;/script&gt;" ID="ID_1394300216" CREATED="1540367587940" MODIFIED="1540367760038"/>
+</node>
+</node>
+<node TEXT="OJO" ID="ID_719486925" CREATED="1548839500985" MODIFIED="1548839505872">
+<icon BUILTIN="atenciвn_!!"/>
+<node TEXT="solo se &quot;stringifizan&quot; los campos de datos, NO los métodos" ID="ID_403139008" CREATED="1548839502334" MODIFIED="1548839535036"/>
+<node TEXT="si el objeto que paso por JSON pertenece a una clase que tiene métodos, cuando &quot;descongele&quot; el objeto este habrá dejado de pertenecer a su clase (si es que algún día perteneció...) y NO podrá llamarse a sus métodos" ID="ID_1387062926" CREATED="1548839530607" MODIFIED="1548839590535"/>
+<node TEXT="solución&#xa;(ñapa):" ID="ID_1248856975" CREATED="1548840165013" MODIFIED="1548840228220">
+<node TEXT="guardar" ID="ID_1259534661" CREATED="1548840214528" MODIFIED="1548840216072">
+<node TEXT="localStorage.rgb = JSON.stringify({&quot;r&quot;:color.getR(), &quot;g&quot;:color.getG(), &quot;b&quot;:color.getB()});" ID="ID_1441296434" CREATED="1548840210137" MODIFIED="1548840211001"/>
+</node>
+<node TEXT="cargar" ID="ID_1334555188" CREATED="1548840216655" MODIFIED="1548840217695">
+<node TEXT="color = new Color();&#xa;&#xa;if (localStorage.rgb) { // Si SÍ existe el valor en localStorage, cargo sus valores.&#xa;  var rgb = JSON.parse(localStorage.rgb);&#xa;  color.setR(rgb.r);&#xa;  color.setG(rgb.g);&#xa;  color.setB(rgb.b);&#xa;}" ID="ID_1548054457" CREATED="1548840179119" MODIFIED="1548840198609"/>
+</node>
+</node>
+</node>
+<node TEXT="conversiones en Javascript" ID="ID_1778219005" CREATED="1612441034642" MODIFIED="1612441044343">
+<node TEXT="de JSON a objetos" ID="ID_240713643" CREATED="1612441119050" MODIFIED="1612441123868">
+<node TEXT="var objetos = JSON.parse(texto);" ID="ID_1450150229" CREATED="1612441047177" MODIFIED="1612441179443"/>
+</node>
+<node TEXT="de objetos a JSON" ID="ID_519479074" CREATED="1612441125057" MODIFIED="1612441128931">
+<node TEXT="var texto = JSON.stringify(objetos);" ID="ID_1272487860" CREATED="1612441115481" MODIFIED="1612441183186"/>
+</node>
+</node>
+<node TEXT="conversiones en PHP" ID="ID_41843513" CREATED="1612441034642" MODIFIED="1612441139995">
+<node TEXT="de JSON a objetos" ID="ID_1086882360" CREATED="1612441119050" MODIFIED="1612441123868">
+<node TEXT="$objetos = json_decode($texto);" ID="ID_66016054" CREATED="1612441047177" MODIFIED="1612441205827"/>
+</node>
+<node TEXT="de objetos a JSON" ID="ID_380036207" CREATED="1612441125057" MODIFIED="1612441128931">
+<node TEXT="$texto = json_encode($objetos)" ID="ID_116048108" CREATED="1612441115481" MODIFIED="1612441171390"/>
+</node>
+</node>
+</node>
+<node TEXT="AJAX" POSITION="right" ID="ID_1940917263" CREATED="1540365581168" MODIFIED="1612441779177">
+<node TEXT="" FOLDED="true" ID="ID_1207659829" CREATED="1549008444621" MODIFIED="1549008454575">
+<icon BUILTIN="z_world"/>
+<node TEXT="http://www.tutorialesprogramacionya.com/ajaxya/" ID="ID_644796698" CREATED="1549008923483" MODIFIED="1549008923483" LINK="http://www.tutorialesprogramacionya.com/ajaxya/"/>
+<node TEXT="https://www.w3schools.com/js/js_ajax_http_send.asp" ID="ID_353264210" CREATED="1549371601841" MODIFIED="1549371601841" LINK="https://www.w3schools.com/js/js_ajax_http_send.asp"/>
+</node>
+<node TEXT="&quot;Asynchronous JavaScript And XML&quot;" ID="ID_1108797951" CREATED="1549007524737" MODIFIED="1549007527580"/>
+<node TEXT="es una TÉCNICA de programación" ID="ID_1086645270" CREATED="1549007528043" MODIFIED="1549007537338"/>
+<node TEXT="objetivo:" FOLDED="true" ID="ID_244088119" CREATED="1549007537918" MODIFIED="1549007569097">
+<node TEXT="pedir información al servidor y actualizar la página con ella, con la página &quot;en marcha&quot; y sin recargarla entera" ID="ID_1528133406" CREATED="1549007539660" MODIFIED="1549007656053"/>
+<node TEXT="enviar (guardar) información en el servidor, y confirmárselo al usuario, con la página &quot;en marcha&quot; y sin recargarla entera" ID="ID_961451777" CREATED="1549007569532" MODIFIED="1549007665201"/>
+</node>
+<node TEXT="concepto SPA" FOLDED="true" ID="ID_1267760267" CREATED="1544605461774" MODIFIED="1544605464916">
+<node TEXT="Un single-page application (SPA), o aplicación de página única es una aplicación web o es un sitio web que cabe en una sola página con el propósito de dar una experiencia más fluida a los usuarios como una aplicación de escritorio. En un SPA todos los códigos de HTML, JavaScript, y CSS se carga de una vez​ o los recursos necesarios se cargan dinámicamente como lo requiera la página y se van agregando, normalmente como respuesta de las acciones del usuario. La página no tiene que cargar otra vez en ningún punto del proceso tampoco se transfiere a otra página, aunque las tecnologías modernas (como el pushState() API del HTML5) pueden permitir la navegabilidad en páginas lógicas dentro de la aplicación" ID="ID_226477253" CREATED="1544605465585" MODIFIED="1548762871190"/>
+<node TEXT="pushState(...)" ID="ID_1966627770" CREATED="1544605468750" MODIFIED="1544605652811">
+<node TEXT="" ID="ID_1188963357" CREATED="1544605704704" MODIFIED="1544605704704">
+<node TEXT="HTML5 incluyó pushState(); un método del objecto window.history de javascript que se encarga de cambiar directamente la url actual del navegador sin necesidad de refrescar la página. Por razones de seguridad sólo podrás cambiar el PATH del dominio y no la URL completa. La manera de usar este método es el siguiente.." ID="ID_1147281565" CREATED="1544605653216" MODIFIED="1544605653216"/>
+<node TEXT="Código :" ID="ID_1175813372" CREATED="1544605653216" MODIFIED="1544605653216"/>
+<node TEXT="window.history.pushState(data, &quot;Titulo&quot;, &quot;nueva_url.html&quot;);" FOLDED="true" ID="ID_44938300" CREATED="1544605653219" MODIFIED="1544605653219">
+<node TEXT="Primer argumento (Object o String): Datos almacenados que podrán ser recogidos con el evento window.onpopstate; activado cuando se usa un pushState() o replaceState()." ID="ID_1851825230" CREATED="1544605653219" MODIFIED="1544605653219"/>
+<node TEXT="Segundo argumento (String): Asigna un título a la nueva URL. El título (ó &lt;title&gt;) del documento no cambiará. Es más una descripción para el manejo de historial que otra cosa." ID="ID_329455393" CREATED="1544605653219" MODIFIED="1544605653219"/>
+<node TEXT="Tercer argumento (String): La nueva ruta a mostrár en el documento." ID="ID_1214331674" CREATED="1544605653219" MODIFIED="1544605653219"/>
+</node>
+</node>
+<node TEXT="" ID="ID_1768030851" CREATED="1544605705331" MODIFIED="1544605705331">
+<node TEXT="Supongamos que http://mozilla.org/foo.html ejecuta el siguiente JavaScript:" ID="ID_332545782" CREATED="1544605706066" MODIFIED="1544605706066" LINK="http://mozilla.org/foo.html"/>
+<node TEXT="var stateObj = { foo: &quot;bar&quot; };" ID="ID_237602257" CREATED="1544605706066" MODIFIED="1544605706066"/>
+<node TEXT="history.pushState(stateObj, &quot;page 2&quot;, &quot;bar.html&quot;);" ID="ID_903168889" CREATED="1544605706066" MODIFIED="1544605706066"/>
+<node TEXT="Esto causará que la barra de URL muestre http://mozilla.org/bar.html, pero no provocará que el navegador carge load.bar ni tampoco que verifique si bar.html existe." ID="ID_391604203" CREATED="1544605706067" MODIFIED="1544605706067" LINK="http://mozilla.org/bar.html,"/>
+</node>
+</node>
+</node>
+<node TEXT="funciones clave&#xa;JavaScript" ID="ID_1529744937" CREATED="1549371413027" MODIFIED="1612444537132">
+<node TEXT="request = new XMLHttpRequest();" ID="ID_1141743508" CREATED="1549371442393" MODIFIED="1549371758459"/>
+<node TEXT="" ID="ID_1712525120" CREATED="1549371956705" MODIFIED="1549371956705">
+<node TEXT="crea un objeto que nos ayudará a realizar una petición al servidor" ID="ID_914649761" CREATED="1549371894649" MODIFIED="1549371946648"/>
+<node TEXT="esta petición puede servir tanto para RECOGER datos como para ENVIAR datos, e incluso las dos cosas simultáneamente" ID="ID_1603349399" CREATED="1549371986376" MODIFIED="1549372025640"/>
+</node>
+<node TEXT="request.onreadystatechange = atenderEventosRequest;" ID="ID_426940908" CREATED="1549371442395" MODIFIED="1549372259235"/>
+<node TEXT="" ID="ID_240441978" CREATED="1549371954292" MODIFIED="1549371954292">
+<node TEXT="le dice al objeto que, según se produzcan &quot;novedades&quot; (cambios de estado en la petición) llame a una función manejadora nuestra" ID="ID_411600879" CREATED="1549371947352" MODIFIED="1549372069321"/>
+<node TEXT="equivale a añadir un suscriptor a un servicio de eventos" ID="ID_1487923235" CREATED="1549372069550" MODIFIED="1549372069870"/>
+</node>
+<node TEXT="request.open(&quot;GET&quot;, &quot;obtenerDatos.php?id=17&quot;);" ID="ID_1503436907" CREATED="1549371442398" MODIFIED="1549371870738"/>
+<node TEXT="" ID="ID_308168738" CREATED="1549372070777" MODIFIED="1549372070777">
+<node TEXT="le dice al objeto cuál va a ser el método (&quot;GET&quot; o &quot;POST&quot;) de envío de la petición al servidor" ID="ID_1033062556" CREATED="1549372071983" MODIFIED="1549372157115"/>
+<node TEXT="la comunicación será por defecto ASÍNCRONA, es decir, NO nos vamos a quedar bloqueados en esta función hasta que llegue la respuesta sino que la ejecución de Javascript seguirá a partir del envío de la petición y ya, cuando vaya llegando la respuesta irán llamando a mi función manejadora para hacérselo saber" ID="ID_966431186" CREATED="1549372086138" MODIFIED="1549372210673"/>
+</node>
+<node TEXT="request.send();" ID="ID_289708623" CREATED="1549371442400" MODIFIED="1549371874583"/>
+<node TEXT="" ID="ID_723648816" CREATED="1549372122217" MODIFIED="1549372122217">
+<node TEXT="lanza ya de forma efectiva la petición al servidor" ID="ID_776499030" CREATED="1549372122757" MODIFIED="1549372133851"/>
+</node>
+</node>
+<node TEXT="mi función&#xa;manejadora&#xa;de eventos" ID="ID_605265025" CREATED="1549371406391" MODIFIED="1549372243585">
+<node TEXT="atenderEventosRequest()" ID="ID_1769317178" CREATED="1549371888810" MODIFIED="1549372262818">
+<node ID="ID_1114842108" CREATED="1549371409502" MODIFIED="1549372389215"><richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -2049,11 +2173,49 @@
   </head>
   <body>
     <p>
-      returns back a variable from a string
+      var request; // Declarada de forma global para que sea accesible desde donde se prepara la request y tambi&#233;n desde atenderEventosRequest().<br/><br/>(...)<br/><br/>function atenderEventosRequest() {
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;if(conexion1.readyState == 4) { // Ya est&#225; la respuesta completa.
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;detalles.innerHTML = request.responseText;
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;} else { // Me han llamado con un evento que corresponde a un estado intermedio. A&#250;n no est&#225; la respuesta completa.
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;detalles.innerHTML = 'Cargando...';
+    </p>
+    <p>
+      &#160;&#160;&#160;&#160;}
+    </p>
+    <p>
+      }
     </p>
   </body>
 </html>
 </richcontent>
+</node>
+</node>
+</node>
+<node TEXT="generar JSON&#xa;desde PHP" FOLDED="true" ID="ID_691526751" CREATED="1549008459844" MODIFIED="1549008469114">
+<node TEXT="echo json_encode($array);" ID="ID_1798960138" CREATED="1549439848293" MODIFIED="1549439919798">
+<node TEXT="toma un array asociativo a base de N elementos, cada uno de los cuales tenga M propiedades" ID="ID_751818069" CREATED="1549440221903" MODIFIED="1549440245783"/>
+<node TEXT="devuelve un string con la codificación JSON del array en forma de N objetos, cada uno con sus M propiedades" ID="ID_1824324731" CREATED="1549440247064" MODIFIED="1549440287458"/>
+</node>
+<node TEXT="$array = json_decode($datosJson, true);" ID="ID_294834344" CREATED="1549440197827" MODIFIED="1549440217258">
+<node TEXT="toma datos JSON codificados en forma de string" ID="ID_730242877" CREATED="1549440276687" MODIFIED="1549440301277"/>
+<node TEXT="devuelve un array asociativo con tantos elementos como objetos había en el JSON, cada uno de ellos con todas sus propiedades" ID="ID_1396519003" CREATED="1549440301432" MODIFIED="1549440325941"/>
+</node>
+<node TEXT="ejemplo&#xa;desde BD" FOLDED="true" ID="ID_872591906" CREATED="1549008492557" MODIFIED="1549439894694">
+<icon BUILTIN="z_script"/>
+<node TEXT="$return_arr = array();&#xa;&#xa;$fetch = mysql_query(&quot;SELECT * FROM table&quot;);&#xa;&#xa;while ($row = mysql_fetch_array($fetch, MYSQL_ASSOC)) {&#xa;    $row_array[&apos;id&apos;] = $row[&apos;id&apos;];&#xa;    $row_array[&apos;col1&apos;] = $row[&apos;col1&apos;];&#xa;    $row_array[&apos;col2&apos;] = $row[&apos;col2&apos;];&#xa;&#xa;    array_push($return_arr,$row_array);&#xa;}&#xa;&#xa;echo json_encode($return_arr);" ID="ID_1185570953" CREATED="1549008494245" MODIFIED="1549008501579"/>
+<node TEXT="It returns a json string in this format:&#xa;&#xa;[{&quot;id&quot;:&quot;1&quot;,&quot;col1&quot;:&quot;col1_value&quot;,&quot;col2&quot;:&quot;col2_value&quot;},{&quot;id&quot;:&quot;2&quot;,&quot;col1&quot;:&quot;col1_value&quot;,&quot;col2&quot;:&quot;col2_value&quot;}]" ID="ID_533869804" CREATED="1549008502006" MODIFIED="1549008503144"/>
+</node>
+<node TEXT="ejemplo&#xa;con literales" FOLDED="true" ID="ID_342764883" CREATED="1549008490531" MODIFIED="1549439904565">
+<icon BUILTIN="z_script"/>
+<node TEXT="$year = date(&apos;Y&apos;);&#xa;$month = date(&apos;m&apos;);&#xa;&#xa;$json_array = array(&#xa;&#xa;//Each array below must be pulled from database&#xa;    //1st record&#xa;    array(&#xa;    &apos;id&apos; =&gt; 111,&#xa;    &apos;title&apos; =&gt; &quot;Event1&quot;,&#xa;    &apos;start&apos; =&gt; &quot;$year-$month-10&quot;,&#xa;    &apos;url&apos; =&gt; &quot;http://yahoo.com/&quot;&#xa;),&#xa;&#xa;     //2nd record&#xa;     array(&#xa;    &apos;id&apos; =&gt; 222,&#xa;    &apos;title&apos; =&gt; &quot;Event2&quot;,&#xa;    &apos;start&apos; =&gt; &quot;$year-$month-20&quot;,&#xa;    &apos;end&apos; =&gt; &quot;$year-$month-22&quot;,&#xa;    &apos;url&apos; =&gt; &quot;http://yahoo.com/&quot;&#xa;)&#xa;&#xa;);&#xa;&#xa;echo json_encode($json_array);" ID="ID_444282943" CREATED="1549008469552" MODIFIED="1549008490068"/>
 </node>
 </node>
 </node>

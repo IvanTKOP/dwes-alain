@@ -1,7 +1,7 @@
 <?php
     require_once "_Varios.php";
 
-    if (haySesionRamIniciada()) redireccionar("ContenidoPrivado1.php");
+    if (haySesionRamIniciada()) redireccionar("MuroVerGlobal.php");
 
     $datosErroneos = isset($_REQUEST["datosErroneos"]);
 ?>
@@ -36,6 +36,8 @@
 
     <input type='submit' value='Iniciar Sesión'>
 </form>
+
+<p>O, si no tienes una cuenta aún, <a href='UsuarioNuevoCrear.php'>créala aquí</a>.</p>
 
 </body>
 
