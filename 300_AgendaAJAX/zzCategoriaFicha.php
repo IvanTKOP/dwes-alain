@@ -57,7 +57,7 @@
 	<h1>Ficha de categoría</h1>
 <?php } ?>
 
-<form method='post' action='CategoriaGuardar.php'>
+<form method='post' action='zzCategoriaGuardar.php'>
 
 <input type='hidden' name='id' value='<?=$id?>' />
 
