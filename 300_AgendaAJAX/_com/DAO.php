@@ -133,10 +133,10 @@ class DAO
     {
         $filasAfectadas = self::ejecutarUpdate(
             "UPDATE Categoria SET nombre=? WHERE id=?",
-            [$categoria->nombre, $categoria->id]
+            [$categoria->getNombre(), $categoria->getId()]
         );
 
-        if ($filasAfectadas != 1) return null;
+        if ($filasAfectadas = null) return null;
         else return $categoria;
     }
 
