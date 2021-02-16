@@ -120,32 +120,54 @@ function domCategoriaCalcularCantidad() {
     return tablaCategorias.children.length-1; // -1 porque hay una fila con las cabeceras.
 }
 
-function domCategoriaObtener(pos) {
+function domCategoriaObtenerTr(pos) {
     let tr = tablaCategorias.children[pos+1]; // +1 porque hay una fila con las cabeceras.
+    return tr;
+}
+
+function domCategoriaObtenerObjeto(pos) {
+    let tr = domCategoriaObtenerTr(pos);
     let td = tr.children[0];
     let input = td.children[0];
 
-    // Devolvemos un objeto recién creado
-    return { "id":  extraerId(tr.id), "nombre": input.value}
+    return { "id":  extraerId(tr.id), "nombre": input.value} // Devolvemos un objeto recién creado con los datos que hemos obtenido.
 }
 
 function domCategoriaInsertarEjecutarInsercion(pos, categoria) {
-    //alert("Insertando en posición " + pos + " categoria: " +categoria.nombre)
-    tablaCategorias.appendChild(domCategoriaCrearTr(categoria));
+    let trReferencia = domCategoriaObtenerTr(pos);
+    let trNueva = domCategoriaCrearTr(categoria);
+
+    tablaCategorias.insertBefore(trNueva, trReferencia);
 }
 
 function domCategoriaInsertar(categoriaNueva) {
     var trs = tablaCategorias.children;
-    for (var pos=0; pos < domCategoriaCalcularCantidad(); pos++) {
-        let categoriaActual = domCategoriaObtener(pos);
-        //alert("Comparando nueva " + categoriaNueva.nombre + " con actual " + categoriaActual.nombre + "\n" + (categoriaNueva.nombre < categoriaActual.nombre))
+
+    // Empezamos en 1 porque la 0 son las cabeceras.
+    for (var pos=1; pos < domCategoriaCalcularCantidad(); pos++) {
+        let categoriaActual = domCategoriaObtenerObjeto(pos);
 
         if (categoriaNueva.nombre.localeCompare(categoriaActual.nombre) == -1) {
+            // Si la categoría nueva va ANTES que la actual, este es el punto en el que insertarla.
             domCategoriaInsertarEjecutarInsercion(pos, categoriaNueva);
             return;
         }
     }
+
     domCategoriaInsertarEjecutarInsercion(domCategoriaCalcularCantidad(), categoriaNueva);
+}
+
+function domCategoriaLocalizarPosicion(id) {
+    var trs = tablaCategorias.children;
+
+    // Empezamos en 1 porque la 0 son las cabeceras.
+    for (var pos=1; pos < domCategoriaCalcularCantidad(); pos++) {
+        let categoriaActual = domCategoriaObtenerObjeto(pos);
+
+        if (categoriaActual.id == id) return (pos); // -1 por la cabecera.
+    }
+
+    return -1;
 }
 
 function domCategoriaEliminar(id) {
@@ -163,19 +185,7 @@ function domCategoriaModificar(categoria) {
 
 
 function pruebas() {
-    categoriaNueva = { "id":  "99", "nombre": "fff"};
-
-    var trs = tablaCategorias.children;
-    for (var pos=0; pos < domCategoriaCalcularCantidad(); pos++) {
-        let categoriaActual = domCategoriaObtener(pos);
-        //alert("Comparando nueva " + categoriaNueva.nombre + " con actual " + categoriaActual.nombre + "\n" + (categoriaNueva.nombre < categoriaActual.nombre))
-
-        if (categoriaNueva.nombre.localeCompare(categoriaActual.nombre) == -1) {
-            domCategoriaInsertarEjecutarInsercion(pos, categoriaNueva);
-            return;
-        }
-    }
-    domCategoriaInsertarEjecutarInsercion(domCategoriaCalcularCantidad(), categoriaNueva);
+    alert(domCategoriaLocalizarPosicion(2));
 }
 
 
