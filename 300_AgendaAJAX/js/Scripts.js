@@ -75,7 +75,6 @@ function inicializar() {
 function clickCategoriaCrear() {
     inputCategoriaNombre.disabled = true;
 
-    // TODO Pasar un objeto JSON stringifizado, con id=-1 o algo así.
     llamadaAjax("CategoriaCrear.php", "nombre=" + inputCategoriaNombre.value,
         function(texto) {
             // Se re-crean los datos por si han modificado/normalizado algún valor en el servidor.
@@ -88,7 +87,7 @@ function clickCategoriaCrear() {
             inputCategoriaNombre.disabled = false;
         },
         function(texto) {
-            alert("Error Ajax al crear: " + texto);
+            notificarUsuario("Error Ajax al crear: " + texto);
             inputCategoriaNombre.disabled = false;
         }
     );
@@ -96,7 +95,7 @@ function clickCategoriaCrear() {
 
 function blurCategoriaModificar(input) {
     let divCategoria = input.parentElement.parentElement;
-    let id = extraerId(divCategoria.id)
+    let id = extraerId(divCategoria.id);
     let nombre = input.value;
 
     let categoria = { "id":  id, "nombre": nombre};
