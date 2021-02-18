@@ -6,7 +6,7 @@ var tablaCategorias;
 
 function inicializaciones() {
     tablaCategorias = document.getElementById("tablaCategorias");
-    document.getElementById('submitCrearCategoria').addEventListener('click', clickCrearCategoria)
+    document.getElementById('submitCrearCategoria').addEventListener('click', clickCrearCategoria);
 
     cargarTodasLasCategorias();
 }
