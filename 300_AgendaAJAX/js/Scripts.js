@@ -60,13 +60,26 @@ function inicializar() {
 
     document.getElementById('btnCategoriaCrear').addEventListener('click', clickCategoriaCrear);
 
+    // En los "Insertar" de a continuación no se fuerza la ordenación, ya que PHP
+    // nos habrá dado los elementos en orden correcto y sería una pérdida de tiempo.
+
     llamadaAjax("CategoriaObtenerTodas.php", "",
         function(texto) {
             var categorias = JSON.parse(texto);
 
             for (var i=0; i<categorias.length; i++) {
-                // No se fuerza la ordenación, ya que PHP nos habrá dado los elementos en orden correcto y sería una pérdida de tiempo.
                 domCategoriaInsertar(categorias[i], false);
+            }
+        }
+    );
+
+    // TODO A POR ESTO.
+    llamadaAjax("PersonaObtenerTodas.php", "",
+        function(texto) {
+            var personas = JSON.parse(texto);
+
+            for (var i=0; i<personas.length; i++) {
+                domPersonaInsertar(personas[i], false);
             }
         }
     );
@@ -212,4 +225,90 @@ function domCategoriaModificar(categoria) {
 
     // Se fuerza la ordenación, ya que este elemento podría no quedar ordenado si se pone al final.
     domCategoriaInsertar(categoria, true);
+}
+
+
+
+// TODO Todos estos siguientes están copypasteados y search&replaceados, y ya. Revisar todo según lo vaya necesitando.
+
+function domPersonaCrearDiv(persona) {
+    let nombreInput = document.createElement("input");
+    nombreInput.setAttribute("type", "text");
+    nombreInput.setAttribute("value", persona.nombre);
+    nombreInput.setAttribute("onblur", "blurPersonaModificar(this); return false;");
+    let nombreDiv = document.createElement("div");
+    nombreDiv.appendChild(nombreInput);
+
+    let eliminarImg = document.createElement("img");
+    eliminarImg.setAttribute("src", "img/Eliminar.png");
+    eliminarImg.setAttribute("onclick", "clickPersonaEliminar(" + persona.id + "); return false;");
+    let eliminarDiv = document.createElement("div");
+    eliminarDiv.appendChild(eliminarImg);
+
+    let divPersona = document.createElement("div");
+    divPersona.setAttribute("id", "persona-" + persona.id);
+    divPersona.appendChild(nombreDiv);
+    divPersona.appendChild(eliminarDiv);
+
+    return divPersona;
+}
+
+function domPersonaObtenerDiv(pos) {
+    let div = divPersonasDatos.children[pos];
+    return div;
+}
+
+function domPersonaObtenerObjeto(pos) {
+    let divPersona = domPersonaObtenerDiv(pos);
+    let divNombre = divPersona.children[0];
+    let input = divNombre.children[0];
+
+    return { "id":  extraerId(divPersona.id), "nombre": input.value}; // Devolvemos un objeto recién creado con los datos que hemos obtenido.
+}
+
+function domPersonaEjecutarInsercion(pos, persona) {
+    let divReferencia = domPersonaObtenerDiv(pos);
+    let divNuevo = domPersonaCrearDiv(persona);
+
+    divPersonasDatos.insertBefore(divNuevo, divReferencia);
+}
+
+function domPersonaInsertar(personaNueva, enOrden=false) {
+    // Si piden insertar en orden, se buscará su lugar. Si no, irá al final.
+    if (enOrden) {
+        for (let pos = 0; pos < divPersonasDatos.children.length; pos++) {
+            let personaActual = domPersonaObtenerObjeto(pos);
+
+            if (personaNueva.nombre.localeCompare(personaActual.nombre) == -1) {
+                // Si la categoría nueva va ANTES que la actual, este es el punto en el que insertarla.
+                domPersonaEjecutarInsercion(pos, personaNueva);
+                return;
+            }
+        }
+    }
+
+    domPersonaEjecutarInsercion(divPersonasDatos.children.length, personaNueva);
+}
+
+function domPersonaLocalizarPosicion(id) {
+    var trs = divPersonasDatos.children;
+
+    for (var pos=0; pos < divPersonasDatos.children.length; pos++) {
+        let personaActual = domPersonaObtenerObjeto(pos);
+
+        if (personaActual.id == id) return (pos);
+    }
+
+    return -1;
+}
+
+function domPersonaEliminar(id) {
+    domPersonaObtenerDiv(domPersonaLocalizarPosicion(id)).remove();
+}
+
+function domPersonaModificar(persona) {
+    domPersonaEliminar(persona.id);
+
+    // Se fuerza la ordenación, ya que este elemento podría no quedar ordenado si se pone al final.
+    domPersonaInsertar(persona, true);
 }
