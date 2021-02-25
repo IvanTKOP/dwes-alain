@@ -74,7 +74,7 @@ class Persona extends Dato implements JsonSerializable
     private int $categoriaId;
     private ?Categoria $categoria;
 
-    public function __construct(int $id, string $nombre, string $apellidos, string $telefono, bool $estrella, int $categoriaId)
+    public function __construct(int $id, string $nombre, ?string $apellidos, string $telefono, bool $estrella, int $categoriaId)
     {
         $this->id = $id;
         $this->nombre = $nombre;
