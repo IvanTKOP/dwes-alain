@@ -183,7 +183,7 @@ class DAO
     {
         $idAutogenerado = self::ejecutarInsert(
             "INSERT INTO Persona (nombre, apellidos, telefono, estrella, categoriaId) VALUES (?, ?, ?, ?, ?)",
-            [$nombre, $apellidos, $telefono, $estrella, $categoriaId]
+            [$nombre, $apellidos, $telefono, $estrella ? 1 : 0, $categoriaId]
         );
 
         if ($idAutogenerado == null) return null;
@@ -194,7 +194,7 @@ class DAO
     {
         $filasAfectadas = self::ejecutarUpdel(
             "UPDATE Persona SET nombre=?, apellidos=?, telefono=?, estrella=?, categoriaId=? WHERE id=?",
-            [$persona->getNombre(), $persona->getApellidos(), $persona->getTelefono(), $persona->isEstrella(), $persona->getCategoriaId(), $persona->getId()]
+            [$persona->getNombre(), $persona->getApellidos(), $persona->getTelefono(), $persona->isEstrella() ? 1 : 0, $persona->getCategoriaId(), $persona->getId()]
         );
 
         if ($filasAfectadas = null) return null;

@@ -246,7 +246,7 @@ function domCrearDivImg(urlSrc, codigoOnclick) {
 
 
 
-function domCategoriaCrearDiv(categoria) {
+function domCategoriaObjetoADiv(categoria) {
     let div = document.createElement("div");
             div.setAttribute("id", "categoria-" + categoria.id);
     div.appendChild(domCrearDivInputText(categoria.nombre, "blurCategoriaModificar(this);"));
@@ -273,7 +273,7 @@ function domCategoriaObtenerObjeto(pos) {
 
 function domCategoriaEjecutarInsercion(pos, categoria) {
     let divReferencia = domCategoriaObtenerDiv(pos);
-    let divNuevo = domCategoriaCrearDiv(categoria);
+    let divNuevo = domCategoriaObjetoADiv(categoria);
 
     divCategoriasDatos.insertBefore(divNuevo, divReferencia);
 }
@@ -322,7 +322,7 @@ function domCategoriaModificar(categoria) {
 
 // TODO Todos estos siguientes están copypasteados y search&replaceados, y ya. Revisar todo según lo vaya necesitando.
 
-function domPersonaCrearDiv(persona) {
+function domPersonaObjetoADiv(persona) {
     let div = document.createElement("div");
             div.setAttribute("id", "persona-" + persona.id);
     div.appendChild(domCrearDivInputText(persona.estrella, "blurPersonaModificar(this);"));
@@ -357,7 +357,7 @@ function domPersonaObtenerObjeto(pos) {
 
 function domPersonaEjecutarInsercion(pos, persona) {
     let divReferencia = domPersonaObtenerDiv(pos);
-    let divNuevo = domPersonaCrearDiv(persona);
+    let divNuevo = domPersonaObjetoADiv(persona);
 
     divPersonasDatos.insertBefore(divNuevo, divReferencia);
 }
