@@ -167,7 +167,7 @@ class DAO
         $datos = [];
 
         $rs = self::ejecutarConsulta(
-            "SELECT * FROM Persona ORDER BY nombre",
+            "SELECT * FROM Persona ORDER BY nombre, apellidos",
             []
         );
 
@@ -182,7 +182,7 @@ class DAO
     public static function personaCrear(string $nombre, string $apellidos, string $telefono, bool $estrella, int $categoriaId): ?Persona
     {
         $idAutogenerado = self::ejecutarInsert(
-            "INSERT INTO Persona (nombre) VALUES (?, ?, ?, ?, ?)",
+            "INSERT INTO Persona (nombre, apellidos, telefono, estrella, categoriaId) VALUES (?, ?, ?, ?, ?)",
             [$nombre, $apellidos, $telefono, $estrella, $categoriaId]
         );
 
@@ -193,8 +193,8 @@ class DAO
     public static function personaActualizar(Persona $persona): ?Persona
     {
         $filasAfectadas = self::ejecutarUpdel(
-            "UPDATE Persona SET nombre=? WHERE id=?",
-            [$persona->getNombre(), $persona->getApellidos(), $persona->getTelefono(), $persona->getEstrella(), $persona->getCategoriaId(), $persona->getId()]
+            "UPDATE Persona SET nombre=?, apellidos=?, telefono=?, estrella=?, categoriaId=? WHERE id=?",
+            [$persona->getNombre(), $persona->getApellidos(), $persona->getTelefono(), $persona->isEstrella(), $persona->getCategoriaId(), $persona->getId()]
         );
 
         if ($filasAfectadas = null) return null;

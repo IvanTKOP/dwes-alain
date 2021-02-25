@@ -6,7 +6,12 @@
 window.onload = inicializar;
 
 var divCategoriasDatos;
+var divPersonasDatos;
 var inputCategoriaNombre;
+var inputPersonaNombre;
+var inputPersonaApellidos;
+var inputPersonaTelefono;
+var inputPersonaCategoriaId;
 
 
 
@@ -56,9 +61,16 @@ function debug() {
 
 function inicializar() {
     divCategoriasDatos = document.getElementById("categoriasDatos");
+    divPersonasDatos = document.getElementById("personasDatos");
+
     inputCategoriaNombre = document.getElementById("categoriaNombre");
+    inputPersonaNombre = document.getElementById("personaNombre");
+    inputPersonaApellidos = document.getElementById("personaApellidos");
+    inputPersonaTelefono = document.getElementById("personaTelefono");
+    inputPersonaCategoriaId = document.getElementById("personaCategoriaId");
 
     document.getElementById('btnCategoriaCrear').addEventListener('click', clickCategoriaCrear);
+    document.getElementById('btnPersonaCrear').addEventListener('click', clickPersonaCrear);
 
     // En los "Insertar" de a continuación no se fuerza la ordenación, ya que PHP
     // nos habrá dado los elementos en orden correcto y sería una pérdida de tiempo.
@@ -73,7 +85,6 @@ function inicializar() {
         }
     );
 
-    // TODO A POR ESTO.
     llamadaAjax("PersonaObtenerTodas.php", "",
         function(texto) {
             var personas = JSON.parse(texto);
@@ -106,12 +117,39 @@ function clickCategoriaCrear() {
     );
 }
 
+function clickPersonaCrear() {
+    inputPersonaNombre.disabled = true;
+    inputPersonaApellidos.disabled = true;
+    inputPersonaTelefono.disabled = true;
+    inputPersonaCategoriaId.disabled = true;
+
+    llamadaAjax("PersonaCrear.php", "nombre="+inputPersonaNombre.value + "&apellidos="+inputPersonaApellidos.value + "&telefono="+inputPersonaTelefono.value + "&categoriaId="+inputPersonaCategoriaId.value,
+        function(texto) {
+            // Se re-crean los datos por si han modificado/normalizado algún valor en el servidor.
+            var Persona = JSON.parse(texto);
+
+            // Se fuerza la ordenación, ya que este elemento podría no quedar ordenado si se pone al final.
+            domPersonaInsertar(Persona, true);
+
+            inputPersonaNombre.value = "";
+            inputPersonaNombre.disabled = false;
+            inputPersonaApellidos.value = "";
+            inputPersonaApellidos.disabled = false;
+            inputPersonaTelefono.value = "";
+            inputPersonaTelefono.disabled = false;
+            inputPersonaCategoriaId.value = "";
+            inputPersonaCategoriaId.disabled = false;
+        },
+        function(texto) {
+            notificarUsuario("Error Ajax al crear: " + texto);
+            inputPersonaNombre.disabled = false;
+        }
+    );
+}
+
 function blurCategoriaModificar(input) {
     let divCategoria = input.parentElement.parentElement;
-    let id = extraerId(divCategoria.id);
-    let nombre = input.value;
-
-    let categoria = { "id":  id, "nombre": nombre};
+    let categoria = domCategoriaDivAObjeto(divCategoria);
 
     llamadaAjax("CategoriaActualizar.php", objetoAParametrosParaRequest(categoria),
         function(texto) {
@@ -120,11 +158,31 @@ function blurCategoriaModificar(input) {
                 categoria = JSON.parse(texto);
                 domCategoriaModificar(categoria);
             } else {
-                alert("Error Ajax al modificar: " + texto);
+                notificarUsuario("Error Ajax al modificar: " + texto);
             }
         },
         function(texto) {
-            alert("Error Ajax al modificar: " + texto);
+            notificarUsuario("Error Ajax al modificar: " + texto);
+        }
+    );
+}
+
+function blurPersonaModificar(input) {
+    let divPersona = input.parentElement.parentElement;
+    let persona = domPersonaDivAObjeto(divPersona);
+
+    llamadaAjax("PersonaActualizar.php", objetoAParametrosParaRequest(persona),
+        function(texto) {
+            if (texto != "null") {
+                // Se re-crean los datos por si han modificado/normalizado algún valor en el servidor.
+                persona = JSON.parse(texto);
+                domPersonaModificar(persona);
+            } else {
+                notificarUsuario("Error Ajax al modificar: " + texto);
+            }
+        },
+        function(texto) {
+            notificarUsuario("Error Ajax al modificar: " + texto);
         }
     );
 }
@@ -132,11 +190,31 @@ function blurCategoriaModificar(input) {
 function clickCategoriaEliminar(id) {
     llamadaAjax("CategoriaEliminar.php", "id="+id,
         function(texto) {
-            var categoria = JSON.parse(texto);
-            domCategoriaEliminar(id);
+            var operacionOK = JSON.parse(texto);
+            if (operacionOK) {
+                domCategoriaEliminar(id);
+            } else {
+                notificarUsuario("Error Ajax al eliminar: " + texto);
+            }
         },
         function(texto) {
-            alert("Error Ajax al eliminar: " + texto);
+            notificarUsuario("Error Ajax al eliminar: " + texto);
+        }
+    );
+}
+
+function clickPersonaEliminar(id) {
+    llamadaAjax("PersonaEliminar.php", "id="+id,
+        function(texto) {
+            var operacionOK = JSON.parse(texto);
+            if (operacionOK) {
+                domPersonaEliminar(id);
+            } else {
+                notificarUsuario("Error Ajax al eliminar: " + texto);
+            }
+        },
+        function(texto) {
+            notificarUsuario("Error Ajax al eliminar: " + texto);
         }
     );
 }
@@ -145,39 +223,52 @@ function clickCategoriaEliminar(id) {
 
 // ---------- GESTIÓN DEL DOM ----------
 
+function domCrearDivInputText(textoValue, codigoOnblur) {
+    let div = document.createElement("div");
+        let input = document.createElement("input");
+                input.setAttribute("type", "text");
+                input.setAttribute("value", textoValue);
+                input.setAttribute("onblur", codigoOnblur + " return false;");
+    div.appendChild(input);
+
+    return div;
+}
+
+function domCrearDivImg(urlSrc, codigoOnclick) {
+    let div = document.createElement("div");
+        let img = document.createElement("img");
+                img.setAttribute("src", urlSrc);
+                img.setAttribute("onclick", codigoOnclick + " return false;");
+    div.appendChild(img);
+
+    return div;
+}
+
+
+
 function domCategoriaCrearDiv(categoria) {
-    let nombreInput = document.createElement("input");
-    nombreInput.setAttribute("type", "text");
-    nombreInput.setAttribute("value", categoria.nombre);
-    nombreInput.setAttribute("onblur", "blurCategoriaModificar(this); return false;");
-    let nombreDiv = document.createElement("div");
-    nombreDiv.appendChild(nombreInput);
+    let div = document.createElement("div");
+            div.setAttribute("id", "categoria-" + categoria.id);
+    div.appendChild(domCrearDivInputText(categoria.nombre, "blurCategoriaModificar(this);"));
+    div.appendChild(domCrearDivImg("img/Eliminar.png", "clickCategoriaEliminar(" + categoria.id + ");"));
 
-    let eliminarImg = document.createElement("img");
-    eliminarImg.setAttribute("src", "img/Eliminar.png");
-    eliminarImg.setAttribute("onclick", "clickCategoriaEliminar(" + categoria.id + "); return false;");
-    let eliminarDiv = document.createElement("div");
-    eliminarDiv.appendChild(eliminarImg);
-
-    let divCategoria = document.createElement("div");
-    divCategoria.setAttribute("id", "categoria-" + categoria.id);
-    divCategoria.appendChild(nombreDiv);
-    divCategoria.appendChild(eliminarDiv);
-
-    return divCategoria;
+    return div;
 }
 
 function domCategoriaObtenerDiv(pos) {
-    let div = divCategoriasDatos.children[pos];
-    return div;
+    return divCategoriasDatos.children[pos];
+}
+
+function domCategoriaDivAObjeto(div) {
+    return { // Devolvemos un objeto recién creado con los datos que hemos obtenido.
+        "id": extraerId(div.id),
+        "nombre": div.children[0].children[0].value,
+    };
 }
 
 function domCategoriaObtenerObjeto(pos) {
     let divCategoria = domCategoriaObtenerDiv(pos);
-    let divNombre = divCategoria.children[0];
-    let input = divNombre.children[0];
-
-    return { "id":  extraerId(divCategoria.id), "nombre": input.value}; // Devolvemos un objeto recién creado con los datos que hemos obtenido.
+    return domCategoriaDivAObjeto(divCategoria);
 }
 
 function domCategoriaEjecutarInsercion(pos, categoria) {
@@ -232,38 +323,36 @@ function domCategoriaModificar(categoria) {
 // TODO Todos estos siguientes están copypasteados y search&replaceados, y ya. Revisar todo según lo vaya necesitando.
 
 function domPersonaCrearDiv(persona) {
-    let nombreInput = document.createElement("input");
-    nombreInput.setAttribute("type", "text");
-    nombreInput.setAttribute("value", persona.nombre);
-    nombreInput.setAttribute("onblur", "blurPersonaModificar(this); return false;");
-    let nombreDiv = document.createElement("div");
-    nombreDiv.appendChild(nombreInput);
+    let div = document.createElement("div");
+            div.setAttribute("id", "persona-" + persona.id);
+    div.appendChild(domCrearDivInputText(persona.estrella, "blurPersonaModificar(this);"));
+    div.appendChild(domCrearDivInputText(persona.nombre, "blurPersonaModificar(this);"));
+    div.appendChild(domCrearDivInputText(persona.apellidos, "blurPersonaModificar(this);"));
+    div.appendChild(domCrearDivInputText(persona.telefono, "blurPersonaModificar(this);"));
+    div.appendChild(domCrearDivInputText(persona.categoriaId, "blurPersonaModificar(this);"));
+    div.appendChild(domCrearDivImg("img/Eliminar.png", "clickPersonaEliminar(" + persona.id + ");"));
 
-    let eliminarImg = document.createElement("img");
-    eliminarImg.setAttribute("src", "img/Eliminar.png");
-    eliminarImg.setAttribute("onclick", "clickPersonaEliminar(" + persona.id + "); return false;");
-    let eliminarDiv = document.createElement("div");
-    eliminarDiv.appendChild(eliminarImg);
-
-    let divPersona = document.createElement("div");
-    divPersona.setAttribute("id", "persona-" + persona.id);
-    divPersona.appendChild(nombreDiv);
-    divPersona.appendChild(eliminarDiv);
-
-    return divPersona;
+    return div;
 }
 
 function domPersonaObtenerDiv(pos) {
-    let div = divPersonasDatos.children[pos];
-    return div;
+    return divPersonasDatos.children[pos];
+}
+
+function domPersonaDivAObjeto(div) {
+    return { // Devolvemos un objeto recién creado con los datos que hemos obtenido.
+        "id": extraerId(div.id),
+        "nombre": div.children[1].children[0].value,
+        "apellidos": div.children[2].children[0].value,
+        "telefono": div.children[3].children[0].value,
+        "estrella": div.children[0].children[0].value,
+        "categoriaId": div.children[4].children[0].value,
+    }
 }
 
 function domPersonaObtenerObjeto(pos) {
     let divPersona = domPersonaObtenerDiv(pos);
-    let divNombre = divPersona.children[0];
-    let input = divNombre.children[0];
-
-    return { "id":  extraerId(divPersona.id), "nombre": input.value}; // Devolvemos un objeto recién creado con los datos que hemos obtenido.
+    return domPersonaDivAObjeto(divPersona);
 }
 
 function domPersonaEjecutarInsercion(pos, persona) {
@@ -279,7 +368,11 @@ function domPersonaInsertar(personaNueva, enOrden=false) {
         for (let pos = 0; pos < divPersonasDatos.children.length; pos++) {
             let personaActual = domPersonaObtenerObjeto(pos);
 
-            if (personaNueva.nombre.localeCompare(personaActual.nombre) == -1) {
+            // Se generan cadenas compuestas por los campos clave para ordenar.
+            let cadenaActual = personaActual.nombre + personaActual.apellidos;
+            let cadenaNueva = personaNueva.nombre + personaNueva.apellidos;
+
+            if (cadenaNueva.localeCompare(cadenaActual) == -1) {
                 // Si la categoría nueva va ANTES que la actual, este es el punto en el que insertarla.
                 domPersonaEjecutarInsercion(pos, personaNueva);
                 return;
