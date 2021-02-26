@@ -5,6 +5,10 @@
 
 window.onload = inicializar;
 
+
+
+// ---------- VARIABLES GLOBALES ----------
+
 var divCategoriasDatos;
 var divPersonasDatos;
 var inputCategoriaNombre;
@@ -31,11 +35,12 @@ function llamadaAjax(url, parametros, manejadorOK, manejadorError) {
     request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
     request.onreadystatechange = function() {
-        if (this.readyState == 4 && request.status == 200) {
-            manejadorOK(request.responseText);
-        }
-        if (manejadorError != null && request.readyState == 4 && this.status != 200) {
-            manejadorError(request.responseText);
+        if (this.readyState == 4) {
+            if (request.status == 200) {
+                manejadorOK(request.responseText);
+            } else {
+                if (manejadorError != null) manejadorError(request.responseText);
+            }
         }
     };
 
@@ -69,8 +74,12 @@ function inicializar() {
     inputPersonaTelefono = document.getElementById("personaTelefono");
     inputPersonaCategoriaId = document.getElementById("personaCategoriaId");
 
+
+
     document.getElementById('btnCategoriaCrear').addEventListener('click', clickCategoriaCrear);
     document.getElementById('btnPersonaCrear').addEventListener('click', clickPersonaCrear);
+
+
 
     // En los "Insertar" de a continuación no se fuerza la ordenación, ya que PHP
     // nos habrá dado los elementos en orden correcto y sería una pérdida de tiempo.
@@ -80,8 +89,11 @@ function inicializar() {
             var categorias = JSON.parse(texto);
 
             for (var i=0; i<categorias.length; i++) {
-                domCategoriaInsertar(categorias[i], false);
+                domCategoriaInsertar(categorias[i]);
             }
+        },
+        function(texto) {
+            notificarUsuario("Error Ajax al cargar categorías al inicializar: " + texto);
         }
     );
 
@@ -90,8 +102,11 @@ function inicializar() {
             var personas = JSON.parse(texto);
 
             for (var i=0; i<personas.length; i++) {
-                domPersonaInsertar(personas[i], false);
+                domPersonaInsertar(personas[i]);
             }
+        },
+        function(texto) {
+            notificarUsuario("Error Ajax al cargar personas al inicializar: " + texto);
         }
     );
 }
@@ -319,8 +334,6 @@ function domCategoriaModificar(categoria) {
 }
 
 
-
-// TODO Todos estos siguientes están copypasteados y search&replaceados, y ya. Revisar todo según lo vaya necesitando.
 
 function domPersonaObjetoADiv(persona) {
     let div = document.createElement("div");

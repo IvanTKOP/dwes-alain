@@ -23,7 +23,8 @@ class DAO
             $pdo = new PDO("mysql:host=$servidor;dbname=$bd;charset=utf8", $identificador, $contrasenna, $opciones);
         } catch (Exception $e) {
             error_log("Error al conectar: " . $e->getMessage());
-            exit("Error al conectar" . $e->getMessage());
+            echo "\n\nError al conectar:\n" . $e->getMessage();
+            header($_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error', true, 500);
         }
 
         return $pdo;
