@@ -32,7 +32,7 @@ function llamadaAjax(url, parametros, manejadorOK, manejadorError) {
     var request = new XMLHttpRequest();
 
     request.open("POST", url);
-    request.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+    request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
     request.onreadystatechange = function() {
         if (this.readyState == 4) {
@@ -63,6 +63,9 @@ function debug() {
 
 
 // ---------- MANEJADORES DE EVENTOS / COMUNICACIÓN CON PHP ----------
+
+// TODO Estaría genial que estos métodos no metieran la mano para nada en el DOM, sino que lo hicieran todo a través de métodos domTalCosa:
+// Por ejemplo: disablearCamposPersonaCrear(), enablearCamposPersonaCrear(), obtenerObjetoPersonaDeCamposPersonaCrear()...
 
 function inicializar() {
     divCategoriasDatos = document.getElementById("categoriasDatos");
@@ -138,13 +141,21 @@ function clickPersonaCrear() {
     inputPersonaTelefono.disabled = true;
     inputPersonaCategoriaId.disabled = true;
 
-    llamadaAjax("PersonaCrear.php", "nombre="+inputPersonaNombre.value + "&apellidos="+inputPersonaApellidos.value + "&telefono="+inputPersonaTelefono.value + "&categoriaId="+inputPersonaCategoriaId.value,
+    let persona = {
+        "id" : -1,
+        "nombre" : inputPersonaNombre.value,
+        "apellidos" : inputPersonaApellidos.value,
+        "telefono" : inputPersonaTelefono.value,
+        "categoriaId" : inputPersonaCategoriaId.value,
+    }
+
+    llamadaAjax("PersonaCrear.php", objetoAParametrosParaRequest(persona),
         function(texto) {
             // Se re-crean los datos por si han modificado/normalizado algún valor en el servidor.
-            var Persona = JSON.parse(texto);
+            var persona = JSON.parse(texto);
 
             // Se fuerza la ordenación, ya que este elemento podría no quedar ordenado si se pone al final.
-            domPersonaInsertar(Persona, true);
+            domPersonaInsertar(persona, true);
 
             inputPersonaNombre.value = "";
             inputPersonaNombre.disabled = false;
@@ -158,6 +169,9 @@ function clickPersonaCrear() {
         function(texto) {
             notificarUsuario("Error Ajax al crear: " + texto);
             inputPersonaNombre.disabled = false;
+            inputPersonaApellidos.disabled = false;
+            inputPersonaTelefono.disabled = false;
+            inputPersonaCategoriaId.disabled = false;
         }
     );
 }
@@ -182,6 +196,7 @@ function blurCategoriaModificar(input) {
     );
 }
 
+// TODO Si escribo false en el input para "quitar" la estrella, no se quita (se queda en true). Pasa algo. Depurar.
 function blurPersonaModificar(input) {
     let divPersona = input.parentElement.parentElement;
     let persona = domPersonaDivAObjeto(divPersona);
@@ -296,7 +311,7 @@ function domCategoriaEjecutarInsercion(pos, categoria) {
 function domCategoriaInsertar(categoriaNueva, enOrden=false) {
     // Si piden insertar en orden, se buscará su lugar. Si no, irá al final.
     if (enOrden) {
-        for (let pos = 0; pos < divCategoriasDatos.children.length; pos++) {
+        for (let pos=0; pos < divCategoriasDatos.children.length; pos++) {
             let categoriaActual = domCategoriaObtenerObjeto(pos);
 
             if (categoriaNueva.nombre.localeCompare(categoriaActual.nombre) == -1) {
@@ -307,23 +322,27 @@ function domCategoriaInsertar(categoriaNueva, enOrden=false) {
         }
     }
 
+    // Si llegamos hasta aquí, insertamos al final.
     domCategoriaEjecutarInsercion(divCategoriasDatos.children.length, categoriaNueva);
 }
 
-function domCategoriaLocalizarPosicion(id) {
-    var trs = divCategoriasDatos.children;
+function domCategoriaLocalizarPosicion(idBuscado) {
+    var divsCategorias = divCategoriasDatos.children;
 
-    for (var pos=0; pos < divCategoriasDatos.children.length; pos++) {
-        let categoriaActual = domCategoriaObtenerObjeto(pos);
+    for (var pos=0; pos < divsCategorias.length; pos++) {
+        let divCategoria = divsCategorias[pos];
+        let categoriaActualId = extraerId(divCategoria.id);
 
-        if (categoriaActual.id == id) return (pos);
+        if (categoriaActualId == idBuscado) return (pos);
     }
 
     return -1;
 }
 
 function domCategoriaEliminar(id) {
-    domCategoriaObtenerDiv(domCategoriaLocalizarPosicion(id)).remove();
+    let pos = domCategoriaLocalizarPosicion(id);
+    let div = domCategoriaObtenerDiv(pos);
+    div.remove();
 }
 
 function domCategoriaModificar(categoria) {
@@ -378,38 +397,42 @@ function domPersonaEjecutarInsercion(pos, persona) {
 function domPersonaInsertar(personaNueva, enOrden=false) {
     // Si piden insertar en orden, se buscará su lugar. Si no, irá al final.
     if (enOrden) {
-        for (let pos = 0; pos < divPersonasDatos.children.length; pos++) {
+        for (let pos=0; pos < divPersonasDatos.children.length; pos++) {
             let personaActual = domPersonaObtenerObjeto(pos);
 
             // Se generan cadenas compuestas por los campos clave para ordenar.
-            let cadenaActual = personaActual.nombre + personaActual.apellidos;
-            let cadenaNueva = personaNueva.nombre + personaNueva.apellidos;
+            let cadenaActual = personaActual.nombre + personaActual.apellidos + personaActual.id;
+            let cadenaNueva = personaNueva.nombre + personaNueva.apellidos + personaNueva.id;
 
             if (cadenaNueva.localeCompare(cadenaActual) == -1) {
-                // Si la categoría nueva va ANTES que la actual, este es el punto en el que insertarla.
+                // Si la persona nueva va ANTES que la actual, este es el punto en el que insertarla.
                 domPersonaEjecutarInsercion(pos, personaNueva);
                 return;
             }
         }
     }
 
+    // Si llegamos hasta aquí, insertamos al final.
     domPersonaEjecutarInsercion(divPersonasDatos.children.length, personaNueva);
 }
 
-function domPersonaLocalizarPosicion(id) {
-    var trs = divPersonasDatos.children;
+function domPersonaLocalizarPosicion(idBuscado) {
+    var divsPersonas = divPersonasDatos.children;
 
-    for (var pos=0; pos < divPersonasDatos.children.length; pos++) {
-        let personaActual = domPersonaObtenerObjeto(pos);
+    for (var pos=0; pos < divsPersonas.length; pos++) {
+        let divPersona = divsPersonas[pos];
+        let personaActualId = extraerId(divPersona.id);
 
-        if (personaActual.id == id) return (pos);
+        if (personaActualId == idBuscado) return (pos);
     }
 
     return -1;
 }
 
 function domPersonaEliminar(id) {
-    domPersonaObtenerDiv(domPersonaLocalizarPosicion(id)).remove();
+    let pos = domPersonaLocalizarPosicion(id);
+    let div = domPersonaObtenerDiv(pos);
+    div.remove();
 }
 
 function domPersonaModificar(persona) {
