@@ -1,7 +1,7 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="1.771">
-    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
+    <properties fit_to_viewport="false" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -67,7 +67,7 @@
 <font NAME="Arial Narrow" SIZE="12" BOLD="true"/>
 </node>
 </node>
-<node TEXT="recursos PHP" FOLDED="true" POSITION="right" ID="ID_684937512" CREATED="1446115156465" MODIFIED="1573030892409">
+<node TEXT="recursos PHP" POSITION="right" ID="ID_684937512" CREATED="1446115156465" MODIFIED="1573030892409">
 <node TEXT="www.php.net" ID="ID_158488882" CREATED="1275120834488" MODIFIED="1414434456189" LINK="http://www.php.net">
 <node TEXT="web oficial" ID="ID_1115416659" CREATED="1275120886818" MODIFIED="1380218440780"/>
 </node>
@@ -181,11 +181,11 @@
 </node>
 <node TEXT="pasar parámetros a los scripts" ID="ID_1214345155" CREATED="1442862807222" MODIFIED="1442862851994">
 <node TEXT="si cargamos así un script..." ID="ID_837979258" CREATED="1442862880101" MODIFIED="1442862894242">
-<node TEXT="script.php?cantidad=17&amp;modo=b" ID="ID_261392125" CREATED="1442862852317" MODIFIED="1552945936227"/>
+<node TEXT="script.php?modo=b&amp;cantidad=17" ID="ID_261392125" CREATED="1442862852317" MODIFIED="1617785769435"/>
 </node>
 <node TEXT="...podemos recuperar el dato así desde PHP" ID="ID_1922640351" CREATED="1442862887917" MODIFIED="1442862907930">
-<node TEXT="$cantidad = (int)$_REQUEST[&quot;cantidad&quot;];" ID="ID_912496386" CREATED="1442862895157" MODIFIED="1602060905452"/>
 <node TEXT="$modo = $_REQUEST[&quot;modo&quot;];" ID="ID_1756566131" CREATED="1442862895157" MODIFIED="1600856591346"/>
+<node TEXT="$cantidad = (int)$_REQUEST[&quot;cantidad&quot;];" ID="ID_912496386" CREATED="1442862895157" MODIFIED="1602060905452"/>
 </node>
 </node>
 </node>
@@ -604,8 +604,8 @@
 </node>
 <node TEXT="" ID="ID_1817918344" CREATED="1318937535767" MODIFIED="1414434456214">
 <node TEXT="(valores)&#xa;literales" ID="ID_78458148" CREATED="1318937470328" MODIFIED="1442861517099">
-<node TEXT="valores &quot;fijos&quot; escritos por el&#xa;programador mientras programa" ID="ID_1847052850" CREATED="1349286721371" MODIFIED="1521139800322">
-<node TEXT="17" ID="ID_647556858" CREATED="1349286735017" MODIFIED="1521139803480">
+<node TEXT="valores &quot;fijos&quot; escritos por el&#xa;programador mientras programa" ID="ID_1847052850" CREATED="1349286721371" MODIFIED="1617786236288">
+<node TEXT="17" ID="ID_647556858" CREATED="1349286735017" MODIFIED="1617786236288">
 <node TEXT="0" ID="ID_589926687" CREATED="1349286737858" MODIFIED="1521139803482">
 <node TEXT="&quot;Hola&quot;" ID="ID_1381624936" CREATED="1349286739893" MODIFIED="1521139803483">
 <node TEXT="true" ID="ID_217783688" CREATED="1349286742022" MODIFIED="1349286743660"/>
@@ -622,7 +622,7 @@
 </node>
 </node>
 <node TEXT="constantes" ID="ID_1383112684" CREATED="1318937641132" MODIFIED="1442856660789">
-<node TEXT="&quot;variables&quot; cuyo valor no se espera que cambie" ID="ID_1530349824" CREATED="1411578059833" MODIFIED="1411578069086"/>
+<node TEXT="&quot;variables&quot; cuyo valor no cambiará" ID="ID_1530349824" CREATED="1411578059833" MODIFIED="1617786270920"/>
 </node>
 <node TEXT="operadores" ID="ID_335555844" CREATED="1318952959968" MODIFIED="1442856660793">
 <node TEXT="trabajan con distintos TIPOS de entrada y/o salida" ID="ID_636385242" CREATED="1349291712120" MODIFIED="1349291720460"/>
@@ -655,7 +655,10 @@
 <node TEXT="===" ID="ID_245245197" CREATED="1379955733175" MODIFIED="1602061378765">
 <icon BUILTIN="atenciвn_!"/>
 <node TEXT="comprueba si tienen el mismo valor ¡Y EL MISMO TIPO!" ID="ID_1573083499" CREATED="1379956012573" MODIFIED="1379956025338"/>
-<node TEXT="¡y, por ejemplo, (&quot;1&quot; === 1) da FALSE en PHP!" ID="ID_1661342784" CREATED="1379956027157" MODIFIED="1396287872068"/>
+<node TEXT="por ejemplo" ID="ID_1661342784" CREATED="1379956027157" MODIFIED="1617786341385">
+<node TEXT="(&quot;1&quot; == 1) da TRUE" ID="ID_1392814797" CREATED="1617786345165" MODIFIED="1617786349328"/>
+<node TEXT="(&quot;1&quot; === 1) da FALSE" ID="ID_1913276438" CREATED="1617786341702" MODIFIED="1617786344752"/>
+</node>
 </node>
 </node>
 <node TEXT="de Strings" ID="ID_616434353" CREATED="1396288635169" MODIFIED="1521139800303">
@@ -674,14 +677,14 @@
 </node>
 </node>
 <node TEXT="expresiones" ID="ID_1871392711" CREATED="1318937472273" MODIFIED="1442856660802">
-<node TEXT="son una combinación de" ID="ID_430908940" CREATED="1349291562755" MODIFIED="1521139800299">
+<node TEXT="son una combinación&#xa;sintácticamente correcta de" ID="ID_430908940" CREATED="1349291562755" MODIFIED="1617786392760">
 <node TEXT="(valores) literales" ID="ID_1084709052" CREATED="1349291567481" MODIFIED="1411578098804"/>
-<node TEXT="identificadores/variables" ID="ID_1222018821" CREATED="1396286689735" MODIFIED="1396286690492"/>
+<node TEXT="identificadores/variables/constantes..." ID="ID_1222018821" CREATED="1396286689735" MODIFIED="1617786401401"/>
 <node TEXT="operadores" ID="ID_1801292527" CREATED="1349291579313" MODIFIED="1349291580948"/>
 </node>
 <node TEXT="se evalúan hasta ser equivalentes a un valor concreto de determinado TIPO" ID="ID_1042368338" CREATED="1349291684069" MODIFIED="1349291697239"/>
 <node TEXT="ejemplos" ID="ID_1710529334" CREATED="1349291591340" MODIFIED="1521139800296">
-<node TEXT="17" ID="ID_1031174516" CREATED="1349291585959" MODIFIED="1521139803443">
+<node TEXT="17" OBJECT="java.lang.Long|17" ID="ID_1031174516" CREATED="1349291585959" MODIFIED="1617786451338">
 <node TEXT="17+2" ID="ID_781886194" CREATED="1349291593708" MODIFIED="1521139803444">
 <node TEXT="$a+17" ID="ID_1718560099" CREATED="1349291597704" MODIFIED="1521139803448">
 <node TEXT="$a" ID="ID_1896215396" CREATED="1349291600344" MODIFIED="1521139803454">
@@ -697,6 +700,10 @@
 </node>
 </node>
 </node>
+</node>
+<node TEXT="instrucciones" ID="ID_1994237351" CREATED="1617786196222" MODIFIED="1617786198042">
+<node TEXT="&quot;frases con verbo&quot;" ID="ID_786295909" CREATED="1617786198286" MODIFIED="1617786203402"/>
+<node TEXT="pueden contenter, o no, expresiones y demás elementos" ID="ID_1956539926" CREATED="1617786479852" MODIFIED="1617786487127"/>
 </node>
 </node>
 <node TEXT="" ID="ID_1720283848" CREATED="1318943414570" MODIFIED="1414434456215">
@@ -825,11 +832,11 @@
 </node>
 </node>
 <node TEXT="estructuras&#xa;de control" FOLDED="true" POSITION="right" ID="ID_1533577543" CREATED="1275124579732" MODIFIED="1573030892502">
-<node TEXT="se pueden &quot;partir&quot;" FOLDED="true" ID="ID_1056054138" CREATED="1275124596728" MODIFIED="1521140314949">
+<node TEXT="se pueden &quot;partir&quot;" ID="ID_1056054138" CREATED="1275124596728" MODIFIED="1521140314949">
 <icon BUILTIN="info_informaciвn"/>
 <node TEXT="a veces utilizar la función echo dentro de una estructura de control es muy farragoso si hay que sacar mucho HTML" ID="ID_221601588" CREATED="1361586709266" MODIFIED="1361586710072"/>
 <node TEXT="así que puedo PARTIR UNA ESTRUCTURA DE CONTROL sin problemas" ID="ID_154691001" CREATED="1275124614863" MODIFIED="1361586712650"/>
-<node TEXT="ejemplo" FOLDED="true" ID="ID_636709088" CREATED="1361586775141" MODIFIED="1571659207767">
+<node TEXT="ejemplo" ID="ID_636709088" CREATED="1361586775141" MODIFIED="1571659207767">
 <icon BUILTIN="z_script"/>
 <node ID="ID_598802181" CREATED="1427139746878" MODIFIED="1521139800281"><richcontent TYPE="NODE">
 
@@ -1046,7 +1053,7 @@
 </node>
 <node TEXT="$_COOKIE" ID="ID_923687309" CREATED="1361587195382" MODIFIED="1574683904779">
 <icon BUILTIN="atenciвn_!"/>
-<node TEXT="alberga los datos enviados al cliente en forma de cookie" ID="ID_123177739" CREATED="1361587198644" MODIFIED="1361587232103"/>
+<node TEXT="alberga los datos que hemos recibido del cliente en forma de cookie (que previamente le habremos pedido guardar nosotros mismos)" ID="ID_123177739" CREATED="1361587198644" MODIFIED="1617789316580"/>
 </node>
 <node TEXT="$_SERVER" ID="ID_134652996" CREATED="1578563909486" MODIFIED="1578563923959">
 <icon BUILTIN="atenciвn_!"/>

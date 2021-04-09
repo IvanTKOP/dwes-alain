@@ -23,7 +23,8 @@ class DAO
             $pdo = new PDO("mysql:host=$servidor;dbname=$bd;charset=utf8", $identificador, $contrasenna, $opciones);
         } catch (Exception $e) {
             error_log("Error al conectar: " . $e->getMessage());
-            exit("Error al conectar" . $e->getMessage());
+            echo "\n\nError al conectar:\n" . $e->getMessage();
+            header($_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error', true, 500);
         }
 
         return $pdo;
@@ -54,33 +55,21 @@ class DAO
         else return self::$pdo->lastInsertId();
     }
 
+    // Ejecuta un Update o un Delete.
     // Devuelve:
     //   - null: si ha habido un error
     //   - 0, 1 u otro número positivo: OK (no errores) y estas son las filas afectadas.
-    private static function ejecutarUpdate(string $sql, array $parametros): ?int
+    private static function ejecutarUpdel(string $sql, array $parametros): ?int
     {
         if (!isset(self::$pdo)) self::$pdo = self::obtenerPdoConexionBd();
 
-        $update = self::$pdo->prepare($sql);
-        $sqlConExito = $update->execute($parametros);
+        $updel = self::$pdo->prepare($sql);
+        $sqlConExito = $updel->execute($parametros);
 
         if (!$sqlConExito) return null;
-        else return $update->rowCount();
+        else return $updel->rowCount();
     }
 
-    // Devuelve:
-    //   - null: si ha habido un error
-    //   - 0, 1 o más: OK (no errores) y estas son las filas afectadas.
-    private static function ejecutarDelete(string $sql, array $parametros): ?int
-    {
-        if (!isset(self::$pdo)) self::$pdo = self::obtenerPdoConexionBd();
-
-        $delete = self::$pdo->prepare($sql);
-        $sqlConExito = $delete->execute($parametros);
-
-        if (!$sqlConExito) return null;
-        else return $delete->rowCount();
-    }
 
 
     /* CATEGORÍA */
@@ -131,7 +120,7 @@ class DAO
 
     public static function categoriaActualizar(Categoria $categoria): ?Categoria
     {
-        $filasAfectadas = self::ejecutarUpdate(
+        $filasAfectadas = self::ejecutarUpdel(
             "UPDATE Categoria SET nombre=? WHERE id=?",
             [$categoria->getNombre(), $categoria->getId()]
         );
@@ -142,7 +131,7 @@ class DAO
 
     public static function categoriaEliminarPorId(int $id): bool
     {
-        $filasAfectadas = self::ejecutarUpdate(
+        $filasAfectadas = self::ejecutarUpdel(
             "DELETE FROM Categoria WHERE id=?",
             [$id]
         );
@@ -153,5 +142,78 @@ class DAO
     public static function categoriaEliminar(Categoria $categoria): bool
     {
         return self::categoriaEliminarPorId($categoria->id);
+    }
+
+
+    /* PERSONA */
+
+    private static function personaCrearDesdeRs(array $fila): Persona
+    {
+        return new Persona($fila["id"], $fila["nombre"], $fila["apellidos"], $fila["telefono"], $fila["estrella"], $fila["categoriaId"]);
+    }
+
+    public static function personaObtenerPorId(int $id): ?Persona
+    {
+        $rs = self::ejecutarConsulta(
+            "SELECT * FROM Persona WHERE id=?",
+            [$id]
+        );
+
+        if ($rs) return self::personaCrearDesdeRs($rs[0]);
+        else return null;
+    }
+
+    public static function personaObtenerTodas(): array
+    {
+        $datos = [];
+
+        $rs = self::ejecutarConsulta(
+            "SELECT * FROM Persona ORDER BY nombre, apellidos",
+            []
+        );
+
+        foreach ($rs as $fila) {
+            $persona = self::personaCrearDesdeRs($fila);
+            array_push($datos, $persona);
+        }
+
+        return $datos;
+    }
+
+    public static function personaCrear(string $nombre, string $apellidos, string $telefono, bool $estrella, int $categoriaId): ?Persona
+    {
+        $idAutogenerado = self::ejecutarInsert(
+            "INSERT INTO Persona (nombre, apellidos, telefono, estrella, categoriaId) VALUES (?, ?, ?, ?, ?)",
+            [$nombre, $apellidos, $telefono, $estrella ? 1 : 0, $categoriaId]
+        );
+
+        if ($idAutogenerado == null) return null;
+        else return self::personaObtenerPorId($idAutogenerado);
+    }
+
+    public static function personaActualizar(Persona $persona): ?Persona
+    {
+        $filasAfectadas = self::ejecutarUpdel(
+            "UPDATE Persona SET nombre=?, apellidos=?, telefono=?, estrella=?, categoriaId=? WHERE id=?",
+            [$persona->getNombre(), $persona->getApellidos(), $persona->getTelefono(), $persona->isEstrella() ? 1 : 0, $persona->getCategoriaId(), $persona->getId()]
+        );
+
+        if ($filasAfectadas = null) return null;
+        else return $persona;
+    }
+
+    public static function personaEliminarPorId(int $id): bool
+    {
+        $filasAfectadas = self::ejecutarUpdel(
+            "DELETE FROM Persona WHERE id=?",
+            [$id]
+        );
+
+        return ($filasAfectadas == 1);
+    }
+
+    public static function personaEliminar(Persona $persona): bool
+    {
+        return self::personaEliminarPorId($persona->id);
     }
 }
