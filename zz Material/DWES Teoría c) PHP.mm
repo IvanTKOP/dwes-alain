@@ -1,6 +1,6 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="1.771">
+<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="1.948">
     <properties fit_to_viewport="false" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
@@ -446,7 +446,7 @@
 </node>
 </node>
 </node>
-<node TEXT="errores y problemas frecuentes" FOLDED="true" POSITION="right" ID="ID_76994381" CREATED="1380824496072" MODIFIED="1573030902589">
+<node TEXT="errores y problemas frecuentes" POSITION="right" ID="ID_76994381" CREATED="1380824496072" MODIFIED="1573030902589">
 <node TEXT="si Apache no arranca" FOLDED="true" ID="ID_622419806" CREATED="1411407848327" MODIFIED="1414434456199">
 <node TEXT="mirar carpeta DocumentRoot y Directory existe (debe indicarse la misma ruta en ambas)" ID="ID_416087543" CREATED="1411407881279" MODIFIED="1411407925405"/>
 <node TEXT="en dichas rutas, poner las barras así / y no así \" ID="ID_1136514709" CREATED="1411407929447" MODIFIED="1411407943013"/>
@@ -478,7 +478,7 @@
 <node TEXT="si cambiamos la configuración de un servidor y no la coge" FOLDED="true" ID="ID_287450574" CREATED="1411407970399" MODIFIED="1445886903407">
 <node TEXT="reiniciar Apache/MySQL o lo que corresponda" ID="ID_767321953" CREATED="1411407975639" MODIFIED="1411407986443"/>
 </node>
-<node TEXT="errores PHP" FOLDED="true" ID="ID_1063529080" CREATED="1411407854105" MODIFIED="1414434456201">
+<node TEXT="errores PHP" ID="ID_1063529080" CREATED="1411407854105" MODIFIED="1414434456201">
 <node TEXT="si ante un error solo vuelve un código 500 pero NO indica texto del error" ID="ID_1234149735" CREATED="1607604855509" MODIFIED="1607604879186">
 <node TEXT="asegurarnos de que esta opción está a On:" ID="ID_1896331819" CREATED="1607604881395" MODIFIED="1607604890284"/>
 <node TEXT="/opt/lampp/etc/php.ini" ID="ID_1831112905" CREATED="1607604891242" MODIFIED="1607604899449">
@@ -1404,13 +1404,14 @@
 <node TEXT="por ejemplo, que comiencen por _" ID="ID_1395462070" CREATED="1361473831398" MODIFIED="1361473839398"/>
 </node>
 </node>
-<node TEXT="redirecciones" FOLDED="true" POSITION="right" ID="ID_762877911" CREATED="1384454993727" MODIFIED="1604921355097">
+<node TEXT="redirecciones" POSITION="right" ID="ID_762877911" CREATED="1384454993727" MODIFIED="1604921355097">
 <node TEXT="&quot;meta redirect&quot; (HTML)" ID="ID_1019255048" CREATED="1381173423760" MODIFIED="1603367875812">
 <node TEXT="esto se devuelve como parte de una página HTML &quot;COMPLETA&quot;" ID="ID_1210942810" CREATED="1603367766822" MODIFIED="1604921485064"/>
 <node TEXT="&lt;head&gt;&#xa;    &lt;meta http-equiv=&quot;refresh&quot; content=&quot;5;URL=listado.php&quot;&gt;&#xa;&lt;/head&gt;" ID="ID_1948733852" CREATED="1381173428401" MODIFIED="1604921440220">
 <icon BUILTIN="atenciвn_!"/>
 </node>
 <node TEXT="puedo poner 0 pero eso provoca &quot;glitches&quot;" ID="ID_178420931" CREATED="1604921485618" MODIFIED="1604921494719"/>
+<node TEXT="NO es, en principio, el estilo actual de hacer las cosas" ID="ID_240435326" CREATED="1618826530692" MODIFIED="1618826541412"/>
 </node>
 <node TEXT="&quot;header location&quot; (HTTP)" ID="ID_166162388" CREATED="1384455000607" MODIFIED="1604921372144">
 <node TEXT="header(&quot;Location: otroScript.php&quot;);" ID="ID_1497097085" CREATED="1384455009903" MODIFIED="1603367492188">
@@ -1684,7 +1685,7 @@
 </node>
 </node>
 </node>
-<node TEXT="cookies" FOLDED="true" POSITION="right" ID="ID_578081402" CREATED="1275125484565" MODIFIED="1605691669984">
+<node TEXT="cookies" POSITION="right" ID="ID_578081402" CREATED="1275125484565" MODIFIED="1605691669984">
 <icon BUILTIN="estadotarea_pendiente"/>
 <node TEXT="para acceder al&#xa;valor de una cookie" ID="ID_70278479" CREATED="1275126411467" MODIFIED="1417636498312">
 <node TEXT="mediante el array asociativo supergobal" ID="ID_867586564" CREATED="1275126719898" MODIFIED="1521139799986">
@@ -1706,17 +1707,7 @@
 <node TEXT="setcookie()" ID="ID_277078675" CREATED="1275126260561" MODIFIED="1417636300725">
 <node TEXT="OJO" ID="ID_479664070" CREATED="1275126224696" MODIFIED="1521139799985">
 <node TEXT="hay que hacerlo al PRINCIPIO de la página" ID="ID_1278763678" CREATED="1275126228136" MODIFIED="1521139803143">
-<node ID="ID_1747540899" CREATED="1275126238175" MODIFIED="1521139803146"><richcontent TYPE="NODE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    tiene que ir ANTES de
-  </body>
-</html>
-</richcontent>
+<node TEXT="tiene que ir ANTES de cualquier HTML" ID="ID_1747540899" CREATED="1275126238175" MODIFIED="1618391973685">
 <node TEXT="porque son ENCABEZADOS" ID="ID_1381931007" CREATED="1275126249898" MODIFIED="1275126254424"/>
 </node>
 </node>
