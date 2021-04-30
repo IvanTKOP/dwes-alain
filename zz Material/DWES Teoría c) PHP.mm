@@ -1685,7 +1685,7 @@
 </node>
 </node>
 </node>
-<node TEXT="cookies" POSITION="right" ID="ID_578081402" CREATED="1275125484565" MODIFIED="1605691669984">
+<node TEXT="cookies" FOLDED="true" POSITION="right" ID="ID_578081402" CREATED="1275125484565" MODIFIED="1605691669984">
 <icon BUILTIN="estadotarea_pendiente"/>
 <node TEXT="para acceder al&#xa;valor de una cookie" ID="ID_70278479" CREATED="1275126411467" MODIFIED="1417636498312">
 <node TEXT="mediante el array asociativo supergobal" ID="ID_867586564" CREATED="1275126719898" MODIFIED="1521139799986">
@@ -1762,7 +1762,7 @@
 </node>
 </node>
 </node>
-<node TEXT="sesiones" FOLDED="true" POSITION="right" ID="ID_89182252" CREATED="1275125486180" MODIFIED="1605691662118">
+<node TEXT="sesiones" POSITION="right" ID="ID_89182252" CREATED="1275125486180" MODIFIED="1605691662118">
 <node TEXT="¿qué es lo que da soporte&#xa;al mecanismo de la sesión?&#xa;(¿cómo nos &quot;acordamos&quot;&#xa;del id de sesión?)" ID="ID_1213888443" CREATED="1275129962771" MODIFIED="1605692539444">
 <node TEXT="cookies" ID="ID_1992282971" CREATED="1275130054916" MODIFIED="1575971031393">
 <icon BUILTIN="button_ok"/>
