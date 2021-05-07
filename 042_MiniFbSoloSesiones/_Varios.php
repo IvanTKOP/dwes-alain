@@ -117,6 +117,7 @@ file_put_contents('php://stderr', $contenido . "\n");
 <?php
 
 declare(strict_types=1);
+
 session_start();
 
 function obtenerPdoConexionBD(): PDO
