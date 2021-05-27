@@ -1,7 +1,7 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
 <node TEXT="" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1573029101196"><hook NAME="MapStyle" zoom="2.143">
-    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
+    <properties fit_to_viewport="false" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -488,7 +488,7 @@
 </node>
 </node>
 <node TEXT="sesiones" POSITION="right" ID="ID_713848640" CREATED="1361805095560" MODIFIED="1573478035306">
-<node TEXT="tipos de &quot;sesiones&quot;" FOLDED="true" ID="ID_1826064534" CREATED="1361805681864" MODIFIED="1414434456284">
+<node TEXT="tipos de &quot;sesiones&quot;" ID="ID_1826064534" CREATED="1361805681864" MODIFIED="1414434456284">
 <node TEXT="sesión-USUARIO" ID="ID_598023351" CREATED="1361588759128" MODIFIED="1414434456445">
 <node TEXT="es un concepto NO-técnico" ID="ID_409146745" CREATED="1361805759349" MODIFIED="1361805783020"/>
 <node TEXT="es, DESDE EL PUNTO DE VISTA DE UN USUARIO, el tiempo que pasa desde que introduce identificador y contraseña hasta que &quot;cierra sesión&quot;" ID="ID_1869307765" CREATED="1361805780864" MODIFIED="1361805817248"/>

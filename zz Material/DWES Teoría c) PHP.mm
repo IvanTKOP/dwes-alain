@@ -1,7 +1,7 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
-<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="1.771">
-    <properties edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff" fit_to_viewport="false"/>
+<node TEXT="PHP" FOLDED="false" ID="ID_397824395" CREATED="1260913320728" MODIFIED="1447271947795"><hook NAME="MapStyle" zoom="1.948">
+    <properties fit_to_viewport="false" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
 <stylenode LOCALIZED_TEXT="styles.root_node" STYLE="oval" UNIFORM_SHAPE="true" VGAP_QUANTITY="24.0 pt">
@@ -181,11 +181,11 @@
 </node>
 <node TEXT="pasar parámetros a los scripts" ID="ID_1214345155" CREATED="1442862807222" MODIFIED="1442862851994">
 <node TEXT="si cargamos así un script..." ID="ID_837979258" CREATED="1442862880101" MODIFIED="1442862894242">
-<node TEXT="script.php?cantidad=17&amp;modo=b" ID="ID_261392125" CREATED="1442862852317" MODIFIED="1552945936227"/>
+<node TEXT="script.php?modo=b&amp;cantidad=17" ID="ID_261392125" CREATED="1442862852317" MODIFIED="1617785769435"/>
 </node>
 <node TEXT="...podemos recuperar el dato así desde PHP" ID="ID_1922640351" CREATED="1442862887917" MODIFIED="1442862907930">
-<node TEXT="$cantidad = (int)$_REQUEST[&quot;cantidad&quot;];" ID="ID_912496386" CREATED="1442862895157" MODIFIED="1602060905452"/>
 <node TEXT="$modo = $_REQUEST[&quot;modo&quot;];" ID="ID_1756566131" CREATED="1442862895157" MODIFIED="1600856591346"/>
+<node TEXT="$cantidad = (int)$_REQUEST[&quot;cantidad&quot;];" ID="ID_912496386" CREATED="1442862895157" MODIFIED="1602060905452"/>
 </node>
 </node>
 </node>
@@ -446,7 +446,7 @@
 </node>
 </node>
 </node>
-<node TEXT="errores y problemas frecuentes" FOLDED="true" POSITION="right" ID="ID_76994381" CREATED="1380824496072" MODIFIED="1573030902589">
+<node TEXT="errores y problemas frecuentes" POSITION="right" ID="ID_76994381" CREATED="1380824496072" MODIFIED="1573030902589">
 <node TEXT="si Apache no arranca" FOLDED="true" ID="ID_622419806" CREATED="1411407848327" MODIFIED="1414434456199">
 <node TEXT="mirar carpeta DocumentRoot y Directory existe (debe indicarse la misma ruta en ambas)" ID="ID_416087543" CREATED="1411407881279" MODIFIED="1411407925405"/>
 <node TEXT="en dichas rutas, poner las barras así / y no así \" ID="ID_1136514709" CREATED="1411407929447" MODIFIED="1411407943013"/>
@@ -478,12 +478,13 @@
 <node TEXT="si cambiamos la configuración de un servidor y no la coge" FOLDED="true" ID="ID_287450574" CREATED="1411407970399" MODIFIED="1445886903407">
 <node TEXT="reiniciar Apache/MySQL o lo que corresponda" ID="ID_767321953" CREATED="1411407975639" MODIFIED="1411407986443"/>
 </node>
-<node TEXT="errores PHP" FOLDED="true" ID="ID_1063529080" CREATED="1411407854105" MODIFIED="1414434456201">
+<node TEXT="errores PHP" ID="ID_1063529080" CREATED="1411407854105" MODIFIED="1414434456201">
 <node TEXT="si ante un error solo vuelve un código 500 pero NO indica texto del error" ID="ID_1234149735" CREATED="1607604855509" MODIFIED="1607604879186">
 <node TEXT="asegurarnos de que esta opción está a On:" ID="ID_1896331819" CREATED="1607604881395" MODIFIED="1607604890284"/>
 <node TEXT="/opt/lampp/etc/php.ini" ID="ID_1831112905" CREATED="1607604891242" MODIFIED="1607604899449">
 <node TEXT="display_errors=On" ID="ID_417229863" CREATED="1607604858968" MODIFIED="1607604863087"/>
 </node>
+<node TEXT="(está a un ~25% del documento)" ID="ID_1009201809" CREATED="1619602842990" MODIFIED="1619602851186"/>
 </node>
 <node TEXT="failed to open stream, failed opening..." ID="ID_1796562515" CREATED="1380824502706" MODIFIED="1414434456335">
 <node TEXT="mensaje completo" ID="ID_1774696689" CREATED="1380824518770" MODIFIED="1521139800409">
@@ -604,8 +605,8 @@
 </node>
 <node TEXT="" ID="ID_1817918344" CREATED="1318937535767" MODIFIED="1414434456214">
 <node TEXT="(valores)&#xa;literales" ID="ID_78458148" CREATED="1318937470328" MODIFIED="1442861517099">
-<node TEXT="valores &quot;fijos&quot; escritos por el&#xa;programador mientras programa" ID="ID_1847052850" CREATED="1349286721371" MODIFIED="1521139800322">
-<node TEXT="17" ID="ID_647556858" CREATED="1349286735017" MODIFIED="1521139803480">
+<node TEXT="valores &quot;fijos&quot; escritos por el&#xa;programador mientras programa" ID="ID_1847052850" CREATED="1349286721371" MODIFIED="1617786236288">
+<node TEXT="17" ID="ID_647556858" CREATED="1349286735017" MODIFIED="1617786236288">
 <node TEXT="0" ID="ID_589926687" CREATED="1349286737858" MODIFIED="1521139803482">
 <node TEXT="&quot;Hola&quot;" ID="ID_1381624936" CREATED="1349286739893" MODIFIED="1521139803483">
 <node TEXT="true" ID="ID_217783688" CREATED="1349286742022" MODIFIED="1349286743660"/>
@@ -622,7 +623,7 @@
 </node>
 </node>
 <node TEXT="constantes" ID="ID_1383112684" CREATED="1318937641132" MODIFIED="1442856660789">
-<node TEXT="&quot;variables&quot; cuyo valor no se espera que cambie" ID="ID_1530349824" CREATED="1411578059833" MODIFIED="1411578069086"/>
+<node TEXT="&quot;variables&quot; cuyo valor no cambiará" ID="ID_1530349824" CREATED="1411578059833" MODIFIED="1617786270920"/>
 </node>
 <node TEXT="operadores" ID="ID_335555844" CREATED="1318952959968" MODIFIED="1442856660793">
 <node TEXT="trabajan con distintos TIPOS de entrada y/o salida" ID="ID_636385242" CREATED="1349291712120" MODIFIED="1349291720460"/>
@@ -655,7 +656,10 @@
 <node TEXT="===" ID="ID_245245197" CREATED="1379955733175" MODIFIED="1602061378765">
 <icon BUILTIN="atenciвn_!"/>
 <node TEXT="comprueba si tienen el mismo valor ¡Y EL MISMO TIPO!" ID="ID_1573083499" CREATED="1379956012573" MODIFIED="1379956025338"/>
-<node TEXT="¡y, por ejemplo, (&quot;1&quot; === 1) da FALSE en PHP!" ID="ID_1661342784" CREATED="1379956027157" MODIFIED="1396287872068"/>
+<node TEXT="por ejemplo" ID="ID_1661342784" CREATED="1379956027157" MODIFIED="1617786341385">
+<node TEXT="(&quot;1&quot; == 1) da TRUE" ID="ID_1392814797" CREATED="1617786345165" MODIFIED="1617786349328"/>
+<node TEXT="(&quot;1&quot; === 1) da FALSE" ID="ID_1913276438" CREATED="1617786341702" MODIFIED="1617786344752"/>
+</node>
 </node>
 </node>
 <node TEXT="de Strings" ID="ID_616434353" CREATED="1396288635169" MODIFIED="1521139800303">
@@ -674,14 +678,14 @@
 </node>
 </node>
 <node TEXT="expresiones" ID="ID_1871392711" CREATED="1318937472273" MODIFIED="1442856660802">
-<node TEXT="son una combinación de" ID="ID_430908940" CREATED="1349291562755" MODIFIED="1521139800299">
+<node TEXT="son una combinación&#xa;sintácticamente correcta de" ID="ID_430908940" CREATED="1349291562755" MODIFIED="1617786392760">
 <node TEXT="(valores) literales" ID="ID_1084709052" CREATED="1349291567481" MODIFIED="1411578098804"/>
-<node TEXT="identificadores/variables" ID="ID_1222018821" CREATED="1396286689735" MODIFIED="1396286690492"/>
+<node TEXT="identificadores/variables/constantes..." ID="ID_1222018821" CREATED="1396286689735" MODIFIED="1617786401401"/>
 <node TEXT="operadores" ID="ID_1801292527" CREATED="1349291579313" MODIFIED="1349291580948"/>
 </node>
 <node TEXT="se evalúan hasta ser equivalentes a un valor concreto de determinado TIPO" ID="ID_1042368338" CREATED="1349291684069" MODIFIED="1349291697239"/>
 <node TEXT="ejemplos" ID="ID_1710529334" CREATED="1349291591340" MODIFIED="1521139800296">
-<node TEXT="17" ID="ID_1031174516" CREATED="1349291585959" MODIFIED="1521139803443">
+<node TEXT="17" OBJECT="java.lang.Long|17" ID="ID_1031174516" CREATED="1349291585959" MODIFIED="1617786451338">
 <node TEXT="17+2" ID="ID_781886194" CREATED="1349291593708" MODIFIED="1521139803444">
 <node TEXT="$a+17" ID="ID_1718560099" CREATED="1349291597704" MODIFIED="1521139803448">
 <node TEXT="$a" ID="ID_1896215396" CREATED="1349291600344" MODIFIED="1521139803454">
@@ -697,6 +701,10 @@
 </node>
 </node>
 </node>
+</node>
+<node TEXT="instrucciones" ID="ID_1994237351" CREATED="1617786196222" MODIFIED="1617786198042">
+<node TEXT="&quot;frases con verbo&quot;" ID="ID_786295909" CREATED="1617786198286" MODIFIED="1617786203402"/>
+<node TEXT="pueden contenter, o no, expresiones y demás elementos" ID="ID_1956539926" CREATED="1617786479852" MODIFIED="1617786487127"/>
 </node>
 </node>
 <node TEXT="" ID="ID_1720283848" CREATED="1318943414570" MODIFIED="1414434456215">
@@ -825,11 +833,11 @@
 </node>
 </node>
 <node TEXT="estructuras&#xa;de control" FOLDED="true" POSITION="right" ID="ID_1533577543" CREATED="1275124579732" MODIFIED="1573030892502">
-<node TEXT="se pueden &quot;partir&quot;" FOLDED="true" ID="ID_1056054138" CREATED="1275124596728" MODIFIED="1521140314949">
+<node TEXT="se pueden &quot;partir&quot;" ID="ID_1056054138" CREATED="1275124596728" MODIFIED="1521140314949">
 <icon BUILTIN="info_informaciвn"/>
 <node TEXT="a veces utilizar la función echo dentro de una estructura de control es muy farragoso si hay que sacar mucho HTML" ID="ID_221601588" CREATED="1361586709266" MODIFIED="1361586710072"/>
 <node TEXT="así que puedo PARTIR UNA ESTRUCTURA DE CONTROL sin problemas" ID="ID_154691001" CREATED="1275124614863" MODIFIED="1361586712650"/>
-<node TEXT="ejemplo" FOLDED="true" ID="ID_636709088" CREATED="1361586775141" MODIFIED="1571659207767">
+<node TEXT="ejemplo" ID="ID_636709088" CREATED="1361586775141" MODIFIED="1571659207767">
 <icon BUILTIN="z_script"/>
 <node ID="ID_598802181" CREATED="1427139746878" MODIFIED="1521139800281"><richcontent TYPE="NODE">
 
@@ -1046,7 +1054,7 @@
 </node>
 <node TEXT="$_COOKIE" ID="ID_923687309" CREATED="1361587195382" MODIFIED="1574683904779">
 <icon BUILTIN="atenciвn_!"/>
-<node TEXT="alberga los datos enviados al cliente en forma de cookie" ID="ID_123177739" CREATED="1361587198644" MODIFIED="1361587232103"/>
+<node TEXT="alberga los datos que hemos recibido del cliente en forma de cookie (que previamente le habremos pedido guardar nosotros mismos)" ID="ID_123177739" CREATED="1361587198644" MODIFIED="1617789316580"/>
 </node>
 <node TEXT="$_SERVER" ID="ID_134652996" CREATED="1578563909486" MODIFIED="1578563923959">
 <icon BUILTIN="atenciвn_!"/>
@@ -1404,6 +1412,7 @@
 <icon BUILTIN="atenciвn_!"/>
 </node>
 <node TEXT="puedo poner 0 pero eso provoca &quot;glitches&quot;" ID="ID_178420931" CREATED="1604921485618" MODIFIED="1604921494719"/>
+<node TEXT="NO es, en principio, el estilo actual de hacer las cosas" ID="ID_240435326" CREATED="1618826530692" MODIFIED="1618826541412"/>
 </node>
 <node TEXT="&quot;header location&quot; (HTTP)" ID="ID_166162388" CREATED="1384455000607" MODIFIED="1604921372144">
 <node TEXT="header(&quot;Location: otroScript.php&quot;);" ID="ID_1497097085" CREATED="1384455009903" MODIFIED="1603367492188">
@@ -1443,7 +1452,7 @@
 </node>
 </node>
 </node>
-<node TEXT="acceso&#xa;a BBDD" FOLDED="true" POSITION="right" ID="ID_316249312" CREATED="1275131296618" MODIFIED="1613135327930">
+<node TEXT="acceso&#xa;a BBDD" POSITION="right" ID="ID_316249312" CREATED="1275131296618" MODIFIED="1613135327930">
 <node TEXT="tutoriales" ID="ID_1643720653" CREATED="1574766505250" MODIFIED="1576659850741">
 <node TEXT="https://websitebeaver.com/php-pdo-vs-mysqli" ID="ID_536140428" CREATED="1575976474136" MODIFIED="1576655616318" LINK="https://websitebeaver.com/php-pdo-vs-mysqli">
 <icon BUILTIN="button_ok"/>
@@ -1457,7 +1466,7 @@
 <icon BUILTIN="help"/>
 </node>
 </node>
-<node TEXT="hay tres formas de acceder a MySQL desde PHP:" FOLDED="true" ID="ID_1201680916" CREATED="1445449286793" MODIFIED="1521139803250">
+<node TEXT="hay tres formas de acceder a MySQL desde PHP:" ID="ID_1201680916" CREATED="1445449286793" MODIFIED="1521139803250">
 <node TEXT="funciones mysql_***" ID="ID_912876348" CREATED="1445449321105" MODIFIED="1576493907760">
 <icon BUILTIN="button_cancel"/>
 <node TEXT="¡eliminadas desde PHP 7!" ID="ID_1825018928" CREATED="1445449338759" MODIFIED="1576493891376"/>
@@ -1487,7 +1496,7 @@
 <node TEXT="debe decir algo como &quot;se ejecutó exitosamente, se ejecutaron XX consultas&quot;" ID="ID_1890287289" CREATED="1413411280811" MODIFIED="1604922236786"/>
 <node TEXT="con esto último, hemos ejecutado un montón de consultas de creación de schema, tablas e inserción de datos que dejan preparado un schema llamado Agenda con el que podemos trabajar" ID="ID_1847859640" CREATED="1413411280811" MODIFIED="1604922242639"/>
 </node>
-<node TEXT="conectar y seleccionar BD (schema)" FOLDED="true" ID="ID_1933660106" CREATED="1275131564025" MODIFIED="1521139803246">
+<node TEXT="conectar y seleccionar BD (schema)" ID="ID_1933660106" CREATED="1275131564025" MODIFIED="1521139803246">
 <icon BUILTIN="full-1"/>
 <node TEXT="datos y&#xa;opciones&#xa;generales" ID="ID_1066498149" CREATED="1576495557688" MODIFIED="1576495706291">
 <node TEXT="para conectar con MySQL desde PHP&#xa;necesitamos los siguientes datos" ID="ID_193611375" CREATED="1275131482383" MODIFIED="1604922398877">
@@ -1513,7 +1522,9 @@
 <node TEXT="sentencias que NO&#xa;devuelven datos&#xa;(INS, UPD, DEL)" FOLDED="true" ID="ID_803700530" CREATED="1275132334962" MODIFIED="1521139803244">
 <icon BUILTIN="full-2"/>
 <node TEXT="primero redacto la sentencia,&#xa;opcionalmente con huecos" ID="ID_200036736" CREATED="1398276154511" MODIFIED="1604923107899">
-<node ID="ID_1818879539" CREATED="1576656463690" MODIFIED="1604923110654"><richcontent TYPE="NODE">
+<node ID="ID_1818879539" CREATED="1576656463690" MODIFIED="1619435847500">
+<icon BUILTIN="atenciвn_!!"/>
+<richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -1526,8 +1537,10 @@
 </richcontent>
 </node>
 </node>
-<node TEXT="luego la &quot;preparo&quot; (por seguridad)&#xa;(&quot;conviertir string a objeto&quot;)" ID="ID_208713291" CREATED="1604923112023" MODIFIED="1604923233609">
-<node ID="ID_518111315" CREATED="1604923119927" MODIFIED="1607685758084"><richcontent TYPE="NODE">
+<node TEXT="luego la &quot;preparo&quot; (por seguridad)&#xa;(&quot;convertir string a objeto&quot;)" ID="ID_208713291" CREATED="1604923112023" MODIFIED="1619435400367">
+<node ID="ID_518111315" CREATED="1604923119927" MODIFIED="1619435847501">
+<icon BUILTIN="atenciвn_!!"/>
+<richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -1541,7 +1554,9 @@
 </node>
 </node>
 <node TEXT="y luego la ejecuto, pasando un&#xa;array para rellenar huecos" ID="ID_1977365181" CREATED="1576656651610" MODIFIED="1576659876609">
-<node ID="ID_1756829186" CREATED="1576656463692" MODIFIED="1607685744437"><richcontent TYPE="NODE">
+<node ID="ID_1756829186" CREATED="1576656463692" MODIFIED="1619435847498">
+<icon BUILTIN="atenciвn_!!"/>
+<richcontent TYPE="NODE">
 
 <html>
   <head>
@@ -1555,7 +1570,8 @@
 </node>
 <node TEXT="devuelve true o false en función de si ha ido todo bien" ID="ID_247357934" CREATED="1603452033543" MODIFIED="1603452046011"/>
 </node>
-<node TEXT="$numFilasAfectadas = $sentencia-&gt;rowCount();" ID="ID_909919678" CREATED="1275132405209" MODIFIED="1576657359257">
+<node TEXT="$numFilasAfectadas = $sentencia-&gt;rowCount();" ID="ID_909919678" CREATED="1275132405209" MODIFIED="1619435990682">
+<icon BUILTIN="atenciвn_!"/>
 <node TEXT="cuántas filas se han visto afectadas en lo último que he ejecutado" ID="ID_337401225" CREATED="1275132442719" MODIFIED="1603879650709"/>
 <node TEXT="habitualmente, lo suyo es que salga UNO" ID="ID_649466945" CREATED="1384196718927" MODIFIED="1384196727340"/>
 <node TEXT="si sale 0, es posible que la sentencia estuviera bien pero que sencillamente el where no ha coincidido con ningún caso (lo pueden haber borrado en paralelo...)" ID="ID_1770772324" CREATED="1445453638230" MODIFIED="1603976338152"/>
@@ -1564,12 +1580,13 @@
 <icon BUILTIN="info_informaciвn"/>
 <node TEXT="parece ser que si se actualiza un registro metiéndole los mismos datos que ya tenía cuenta como rowCount() = 0" ID="ID_1712798575" CREATED="1384194582174" MODIFIED="1604058657137"/>
 </node>
-<node TEXT="$id = $conexion-&gt;lastInsertId();" ID="ID_1698286276" CREATED="1384461137077" MODIFIED="1604059438929">
+<node TEXT="$id = $conexion-&gt;lastInsertId();" ID="ID_1698286276" CREATED="1384461137077" MODIFIED="1619435994921">
+<icon BUILTIN="atenciвn_!"/>
 <node TEXT="tras un INSERT, para obtener el id que MySQL ha asignado al nuevo registro" ID="ID_1930669587" CREATED="1384461142852" MODIFIED="1384461168873"/>
 <node TEXT="OJO: esto se solicita sobre el objeto conexión (el &quot;PDO&quot;), no sobre el objeto sentencia" ID="ID_1781564233" CREATED="1576657479179" MODIFIED="1604059450156"/>
 </node>
 </node>
-<node TEXT="consultas que SÍ&#xa;devuelven datos&#xa;(SELECT)" FOLDED="true" ID="ID_1746855546" CREATED="1275132334962" MODIFIED="1521139803242">
+<node TEXT="consultas que SÍ&#xa;devuelven datos&#xa;(SELECT)" ID="ID_1746855546" CREATED="1275132334962" MODIFIED="1521139803242">
 <icon BUILTIN="full-3"/>
 <node TEXT="al ejecutarlas, me devuelven una &quot;tabla&quot; con todos los registros que vienen como resultado de la select" ID="ID_1776372879" CREATED="1275132379071" MODIFIED="1576495738611">
 <icon BUILTIN="info_informaciвn"/>
@@ -1589,7 +1606,7 @@
 </node>
 <node TEXT="el $rs que he obtenido" ID="ID_955116771" CREATED="1275132684645" MODIFIED="1576660586800">
 <node TEXT="rs = &quot;record set&quot; (&quot;conjunto de registros&quot;)" ID="ID_918292832" CREATED="1578474484199" MODIFIED="1604925444083"/>
-<node TEXT="es un ARRAY NORMAL (1er nivel)" ID="ID_829708486" CREATED="1275132693560" MODIFIED="1521139800086">
+<node TEXT="es un ARRAY ESCALAR/&quot;NORMAL&quot; (1er nivel)" ID="ID_829708486" CREATED="1275132693560" MODIFIED="1619601145681">
 <node TEXT="de ARRAYS ASOCIATIVOS (2º nivel)" ID="ID_808823819" CREATED="1275132859382" MODIFIED="1275132863111"/>
 </node>
 <node TEXT="cada registro es un ARRAY ASOCIATIVO" ID="ID_1281921116" CREATED="1275132705478" MODIFIED="1275132711954"/>
@@ -1607,8 +1624,8 @@
 <node TEXT="tratamiento&#xa;del record set" ID="ID_1858477053" CREATED="1275132870987" MODIFIED="1604925720869">
 <node TEXT="foreach ($rs as $fila) {&#xa;    // ...&#xa;}" ID="ID_1252977988" CREATED="1576660637313" MODIFIED="1604925792294"/>
 <node TEXT="cuando estoy DENTRO del for, para obtener el valor de UN campo de ESTA fila en concreto que estoy tratando" ID="ID_1552437794" CREATED="1384191003840" MODIFIED="1576660677521">
+<node TEXT="$id = (int) $fila[&quot;id&quot;]" ID="ID_1284021596" CREATED="1384191035039" MODIFIED="1619601170833"/>
 <node TEXT="$nombre = $fila[&quot;nombre&quot;];" ID="ID_1988667085" CREATED="1384191020104" MODIFIED="1445889934160"/>
-<node TEXT="$telefono = $fila[&quot;telefono&quot;]" ID="ID_1284021596" CREATED="1384191035039" MODIFIED="1604925781059"/>
 <node TEXT="..." ID="ID_1123366710" CREATED="1384191038751" MODIFIED="1384191039348"/>
 </node>
 <node TEXT="por tanto, hago" ID="ID_1709606239" CREATED="1275133381241" MODIFIED="1521139800077">
@@ -1699,17 +1716,7 @@
 <node TEXT="setcookie()" ID="ID_277078675" CREATED="1275126260561" MODIFIED="1417636300725">
 <node TEXT="OJO" ID="ID_479664070" CREATED="1275126224696" MODIFIED="1521139799985">
 <node TEXT="hay que hacerlo al PRINCIPIO de la página" ID="ID_1278763678" CREATED="1275126228136" MODIFIED="1521139803143">
-<node ID="ID_1747540899" CREATED="1275126238175" MODIFIED="1521139803146"><richcontent TYPE="NODE">
-
-<html>
-  <head>
-    
-  </head>
-  <body>
-    tiene que ir ANTES de
-  </body>
-</html>
-</richcontent>
+<node TEXT="tiene que ir ANTES de cualquier HTML" ID="ID_1747540899" CREATED="1275126238175" MODIFIED="1618391973685">
 <node TEXT="porque son ENCABEZADOS" ID="ID_1381931007" CREATED="1275126249898" MODIFIED="1275126254424"/>
 </node>
 </node>
@@ -1764,7 +1771,7 @@
 </node>
 </node>
 </node>
-<node TEXT="sesiones" FOLDED="true" POSITION="right" ID="ID_89182252" CREATED="1275125486180" MODIFIED="1605691662118">
+<node TEXT="sesiones" POSITION="right" ID="ID_89182252" CREATED="1275125486180" MODIFIED="1605691662118">
 <node TEXT="¿qué es lo que da soporte&#xa;al mecanismo de la sesión?&#xa;(¿cómo nos &quot;acordamos&quot;&#xa;del id de sesión?)" ID="ID_1213888443" CREATED="1275129962771" MODIFIED="1605692539444">
 <node TEXT="cookies" ID="ID_1992282971" CREATED="1275130054916" MODIFIED="1575971031393">
 <icon BUILTIN="button_ok"/>
@@ -1812,16 +1819,13 @@
 <node TEXT="session.cookie_lifetime" ID="ID_1072995842" CREATED="1575542797727" MODIFIED="1607947044637">
 <icon BUILTIN="atenciвn_!"/>
 </node>
+<node TEXT="si se pone 0: duran la sesión (hasta cerrar el navegador o la pestaña)" ID="ID_1790873751" CREATED="1575542807335" MODIFIED="1605787466302"/>
 </node>
 <node TEXT="caducidad del &quot;post-it&quot; en la RAM del servidor" ID="ID_726424745" CREATED="1607684886479" MODIFIED="1607947070126">
 <node TEXT="session.gc_maxlifetime" ID="ID_467350692" CREATED="1607684903122" MODIFIED="1607684908404">
 <icon BUILTIN="atenciвn_!"/>
 </node>
 </node>
-</node>
-<node TEXT="duración" ID="ID_889132234" CREATED="1575542822346" MODIFIED="1575542825119">
-<node TEXT="si se pone 0: duran la sesión (hasta cerrar el navegador o la pestaña)" ID="ID_1790873751" CREATED="1575542807335" MODIFIED="1605787466302"/>
-<node TEXT="si no, lo que se ponga" ID="ID_719805323" CREATED="1575542818976" MODIFIED="1575542821697"/>
 </node>
 </node>
 <node TEXT="instrucciones&#xa;en PHP" ID="ID_1223236180" CREATED="1385051085963" MODIFIED="1605787472644">
@@ -2110,7 +2114,7 @@
 </node>
 </node>
 </node>
-<node TEXT="AJAX" POSITION="right" ID="ID_1940917263" CREATED="1540365581168" MODIFIED="1612441779177">
+<node TEXT="AJAX" FOLDED="true" POSITION="right" ID="ID_1940917263" CREATED="1540365581168" MODIFIED="1612441779177">
 <node TEXT="" FOLDED="true" ID="ID_1207659829" CREATED="1549008444621" MODIFIED="1549008454575">
 <icon BUILTIN="z_world"/>
 <node TEXT="http://www.tutorialesprogramacionya.com/ajaxya/" ID="ID_644796698" CREATED="1549008923483" MODIFIED="1549008923483" LINK="http://www.tutorialesprogramacionya.com/ajaxya/"/>
