@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 declare(strict_types=1);
 
@@ -113,8 +112,7 @@ exit;
 function syso(string $contenido)
 {
 file_put_contents('php://stderr', $contenido . "\n");
-=======
-<?php
+}
 
 declare(strict_types=1);
 
@@ -266,5 +264,5 @@ function redireccionar(string $url)
 function syso(string $contenido)
 {
     file_put_contents('php://stderr', $contenido . "\n");
->>>>>>> main
+
 }
