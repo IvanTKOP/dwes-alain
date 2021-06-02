@@ -2,12 +2,12 @@
 // TODO Quedaría pendiente poner un timer para actualizar lo local si actualizan el servidor. Una solución óptima sería poner timestamp de modificación en la tabla y pedir categoriaObtenerModificadasDesde(timestamp), donde timestamp es la última vez que he pedido algo.
 
 
-<<<<<<< HEAD
+
 function inicializaciones() {
     tablaCategorias = document.getElementById("tablaCategorias");
     document.getElementById('submitCrearCategoria').addEventListener('click', clickCrearCategoria);
-=======
->>>>>>> main
+}
+
 
 window.onload = inicializar;
 
@@ -32,7 +32,8 @@ function notificarUsuario(texto) {
     alert(texto);
 }
 
-function llamadaAjax(url, parametros, manejadorOK, manejadorError) {
+function llamadaAjax(url, parametros, manejadorOK, manejadorError) { // manejadores son funciones landa pasadas aqui por parametro para que segun salga el status del request saber cual funcion llamar
+
     //TODO PARA DEPURACIÓN: alert("Haciendo ajax a " + url + "\nCon parámetros " + parametros);
 
     var request = new XMLHttpRequest();
@@ -41,10 +42,10 @@ function llamadaAjax(url, parametros, manejadorOK, manejadorError) {
     request.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
     request.onreadystatechange = function() {
-        if (this.readyState == 4) {
-            if (request.status == 200) {
-                manejadorOK(request.responseText);
-            } else {
+        if (this.readyState == 4) { // estado completado (el 3 seria cargando)
+            if (request.status == 200) { // ha terminado correctamente llamo manejadorOK
+                manejadorOK(request.responseText); 
+            } else { // hay error manejadorError    
                 if (manejadorError != null) manejadorError(request.responseText);
             }
         }
