@@ -1,6 +1,20 @@
 <map version="freeplane 1.8.0">
 <!--To view this file, download free mind mapping software Freeplane from http://freeplane.sourceforge.net -->
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
 <node TEXT="" FOLDED="false" ID="ID_513931562" CREATED="1580379249661" MODIFIED="1580379252481"><hook NAME="MapStyle" zoom="2.357">
+=======
+<node TEXT="" FOLDED="false" ID="ID_513931562" CREATED="1580379249661" MODIFIED="1580379252481"><hook NAME="MapStyle" zoom="1.61">
+>>>>>>> Stashed changes
+<<<<<<< Updated upstream
+=======
+=======
+<node TEXT="" FOLDED="false" ID="ID_513931562" CREATED="1580379249661" MODIFIED="1580379252481"><hook NAME="MapStyle" zoom="1.61">
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
     <properties fit_to_viewport="false" show_icon_for_attributes="true" edgeColorConfiguration="#808080ff,#ff0000ff,#0000ffff,#00ff00ff,#ff00ffff,#00ffffff,#7c0000ff,#00007cff,#007c00ff,#7c007cff,#007c7cff,#7c7c00ff"/>
 
 <map_styles>
@@ -58,7 +72,7 @@
 <node TEXT="https://thepilcrow.net/explaining-basic-concepts-git-and-github/" ID="ID_1779245921" CREATED="1580381280198" MODIFIED="1580381280198" LINK="https://thepilcrow.net/explaining-basic-concepts-git-and-github/"/>
 </node>
 <node TEXT="" ID="ID_134768744" CREATED="1581027094617" MODIFIED="1604487131183">
-<node TEXT="repositorio" FOLDED="true" ID="ID_1342328881" CREATED="1581027051916" MODIFIED="1604487131182">
+<node TEXT="repositorio" ID="ID_1342328881" CREATED="1581027051916" MODIFIED="1604487131182">
 <node TEXT="la COLECCIÓN ENTERA de RAMAS con sus ficheros, sus cambios, los commits y toda la metainformación asociada" ID="ID_1451656154" CREATED="1581027054916" MODIFIED="1581333000300"/>
 <node TEXT="guarda TODO el historial de todos los archivos" ID="ID_1659529376" CREATED="1604487293801" MODIFIED="1604487303016">
 <node TEXT="puedo volver atrás siempre que quiera" ID="ID_962264331" CREATED="1604487303219" MODIFIED="1604487310861"/>
@@ -228,7 +242,7 @@
 </node>
 </node>
 </node>
-<node TEXT="GitKraken" POSITION="right" ID="ID_1045581662" CREATED="1581331111381" MODIFIED="1581331114480">
+<node TEXT="GitKraken" FOLDED="true" POSITION="right" ID="ID_1045581662" CREATED="1581331111381" MODIFIED="1581331114480">
 <node TEXT="es una interfaz gráfica (&quot;UI&quot;) para GIT" ID="ID_1343617100" CREATED="1581332918703" MODIFIED="1581332935475">
 <node TEXT="NO es un IDE como tal" ID="ID_1090345786" CREATED="1581332925601" MODIFIED="1581332928525"/>
 </node>
